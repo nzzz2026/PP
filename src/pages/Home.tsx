@@ -1274,7 +1274,6 @@ const Home: React.FC = () => {
                   textDecoration: 'none',
                   transition: 'all 0.3s ease'
                 }}>
-                  <span>📅</span>
                   <span>Book Online Now</span>
                 </Link>
                 <a href="tel:08007723999" style={{
@@ -1292,7 +1291,6 @@ const Home: React.FC = () => {
                   transition: 'all 0.3s ease',
                   backdropFilter: 'blur(10px)'
                 }}>
-                  <span>💬</span>
                   <span>Get Instant Quote</span>
                 </a>
               </div>
