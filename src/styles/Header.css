@@ -100,15 +100,15 @@
     left: 50%;
     transform: translateX(-50%);
     background: white;
-    border-radius: 16px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.15);
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1000;
-    width: 600px;
-    margin-top: 10px;
+    width: 520px;
+    margin-top: 8px;
 }
 
 .pest-library-dropdown:hover .pest-dropdown {
@@ -119,67 +119,68 @@
 
 .pest-dropdown-content {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-    padding: 2rem;
+    grid-template-columns: 1.8fr 1.2fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
 }
 
 .pest-dropdown-section h4 {
-    color: var(--charcoal);
-    font-size: 1.1rem;
+    color: #1F2937;
+    font-size: 1rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     margin-top: 0;
 }
 
 .pest-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .pest-item {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    padding: 0.75rem;
-    border-radius: 8px;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 6px;
     transition: all 0.3s ease;
-    color: var(--gray-700);
+    color: #374151;
     text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 0.85rem;
+    font-weight: 600;
 }
 
 .pest-item:hover {
-    background: var(--gray-50);
-    color: var(--forest);
-    transform: translateX(4px);
+    background: #F3F4F6;
+    color: #0F766E;
+    transform: translateX(2px);
 }
 
 .pest-icon {
-    font-size: 1.5rem;
-    width: 32px;
-    height: 32px;
+    font-size: 1.2rem;
+    width: 28px;
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(15, 118, 110, 0.1);
-    border-radius: 8px;
-    min-width: 32px;
+    background: rgba(15, 118, 110, 0.15);
+    border-radius: 6px;
+    min-width: 28px;
 }
 
 .view-all-pests {
     color: #DC2626;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-decoration: none;
-    padding: 0.5rem 0;
-    border-top: 1px solid var(--gray-200);
+    padding: 0.75rem 0 0.25rem;
+    border-top: 1px solid #E5E7EB;
     display: block;
     text-align: center;
     transition: color 0.3s ease;
+    margin-top: 0.5rem;
 }
 
 .view-all-pests:hover {
@@ -187,41 +188,42 @@
 }
 
 .pest-dropdown-guarantee {
-    padding-left: 2rem;
-    border-left: 1px solid var(--gray-200);
+    padding-left: 1.5rem;
+    border-left: 1px solid #E5E7EB;
 }
 
 .pest-dropdown-guarantee h4 {
-    color: var(--charcoal);
-    font-size: 1.1rem;
+    color: #1F2937;
+    font-size: 1rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     margin-top: 0;
 }
 
 .guarantee-content {
     display: flex;
     align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
 }
 
 .guarantee-icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #DC2626;
-    min-width: 40px;
+    min-width: 32px;
 }
 
 .guarantee-text strong {
     display: block;
-    color: var(--charcoal);
-    font-size: 0.95rem;
+    color: #1F2937;
+    font-size: 0.85rem;
     margin-bottom: 0.25rem;
+    font-weight: 700;
 }
 
 .guarantee-text p {
-    color: var(--gray-600);
-    font-size: 0.85rem;
+    color: #4B5563;
+    font-size: 0.75rem;
     margin: 0;
     line-height: 1.4;
 }
@@ -229,13 +231,13 @@
 .dropdown-cta-buttons {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.5rem;
 }
 
 .dropdown-btn {
-    padding: 10px 16px;
-    border-radius: 8px;
-    font-size: 0.85rem;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.8rem;
     font-weight: 600;
     text-align: center;
     text-decoration: none;
@@ -497,18 +499,18 @@
 
 @media (max-width: 1200px) {
     .pest-dropdown {
-        width: 500px;
+        width: 460px;
     }
     
     .pest-dropdown-content {
-        padding: 1.5rem;
-        gap: 1.5rem;
+        padding: 1.25rem;
+        gap: 1.25rem;
     }
 }
 
 @media (max-width: 1024px) {
     .pest-dropdown {
-        width: 450px;
+        width: 420px;
     }
     
     .pest-grid {
@@ -516,7 +518,7 @@
     }
     
     .pest-dropdown-guarantee {
-        padding-left: 1.5rem;
+        padding-left: 1.25rem;
     }
 }
 
