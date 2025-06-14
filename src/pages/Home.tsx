@@ -76,11 +76,12 @@ const Home: React.FC = () => {
             
             {/* Trust Badges */}
             <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
+              display: 'flex',
+              justifyContent: 'center',
+              flexWrap: 'wrap',
               gap: '1rem',
               marginBottom: '2rem',
-              maxWidth: '600px',
+              maxWidth: '800px',
               margin: '0 auto 2rem'
             }}>
               <div style={{
@@ -197,14 +198,14 @@ const Home: React.FC = () => {
               </div>
             </div>
             
-            {/* CTA Buttons */}
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            {/* CTA Button */}
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
               <a href="tel:08007723999" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '0.5rem',
-                padding: '16px 32px',
-                fontSize: '1.1rem',
+                padding: '18px 40px',
+                fontSize: '1.2rem',
                 fontWeight: '700',
                 borderRadius: '12px',
                 background: 'var(--lime)',
@@ -216,24 +217,6 @@ const Home: React.FC = () => {
               }}>
                 <span>Call Now: 0800-772-3999</span>
               </a>
-              <Link to="/contact" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-                padding: '16px 32px',
-                fontSize: '1.1rem',
-                fontWeight: '700',
-                borderRadius: '12px',
-                background: 'rgba(255, 255, 255, 0.1)',
-                color: 'white',
-                border: '2px solid rgba(255, 255, 255, 0.8)',
-                textDecoration: 'none',
-                transition: 'all 0.3s ease',
-                backdropFilter: 'blur(10px)',
-                textShadow: 'none'
-              }}>
-                <span>Free Inspection</span>
-              </Link>
             </div>
           </div>
         </section>

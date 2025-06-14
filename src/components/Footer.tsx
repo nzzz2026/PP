@@ -4,7 +4,7 @@ import PPLLogoGreen from '../PPL Logo Green.svg';
 
 const Footer: React.FC = () => {
   return (
-    <footer style={{background: 'var(--forest)', color: 'white', padding: '6rem 0 3rem', position: 'relative'}}>
+    <footer style={{background: 'rgba(26, 36, 47, 0.98)', color: 'white', padding: '6rem 0 3rem', position: 'relative'}}>
       <div className="container">
         <div className="footer-grid" style={{display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1.5fr', gap: '4rem', marginBottom: '4rem'}}>
           {/* Company Info */}
