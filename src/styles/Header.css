@@ -89,6 +89,180 @@
     width: 100%;
 }
 
+/* Pest Library Dropdown */
+.pest-library-dropdown {
+    position: relative;
+}
+
+.pest-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    width: 600px;
+    margin-top: 10px;
+}
+
+.pest-library-dropdown:hover .pest-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.pest-dropdown-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.pest-dropdown-section h4 {
+    color: var(--charcoal);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+}
+
+.pest-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.pest-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    color: var(--gray-700);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.pest-item:hover {
+    background: var(--gray-50);
+    color: var(--forest);
+    transform: translateX(4px);
+}
+
+.pest-icon {
+    font-size: 1.5rem;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 118, 110, 0.1);
+    border-radius: 8px;
+    min-width: 32px;
+}
+
+.view-all-pests {
+    color: #DC2626;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    border-top: 1px solid var(--gray-200);
+    display: block;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.view-all-pests:hover {
+    color: #B91C1C;
+}
+
+.pest-dropdown-guarantee {
+    padding-left: 2rem;
+    border-left: 1px solid var(--gray-200);
+}
+
+.pest-dropdown-guarantee h4 {
+    color: var(--charcoal);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.guarantee-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.guarantee-icon {
+    font-size: 2rem;
+    color: #DC2626;
+    min-width: 40px;
+}
+
+.guarantee-text strong {
+    display: block;
+    color: var(--charcoal);
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+}
+
+.guarantee-text p {
+    color: var(--gray-600);
+    font-size: 0.85rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.dropdown-cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.dropdown-btn {
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.estimate-btn {
+    background: #DC2626;
+    color: white;
+}
+
+.estimate-btn:hover {
+    background: #B91C1C;
+    transform: translateY(-1px);
+}
+
+.call-btn {
+    background: var(--charcoal);
+    color: white;
+}
+
+.call-btn:hover {
+    background: var(--gray-800);
+    transform: translateY(-1px);
+}
+
 /* Header CTA */
 .header-cta {
     display: flex;
@@ -321,6 +495,31 @@
     }
 }
 
+@media (max-width: 1200px) {
+    .pest-dropdown {
+        width: 500px;
+    }
+    
+    .pest-dropdown-content {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .pest-dropdown {
+        width: 450px;
+    }
+    
+    .pest-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pest-dropdown-guarantee {
+        padding-left: 1.5rem;
+    }
+}
+
 @media (max-width: 900px) {
     .desktop-nav {
         display: none;
@@ -332,6 +531,10 @@
     
     .mobile-menu-btn {
         display: block;
+    }
+    
+    .pest-dropdown {
+        display: none;
     }
 }
 

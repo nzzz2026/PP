@@ -32,7 +32,57 @@ const Header: React.FC = () => {
             <ul className="nav-menu">
               <li><Link to="/">Home</Link></li>
               <li><Link to="/services">Services</Link></li>
-              <li><Link to="/pest-library">Pest Library</Link></li>
+              <li className="pest-library-dropdown">
+                <Link to="/pest-library">Pest Library</Link>
+                <div className="pest-dropdown">
+                  <div className="pest-dropdown-content">
+                    <div className="pest-dropdown-section">
+                      <h4>Common London Pests</h4>
+                      <div className="pest-grid">
+                        <Link to="/pest-library/bed-bugs" className="pest-item">
+                          <div className="pest-icon">🛏️</div>
+                          <span>Bed Bugs</span>
+                        </Link>
+                        <Link to="/pest-library/house-spiders" className="pest-item">
+                          <div className="pest-icon">🕷️</div>
+                          <span>Spiders</span>
+                        </Link>
+                        <Link to="/pest-library/cockroaches" className="pest-item">
+                          <div className="pest-icon">🪳</div>
+                          <span>Cockroaches</span>
+                        </Link>
+                        <Link to="/pest-library/rats" className="pest-item">
+                          <div className="pest-icon">🐀</div>
+                          <span>Rodents</span>
+                        </Link>
+                        <Link to="/pest-library/ants" className="pest-item">
+                          <div className="pest-icon">🐜</div>
+                          <span>Ants</span>
+                        </Link>
+                        <Link to="/pest-library/wasps" className="pest-item">
+                          <div className="pest-icon">🐝</div>
+                          <span>Wasps</span>
+                        </Link>
+                      </div>
+                      <Link to="/pest-library" className="view-all-pests">View All Pests...</Link>
+                    </div>
+                    <div className="pest-dropdown-guarantee">
+                      <h4>Our Guarantee</h4>
+                      <div className="guarantee-content">
+                        <div className="guarantee-icon">🏆</div>
+                        <div className="guarantee-text">
+                          <strong>100% Satisfaction or Money Back</strong>
+                          <p>Resolving your pest problem is our #1 priority.</p>
+                        </div>
+                      </div>
+                      <div className="dropdown-cta-buttons">
+                        <Link to="/contact" className="dropdown-btn estimate-btn">Get a Free Estimate</Link>
+                        <a href="tel:08007723999" className="dropdown-btn call-btn">Call Us</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
               <li><Link to="/service-areas">Service Areas</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="/contact">Contact</Link></li>
