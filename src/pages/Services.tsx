@@ -143,39 +143,29 @@ const Services: React.FC = () => {
       
       <main style={{ paddingTop: '80px' }}>
         {/* Hero Section */}
-        <section className="services-hero">
+        <section style={{
+          background: 'linear-gradient(135deg, var(--charcoal) 0%, var(--gray-800) 100%)',
+          color: 'white',
+          padding: '80px 0',
+          textAlign: 'center'
+        }}>
           <div className="container">
-            <div className="text-center">
-              <div className="hero-badge">
-                <span>London's Premier Pest Control Specialists</span>
-              </div>
-              <h1 className="hero-title">
-                Professional Pest Control
-                <span className="accent">That Actually Works</span>
-              </h1>
-              <p className="hero-description">
-                Evidence-based pest elimination with guaranteed results. Serving London's residential, commercial, and restaurant sectors with 15+ years of proven expertise.
-              </p>
-              <div className="hero-buttons">
-                <Link to="/contact" className="btn-hero-primary">
-                  Get Free Assessment
-                </Link>
-                <a href="tel:02071234567" className="btn-hero-secondary">
-                  Emergency: 020 7123 4567
-                </a>
-              </div>
-              
-              {/* Trust Badges */}
-              <div className="trust-badges">
-                {trustBadges.map((badge, index) => (
-                  <div key={index} className="trust-badge">
-                    <span className="trust-badge-icon">{badge.icon}</span>
-                    <div className="trust-badge-title">{badge.name}</div>
-                    <div className="trust-badge-desc">{badge.description}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <h1 style={{
+              fontSize: 'clamp(2rem, 4vw, 3rem)',
+              fontWeight: '800',
+              marginBottom: '1rem',
+              color: 'white'
+            }}>
+              Professional Pest Control Services
+            </h1>
+            <p style={{
+              fontSize: '1.2rem',
+              color: 'rgba(255, 255, 255, 0.8)',
+              maxWidth: '600px',
+              margin: '0 auto'
+            }}>
+              Expert pest elimination for residential, commercial, and restaurant properties across London
+            </p>
           </div>
         </section>
 
