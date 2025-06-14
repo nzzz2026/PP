@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FiHome, FiBuilding } from 'react-icons/fi';
 import { pestCategories } from '../data/pests';
 
 const PestLibrary: React.FC = () => {
@@ -233,7 +234,7 @@ const PestLibrary: React.FC = () => {
                 justifyContent: 'center',
                 margin: '0 auto 1.5rem',
                 fontSize: '1.5rem'
-              }}>🏠</div>
+              }}><FiHome /></div>
               <h3 style={{
                 fontSize: '1.3rem',
                 fontWeight: '700',
@@ -284,7 +285,7 @@ const PestLibrary: React.FC = () => {
                 justifyContent: 'center',
                 margin: '0 auto 1.5rem',
                 fontSize: '1.5rem'
-              }}>🏢</div>
+              }}><FiBuilding /></div>
               <h3 style={{
                 fontSize: '1.3rem',
                 fontWeight: '700',

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FiCheck, FiStar, FiArrowRight, FiZap, FiRecycle, FiX, FiPhone, FiClock, FiShield, FiUsers, FiAward } from 'react-icons/fi';
 import heroImage from '../hero_image.jpeg';
 
 const Home: React.FC = () => {
@@ -44,7 +45,7 @@ const Home: React.FC = () => {
               color: 'white',
               backdropFilter: 'blur(10px)'
             }}>
-              <span style={{ color: 'var(--lime)' }}>✓</span>
+              <FiCheck style={{ color: 'var(--lime)', fontSize: '1rem' }} />
               <span>London's #1 Rated Pest Control</span>
             </div>
             
@@ -107,7 +108,7 @@ const Home: React.FC = () => {
                   justifyContent: 'center',
                   fontSize: '0.8rem',
                   fontWeight: 'bold'
-                }}>✓</div>
+                }}><FiCheck /></div>
                 <div>
                   <div style={{ fontWeight: '700', fontSize: '0.8rem', color: 'white' }}>Since 2008</div>
                   <div style={{ fontSize: '0.65rem', color: 'rgba(255, 255, 255, 0.7)' }}>16+ Years Experience</div>
@@ -431,7 +432,7 @@ const Home: React.FC = () => {
                         justifyContent: 'center',
                         fontSize: '0.7rem',
                         minWidth: '16px'
-                      }}>✓</span>
+                      }}><FiCheck /></span>
                       {item}
                     </li>
                   ))}
@@ -442,9 +443,9 @@ const Home: React.FC = () => {
                     fontWeight: '600',
                     textDecoration: 'none',
                     fontSize: '0.9rem'
-                  }}>Learn More →</Link>
+                  }}>Learn More <FiArrowRight style={{fontSize: '0.8rem'}} /></Link>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                    <span style={{ color: '#FFD700', fontSize: '0.8rem' }}>★★★★★</span>
+                    <span style={{ color: '#FFD700', fontSize: '0.8rem' }}><div style={{display: 'flex', gap: '2px'}}>{[...Array(5)].map((_, i) => <FiStar key={i} style={{fontSize: '0.8rem'}} />)}</div></span>
                     <span style={{ fontSize: '0.75rem', color: 'var(--gray-600)' }}>4.9/5</span>
                   </div>
                 </div>
@@ -1230,10 +1231,10 @@ const Home: React.FC = () => {
                 margin: '2rem 0'
               }}>
                 {[
-                  { icon: '⚡', text: 'Same-Day Service' },
-                  { icon: '£', text: 'Free Quotes & Inspections' },
-                  { icon: '✓', text: 'Guaranteed Results' },
-                  { icon: '♻', text: 'Eco-Friendly Methods' }
+                  { icon: <FiZap />, text: 'Same-Day Service' },
+                  { icon: <FiPhone />, text: 'Free Quotes & Inspections' },
+                  { icon: <FiCheck />, text: 'Guaranteed Results' },
+                  { icon: <FiRecycle />, text: 'Eco-Friendly Methods' }
                 ].map((feature, index) => (
                   <div key={index} style={{
                     display: 'flex',
@@ -1248,7 +1249,7 @@ const Home: React.FC = () => {
                     fontSize: '0.85rem',
                     fontWeight: '600'
                   }}>
-                    <span style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>{feature.icon}</span>
+                    <span style={{ fontSize: '1.1rem', fontWeight: 'bold', display: 'flex' }}>{feature.icon}</span>
                     <span>{feature.text}</span>
                   </div>
                 ))}

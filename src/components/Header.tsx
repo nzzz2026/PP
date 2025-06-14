@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { FiPhone } from 'react-icons/fi';
 import '../styles/Header.css';
 import PPLLogoWhite from '../PPL White.svg';
 
@@ -92,7 +93,7 @@ const Header: React.FC = () => {
           {/* CTA */}
           <div className="header-cta">
             <a href="tel:02071234567" className="phone-number">
-              <span className="animate-pulse">📞</span>
+              <FiPhone className="animate-pulse" />
               <span className="phone-text">020 7123 4567</span>
             </a>
             <Link to="/emergency" className="emergency-btn">Emergency</Link>
@@ -125,7 +126,7 @@ const Header: React.FC = () => {
             </ul>
             <div className="mobile-cta">
               <a href="tel:02071234567" className="mobile-phone">
-                <span>📞</span>
+                <FiPhone />
                 <span>020 7123 4567</span>
               </a>
               <Link to="/emergency" className="mobile-emergency" onClick={() => setIsMobileMenuOpen(false)}>

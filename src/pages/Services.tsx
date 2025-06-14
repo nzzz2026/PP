@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FiHome, FiBuilding, FiCoffee, FiCheck, FiAlertTriangle, FiTarget, FiShield, FiAward, FiZap } from 'react-icons/fi';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -10,7 +11,7 @@ const Services: React.FC = () => {
       subtitle: 'Home & Family Protection',
       description: 'Comprehensive pest elimination for London homes using family-safe methods that protect what matters most.',
       detailedDescription: 'Our residential pest control services are specifically designed for London homes, ensuring your family\'s safety while effectively eliminating unwanted pests. We understand that your home is your sanctuary.',
-      icon: '🏠',
+      icon: <FiHome />,
       primaryBenefit: 'Family-Safe Guaranteed',
       keyFeatures: [
         'Child & pet-safe treatments only',
@@ -51,7 +52,7 @@ const Services: React.FC = () => {
       subtitle: 'Business Continuity Protection',
       description: 'Professional pest management that protects your business reputation with minimal disruption and full compliance documentation.',
       detailedDescription: 'Protecting London businesses from pest-related disruptions since 2010. Our commercial services ensure your operations continue smoothly while maintaining the highest standards of pest control.',
-      icon: '🏢',
+      icon: <FiBuilding />,
       primaryBenefit: 'Zero Business Disruption',
       keyFeatures: [
         'Discrete, unmarked service vehicles',
@@ -92,7 +93,7 @@ const Services: React.FC = () => {
       subtitle: 'Food Safety Excellence',
       description: 'Specialized food service pest control ensuring HACCP compliance and maintaining your establishment\'s reputation for cleanliness.',
       detailedDescription: 'London\'s restaurant industry trusts us to maintain the highest food safety standards. Our specialized treatments protect your reputation, ensure compliance, and keep your kitchen pest-free.',
-      icon: '🍽️',
+      icon: <FiCoffee />,
       primaryBenefit: 'HACCP Compliance Guaranteed',
       keyFeatures: [
         'Food-safe treatments exclusively',
@@ -131,10 +132,10 @@ const Services: React.FC = () => {
   ];
 
   const trustBadges = [
-    { name: 'FSA Approved', icon: '🛡️', description: 'Food Standards Agency certified treatments' },
-    { name: 'BPCA Member', icon: '🏆', description: 'British Pest Control Association member' },
-    { name: 'Insured & Bonded', icon: '📋', description: '£2M public liability insurance' },
-    { name: 'HACCP Compliant', icon: '✅', description: 'Full HACCP compliance documentation' }
+    { name: 'FSA Approved', icon: <FiShield />, description: 'Food Standards Agency certified treatments' },
+    { name: 'BPCA Member', icon: <FiAward />, description: 'British Pest Control Association member' },
+    { name: 'Insured & Bonded', icon: <FiCheck />, description: '£2M public liability insurance' },
+    { name: 'HACCP Compliant', icon: <FiCheck />, description: 'Full HACCP compliance documentation' }
   ];
 
   return (
@@ -180,7 +181,7 @@ const Services: React.FC = () => {
                     {/* Content Side */}
                     <div className="service-content">
                       <div className={`service-badge ${category.color}`}>
-                        <span className="service-badge-icon">{category.icon}</span>
+                        <span className="service-badge-icon" style={{display: 'flex', alignItems: 'center'}}>{category.icon}</span>
                         <span>{category.primaryBenefit}</span>
                       </div>
                       
@@ -213,7 +214,7 @@ const Services: React.FC = () => {
                           <ul className="feature-list">
                             {category.keyFeatures.map((feature, featureIndex) => (
                               <li key={featureIndex} className="feature-item">
-                                <span className={`feature-icon ${category.color}`}>✓</span>
+                                <span className={`feature-icon ${category.color}`} style={{display: 'flex'}}><FiCheck /></span>
                                 <span>{feature}</span>
                               </li>
                             ))}
@@ -226,7 +227,7 @@ const Services: React.FC = () => {
                           <ul className="feature-list">
                             {category.commonIssues.map((issue, issueIndex) => (
                               <li key={issueIndex} className="feature-item">
-                                <span className="issue-icon">⚠</span>
+                                <span className="issue-icon" style={{display: 'flex'}}><FiAlertTriangle /></span>
                                 <span>{issue}</span>
                               </li>
                             ))}
@@ -312,7 +313,7 @@ const Services: React.FC = () => {
             <div className="stats-grid">
               <div className="stat-card">
                 <div className="stat-icon-wrapper green">
-                  <span>🎯</span>
+                  <FiTarget />
                 </div>
                 <h3 className="stat-title">98% Success Rate</h3>
                 <p className="stat-description">Industry-leading elimination success rate with guaranteed follow-up service.</p>
@@ -320,7 +321,7 @@ const Services: React.FC = () => {
               
               <div className="stat-card">
                 <div className="stat-icon-wrapper blue">
-                  <span>⚡</span>
+                  <FiZap />
                 </div>
                 <h3 className="stat-title">Emergency Response</h3>
                 <p className="stat-description">Same-day emergency service with 1-4 hour response times across London.</p>
@@ -328,7 +329,7 @@ const Services: React.FC = () => {
               
               <div className="stat-card">
                 <div className="stat-icon-wrapper red">
-                  <span>🛡️</span>
+                  <FiShield />
                 </div>
                 <h3 className="stat-title">Safety Certified</h3>
                 <p className="stat-description">Only FSA-approved, family-safe treatments with full insurance coverage.</p>

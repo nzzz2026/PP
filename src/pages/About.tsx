@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiPhone } from 'react-icons/fi';
 
 const About: React.FC = () => {
   return (
@@ -111,7 +112,7 @@ const About: React.FC = () => {
                 boxShadow: '0 4px 20px rgba(16, 185, 129, 0.3)'
               }}
             >
-              <span style={{ fontSize: '1.2rem' }}>📞</span>
+              <FiPhone style={{ fontSize: '1.2rem' }} />
               <span>Call Now: 0800-772-3999</span>
             </a>
           </div>

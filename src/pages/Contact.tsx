@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FiCheck } from 'react-icons/fi';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -176,7 +177,7 @@ const Contact: React.FC = () => {
                         alignItems: 'center',
                         justifyContent: 'center',
                         fontSize: '0.8rem'
-                      }}>✓</span>
+                      }}><FiCheck /></span>
                       {item}
                     </li>
                   ))}
