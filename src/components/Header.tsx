@@ -22,7 +22,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <div className="logo-section">
             <div className="logo-icon animate-pulse">🛡️</div>
-            <Link to="/" className="logo-text">Pest Defenders</Link>
+            <Link to="/" className="logo-text">Pest Pro</Link>
           </div>
           
           {/* Navigation */}
