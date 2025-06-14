@@ -15,19 +15,24 @@ body {
 
 /* Enhanced Custom Properties */
 :root {
-    --forest: #004225;
-    --forest-light: #16A34A;
-    --forest-dark: #003018;
-    --primary: #2563EB;
-    --primary-light: #60A5FA;
-    --primary-dark: #1D4ED8;
-    --lime: #22C55E;
-    --lime-light: #4ADE80;
-    --lime-dark: #16A34A;
+    --forest: #0F766E;
+    --forest-light: #14B8A6;
+    --forest-dark: #134E4A;
+    --primary: #0891B2;
+    --primary-light: #06B6D4;
+    --primary-dark: #0E7490;
+    --lime: #10B981;
+    --lime-light: #34D399;
+    --lime-dark: #059669;
+    --orange: #EA580C;
+    --orange-light: #FB923C;
+    --orange-dark: #C2410C;
+    --accent: #6366F1;
+    --accent-light: #8B5CF6;
     --navy: #1E40AF;
     --navy-light: #3B82F6;
-    --charcoal: #1A242F;
-    --charcoal-light: #2A3441;
+    --charcoal: #1F2937;
+    --charcoal-light: #374151;
     --ivory: #F8FAFC;
     --ivory-dark: #F1F5F9;
     --white: #FFFFFF;
@@ -354,7 +359,174 @@ a {
 }
 
 .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
     margin-top: 4rem;
+}
+
+.service-card {
+    background: white;
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.service-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.15);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(34, 197, 94, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover::before {
+    transform: scale(1.5);
+}
+
+.service-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--forest) 0%, var(--forest-light) 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 66, 37, 0.2);
+    min-width: 80px;
+}
+
+.service-card:hover .service-icon {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.service-info h3 {
+    color: var(--forest);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.service-price {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--forest);
+}
+
+.service-description {
+    color: var(--gray-600);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.service-features {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.service-features li {
+    padding: 0.75rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--gray-700);
+    border-bottom: 1px solid var(--gray-100);
+    font-size: 0.875rem;
+}
+
+.service-features li:last-child {
+    border-bottom: none;
+}
+
+.service-features li::before {
+    content: '✓';
+    color: var(--lime);
+    font-weight: bold;
+    font-size: 1rem;
+    width: 20px;
+    height: 20px;
+    background: rgba(34, 197, 94, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+}
+
+/* Modern Hover Effects */
+.modern-hover {
+    position: relative;
+    overflow: hidden;
+}
+
+.modern-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.modern-hover:hover::before {
+    left: 100%;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+    0% { transform: scale(0.95); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Area Items */
+.area-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 0;
+    font-weight: 500;
+    color: white;
+}
+
+.area-item::before {
+    content: '✓';
+    color: var(--lime);
+    font-weight: bold;
+    font-size: 1.125rem;
+    width: 24px;
+    height: 24px;
+    background: rgba(16, 185, 129, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
 }
 
 .final-cta {
