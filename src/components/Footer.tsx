@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   return (
     <footer style={{background: 'rgba(26, 36, 47, 0.98)', color: 'white', padding: '6rem 0 3rem', position: 'relative'}}>
       <div className="container">
-        <div className="footer-grid" style={{display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1.5fr', gap: '4rem', marginBottom: '4rem'}}>
+        <div className="footer-grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 'clamp(2rem, 5vw, 4rem)', marginBottom: 'clamp(2rem, 5vw, 4rem)'}}>
           {/* Company Info */}
           <div>
             <div className="footer-logo" style={{display: 'flex', alignItems: 'center', marginBottom: '2rem'}}>
@@ -131,12 +131,13 @@ const Footer: React.FC = () => {
         {/* Footer Bottom */}
         <div className="footer-bottom" style={{
           borderTop: '1px solid rgba(255, 255, 255, 0.2)', 
-          paddingTop: '3rem', 
+          paddingTop: 'clamp(2rem, 4vw, 3rem)', 
           display: 'flex', 
           justifyContent: 'space-between', 
           alignItems: 'center', 
           flexWrap: 'wrap', 
-          gap: '2rem'
+          gap: 'clamp(1rem, 3vw, 2rem)',
+          textAlign: 'center'
         }}>
           <p style={{color: 'rgba(255, 255, 255, 0.6)', fontSize: '0.875rem'}}>
             © 2024 Pest Pro London. All rights reserved. | BPCA Member | Fully Insured | Environmental Agency Registered

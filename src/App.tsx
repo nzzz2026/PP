@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles/globals.css';
+import './styles/mobile.css';
 
 // Components
 import Header from './components/Header';

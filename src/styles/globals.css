@@ -53,10 +53,24 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 24px;
+    width: 100%;
 }
 
 .container-sm { max-width: 1200px; }
 .container-xs { max-width: 1000px; }
+
+/* Mobile-first container adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+}
 
 /* Enhanced Typography */
 h1, h2, h3, h4, h5, h6 {
@@ -250,6 +264,39 @@ a {
     font-size: 0.875rem;
 }
 
+/* Enhanced Mobile Button Styles */
+@media (max-width: 768px) {
+    .btn {
+        padding: 14px 28px;
+        font-size: 0.95rem;
+    }
+    
+    .btn-lg {
+        padding: 16px 32px;
+        font-size: 1rem;
+    }
+    
+    .btn-sm {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    
+    .btn-lg {
+        padding: 14px 28px;
+        font-size: 0.95rem;
+    }
+}
+
 /* Enhanced Section Styles */
 .section {
     padding: 120px 0;
@@ -301,16 +348,54 @@ a {
 
 /* Enhanced Responsive Design */
 @media (max-width: 1200px) {
-    .container { padding: 0 20px; }
+    .container { 
+        padding: 0 20px; 
+        max-width: 1200px;
+    }
 }
 
 @media (max-width: 768px) {
-    .section { padding: 80px 0; }
-    .section-header { margin-bottom: 3rem; }
+    .container { 
+        padding: 0 16px; 
+    }
+    
+    .section { 
+        padding: 60px 0; 
+    }
+    
+    .section-header { 
+        margin-bottom: 2rem; 
+    }
+    
+    .section-header h2 {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
-    .container { padding: 0 16px; }
+    .container { 
+        padding: 0 12px; 
+    }
+    
+    .section { 
+        padding: 40px 0; 
+    }
+    
+    .section-header { 
+        margin-bottom: 1.5rem; 
+    }
+    
+    .section-header h2 {
+        font-size: clamp(1.25rem, 5vw, 1.75rem);
+    }
+    
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
 }
 
 /* Home Page Specific Styles */
@@ -360,9 +445,23 @@ a {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
     margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        gap: 1rem;
+    }
 }
 
 .service-card {
@@ -374,6 +473,20 @@ a {
     position: relative;
     overflow: hidden;
     border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        padding: 2rem;
+        border-radius: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
 }
 
 .service-card:hover {

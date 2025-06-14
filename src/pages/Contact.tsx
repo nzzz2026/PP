@@ -58,8 +58,8 @@ const Contact: React.FC = () => {
         <div className="container">
           <div style={{
             display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '4rem',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: 'clamp(2rem, 5vw, 4rem)',
             alignItems: 'start'
           }}>
             {/* Left Side - Support Information */}
@@ -238,7 +238,7 @@ const Contact: React.FC = () => {
                     />
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1.5rem' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '1.5rem' }}>
                     <div>
                       <label style={{
                         display: 'block',

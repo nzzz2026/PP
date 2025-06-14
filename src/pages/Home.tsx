@@ -12,10 +12,12 @@ const Home: React.FC = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          padding: '120px 0',
+          backgroundAttachment: 'scroll',
+          padding: 'clamp(80px, 15vw, 120px) 0',
           position: 'relative',
           overflow: 'hidden',
-          color: 'white'
+          color: 'white',
+          minHeight: 'clamp(500px, 70vh, 700px)'
         }}>
           <div style={{
             position: 'absolute',
@@ -76,9 +78,8 @@ const Home: React.FC = () => {
             
             {/* Trust Badges */}
             <div style={{
-              display: 'flex',
-              justifyContent: 'center',
-              flexWrap: 'wrap',
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
               gap: '1rem',
               marginBottom: '2rem',
               maxWidth: '800px',
@@ -222,21 +223,16 @@ const Home: React.FC = () => {
         </section>
 
         {/* Stats Section */}
-        <section style={{ padding: '60px 0', background: 'white' }}>
+        <section style={{ padding: 'clamp(40px, 6vw, 60px) 0', background: 'white' }}>
           <div className="container">
             <div style={{
               background: 'linear-gradient(135deg, var(--ivory) 0%, var(--white) 100%)',
-              borderRadius: '20px',
-              padding: '3rem 2rem',
+              borderRadius: 'clamp(12px, 3vw, 20px)',
+              padding: 'clamp(2rem, 5vw, 3rem) clamp(1rem, 3vw, 2rem)',
               boxShadow: '0 20px 80px rgba(0, 0, 0, 0.1)',
               border: '1px solid rgba(0, 0, 0, 0.05)'
             }}>
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
-                gap: '2rem',
-                textAlign: 'center'
-              }}>
+              <div className="stats-grid">
                 <div style={{ position: 'relative' }}>
                   <div style={{
                     position: 'absolute',
@@ -331,13 +327,13 @@ const Home: React.FC = () => {
         </section>
 
         {/* Services Section */}
-        <section style={{ padding: '80px 0', background: '#FAFBFC' }}>
+        <section style={{ padding: 'clamp(40px, 8vw, 80px) 0', background: '#FAFBFC' }}>
           <div className="container">
-            <div style={{ textAlign: 'center', marginBottom: '3rem', maxWidth: '700px', margin: '0 auto 3rem' }}>
+            <div style={{ textAlign: 'center', marginBottom: 'clamp(2rem, 5vw, 3rem)', maxWidth: '700px', margin: '0 auto clamp(2rem, 5vw, 3rem)' }}>
               <h2 style={{
                 color: 'var(--forest)',
                 marginBottom: '1rem',
-                fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
+                fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
                 fontWeight: '700'
               }}>Professional Pest Control Services</h2>
               <div style={{
@@ -348,17 +344,13 @@ const Home: React.FC = () => {
                 borderRadius: '2px'
               }}></div>
               <p style={{
-                fontSize: '1rem',
+                fontSize: 'clamp(0.9rem, 2.5vw, 1rem)',
                 color: 'var(--gray-600)',
                 lineHeight: 1.6
               }}>Comprehensive solutions tailored to your needs, delivered by certified professionals with cutting-edge technology and eco-friendly methods</p>
             </div>
             
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '1.5rem'
-            }}>
+            <div className="services-grid">
               {/* Residential Service */}
               <div style={{
                 background: 'white',

@@ -1,0 +1,140 @@
+/* Mobile-specific responsive styles */
+
+/* Ensure all text is readable */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    /* Prevent horizontal scroll */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    /* Improve touch targets */
+    button, a, input, select, textarea {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Better form inputs on mobile */
+    input, select, textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 12px 16px;
+        border-radius: 8px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Stack form elements on mobile */
+    .form-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    /* Better image handling */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Improve table responsiveness */
+    table {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+        white-space: nowrap;
+    }
+    
+    /* Better navigation on mobile */
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    /* Improve card layouts */
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    /* Better spacing */
+    .mobile-padding {
+        padding: 1rem;
+    }
+    
+    /* Improve readability */
+    p, li {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    /* Better button layouts */
+    .button-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+    
+    .button-group > * {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Even smaller screens */
+    .container {
+        padding: 0 8px;
+    }
+    
+    /* Smaller text for very small screens */
+    h1 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+    
+    h2 {
+        font-size: clamp(1.25rem, 5vw, 1.75rem);
+    }
+    
+    h3 {
+        font-size: clamp(1.1rem, 4vw, 1.5rem);
+    }
+    
+    /* Tighter spacing */
+    .section {
+        padding: 2rem 0;
+    }
+    
+    /* Stack everything */
+    .flex-container {
+        flex-direction: column;
+    }
+    
+    /* Better touch targets for small screens */
+    button, .btn {
+        min-height: 48px;
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
+
+/* Landscape phone adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-section {
+        padding: 2rem 0;
+    }
+    
+    .section {
+        padding: 3rem 0;
+    }
+}
+
+/* Fix for iOS Safari */
+@supports (-webkit-touch-callout: none) {
+    .hero-section {
+        min-height: -webkit-fill-available;
+    }
+}
