@@ -1,25 +1,54 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './styles/globals.css';
+
+// Components
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+// Pages
+import Home from './pages/Home';
+import PestLibrary from './pages/PestLibrary';
+import PestCategory from './pages/PestCategory';
+import PestDetail from './pages/PestDetail';
+import ServiceAreas from './pages/ServiceAreas';
+import ServiceAreaDetail from './pages/ServiceAreaDetail';
+import Services from './pages/Services';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Emergency from './pages/Emergency';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <main>
+          <Routes>
+            {/* Home */}
+            <Route path="/" element={<Home />} />
+            
+            {/* Services */}
+            <Route path="/services" element={<Services />} />
+            <Route path="/emergency" element={<Emergency />} />
+            
+            {/* Pest Library */}
+            <Route path="/pest-library" element={<PestLibrary />} />
+            <Route path="/pest-library/:category" element={<PestCategory />} />
+            <Route path="/pest-library/:category/:pestId" element={<PestDetail />} />
+            
+            {/* Service Areas */}
+            <Route path="/service-areas" element={<ServiceAreas />} />
+            <Route path="/service-areas/:areaId" element={<ServiceAreaDetail />} />
+            
+            {/* Company */}
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
