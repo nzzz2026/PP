@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiCheck, FiStar, FiArrowRight, FiZap, FiRecycle, FiX, FiPhone, FiClock, FiShield, FiUsers, FiAward } from 'react-icons/fi';
+import { FiCheck, FiStar, FiArrowRight, FiZap, FiPhone, FiRecycle } from 'react-icons/fi';
 import heroImage from '../hero_image.jpeg';
 
 const Home: React.FC = () => {
@@ -45,7 +45,7 @@ const Home: React.FC = () => {
               color: 'white',
               backdropFilter: 'blur(10px)'
             }}>
-              <FiCheck style={{ color: 'var(--lime)', fontSize: '1rem' }} />
+              <FiCheck style={{fontSize: '0.8rem'}} />
               <span>London's #1 Rated Pest Control</span>
             </div>
             
@@ -108,7 +108,7 @@ const Home: React.FC = () => {
                   justifyContent: 'center',
                   fontSize: '0.8rem',
                   fontWeight: 'bold'
-                }}><FiCheck /></div>
+                }}><FiCheck style={{fontSize: '0.8rem'}} /></div>
                 <div>
                   <div style={{ fontWeight: '700', fontSize: '0.8rem', color: 'white' }}>Since 2008</div>
                   <div style={{ fontSize: '0.65rem', color: 'rgba(255, 255, 255, 0.7)' }}>16+ Years Experience</div>
@@ -136,7 +136,7 @@ const Home: React.FC = () => {
                   justifyContent: 'center',
                   fontSize: '0.8rem',
                   fontWeight: 'bold'
-                }}>✓</div>
+                }}><FiCheck style={{fontSize: '0.8rem'}} /></div>
                 <div>
                   <div style={{ fontWeight: '700', fontSize: '0.8rem', color: 'white' }}>BPCA Certified</div>
                   <div style={{ fontSize: '0.65rem', color: 'rgba(255, 255, 255, 0.7)' }}>Professional Standards</div>
@@ -164,7 +164,7 @@ const Home: React.FC = () => {
                   justifyContent: 'center',
                   fontSize: '0.8rem',
                   fontWeight: 'bold'
-                }}>✓</div>
+                }}><FiCheck style={{fontSize: '0.8rem'}} /></div>
                 <div>
                   <div style={{ fontWeight: '700', fontSize: '0.8rem', color: 'white' }}>Fully Insured</div>
                   <div style={{ fontSize: '0.65rem', color: 'rgba(255, 255, 255, 0.7)' }}>£2M Public Liability</div>
@@ -192,7 +192,7 @@ const Home: React.FC = () => {
                   justifyContent: 'center',
                   fontSize: '0.8rem',
                   fontWeight: 'bold'
-                }}>✓</div>
+                }}><FiCheck style={{fontSize: '0.8rem'}} /></div>
                 <div>
                   <div style={{ fontWeight: '700', fontSize: '0.8rem', color: 'white' }}>4.9/5 Rating</div>
                   <div style={{ fontSize: '0.65rem', color: 'rgba(255, 255, 255, 0.7)' }}>487+ Reviews</div>
@@ -432,7 +432,7 @@ const Home: React.FC = () => {
                         justifyContent: 'center',
                         fontSize: '0.7rem',
                         minWidth: '16px'
-                      }}><FiCheck /></span>
+                      }}><FiCheck style={{fontSize: '0.8rem'}} /></span>
                       {item}
                     </li>
                   ))}
@@ -445,7 +445,7 @@ const Home: React.FC = () => {
                     fontSize: '0.9rem'
                   }}>Learn More <FiArrowRight style={{fontSize: '0.8rem'}} /></Link>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                    <span style={{ color: '#FFD700', fontSize: '0.8rem' }}><div style={{display: 'flex', gap: '2px'}}>{[...Array(5)].map((_, i) => <FiStar key={i} style={{fontSize: '0.8rem'}} />)}</div></span>
+                    <span style={{ color: '#FFD700', fontSize: '0.8rem' }}><div style={{display: 'flex', gap: '2px'}}>{[...Array(5)].map((_, i) => <FiStar style={{fontSize: '0.8rem'}} />)}</div></span>
                     <span style={{ fontSize: '0.75rem', color: 'var(--gray-600)' }}>4.9/5</span>
                   </div>
                 </div>
@@ -531,7 +531,7 @@ const Home: React.FC = () => {
                         justifyContent: 'center',
                         fontSize: '0.7rem',
                         minWidth: '16px'
-                      }}>✓</span>
+                      }}><FiCheck style={{fontSize: '0.8rem'}} /></span>
                       {item}
                     </li>
                   ))}
@@ -542,9 +542,9 @@ const Home: React.FC = () => {
                     fontWeight: '600',
                     textDecoration: 'none',
                     fontSize: '0.9rem'
-                  }}>Learn More →</Link>
+                  }}>Learn More <FiArrowRight style={{fontSize: '0.8rem'}} /></Link>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                    <span style={{ color: '#FFD700', fontSize: '0.8rem' }}>★★★★★</span>
+                    <span style={{ color: '#FFD700', fontSize: '0.8rem' }}><FiStar style={{fontSize: '0.8rem'}} /><FiStar style={{fontSize: '0.8rem'}} /><FiStar style={{fontSize: '0.8rem'}} /><FiStar style={{fontSize: '0.8rem'}} /><FiStar style={{fontSize: '0.8rem'}} /></span>
                     <span style={{ fontSize: '0.75rem', color: 'var(--gray-600)' }}>5.0/5</span>
                   </div>
                 </div>
@@ -630,7 +630,7 @@ const Home: React.FC = () => {
                         justifyContent: 'center',
                         fontSize: '0.7rem',
                         minWidth: '16px'
-                      }}>✓</span>
+                      }}><FiCheck style={{fontSize: '0.8rem'}} /></span>
                       {item}
                     </li>
                   ))}
@@ -641,9 +641,9 @@ const Home: React.FC = () => {
                     fontWeight: '600',
                     textDecoration: 'none',
                     fontSize: '0.9rem'
-                  }}>Learn More →</Link>
+                  }}>Learn More <FiArrowRight style={{fontSize: '0.8rem'}} /></Link>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                    <span style={{ color: '#FFD700', fontSize: '0.8rem' }}>★★★★★</span>
+                    <span style={{ color: '#FFD700', fontSize: '0.8rem' }}><FiStar style={{fontSize: '0.8rem'}} /><FiStar style={{fontSize: '0.8rem'}} /><FiStar style={{fontSize: '0.8rem'}} /><FiStar style={{fontSize: '0.8rem'}} /><FiStar style={{fontSize: '0.8rem'}} /></span>
                     <span style={{ fontSize: '0.75rem', color: 'var(--gray-600)' }}>4.8/5</span>
                   </div>
                 </div>
@@ -706,7 +706,7 @@ const Home: React.FC = () => {
               {[
                 { icon: 'T', title: 'Advanced Technology', desc: 'Latest eco-friendly treatments, thermal imaging detection, and smart monitoring systems for superior results.' },
                 { icon: 'E', title: 'Certified Experts', desc: 'BPCA trained and certified professionals with continuous education and 16+ years of London experience.' },
-                { icon: '✓', title: 'Eco-Friendly Methods', desc: 'Environmentally responsible treatments that are safe for your family, pets, and the London ecosystem.' },
+                { icon: 'E', title: 'Eco-Friendly Methods', desc: 'Environmentally responsible treatments that are safe for your family, pets, and the London ecosystem.' },
                 { icon: 'G', title: 'Guaranteed Results', desc: '100% satisfaction guarantee with free re-treatments and comprehensive 6-month warranties.' },
                 { icon: 'R', title: 'Rapid Response', desc: 'Emergency service with same-day response across all London boroughs within 2 hours.' },
                 { icon: 'D', title: 'Digital Reporting', desc: 'Advanced digital tracking, detailed reports, and real-time updates via our customer portal.' }
@@ -936,7 +936,7 @@ const Home: React.FC = () => {
                         fontWeight: '600',
                         textDecoration: 'none',
                         fontSize: '0.8rem'
-                      }}>Learn More →</Link>
+                      }}>Learn More <FiArrowRight style={{fontSize: '0.8rem'}} /></Link>
                       <span style={{
                         background: `${pest.color}15`,
                         color: pest.color,
@@ -1046,7 +1046,7 @@ const Home: React.FC = () => {
                             alignItems: 'center',
                             justifyContent: 'center',
                             minWidth: '16px'
-                          }}>✓</span>
+                          }}><FiCheck style={{fontSize: '0.8rem'}} /></span>
                           {area}
                         </div>
                       ))}
@@ -1074,7 +1074,7 @@ const Home: React.FC = () => {
                             alignItems: 'center',
                             justifyContent: 'center',
                             minWidth: '16px'
-                          }}>✓</span>
+                          }}><FiCheck style={{fontSize: '0.8rem'}} /></span>
                           {area}
                         </div>
                       ))}
@@ -1230,29 +1230,70 @@ const Home: React.FC = () => {
                 gap: '1rem',
                 margin: '2rem 0'
               }}>
-                {[
-                  { icon: <FiZap />, text: 'Same-Day Service' },
-                  { icon: <FiPhone />, text: 'Free Quotes & Inspections' },
-                  { icon: <FiCheck />, text: 'Guaranteed Results' },
-                  { icon: <FiRecycle />, text: 'Eco-Friendly Methods' }
-                ].map((feature, index) => (
-                  <div key={index} style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: '0.5rem',
-                    background: 'rgba(255, 255, 255, 0.1)',
-                    padding: '1rem',
-                    borderRadius: '10px',
-                    backdropFilter: 'blur(10px)',
-                    border: '1px solid rgba(255, 255, 255, 0.2)',
-                    fontSize: '0.85rem',
-                    fontWeight: '600'
-                  }}>
-                    <span style={{ fontSize: '1.1rem', fontWeight: 'bold', display: 'flex' }}>{feature.icon}</span>
-                    <span>{feature.text}</span>
-                  </div>
-                ))}
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.5rem',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  padding: '1rem',
+                  borderRadius: '10px',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  fontSize: '0.85rem',
+                  fontWeight: '600'
+                }}>
+                  <FiZap style={{ fontSize: '1.1rem' }} />
+                  <span>Same-Day Service</span>
+                </div>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.5rem',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  padding: '1rem',
+                  borderRadius: '10px',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  fontSize: '0.85rem',
+                  fontWeight: '600'
+                }}>
+                  <FiPhone style={{ fontSize: '1.1rem' }} />
+                  <span>Free Quotes & Inspections</span>
+                </div>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.5rem',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  padding: '1rem',
+                  borderRadius: '10px',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  fontSize: '0.85rem',
+                  fontWeight: '600'
+                }}>
+                  <FiCheck style={{ fontSize: '1.1rem' }} />
+                  <span>Guaranteed Results</span>
+                </div>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.5rem',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  padding: '1rem',
+                  borderRadius: '10px',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  fontSize: '0.85rem',
+                  fontWeight: '600'
+                }}>
+                  <FiRecycle style={{ fontSize: '1.1rem' }} />
+                  <span>Eco-Friendly Methods</span>
+                </div>
               </div>
               
               <div style={{
@@ -1331,7 +1372,7 @@ const Home: React.FC = () => {
                   color: 'white',
                   fontWeight: '600',
                   fontSize: '0.85rem'
-                }}>✓ {org}</div>
+                }}><FiCheck style={{fontSize: '0.8rem'}} /> {org}</div>
               ))}
             </div>
           </div>
