@@ -14,6 +14,9 @@ import PestDetail from './pages/PestDetail';
 import ServiceAreas from './pages/ServiceAreas';
 import ServiceAreaDetail from './pages/ServiceAreaDetail';
 import Services from './pages/Services';
+import ResidentialServices from './pages/ResidentialServices';
+import CommercialServices from './pages/CommercialServices';
+import RestaurantServices from './pages/RestaurantServices';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Emergency from './pages/Emergency';
@@ -30,6 +33,9 @@ function App() {
             
             {/* Services */}
             <Route path="/services" element={<Services />} />
+            <Route path="/services/residential" element={<ResidentialServices />} />
+            <Route path="/services/commercial" element={<CommercialServices />} />
+            <Route path="/services/restaurants" element={<RestaurantServices />} />
             <Route path="/emergency" element={<Emergency />} />
             
             {/* Pest Library */}
