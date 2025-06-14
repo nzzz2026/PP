@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import heroImage from '../hero_image.jpeg';
 
 const Home: React.FC = () => {
   return (
@@ -7,10 +8,14 @@ const Home: React.FC = () => {
       <main style={{ paddingTop: '80px' }}>
         {/* Hero Section */}
         <section style={{
-          background: 'linear-gradient(135deg, rgba(248, 250, 252, 0.95) 0%, rgba(241, 245, 249, 0.9) 100%)',
-          padding: '80px 0',
+          background: `linear-gradient(135deg, rgba(26, 36, 47, 0.85) 0%, rgba(15, 118, 110, 0.75) 100%), url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          padding: '120px 0',
           position: 'relative',
-          overflow: 'hidden'
+          overflow: 'hidden',
+          color: 'white'
         }}>
           <div style={{
             position: 'absolute',
@@ -18,8 +23,8 @@ const Home: React.FC = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundImage: 'url("data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><defs><pattern id=\'dots\' width=\'20\' height=\'20\' patternUnits=\'userSpaceOnUse\'><circle cx=\'10\' cy=\'10\' r=\'1.5\' fill=\'rgba(15,118,110,0.1)\'/></pattern></defs><rect width=\'100\' height=\'100\' fill=\'url(%23dots)\'/></svg>")',
-            opacity: 0.4
+            background: 'rgba(0, 0, 0, 0.3)',
+            zIndex: 1
           }}></div>
           
           <div className="container" style={{ position: 'relative', zIndex: 10, textAlign: 'center', maxWidth: '900px', margin: '0 auto', padding: '0 24px' }}>
@@ -27,16 +32,17 @@ const Home: React.FC = () => {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '0.5rem',
-              background: 'rgba(15, 118, 110, 0.1)',
-              border: '1px solid rgba(15, 118, 110, 0.2)',
-              padding: '6px 16px',
+              background: 'rgba(16, 185, 129, 0.2)',
+              border: '1px solid rgba(16, 185, 129, 0.4)',
+              padding: '8px 20px',
               borderRadius: '25px',
-              fontSize: '0.8rem',
+              fontSize: '0.9rem',
               fontWeight: '600',
               marginBottom: '1.5rem',
-              color: 'var(--forest)'
+              color: 'white',
+              backdropFilter: 'blur(10px)'
             }}>
-              <span>🏆</span>
+              <span style={{ color: 'var(--lime)' }}>✓</span>
               <span>London's #1 Rated Pest Control</span>
             </div>
             
@@ -45,25 +51,25 @@ const Home: React.FC = () => {
               fontWeight: '800',
               lineHeight: 1.1,
               marginBottom: '1rem',
-              color: 'var(--charcoal)',
-              letterSpacing: '-0.02em'
+              color: 'white',
+              letterSpacing: '-0.02em',
+              textShadow: '2px 2px 20px rgba(0, 0, 0, 0.5)'
             }}>
               Say Goodbye to<br/>
               <span style={{
-                background: 'linear-gradient(135deg, #0F766E 0%, #0891B2 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text'
+                color: 'var(--lime)',
+                textShadow: '2px 2px 20px rgba(0, 0, 0, 0.5)'
               }}>Unwanted Guests</span>
             </h1>
             
             <p style={{
-              fontSize: '1.1rem',
-              color: 'var(--gray-600)',
+              fontSize: '1.2rem',
+              color: 'rgba(255, 255, 255, 0.9)',
               marginBottom: '2rem',
               lineHeight: 1.6,
               maxWidth: '600px',
-              margin: '0 auto 2rem'
+              margin: '0 auto 2rem',
+              textShadow: '1px 1px 10px rgba(0, 0, 0, 0.3)'
             }}>
               Professional pest control that actually works. Same-day service across London.
             </p>
@@ -71,64 +77,122 @@ const Home: React.FC = () => {
             {/* Trust Badges */}
             <div style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
               gap: '1rem',
               marginBottom: '2rem',
-              maxWidth: '400px',
+              maxWidth: '600px',
               margin: '0 auto 2rem'
             }}>
               <div style={{
-                background: 'white',
+                background: 'rgba(255, 255, 255, 0.1)',
+                backdropFilter: 'blur(10px)',
                 padding: '12px 16px',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '8px',
                 borderRadius: '12px',
-                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.05)',
-                border: '1px solid var(--gray-200)'
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                transition: 'all 0.3s ease'
               }}>
                 <div style={{
-                  width: '28px',
-                  height: '28px',
-                  background: 'var(--forest)',
+                  width: '24px',
+                  height: '24px',
+                  background: 'var(--lime)',
                   color: 'white',
-                  borderRadius: '6px',
+                  borderRadius: '50%',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   fontSize: '0.8rem',
                   fontWeight: 'bold'
-                }}>B</div>
+                }}>✓</div>
                 <div>
-                  <div style={{ fontWeight: '700', fontSize: '0.8rem' }}>BPCA Certified</div>
-                  <div style={{ fontSize: '0.65rem', color: 'var(--gray-500)' }}>Professional Standards</div>
+                  <div style={{ fontWeight: '700', fontSize: '0.8rem', color: 'white' }}>Since 2008</div>
+                  <div style={{ fontSize: '0.65rem', color: 'rgba(255, 255, 255, 0.7)' }}>16+ Years Experience</div>
                 </div>
               </div>
               <div style={{
-                background: 'white',
+                background: 'rgba(255, 255, 255, 0.1)',
+                backdropFilter: 'blur(10px)',
                 padding: '12px 16px',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '8px',
                 borderRadius: '12px',
-                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.05)',
-                border: '1px solid var(--gray-200)'
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                transition: 'all 0.3s ease'
               }}>
                 <div style={{
-                  width: '28px',
-                  height: '28px',
-                  background: '#FFD700',
+                  width: '24px',
+                  height: '24px',
+                  background: 'var(--lime)',
                   color: 'white',
-                  borderRadius: '6px',
+                  borderRadius: '50%',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   fontSize: '0.8rem',
                   fontWeight: 'bold'
-                }}>★</div>
+                }}>✓</div>
                 <div>
-                  <div style={{ fontWeight: '700', fontSize: '0.8rem' }}>4.9/5 Rating</div>
-                  <div style={{ fontSize: '0.65rem', color: 'var(--gray-500)' }}>487+ Reviews</div>
+                  <div style={{ fontWeight: '700', fontSize: '0.8rem', color: 'white' }}>BPCA Certified</div>
+                  <div style={{ fontSize: '0.65rem', color: 'rgba(255, 255, 255, 0.7)' }}>Professional Standards</div>
+                </div>
+              </div>
+              <div style={{
+                background: 'rgba(255, 255, 255, 0.1)',
+                backdropFilter: 'blur(10px)',
+                padding: '12px 16px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                borderRadius: '12px',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                transition: 'all 0.3s ease'
+              }}>
+                <div style={{
+                  width: '24px',
+                  height: '24px',
+                  background: 'var(--lime)',
+                  color: 'white',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '0.8rem',
+                  fontWeight: 'bold'
+                }}>✓</div>
+                <div>
+                  <div style={{ fontWeight: '700', fontSize: '0.8rem', color: 'white' }}>Fully Insured</div>
+                  <div style={{ fontSize: '0.65rem', color: 'rgba(255, 255, 255, 0.7)' }}>£2M Public Liability</div>
+                </div>
+              </div>
+              <div style={{
+                background: 'rgba(255, 255, 255, 0.1)',
+                backdropFilter: 'blur(10px)',
+                padding: '12px 16px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                borderRadius: '12px',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                transition: 'all 0.3s ease'
+              }}>
+                <div style={{
+                  width: '24px',
+                  height: '24px',
+                  background: 'var(--lime)',
+                  color: 'white',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '0.8rem',
+                  fontWeight: 'bold'
+                }}>✓</div>
+                <div>
+                  <div style={{ fontWeight: '700', fontSize: '0.8rem', color: 'white' }}>4.9/5 Rating</div>
+                  <div style={{ fontSize: '0.65rem', color: 'rgba(255, 255, 255, 0.7)' }}>487+ Reviews</div>
                 </div>
               </div>
             </div>
@@ -139,34 +203,35 @@ const Home: React.FC = () => {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '0.5rem',
-                padding: '14px 28px',
-                fontSize: '1rem',
-                fontWeight: '600',
-                borderRadius: '10px',
-                background: 'var(--forest)',
+                padding: '16px 32px',
+                fontSize: '1.1rem',
+                fontWeight: '700',
+                borderRadius: '12px',
+                background: 'var(--lime)',
                 color: 'white',
                 textDecoration: 'none',
                 transition: 'all 0.3s ease',
-                boxShadow: '0 4px 20px rgba(15, 118, 110, 0.2)'
+                boxShadow: '0 8px 30px rgba(16, 185, 129, 0.4)',
+                textShadow: 'none'
               }}>
-                <span>📞</span>
                 <span>Call Now: 0800-772-3999</span>
               </a>
               <Link to="/contact" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '0.5rem',
-                padding: '14px 28px',
-                fontSize: '1rem',
-                fontWeight: '600',
-                borderRadius: '10px',
-                background: 'transparent',
-                color: 'var(--forest)',
-                border: '2px solid var(--forest)',
+                padding: '16px 32px',
+                fontSize: '1.1rem',
+                fontWeight: '700',
+                borderRadius: '12px',
+                background: 'rgba(255, 255, 255, 0.1)',
+                color: 'white',
+                border: '2px solid rgba(255, 255, 255, 0.8)',
                 textDecoration: 'none',
-                transition: 'all 0.3s ease'
+                transition: 'all 0.3s ease',
+                backdropFilter: 'blur(10px)',
+                textShadow: 'none'
               }}>
-                <span>📅</span>
                 <span>Free Inspection</span>
               </Link>
             </div>
