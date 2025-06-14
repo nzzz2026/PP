@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Header.css';
+import PPLLogoWhite from '../PPL White.svg';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,8 +22,9 @@ const Header: React.FC = () => {
         <div className="header-content">
           {/* Logo */}
           <div className="logo-section">
-            <div className="logo-icon animate-pulse">🛡️</div>
-            <Link to="/" className="logo-text">Pest Pro</Link>
+            <Link to="/" className="logo-link">
+              <img src={PPLLogoWhite} alt="Pest Pro London" className="logo-image" />
+            </Link>
           </div>
           
           {/* Navigation */}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PPLLogoGreen from '../PPL Logo Green.svg';
 
 const Footer: React.FC = () => {
   return (
@@ -8,18 +9,16 @@ const Footer: React.FC = () => {
         <div className="footer-grid" style={{display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1.5fr', gap: '4rem', marginBottom: '4rem'}}>
           {/* Company Info */}
           <div>
-            <div className="footer-logo" style={{display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem'}}>
-              <div className="footer-logo-icon" style={{
-                width: '60px', 
-                height: '60px', 
-                background: 'linear-gradient(135deg, var(--lime) 0%, var(--lime-dark) 100%)', 
-                borderRadius: '50%', 
-                display: 'flex', 
-                alignItems: 'center', 
-                justifyContent: 'center', 
-                fontSize: '2rem'
-              }}>🛡️</div>
-              <div className="footer-logo-text" style={{fontSize: '1.5rem', fontWeight: 800}}>Pest Defenders</div>
+            <div className="footer-logo" style={{display: 'flex', alignItems: 'center', marginBottom: '2rem'}}>
+              <img 
+                src={PPLLogoGreen} 
+                alt="Pest Pro London" 
+                style={{
+                  height: '80px',
+                  width: 'auto',
+                  objectFit: 'contain'
+                }} 
+              />
             </div>
             <p className="footer-description" style={{color: 'rgba(255, 255, 255, 0.8)', lineHeight: 1.6, marginBottom: '2rem'}}>
               London's most trusted pest control experts since 2008. Professional, reliable, and guaranteed results with eco-friendly methods. BPCA certified and fully insured for your peace of mind.
@@ -122,7 +121,7 @@ const Footer: React.FC = () => {
               }}>✉️</div>
               <div className="contact-info">
                 <h5 style={{color: 'white', fontWeight: 700, marginBottom: '0.25rem'}}>Email Support</h5>
-                <p style={{color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.875rem'}}>info@pestdefenderslondon.co.uk</p>
+                <p style={{color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.875rem'}}>info@pestprolondon.co.uk</p>
                 <p style={{fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.7)'}}>Response within 2 hours</p>
               </div>
             </div>
@@ -140,7 +139,7 @@ const Footer: React.FC = () => {
           gap: '2rem'
         }}>
           <p style={{color: 'rgba(255, 255, 255, 0.6)', fontSize: '0.875rem'}}>
-            © 2024 Pest Defenders London. All rights reserved. | BPCA Member | Fully Insured | Environmental Agency Registered
+            © 2024 Pest Pro London. All rights reserved. | BPCA Member | Fully Insured | Environmental Agency Registered
           </p>
           <div className="footer-links" style={{display: 'flex', gap: '3rem', flexWrap: 'wrap'}}>
             <a href="#" style={{color: 'rgba(255, 255, 255, 0.6)', fontSize: '0.875rem', transition: 'color 0.3s ease'}}>Privacy Policy</a>
