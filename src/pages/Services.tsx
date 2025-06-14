@@ -172,13 +172,6 @@ const Services: React.FC = () => {
         {/* Service Categories - Enhanced */}
         <section className="services-section">
           <div className="container">
-            <div className="section-header">
-              <h2>Specialized Service Categories</h2>
-              <div className="section-divider"></div>
-              <p className="section-subtitle">
-                Choose your service type for tailored pest control solutions that address your specific environment and challenges.
-              </p>
-            </div>
 
             <div>
               {serviceCategories.map((category, index) => (
