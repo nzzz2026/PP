@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiHome, FiBuilding, FiCoffee, FiCheck, FiAlertTriangle, FiTarget, FiShield, FiAward, FiZap } from 'react-icons/fi';
+import { FiHome, FiCoffee, FiCheck, FiAlertTriangle, FiTarget, FiShield, FiAward, FiZap } from 'react-icons/fi';
+import { FaBuilding } from 'react-icons/fa';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -52,7 +53,7 @@ const Services: React.FC = () => {
       subtitle: 'Business Continuity Protection',
       description: 'Professional pest management that protects your business reputation with minimal disruption and full compliance documentation.',
       detailedDescription: 'Protecting London businesses from pest-related disruptions since 2010. Our commercial services ensure your operations continue smoothly while maintaining the highest standards of pest control.',
-      icon: <FiBuilding />,
+      icon: <FaBuilding />,
       primaryBenefit: 'Zero Business Disruption',
       keyFeatures: [
         'Discrete, unmarked service vehicles',

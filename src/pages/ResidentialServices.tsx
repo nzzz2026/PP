@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiHome, FiCheck, FiZap, FiPhone } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -81,21 +82,21 @@ const ResidentialServices: React.FC = () => {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🏠</span>
+                  <FiHome className="text-2xl text-green-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Family Safe Methods</h3>
                 <p className="text-gray-600">Child and pet-friendly treatments that keep your family safe while eliminating pests effectively.</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">⚡</span>
+                  <FiZap className="text-2xl text-green-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Rapid Response</h3>
                 <p className="text-gray-600">Same-day emergency service available with 2-4 hour response times for urgent pest situations.</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">✅</span>
+                  <FiCheck className="text-2xl text-green-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Guaranteed Results</h3>
                 <p className="text-gray-600">All residential treatments come with our satisfaction guarantee and follow-up support.</p>
@@ -116,7 +117,7 @@ const ResidentialServices: React.FC = () => {
                   <ul className="space-y-2 mb-4">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm">
-                        <span className="text-green-500 mr-2">✓</span>
+                        <FiCheck className="text-green-500 mr-2" />
                         {feature}
                       </li>
                     ))}

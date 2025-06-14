@@ -1,4 +1,7 @@
 import React from 'react';
+import { FiCoffee, FiCheck, FiShield, FiAlertTriangle, FiZap, FiClock, FiFileText } from 'react-icons/fi';
+import { FaBug } from 'react-icons/fa';
+import { GiRat, GiFly, GiAnt } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -94,15 +97,15 @@ const RestaurantServices: React.FC = () => {
               </p>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="flex items-center justify-center">
-                  <span className="text-3xl mr-3">🛡️</span>
+                  <FiShield className="text-3xl mr-3 text-red-600" />
                   <span className="font-semibold">Food-Safe Only</span>
                 </div>
                 <div className="flex items-center justify-center">
-                  <span className="text-3xl mr-3">⚡</span>
+                  <FiZap className="text-3xl mr-3 text-red-600" />
                   <span className="font-semibold">Emergency Response</span>
                 </div>
                 <div className="flex items-center justify-center">
-                  <span className="text-3xl mr-3">✅</span>
+                  <FiCheck className="text-3xl mr-3 text-green-600" />
                   <span className="font-semibold">Compliance Guaranteed</span>
                 </div>
               </div>
@@ -117,28 +120,28 @@ const RestaurantServices: React.FC = () => {
             <div className="grid md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🍽️</span>
+                  <FiCoffee className="text-2xl text-red-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Food Service Experts</h3>
                 <p className="text-gray-600">Specialized knowledge of restaurant pest challenges and solutions.</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🕐</span>
+                  <FiClock className="text-2xl text-red-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Flexible Hours</h3>
                 <p className="text-gray-600">Pre-opening and post-closing treatments to avoid disruption.</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">📋</span>
+                  <FiFileText className="text-2xl text-red-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Inspection Ready</h3>
                 <p className="text-gray-600">Full documentation and compliance for health inspections.</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🚨</span>
+                  <FiAlertTriangle className="text-2xl text-red-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Emergency Service</h3>
                 <p className="text-gray-600">Same-day response for urgent pest situations.</p>
@@ -159,7 +162,7 @@ const RestaurantServices: React.FC = () => {
                   <ul className="space-y-2 mb-4">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm">
-                        <span className="text-red-500 mr-2">✓</span>
+                        <FiCheck className="text-red-500 mr-2" />
                         {feature}
                       </li>
                     ))}
@@ -189,7 +192,7 @@ const RestaurantServices: React.FC = () => {
                 <ul className="space-y-3">
                   {complianceFeatures.map((feature, index) => (
                     <li key={index} className="flex items-center">
-                      <span className="text-green-500 mr-3">✓</span>
+                      <FiCheck className="text-green-500 mr-3" />
                       {feature}
                     </li>
                   ))}
@@ -199,28 +202,28 @@ const RestaurantServices: React.FC = () => {
                 <h3 className="text-2xl font-semibold mb-6">Common Restaurant Pests</h3>
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <span className="text-2xl mr-3">🪳</span>
+                    <FaBug className="text-2xl mr-3 text-gray-700" />
                     <div>
                       <h4 className="font-semibold">Cockroaches</h4>
                       <p className="text-sm text-gray-600">Kitchen and food prep areas</p>
                     </div>
                   </div>
                   <div className="flex items-center">
-                    <span className="text-2xl mr-3">🐀</span>
+                    <GiRat className="text-2xl mr-3 text-gray-700" />
                     <div>
                       <h4 className="font-semibold">Rodents</h4>
                       <p className="text-sm text-gray-600">Storage and dining areas</p>
                     </div>
                   </div>
                   <div className="flex items-center">
-                    <span className="text-2xl mr-3">🪰</span>
+                    <GiFly className="text-2xl mr-3 text-gray-700" />
                     <div>
                       <h4 className="font-semibold">Flies</h4>
                       <p className="text-sm text-gray-600">Kitchen and waste areas</p>
                     </div>
                   </div>
                   <div className="flex items-center">
-                    <span className="text-2xl mr-3">🐜</span>
+                    <GiAnt className="text-2xl mr-3 text-gray-700" />
                     <div>
                       <h4 className="font-semibold">Ants</h4>
                       <p className="text-sm text-gray-600">Food storage and prep areas</p>

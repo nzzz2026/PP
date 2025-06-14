@@ -683,7 +683,7 @@ const Home: React.FC = () => {
                 marginBottom: '1rem',
                 fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
                 fontWeight: '700'
-              }}>Why London Trusts Pest Defenders</h2>
+              }}>Why London Trusts Pest Pro</h2>
               <div style={{
                 width: '80px',
                 height: '3px',
@@ -704,12 +704,10 @@ const Home: React.FC = () => {
               gap: '2rem'
             }}>
               {[
-                { icon: 'T', title: 'Advanced Technology', desc: 'Latest eco-friendly treatments, thermal imaging detection, and smart monitoring systems for superior results.' },
                 { icon: 'E', title: 'Certified Experts', desc: 'BPCA trained and certified professionals with continuous education and 16+ years of London experience.' },
                 { icon: 'E', title: 'Eco-Friendly Methods', desc: 'Environmentally responsible treatments that are safe for your family, pets, and the London ecosystem.' },
                 { icon: 'G', title: 'Guaranteed Results', desc: '100% satisfaction guarantee with free re-treatments and comprehensive 6-month warranties.' },
-                { icon: 'R', title: 'Rapid Response', desc: 'Emergency service with same-day response across all London boroughs within 2 hours.' },
-                { icon: 'D', title: 'Digital Reporting', desc: 'Advanced digital tracking, detailed reports, and real-time updates via our customer portal.' }
+                { icon: 'R', title: 'Rapid Response', desc: 'Emergency service with same-day response across all London boroughs within 2 hours.' }
               ].map((item, index) => (
                 <div key={index} style={{
                   textAlign: 'center',
@@ -717,7 +715,23 @@ const Home: React.FC = () => {
                   background: 'rgba(255, 255, 255, 0.05)',
                   borderRadius: '12px',
                   backdropFilter: 'blur(10px)',
-                  border: '1px solid rgba(255, 255, 255, 0.1)'
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                  cursor: 'pointer',
+                  position: 'relative',
+                  overflow: 'hidden'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-8px) scale(1.02)';
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.12)';
+                  e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(15, 118, 110, 0.4)';
+                  e.currentTarget.style.border = '1px solid rgba(15, 118, 110, 0.4)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+                  e.currentTarget.style.boxShadow = 'none';
+                  e.currentTarget.style.border = '1px solid rgba(255, 255, 255, 0.1)';
                 }}>
                   <div style={{
                     width: '50px',

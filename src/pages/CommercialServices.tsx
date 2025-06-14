@@ -1,4 +1,6 @@
 import React from 'react';
+import { FiCheck, FiShield, FiBarChart, FiLock, FiClock, FiFileText } from 'react-icons/fi';
+import { FaFlask, FaBuilding } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -44,14 +46,14 @@ const CommercialServices: React.FC = () => {
   ];
 
   const industries = [
-    { name: 'Office Buildings', icon: '🏢' },
-    { name: 'Retail Stores', icon: '🛍️' },
-    { name: 'Warehouses', icon: '🏭' },
-    { name: 'Healthcare', icon: '🏥' },
-    { name: 'Education', icon: '🎓' },
-    { name: 'Manufacturing', icon: '⚙️' },
-    { name: 'Hotels', icon: '🏨' },
-    { name: 'Gyms & Spas', icon: '💪' }
+    { name: 'Office Buildings', icon: FaBuilding },
+    { name: 'Retail Stores', icon: FaBuilding },
+    { name: 'Warehouses', icon: FaBuilding },
+    { name: 'Healthcare', icon: FaBuilding },
+    { name: 'Education', icon: FaBuilding },
+    { name: 'Manufacturing', icon: FaBuilding },
+    { name: 'Hotels', icon: FaBuilding },
+    { name: 'Gyms & Spas', icon: FaBuilding }
   ];
 
   return (
@@ -92,28 +94,28 @@ const CommercialServices: React.FC = () => {
             <div className="grid md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">📋</span>
+                  <FiFileText className="text-2xl text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Compliance Ready</h3>
                 <p className="text-gray-600">Full documentation and reporting for health inspections and audits.</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🔒</span>
+                  <FiLock className="text-2xl text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Discreet Service</h3>
                 <p className="text-gray-600">Professional, unmarked vehicles and discrete treatment methods.</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">⏰</span>
+                  <FiClock className="text-2xl text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Flexible Scheduling</h3>
                 <p className="text-gray-600">Out-of-hours service available to minimize business disruption.</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🛡️</span>
+                  <FiShield className="text-2xl text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Guaranteed Results</h3>
                 <p className="text-gray-600">Service level agreements and satisfaction guarantees for peace of mind.</p>
@@ -129,7 +131,7 @@ const CommercialServices: React.FC = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {industries.map((industry, index) => (
                 <div key={index} className="text-center p-4 border rounded-lg hover:shadow-md transition-shadow">
-                  <div className="text-3xl mb-2">{industry.icon}</div>
+                  <div className="text-3xl mb-2 flex justify-center"><industry.icon className="text-blue-600" /></div>
                   <h3 className="font-semibold">{industry.name}</h3>
                 </div>
               ))}
@@ -149,7 +151,7 @@ const CommercialServices: React.FC = () => {
                   <ul className="space-y-2 mb-4">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm">
-                        <span className="text-blue-500 mr-2">✓</span>
+                        <FiCheck className="text-blue-500 mr-2" />
                         {feature}
                       </li>
                     ))}
@@ -175,17 +177,17 @@ const CommercialServices: React.FC = () => {
             <h2 className="text-3xl font-bold text-center mb-12">Compliance & Standards</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg text-center">
-                <div className="text-3xl mb-4">🏛️</div>
+                <div className="text-3xl mb-4 flex justify-center"><FaBuilding className="text-blue-600" /></div>
                 <h3 className="text-xl font-semibold mb-2">Government Compliance</h3>
                 <p className="text-gray-600">Full compliance with local council requirements and health department standards.</p>
               </div>
               <div className="bg-white p-6 rounded-lg text-center">
-                <div className="text-3xl mb-4">🔬</div>
+                <div className="text-3xl mb-4 flex justify-center"><FaFlask className="text-blue-600" /></div>
                 <h3 className="text-xl font-semibold mb-2">HACCP Support</h3>
                 <p className="text-gray-600">Integrated pest management plans supporting your HACCP compliance.</p>
               </div>
               <div className="bg-white p-6 rounded-lg text-center">
-                <div className="text-3xl mb-4">📊</div>
+                <div className="text-3xl mb-4 flex justify-center"><FiBarChart className="text-blue-600" /></div>
                 <h3 className="text-xl font-semibold mb-2">Detailed Reports</h3>
                 <p className="text-gray-600">Comprehensive treatment reports and monitoring data for audit purposes.</p>
               </div>

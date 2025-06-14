@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiHome, FiBuilding } from 'react-icons/fi';
+import { FiHome } from 'react-icons/fi';
+import { FaBuilding } from 'react-icons/fa';
 import { pestCategories } from '../data/pests';
 
 const PestLibrary: React.FC = () => {
@@ -285,7 +286,7 @@ const PestLibrary: React.FC = () => {
                 justifyContent: 'center',
                 margin: '0 auto 1.5rem',
                 fontSize: '1.5rem'
-              }}><FiBuilding /></div>
+              }}><FaBuilding /></div>
               <h3 style={{
                 fontSize: '1.3rem',
                 fontWeight: '700',
