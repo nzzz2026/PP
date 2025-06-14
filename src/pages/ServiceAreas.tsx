@@ -74,14 +74,11 @@ const ServiceAreas: React.FC = () => {
                       }}
                     >
                       <div style={{
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'flex-start',
                         marginBottom: 'clamp(0.75rem, 1.5vw, 1rem)'
                       }}>
                         <h3 style={{
                           color: 'var(--forest)',
-                          margin: 0,
+                          margin: '0 0 0.5rem 0',
                           fontSize: 'clamp(1.1rem, 2.2vw, 1.25rem)',
                           fontWeight: '700',
                           lineHeight: 1.2
@@ -95,7 +92,9 @@ const ServiceAreas: React.FC = () => {
                           borderRadius: '12px',
                           fontSize: '0.75rem',
                           fontWeight: '600',
-                          whiteSpace: 'nowrap'
+                          display: 'inline-block',
+                          wordBreak: 'break-word',
+                          maxWidth: '100%'
                         }}>
                           {area.postcode}
                         </span>
