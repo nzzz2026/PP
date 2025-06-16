@@ -63,51 +63,13 @@
 .nav-menu a {
     color: white;
     font-weight: 500;
-    position: relative;
     padding: 0.75rem 1rem;
     font-size: 0.9rem;
     white-space: nowrap;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.nav-menu a:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(143, 229, 72, 0.2), transparent);
-    transition: left 0.6s ease;
-}
-
-.nav-menu a:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--lime) 0%, var(--lime-light) 100%);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateX(-50%);
-    border-radius: 2px;
 }
 
 .nav-menu a:hover {
     color: var(--lime);
-    background: rgba(143, 229, 72, 0.1);
-    transform: translateY(-2px);
-}
-
-.nav-menu a:hover:before {
-    left: 100%;
-}
-
-.nav-menu a:hover:after {
-    width: 80%;
 }
 
 /* Pest Library Dropdown */
@@ -343,30 +305,6 @@
     gap: 0.5rem;
     white-space: nowrap;
     padding: 0.5rem 1rem;
-    border-radius: 8px;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-}
-
-.phone-number:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(143, 229, 72, 0.1), transparent);
-    transition: left 0.5s ease;
-}
-
-.phone-number:hover {
-    background: rgba(143, 229, 72, 0.1);
-    transform: translateY(-2px) scale(1.05);
-}
-
-.phone-number:hover:before {
-    left: 100%;
 }
 
 .phone-text {
@@ -374,38 +312,13 @@
 }
 
 .emergency-btn {
-    background: linear-gradient(135deg, var(--lime) 0%, var(--lime-dark) 100%);
+    background: var(--lime);
     color: white;
     padding: 12px 24px;
     border-radius: 50px;
     font-weight: 700;
     font-size: 0.8rem;
-    box-shadow: 0 4px 20px rgba(34, 197, 94, 0.3);
     white-space: nowrap;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-}
-
-.emergency-btn:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: left 0.5s ease;
-}
-
-.emergency-btn:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 12px 40px rgba(34, 197, 94, 0.5);
-    background: linear-gradient(135deg, var(--lime-light) 0%, var(--lime) 100%);
-}
-
-.emergency-btn:hover:before {
-    left: 100%;
 }
 
 /* Mobile Menu Button */
