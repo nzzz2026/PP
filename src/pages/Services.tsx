@@ -1,18 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FiHome, FiCoffee, FiCheck, FiAlertTriangle, FiTarget, FiShield, FiAward, FiZap } from 'react-icons/fi';
-import { FaBuilding } from 'react-icons/fa';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const Services: React.FC = () => {
+  // Add keyframe animations for hero section
+  const keyframes = `
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  `;
+
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = keyframes;
+    document.head.appendChild(style);
+    return () => document.head.removeChild(style);
+  }, []);
+
   const serviceCategories = [
     {
       title: 'Residential Services',
       subtitle: 'Home & Family Protection',
       description: 'Comprehensive pest elimination for London homes using family-safe methods that protect what matters most.',
       detailedDescription: 'Our residential pest control services are specifically designed for London homes, ensuring your family\'s safety while effectively eliminating unwanted pests. We understand that your home is your sanctuary.',
-      icon: <FiHome />,
+      icon: null,
       primaryBenefit: 'Family-Safe Guaranteed',
       keyFeatures: [
         'Child & pet-safe treatments only',
@@ -53,7 +72,7 @@ const Services: React.FC = () => {
       subtitle: 'Business Continuity Protection',
       description: 'Professional pest management that protects your business reputation with minimal disruption and full compliance documentation.',
       detailedDescription: 'Protecting London businesses from pest-related disruptions since 2010. Our commercial services ensure your operations continue smoothly while maintaining the highest standards of pest control.',
-      icon: <FaBuilding />,
+      icon: null,
       primaryBenefit: 'Zero Business Disruption',
       keyFeatures: [
         'Discrete, unmarked service vehicles',
@@ -94,7 +113,7 @@ const Services: React.FC = () => {
       subtitle: 'Food Safety Excellence',
       description: 'Specialized food service pest control ensuring HACCP compliance and maintaining your establishment\'s reputation for cleanliness.',
       detailedDescription: 'London\'s restaurant industry trusts us to maintain the highest food safety standards. Our specialized treatments protect your reputation, ensure compliance, and keep your kitchen pest-free.',
-      icon: <FiCoffee />,
+      icon: null,
       primaryBenefit: 'HACCP Compliance Guaranteed',
       keyFeatures: [
         'Food-safe treatments exclusively',
@@ -133,15 +152,15 @@ const Services: React.FC = () => {
   ];
 
   const trustBadges = [
-    { name: 'FSA Approved', icon: <FiShield />, description: 'Food Standards Agency certified treatments' },
-    { name: 'BPCA Member', icon: <FiAward />, description: 'British Pest Control Association member' },
-    { name: 'Insured & Bonded', icon: <FiCheck />, description: '£2M public liability insurance' },
-    { name: 'HACCP Compliant', icon: <FiCheck />, description: 'Full HACCP compliance documentation' }
+    { name: 'FSA Approved', description: 'Food Standards Agency certified treatments' },
+    { name: 'BPCA Member', description: 'British Pest Control Association member' },
+    { name: 'Insured & Bonded', description: '£2M public liability insurance' },
+    { name: 'HACCP Compliant', description: 'Full HACCP compliance documentation' }
   ];
 
   return (
     <div style={{ minHeight: '100vh', background: 'white' }}>
-      <Header />
+      
       
       <main style={{ paddingTop: '80px' }}>
         {/* Hero Section */}
@@ -156,7 +175,8 @@ const Services: React.FC = () => {
               fontSize: 'clamp(2rem, 4vw, 3rem)',
               fontWeight: '800',
               marginBottom: '1rem',
-              color: 'white'
+              color: 'white',
+              animation: 'fadeInUp 1s ease-out 0.2s both'
             }}>
               Professional Pest Control Services
             </h1>
@@ -164,7 +184,8 @@ const Services: React.FC = () => {
               fontSize: '1.2rem',
               color: 'rgba(255, 255, 255, 0.8)',
               maxWidth: '600px',
-              margin: '0 auto'
+              margin: '0 auto',
+              animation: 'fadeInUp 1.2s ease-out 0.4s both'
             }}>
               Expert pest elimination for residential, commercial, and restaurant properties across London
             </p>
@@ -215,7 +236,7 @@ const Services: React.FC = () => {
                           <ul className="feature-list">
                             {category.keyFeatures.map((feature, featureIndex) => (
                               <li key={featureIndex} className="feature-item">
-                                <span className={`feature-icon ${category.color}`} style={{display: 'flex'}}><FiCheck /></span>
+                                <span className={`feature-icon ${category.color}`} style={{display: 'flex'}}></span>
                                 <span>{feature}</span>
                               </li>
                             ))}
@@ -228,7 +249,7 @@ const Services: React.FC = () => {
                           <ul className="feature-list">
                             {category.commonIssues.map((issue, issueIndex) => (
                               <li key={issueIndex} className="feature-item">
-                                <span className="issue-icon" style={{display: 'flex'}}><FiAlertTriangle /></span>
+                                <span className="issue-icon" style={{display: 'flex'}}></span>
                                 <span>{issue}</span>
                               </li>
                             ))}
@@ -314,7 +335,7 @@ const Services: React.FC = () => {
             <div className="stats-grid">
               <div className="stat-card">
                 <div className="stat-icon-wrapper green">
-                  <FiTarget />
+                  
                 </div>
                 <h3 className="stat-title">98% Success Rate</h3>
                 <p className="stat-description">Industry-leading elimination success rate with guaranteed follow-up service.</p>
@@ -322,7 +343,7 @@ const Services: React.FC = () => {
               
               <div className="stat-card">
                 <div className="stat-icon-wrapper blue">
-                  <FiZap />
+                  
                 </div>
                 <h3 className="stat-title">Emergency Response</h3>
                 <p className="stat-description">Same-day emergency service with 1-4 hour response times across London.</p>
@@ -330,7 +351,7 @@ const Services: React.FC = () => {
               
               <div className="stat-card">
                 <div className="stat-icon-wrapper red">
-                  <FiShield />
+                  
                 </div>
                 <h3 className="stat-title">Safety Certified</h3>
                 <p className="stat-description">Only FSA-approved, family-safe treatments with full insurance coverage.</p>
@@ -338,7 +359,6 @@ const Services: React.FC = () => {
               
               <div className="stat-card">
                 <div className="stat-icon-wrapper purple">
-                  <span>📋</span>
                 </div>
                 <h3 className="stat-title">Full Compliance</h3>
                 <p className="stat-description">Complete documentation for health inspections and regulatory compliance.</p>
@@ -366,7 +386,7 @@ const Services: React.FC = () => {
         </section>
       </main>
 
-      <Footer />
+      
     </div>
   );
 };

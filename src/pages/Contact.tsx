@@ -1,7 +1,27 @@
-import React, { useState } from 'react';
-import { FiCheck } from 'react-icons/fi';
+import React, { useState, useEffect } from 'react';
 
 const Contact: React.FC = () => {
+  // Add keyframe animations for hero section
+  const keyframes = `
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  `;
+
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = keyframes;
+    document.head.appendChild(style);
+    return () => document.head.removeChild(style);
+  }, []);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -39,7 +59,8 @@ const Contact: React.FC = () => {
             fontSize: 'clamp(2rem, 4vw, 3rem)',
             fontWeight: '800',
             marginBottom: '1rem',
-            color: 'white'
+            color: 'white',
+            animation: 'fadeInUp 1s ease-out 0.2s both'
           }}>
             Get Professional Pest Control
           </h1>
@@ -47,7 +68,8 @@ const Contact: React.FC = () => {
             fontSize: '1.2rem',
             color: 'rgba(255, 255, 255, 0.8)',
             maxWidth: '600px',
-            margin: '0 auto'
+            margin: '0 auto',
+            animation: 'fadeInUp 1.2s ease-out 0.4s both'
           }}>
             Contact our experts today for fast, effective pest control solutions across London
           </p>
@@ -107,7 +129,7 @@ const Contact: React.FC = () => {
                     }}>24</div>
                     <div>
                       <h3 style={{ color: 'var(--forest)', marginBottom: '0.25rem', fontSize: '1.2rem' }}>24/7 Emergency Line</h3>
-                      <p style={{ color: 'var(--gray-600)', fontSize: '1.1rem', fontWeight: '700' }}>0800-772-3999</p>
+                      <p style={{ color: 'var(--gray-600)', fontSize: '1.1rem', fontWeight: '700' }}>077 2704 9304</p>
                       <p style={{ color: 'var(--gray-500)', fontSize: '0.9rem' }}>Always available for urgent pest issues</p>
                     </div>
                   </div>
@@ -177,7 +199,7 @@ const Contact: React.FC = () => {
                         alignItems: 'center',
                         justifyContent: 'center',
                         fontSize: '0.8rem'
-                      }}><FiCheck /></span>
+                      }}></span>
                       {item}
                     </li>
                   ))}
@@ -227,13 +249,25 @@ const Contact: React.FC = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
+                      onFocus={(e) => {
+                        e.currentTarget.style.borderColor = 'var(--lime)';
+                        e.currentTarget.style.boxShadow = '0 0 0 3px rgba(16, 185, 129, 0.1), 0 8px 25px rgba(16, 185, 129, 0.15)';
+                        e.currentTarget.style.transform = 'translateY(-2px)';
+                      }}
+                      onBlur={(e) => {
+                        e.currentTarget.style.borderColor = 'var(--gray-200)';
+                        e.currentTarget.style.boxShadow = 'none';
+                        e.currentTarget.style.transform = 'translateY(0)';
+                      }}
                       style={{
                         width: '100%',
-                        padding: '12px 16px',
+                        padding: '14px 18px',
                         border: '2px solid var(--gray-200)',
-                        borderRadius: '8px',
+                        borderRadius: '12px',
                         fontSize: '1rem',
-                        transition: 'border-color 0.3s ease'
+                        transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                        background: 'rgba(248, 250, 252, 0.5)',
+                        outline: 'none'
                       }}
                       placeholder="Enter your full name"
                     />
@@ -255,12 +289,25 @@ const Contact: React.FC = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
+                        onFocus={(e) => {
+                          e.currentTarget.style.borderColor = 'var(--lime)';
+                          e.currentTarget.style.boxShadow = '0 0 0 3px rgba(16, 185, 129, 0.1), 0 8px 25px rgba(16, 185, 129, 0.15)';
+                          e.currentTarget.style.transform = 'translateY(-2px)';
+                        }}
+                        onBlur={(e) => {
+                          e.currentTarget.style.borderColor = 'var(--gray-200)';
+                          e.currentTarget.style.boxShadow = 'none';
+                          e.currentTarget.style.transform = 'translateY(0)';
+                        }}
                         style={{
                           width: '100%',
-                          padding: '12px 16px',
+                          padding: '14px 18px',
                           border: '2px solid var(--gray-200)',
-                          borderRadius: '8px',
-                          fontSize: '1rem'
+                          borderRadius: '12px',
+                          fontSize: '1rem',
+                          transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                          background: 'rgba(248, 250, 252, 0.5)',
+                          outline: 'none'
                         }}
                         placeholder="your@email.com"
                       />
@@ -280,12 +327,25 @@ const Contact: React.FC = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         required
+                        onFocus={(e) => {
+                          e.currentTarget.style.borderColor = 'var(--lime)';
+                          e.currentTarget.style.boxShadow = '0 0 0 3px rgba(16, 185, 129, 0.1), 0 8px 25px rgba(16, 185, 129, 0.15)';
+                          e.currentTarget.style.transform = 'translateY(-2px)';
+                        }}
+                        onBlur={(e) => {
+                          e.currentTarget.style.borderColor = 'var(--gray-200)';
+                          e.currentTarget.style.boxShadow = 'none';
+                          e.currentTarget.style.transform = 'translateY(0)';
+                        }}
                         style={{
                           width: '100%',
-                          padding: '12px 16px',
+                          padding: '14px 18px',
                           border: '2px solid var(--gray-200)',
-                          borderRadius: '8px',
-                          fontSize: '1rem'
+                          borderRadius: '12px',
+                          fontSize: '1rem',
+                          transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                          background: 'rgba(248, 250, 252, 0.5)',
+                          outline: 'none'
                         }}
                         placeholder="020 XXXX XXXX"
                       />
@@ -306,12 +366,25 @@ const Contact: React.FC = () => {
                       name="address"
                       value={formData.address}
                       onChange={handleChange}
+                      onFocus={(e) => {
+                        e.currentTarget.style.borderColor = 'var(--lime)';
+                        e.currentTarget.style.boxShadow = '0 0 0 3px rgba(16, 185, 129, 0.1), 0 8px 25px rgba(16, 185, 129, 0.15)';
+                        e.currentTarget.style.transform = 'translateY(-2px)';
+                      }}
+                      onBlur={(e) => {
+                        e.currentTarget.style.borderColor = 'var(--gray-200)';
+                        e.currentTarget.style.boxShadow = 'none';
+                        e.currentTarget.style.transform = 'translateY(0)';
+                      }}
                       style={{
                         width: '100%',
-                        padding: '12px 16px',
+                        padding: '14px 18px',
                         border: '2px solid var(--gray-200)',
-                        borderRadius: '8px',
-                        fontSize: '1rem'
+                        borderRadius: '12px',
+                        fontSize: '1rem',
+                        transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                        background: 'rgba(248, 250, 252, 0.5)',
+                        outline: 'none'
                       }}
                       placeholder="Street address, London postcode"
                     />
@@ -331,12 +404,31 @@ const Contact: React.FC = () => {
                         name="pestType"
                         value={formData.pestType}
                         onChange={handleChange}
+                        onFocus={(e) => {
+                          e.currentTarget.style.borderColor = 'var(--lime)';
+                          e.currentTarget.style.boxShadow = '0 0 0 3px rgba(16, 185, 129, 0.1), 0 8px 25px rgba(16, 185, 129, 0.15)';
+                          e.currentTarget.style.transform = 'translateY(-2px)';
+                        }}
+                        onBlur={(e) => {
+                          e.currentTarget.style.borderColor = 'var(--gray-200)';
+                          e.currentTarget.style.boxShadow = 'none';
+                          e.currentTarget.style.transform = 'translateY(0)';
+                        }}
                         style={{
                           width: '100%',
-                          padding: '12px 16px',
+                          padding: '14px 18px',
                           border: '2px solid var(--gray-200)',
-                          borderRadius: '8px',
-                          fontSize: '1rem'
+                          borderRadius: '12px',
+                          fontSize: '1rem',
+                          transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                          background: 'rgba(248, 250, 252, 0.5)',
+                          outline: 'none',
+                          appearance: 'none',
+                          backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e")`,
+                          backgroundPosition: 'right 12px center',
+                          backgroundRepeat: 'no-repeat',
+                          backgroundSize: '16px',
+                          paddingRight: '40px'
                         }}
                       >
                         <option value="">Select pest type</option>
@@ -363,12 +455,31 @@ const Contact: React.FC = () => {
                         name="urgency"
                         value={formData.urgency}
                         onChange={handleChange}
+                        onFocus={(e) => {
+                          e.currentTarget.style.borderColor = 'var(--lime)';
+                          e.currentTarget.style.boxShadow = '0 0 0 3px rgba(16, 185, 129, 0.1), 0 8px 25px rgba(16, 185, 129, 0.15)';
+                          e.currentTarget.style.transform = 'translateY(-2px)';
+                        }}
+                        onBlur={(e) => {
+                          e.currentTarget.style.borderColor = 'var(--gray-200)';
+                          e.currentTarget.style.boxShadow = 'none';
+                          e.currentTarget.style.transform = 'translateY(0)';
+                        }}
                         style={{
                           width: '100%',
-                          padding: '12px 16px',
+                          padding: '14px 18px',
                           border: '2px solid var(--gray-200)',
-                          borderRadius: '8px',
-                          fontSize: '1rem'
+                          borderRadius: '12px',
+                          fontSize: '1rem',
+                          transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                          background: 'rgba(248, 250, 252, 0.5)',
+                          outline: 'none',
+                          appearance: 'none',
+                          backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e")`,
+                          backgroundPosition: 'right 12px center',
+                          backgroundRepeat: 'no-repeat',
+                          backgroundSize: '16px',
+                          paddingRight: '40px'
                         }}
                       >
                         <option value="">Select urgency</option>
@@ -394,13 +505,27 @@ const Contact: React.FC = () => {
                       value={formData.message}
                       onChange={handleChange}
                       rows={4}
+                      onFocus={(e) => {
+                        e.currentTarget.style.borderColor = 'var(--lime)';
+                        e.currentTarget.style.boxShadow = '0 0 0 3px rgba(16, 185, 129, 0.1), 0 8px 25px rgba(16, 185, 129, 0.15)';
+                        e.currentTarget.style.transform = 'translateY(-2px)';
+                      }}
+                      onBlur={(e) => {
+                        e.currentTarget.style.borderColor = 'var(--gray-200)';
+                        e.currentTarget.style.boxShadow = 'none';
+                        e.currentTarget.style.transform = 'translateY(0)';
+                      }}
                       style={{
                         width: '100%',
-                        padding: '12px 16px',
+                        padding: '14px 18px',
                         border: '2px solid var(--gray-200)',
-                        borderRadius: '8px',
+                        borderRadius: '12px',
                         fontSize: '1rem',
-                        resize: 'vertical'
+                        resize: 'vertical',
+                        transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                        background: 'rgba(248, 250, 252, 0.5)',
+                        outline: 'none',
+                        minHeight: '120px'
                       }}
                       placeholder="Tell us about the pest problem, where you've seen them, how long it's been happening, etc."
                     ></textarea>
@@ -408,18 +533,30 @@ const Contact: React.FC = () => {
 
                   <button
                     type="submit"
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-3px) scale(1.02)';
+                      e.currentTarget.style.boxShadow = '0 12px 40px rgba(16, 185, 129, 0.4), 0 0 20px rgba(16, 185, 129, 0.3)';
+                      e.currentTarget.style.background = 'linear-gradient(135deg, var(--lime-light) 0%, var(--lime) 100%)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                      e.currentTarget.style.boxShadow = '0 4px 20px rgba(16, 185, 129, 0.3)';
+                      e.currentTarget.style.background = 'linear-gradient(135deg, var(--lime) 0%, var(--lime-dark) 100%)';
+                    }}
                     style={{
                       width: '100%',
-                      padding: '16px',
-                      background: 'var(--lime)',
+                      padding: '18px 24px',
+                      background: 'linear-gradient(135deg, var(--lime) 0%, var(--lime-dark) 100%)',
                       color: 'white',
                       border: 'none',
-                      borderRadius: '12px',
+                      borderRadius: '14px',
                       fontSize: '1.1rem',
                       fontWeight: '700',
                       cursor: 'pointer',
-                      transition: 'all 0.3s ease',
-                      boxShadow: '0 4px 20px rgba(16, 185, 129, 0.3)'
+                      transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                      boxShadow: '0 4px 20px rgba(16, 185, 129, 0.3)',
+                      position: 'relative',
+                      overflow: 'hidden'
                     }}
                   >
                     Get Free Quote & Schedule Service

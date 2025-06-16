@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { FiAlertTriangle, FiZap, FiPhone } from 'react-icons/fi';
 
 const Emergency: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -61,7 +60,7 @@ const Emergency: React.FC = () => {
             marginBottom: '1.5rem',
             backdropFilter: 'blur(10px)'
           }}>
-            <FiAlertTriangle style={{ fontSize: '1.2rem', color: '#DC2626' }} />
+            
             <span>24/7 Emergency Response</span>
           </div>
           
@@ -137,7 +136,7 @@ const Emergency: React.FC = () => {
                     alignItems: 'center',
                     justifyContent: 'center',
                     fontSize: '1.5rem'
-                  }}><FiAlertTriangle /></div>
+                  }}></div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                     <div style={{
                       width: '60px',
@@ -149,10 +148,10 @@ const Emergency: React.FC = () => {
                       justifyContent: 'center',
                       fontSize: '1.8rem',
                       fontWeight: 'bold'
-                    }}><FiPhone /></div>
+                    }}>📞</div>
                     <div>
                       <h3 style={{ marginBottom: '0.25rem', fontSize: '1.3rem' }}>Emergency Hotline</h3>
-                      <p style={{ fontSize: '1.8rem', fontWeight: '800', margin: '0.5rem 0' }}>0800-772-3999</p>
+                      <p style={{ fontSize: '1.8rem', fontWeight: '800', margin: '0.5rem 0' }}>077 2704 9304</p>
                       <p style={{ fontSize: '0.9rem', opacity: 0.9, margin: 0 }}>Available 24/7 - Average response time: 2 hours</p>
                     </div>
                   </div>
@@ -176,7 +175,7 @@ const Emergency: React.FC = () => {
                       justifyContent: 'center',
                       color: '#F59E0B',
                       fontSize: '1.5rem'
-                    }}><FiZap /></div>
+                    }}></div>
                     <div>
                       <h3 style={{ color: 'var(--forest)', marginBottom: '0.25rem', fontSize: '1.2rem' }}>Online Emergency Request</h3>
                       <p style={{ color: 'var(--gray-600)', fontSize: '1rem' }}>Submit form for priority response</p>
@@ -253,7 +252,7 @@ const Emergency: React.FC = () => {
                     justifyContent: 'center',
                     margin: '0 auto 1rem',
                     fontSize: '1.5rem'
-                  }}><FiAlertTriangle /></div>
+                  }}></div>
                   <h3 style={{
                     color: '#DC2626',
                     fontSize: '1.5rem',

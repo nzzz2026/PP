@@ -1,0 +1,568 @@
+.pest-detail {
+  padding-top: 80px;
+  min-height: 100vh;
+}
+
+.pest-detail-error {
+  padding: 120px 0;
+  text-align: center;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.pest-detail-error h1 {
+  font-size: 2.5rem;
+  color: var(--charcoal);
+  margin-bottom: 1rem;
+}
+
+.pest-detail-error p {
+  font-size: 1.2rem;
+  color: var(--gray-600);
+  margin-bottom: 2rem;
+}
+
+.pest-detail .breadcrumb-section {
+  background: #f8fafc;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.pest-detail .breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: var(--gray-600);
+}
+
+.pest-detail .breadcrumb a {
+  color: var(--lime);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.pest-detail .breadcrumb a:hover {
+  color: var(--forest);
+}
+
+.pest-detail .hero {
+  background: linear-gradient(135deg, #f8fafc 0%, #e5e7eb 100%);
+  padding: 60px 0;
+}
+
+.pest-detail .hero-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.pest-detail .hero-text h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--charcoal);
+  margin-bottom: 0.5rem;
+}
+
+.pest-detail .scientific-name {
+  font-style: italic;
+  color: var(--gray-600);
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.pest-detail .description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--gray-700);
+  margin-bottom: 2rem;
+}
+
+.pest-detail .quick-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.pest-detail .btn {
+  padding: 16px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pest-detail .btn-primary {
+  background: var(--lime);
+  color: white;
+}
+
+.pest-detail .btn-primary:hover {
+  background: var(--forest);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.pest-detail .btn-secondary {
+  background: white;
+  color: var(--charcoal);
+  border: 2px solid var(--gray-300);
+}
+
+.pest-detail .btn-secondary:hover {
+  border-color: var(--lime);
+  color: var(--forest);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.pest-detail .urgency-alert {
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.pest-detail .urgency-alert strong {
+  color: var(--charcoal);
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.pest-detail .urgency-alert p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--gray-700);
+}
+
+.pest-detail .quick-facts {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--gray-200);
+}
+
+.pest-detail .quick-facts h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--forest);
+  margin-bottom: 1.5rem;
+}
+
+.pest-detail .fact {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--gray-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pest-detail .fact:last-child {
+  border-bottom: none;
+}
+
+.pest-detail .fact-label {
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.pest-detail .fact-value {
+  color: var(--gray-600);
+  text-align: right;
+  max-width: 60%;
+}
+
+.pest-detail .identification-section,
+.pest-detail .risks-section,
+.pest-detail .treatment-section,
+.pest-detail .prevention-section,
+.pest-detail .london-specific,
+.pest-detail .related-pests {
+  padding: 60px 0;
+}
+
+.pest-detail .identification-section {
+  background: white;
+}
+
+.pest-detail h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--charcoal);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.pest-detail .identification-grid,
+.pest-detail .risks-grid,
+.pest-detail .prevention-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.pest-detail .id-card,
+.pest-detail .risk-card,
+.pest-detail .prevention-card {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid var(--gray-200);
+  transition: all 0.3s ease;
+}
+
+.pest-detail .id-card:hover,
+.pest-detail .risk-card:hover,
+.pest-detail .prevention-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--lime);
+}
+
+.pest-detail .id-card h3,
+.pest-detail .risk-card h3,
+.pest-detail .prevention-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--forest);
+  margin-bottom: 1.5rem;
+}
+
+.pest-detail .id-card ul,
+.pest-detail .risk-card ul,
+.pest-detail .prevention-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pest-detail .id-card li,
+.pest-detail .risk-card li,
+.pest-detail .prevention-card li {
+  padding: 8px 0;
+  color: var(--gray-700);
+  padding-left: 24px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.pest-detail .id-card li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--lime);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.pest-detail .risk-card.health {
+  border-top: 4px solid #dc2626;
+}
+
+.pest-detail .risk-card.property {
+  border-top: 4px solid #f97316;
+}
+
+.pest-detail .risk-card.business {
+  border-top: 4px solid #3b82f6;
+}
+
+.pest-detail .treatment-section {
+  background: #f8fafc;
+}
+
+.pest-detail .treatment-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+}
+
+.pest-detail .treatment-methods ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.pest-detail .treatment-methods li {
+  padding: 12px 0;
+  color: var(--gray-700);
+  padding-left: 32px;
+  position: relative;
+  line-height: 1.6;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.pest-detail .treatment-methods li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--lime);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.pest-detail .timeline,
+.pest-detail .followup {
+  font-size: 1.1rem;
+  color: var(--gray-700);
+  margin-bottom: 1rem;
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid var(--gray-200);
+}
+
+.pest-detail .treatment-prep {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--gray-200);
+  height: fit-content;
+}
+
+.pest-detail .prevention-card li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--lime);
+  font-weight: bold;
+}
+
+.pest-detail .london-specific {
+  background: white;
+}
+
+.pest-detail .london-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.pest-detail .borough-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 1rem 0 2rem;
+}
+
+.pest-detail .borough-tag {
+  display: inline-block;
+  padding: 8px 16px;
+  background: var(--lime);
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.pest-detail .borough-tag:hover {
+  background: var(--forest);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pest-detail .season.current {
+  background: #fef3c7;
+  border: 2px solid #f59e0b;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.pest-detail .season.current h4 {
+  margin: 0 0 8px 0;
+  color: #92400e;
+}
+
+.pest-detail .seasons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.pest-detail .season {
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid var(--gray-200);
+  transition: all 0.3s ease;
+}
+
+.pest-detail .season:hover {
+  border-color: var(--lime);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pest-detail .season-icon {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.pest-detail .season strong {
+  color: var(--forest);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.pest-detail .season p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+.pest-detail .related-pests {
+  background: #f8fafc;
+}
+
+.pest-detail .related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.pest-detail .related-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--gray-200);
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.pest-detail .related-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--lime);
+}
+
+.pest-detail .related-card h3 {
+  color: var(--forest);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.pest-detail .related-card p {
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.pest-detail .link-arrow {
+  color: var(--lime);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.pest-detail .related-card:hover .link-arrow {
+  color: var(--forest);
+}
+
+.pest-detail .cta-section {
+  background: var(--charcoal);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.pest-detail .cta-content h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.pest-detail .cta-content > p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+}
+
+.pest-detail .features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.pest-detail .feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.pest-detail .cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pest-detail .cta-section .btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.pest-detail .cta-section .btn-secondary:hover {
+  background: white;
+  color: var(--charcoal);
+}
+
+@media (max-width: 1024px) {
+  .pest-detail .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .pest-detail .treatment-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .pest-detail .london-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .pest-detail .quick-actions {
+    flex-direction: column;
+  }
+  
+  .pest-detail .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .pest-detail .identification-grid,
+  .pest-detail .risks-grid,
+  .pest-detail .prevention-grid,
+  .pest-detail .related-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pest-detail .seasons-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pest-detail .features {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

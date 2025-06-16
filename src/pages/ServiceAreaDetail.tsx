@@ -56,8 +56,8 @@ const ServiceAreaDetail: React.FC = () => {
               <p><strong>Commercial:</strong> {area.pricing.commercial}</p>
               <p><strong>Emergency:</strong> {area.pricing.emergency}</p>
               
-              <a href="tel:08007723999" className="btn btn-primary" style={{marginTop: '2rem', width: '100%'}}>
-                Call Now: 0800-772-3999
+              <a href="tel:07727049304" className="btn btn-primary" style={{marginTop: '2rem', width: '100%'}}>
+                Call Now: 077 2704 9304
               </a>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FiPhone } from 'react-icons/fi';
+// import { FiPhone } from 'react-icons/fi';
 import '../styles/Header.css';
 import PPLLogoWhite from '../PPL White.svg';
 
@@ -78,7 +78,7 @@ const Header: React.FC = () => {
                       </div>
                       <div className="dropdown-cta-buttons">
                         <Link to="/contact" className="dropdown-btn estimate-btn">Get a Free Estimate</Link>
-                        <a href="tel:08007723999" className="dropdown-btn call-btn">Call Us</a>
+                        <a href="tel:07727049304" className="dropdown-btn call-btn">Call Us</a>
                       </div>
                     </div>
                   </div>
@@ -92,9 +92,9 @@ const Header: React.FC = () => {
           
           {/* CTA */}
           <div className="header-cta">
-            <a href="tel:02071234567" className="phone-number">
-              <FiPhone className="animate-pulse" />
-              <span className="phone-text">020 7123 4567</span>
+            <a href="tel:07727049304" className="phone-number">
+              📞
+              <span className="phone-text">077 2704 9304</span>
             </a>
             <Link to="/emergency" className="emergency-btn">Emergency</Link>
           </div>
@@ -125,9 +125,9 @@ const Header: React.FC = () => {
               <li><Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link></li>
             </ul>
             <div className="mobile-cta">
-              <a href="tel:02071234567" className="mobile-phone">
-                <FiPhone />
-                <span>020 7123 4567</span>
+              <a href="tel:07727049304" className="mobile-phone">
+                📞
+                <span>077 2704 9304</span>
               </a>
               <Link to="/emergency" className="mobile-emergency" onClick={() => setIsMobileMenuOpen(false)}>
                 Emergency Call

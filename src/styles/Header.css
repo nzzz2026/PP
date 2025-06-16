@@ -64,29 +64,51 @@
     color: white;
     font-weight: 500;
     position: relative;
-    padding: 0.5rem 0;
+    padding: 0.75rem 1rem;
     font-size: 0.9rem;
     white-space: nowrap;
-    transition: color 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.nav-menu a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(143, 229, 72, 0.2), transparent);
+    transition: left 0.6s ease;
 }
 
 .nav-menu a:after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50%;
     width: 0;
     height: 2px;
-    background: var(--lime);
-    transition: width 0.3s ease;
+    background: linear-gradient(90deg, var(--lime) 0%, var(--lime-light) 100%);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50%);
+    border-radius: 2px;
 }
 
 .nav-menu a:hover {
     color: var(--lime);
+    background: rgba(143, 229, 72, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(143, 229, 72, 0.3);
+}
+
+.nav-menu a:hover:before {
+    left: 100%;
 }
 
 .nav-menu a:hover:after {
-    width: 100%;
+    width: 80%;
 }
 
 /* Pest Library Dropdown */
@@ -143,19 +165,39 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem;
-    border-radius: 6px;
-    transition: all 0.3s ease;
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     color: #374151;
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+}
+
+.pest-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(15, 118, 110, 0.1), transparent);
+    transition: left 0.5s ease;
 }
 
 .pest-item:hover {
-    background: #F3F4F6;
+    background: linear-gradient(135deg, #F0FDF4 0%, #ECFDF5 100%);
     color: #0F766E;
-    transform: translateX(2px);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(15, 118, 110, 0.15);
+    border: 1px solid rgba(15, 118, 110, 0.2);
+}
+
+.pest-item:hover:before {
+    left: 100%;
 }
 
 .pest-icon {
@@ -235,34 +277,55 @@
 }
 
 .dropdown-btn {
-    padding: 8px 14px;
-    border-radius: 6px;
+    padding: 10px 16px;
+    border-radius: 8px;
     font-size: 0.8rem;
     font-weight: 600;
     text-align: center;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.dropdown-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.dropdown-btn:hover:before {
+    left: 100%;
 }
 
 .estimate-btn {
-    background: #DC2626;
+    background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
     color: white;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
 }
 
 .estimate-btn:hover {
-    background: #B91C1C;
-    transform: translateY(-1px);
+    background: linear-gradient(135deg, #B91C1C 0%, #991B1B 100%);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
 }
 
 .call-btn {
-    background: var(--charcoal);
+    background: linear-gradient(135deg, var(--charcoal) 0%, var(--gray-800) 100%);
     color: white;
+    box-shadow: 0 4px 15px rgba(31, 41, 55, 0.3);
 }
 
 .call-btn:hover {
-    background: var(--gray-800);
-    transform: translateY(-1px);
+    background: linear-gradient(135deg, var(--gray-800) 0%, var(--gray-900) 100%);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(31, 41, 55, 0.4);
 }
 
 /* Header CTA */
@@ -281,6 +344,32 @@
     align-items: center;
     gap: 0.5rem;
     white-space: nowrap;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.phone-number:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(143, 229, 72, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.phone-number:hover {
+    background: rgba(143, 229, 72, 0.1);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(143, 229, 72, 0.2);
+}
+
+.phone-number:hover:before {
+    left: 100%;
 }
 
 .phone-text {
@@ -290,18 +379,36 @@
 .emergency-btn {
     background: linear-gradient(135deg, var(--lime) 0%, var(--lime-dark) 100%);
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 50px;
     font-weight: 700;
     font-size: 0.8rem;
     box-shadow: 0 4px 20px rgba(34, 197, 94, 0.3);
     white-space: nowrap;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.emergency-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
 }
 
 .emergency-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(34, 197, 94, 0.4);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 40px rgba(34, 197, 94, 0.5);
+    background: linear-gradient(135deg, var(--lime-light) 0%, var(--lime) 100%);
+}
+
+.emergency-btn:hover:before {
+    left: 100%;
 }
 
 /* Mobile Menu Button */

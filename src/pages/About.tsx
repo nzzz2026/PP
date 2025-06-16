@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiPhone } from 'react-icons/fi';
+// import { FiPhone } from 'react-icons/fi';
 
 const About: React.FC = () => {
   return (
@@ -96,7 +96,7 @@ const About: React.FC = () => {
             </div>
             
             <a 
-              href="tel:08007723999" 
+              href="tel:07727049304" 
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -112,8 +112,8 @@ const About: React.FC = () => {
                 boxShadow: '0 4px 20px rgba(16, 185, 129, 0.3)'
               }}
             >
-              <FiPhone style={{ fontSize: '1.2rem' }} />
-              <span>Call Now: 0800-772-3999</span>
+              📞
+              <span>Call Now: 077 2704 9304</span>
             </a>
           </div>
         </div>

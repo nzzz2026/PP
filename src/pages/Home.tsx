@@ -1,9 +1,47 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiCheck, FiStar, FiArrowRight, FiZap, FiPhone, FiRecycle } from 'react-icons/fi';
 import heroImage from '../hero_image.jpeg';
 
 const Home: React.FC = () => {
+  // Add keyframe animations
+  const keyframes = `
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    
+    @keyframes shimmer {
+      0% {
+        background-position: -1000px 0;
+      }
+      100% {
+        background-position: 1000px 0;
+      }
+    }
+  `;
+
+  React.useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = keyframes;
+    document.head.appendChild(style);
+    return () => document.head.removeChild(style);
+  }, []);
+
   return (
     <div style={{ backgroundColor: '#FAFBFC', minHeight: '100vh' }}>
       <main style={{ paddingTop: '80px' }}>
@@ -43,10 +81,10 @@ const Home: React.FC = () => {
               fontWeight: '600',
               marginBottom: '1.5rem',
               color: 'white',
-              backdropFilter: 'blur(10px)'
+              backdropFilter: 'blur(10px)',
+              animation: 'fadeInUp 1s ease-out, float 3s ease-in-out infinite'
             }}>
-              <FiCheck style={{fontSize: '0.8rem'}} />
-              <span>London's #1 Rated Pest Control</span>
+              <span>✓ London's #1 Rated Pest Control</span>
             </div>
             
             <h1 style={{
@@ -56,7 +94,8 @@ const Home: React.FC = () => {
               marginBottom: '1rem',
               color: 'white',
               letterSpacing: '-0.02em',
-              textShadow: '2px 2px 20px rgba(0, 0, 0, 0.5)'
+              textShadow: '2px 2px 20px rgba(0, 0, 0, 0.5)',
+              animation: 'fadeInUp 1.2s ease-out 0.2s both'
             }}>
               Say Goodbye to<br/>
               <span style={{
@@ -72,7 +111,8 @@ const Home: React.FC = () => {
               lineHeight: 1.6,
               maxWidth: '600px',
               margin: '0 auto 2rem',
-              textShadow: '1px 1px 10px rgba(0, 0, 0, 0.3)'
+              textShadow: '1px 1px 10px rgba(0, 0, 0, 0.3)',
+              animation: 'fadeInUp 1.4s ease-out 0.4s both'
             }}>
               Professional pest control that actually works. Same-day service across London.
             </p>
@@ -84,11 +124,25 @@ const Home: React.FC = () => {
               gap: '1rem',
               marginBottom: '2rem',
               maxWidth: '800px',
-              margin: '0 auto 2rem'
+              margin: '0 auto 2rem',
+              animation: 'fadeInUp 1.6s ease-out 0.6s both'
             }}>
-              <div style={{
+              <div 
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-4px) scale(1.05)';
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(143, 229, 72, 0.4)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+              style={{
                 background: 'rgba(255, 255, 255, 0.1)',
                 backdropFilter: 'blur(10px)',
+                transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                cursor: 'pointer',
                 padding: '12px 16px',
                 display: 'flex',
                 alignItems: 'center',
@@ -108,7 +162,7 @@ const Home: React.FC = () => {
                   justifyContent: 'center',
                   fontSize: '0.8rem',
                   fontWeight: 'bold'
-                }}><FiCheck style={{fontSize: '0.8rem'}} /></div>
+}}>✓</div>
                 <div>
                   <div style={{ fontWeight: '700', fontSize: '0.8rem', color: 'white' }}>Since 2008</div>
                   <div style={{ fontSize: '0.65rem', color: 'rgba(255, 255, 255, 0.7)' }}>16+ Years Experience</div>
@@ -136,7 +190,7 @@ const Home: React.FC = () => {
                   justifyContent: 'center',
                   fontSize: '0.8rem',
                   fontWeight: 'bold'
-                }}><FiCheck style={{fontSize: '0.8rem'}} /></div>
+                }}></div>
                 <div>
                   <div style={{ fontWeight: '700', fontSize: '0.8rem', color: 'white' }}>BPCA Certified</div>
                   <div style={{ fontSize: '0.65rem', color: 'rgba(255, 255, 255, 0.7)' }}>Professional Standards</div>
@@ -164,7 +218,7 @@ const Home: React.FC = () => {
                   justifyContent: 'center',
                   fontSize: '0.8rem',
                   fontWeight: 'bold'
-                }}><FiCheck style={{fontSize: '0.8rem'}} /></div>
+                }}></div>
                 <div>
                   <div style={{ fontWeight: '700', fontSize: '0.8rem', color: 'white' }}>Fully Insured</div>
                   <div style={{ fontSize: '0.65rem', color: 'rgba(255, 255, 255, 0.7)' }}>£2M Public Liability</div>
@@ -192,7 +246,7 @@ const Home: React.FC = () => {
                   justifyContent: 'center',
                   fontSize: '0.8rem',
                   fontWeight: 'bold'
-                }}><FiCheck style={{fontSize: '0.8rem'}} /></div>
+                }}></div>
                 <div>
                   <div style={{ fontWeight: '700', fontSize: '0.8rem', color: 'white' }}>4.9/5 Rating</div>
                   <div style={{ fontSize: '0.65rem', color: 'rgba(255, 255, 255, 0.7)' }}>487+ Reviews</div>
@@ -201,8 +255,23 @@ const Home: React.FC = () => {
             </div>
             
             {/* CTA Button */}
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <a href="tel:08007723999" style={{
+            <div style={{ 
+              display: 'flex', 
+              justifyContent: 'center',
+              animation: 'fadeInUp 1.8s ease-out 0.8s both'
+            }}>
+              <a href="tel:08007723999" 
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-5px) scale(1.05)';
+                e.currentTarget.style.background = 'linear-gradient(135deg, var(--lime-light) 0%, var(--lime) 100%)';
+                e.currentTarget.style.boxShadow = '0 25px 60px rgba(16, 185, 129, 0.6), 0 0 30px rgba(16, 185, 129, 0.8)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                e.currentTarget.style.background = 'var(--lime)';
+                e.currentTarget.style.boxShadow = '0 8px 30px rgba(16, 185, 129, 0.4)';
+              }}
+              style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '0.5rem',
@@ -213,11 +282,13 @@ const Home: React.FC = () => {
                 background: 'var(--lime)',
                 color: 'white',
                 textDecoration: 'none',
-                transition: 'all 0.3s ease',
+                transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                 boxShadow: '0 8px 30px rgba(16, 185, 129, 0.4)',
-                textShadow: 'none'
+                textShadow: 'none',
+                position: 'relative',
+                overflow: 'hidden'
               }}>
-                <span>Call Now: 0800-772-3999</span>
+                <span>Call Now: 077 2704 9304</span>
               </a>
             </div>
           </div>
@@ -353,15 +424,31 @@ const Home: React.FC = () => {
             
             <div className="services-grid">
               {/* Residential Service */}
-              <div style={{
+              <div 
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-12px) scale(1.02)';
+                e.currentTarget.style.boxShadow = '0 30px 80px rgba(0, 0, 0, 0.15), 0 0 40px rgba(15, 118, 110, 0.2)';
+                e.currentTarget.style.border = '1px solid rgba(15, 118, 110, 0.3)';
+                const icon = e.currentTarget.querySelector('.service-icon');
+                if (icon) icon.style.transform = 'rotate(10deg) scale(1.1)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                e.currentTarget.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.08)';
+                e.currentTarget.style.border = '1px solid rgba(0, 0, 0, 0.05)';
+                const icon = e.currentTarget.querySelector('.service-icon');
+                if (icon) icon.style.transform = 'rotate(0deg) scale(1)';
+              }}
+              style={{
                 background: 'white',
                 borderRadius: '16px',
                 padding: '2rem',
                 boxShadow: '0 10px 40px rgba(0, 0, 0, 0.08)',
-                transition: 'all 0.3s ease',
+                transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                 border: '1px solid rgba(0, 0, 0, 0.05)',
                 position: 'relative',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                cursor: 'pointer'
               }}>
                 <div style={{
                   display: 'flex',
@@ -369,7 +456,7 @@ const Home: React.FC = () => {
                   gap: '1rem',
                   marginBottom: '1.5rem'
                 }}>
-                  <div style={{
+                  <div className="service-icon" style={{
                     width: '60px',
                     height: '60px',
                     background: 'linear-gradient(135deg, var(--forest) 0%, var(--forest-light) 100%)',
@@ -380,7 +467,9 @@ const Home: React.FC = () => {
                     color: 'white',
                     fontSize: '1.5rem',
                     fontWeight: 'bold',
-                    minWidth: '60px'
+                    minWidth: '60px',
+                    transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                    boxShadow: '0 8px 25px rgba(15, 118, 110, 0.3)'
                   }}>R</div>
                   <div>
                     <h3 style={{
@@ -432,7 +521,7 @@ const Home: React.FC = () => {
                         justifyContent: 'center',
                         fontSize: '0.7rem',
                         minWidth: '16px'
-                      }}><FiCheck style={{fontSize: '0.8rem'}} /></span>
+}}>✓</span>
                       {item}
                     </li>
                   ))}
@@ -443,24 +532,40 @@ const Home: React.FC = () => {
                     fontWeight: '600',
                     textDecoration: 'none',
                     fontSize: '0.9rem'
-                  }}>Learn More <FiArrowRight style={{fontSize: '0.8rem'}} /></Link>
+                  }}>Learn More →</Link>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                    <span style={{ color: '#FFD700', fontSize: '0.8rem' }}><div style={{display: 'flex', gap: '2px'}}>{[...Array(5)].map((_, i) => <FiStar style={{fontSize: '0.8rem'}} />)}</div></span>
+                    <span style={{ color: '#FFD700', fontSize: '0.8rem' }}>★★★★★</span>
                     <span style={{ fontSize: '0.75rem', color: 'var(--gray-600)' }}>4.9/5</span>
                   </div>
                 </div>
               </div>
               
               {/* Commercial Service */}
-              <div style={{
+              <div 
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-12px) scale(1.02)';
+                e.currentTarget.style.boxShadow = '0 30px 80px rgba(0, 0, 0, 0.15), 0 0 40px rgba(8, 145, 178, 0.2)';
+                e.currentTarget.style.border = '1px solid rgba(8, 145, 178, 0.3)';
+                const icon = e.currentTarget.querySelector('.service-icon');
+                if (icon) icon.style.transform = 'rotate(10deg) scale(1.1)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                e.currentTarget.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.08)';
+                e.currentTarget.style.border = '1px solid rgba(0, 0, 0, 0.05)';
+                const icon = e.currentTarget.querySelector('.service-icon');
+                if (icon) icon.style.transform = 'rotate(0deg) scale(1)';
+              }}
+              style={{
                 background: 'white',
                 borderRadius: '16px',
                 padding: '2rem',
                 boxShadow: '0 10px 40px rgba(0, 0, 0, 0.08)',
-                transition: 'all 0.3s ease',
+                transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                 border: '1px solid rgba(0, 0, 0, 0.05)',
                 position: 'relative',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                cursor: 'pointer'
               }}>
                 <div style={{
                   display: 'flex',
@@ -468,10 +573,10 @@ const Home: React.FC = () => {
                   gap: '1rem',
                   marginBottom: '1.5rem'
                 }}>
-                  <div style={{
+                  <div className="service-icon" style={{
                     width: '60px',
                     height: '60px',
-                    background: 'var(--primary)',
+                    background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%)',
                     borderRadius: '12px',
                     display: 'flex',
                     alignItems: 'center',
@@ -479,7 +584,9 @@ const Home: React.FC = () => {
                     color: 'white',
                     fontSize: '1.5rem',
                     fontWeight: 'bold',
-                    minWidth: '60px'
+                    minWidth: '60px',
+                    transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                    boxShadow: '0 8px 25px rgba(8, 145, 178, 0.3)'
                   }}>C</div>
                   <div>
                     <h3 style={{
@@ -531,7 +638,7 @@ const Home: React.FC = () => {
                         justifyContent: 'center',
                         fontSize: '0.7rem',
                         minWidth: '16px'
-                      }}><FiCheck style={{fontSize: '0.8rem'}} /></span>
+                      }}></span>
                       {item}
                     </li>
                   ))}
@@ -542,24 +649,40 @@ const Home: React.FC = () => {
                     fontWeight: '600',
                     textDecoration: 'none',
                     fontSize: '0.9rem'
-                  }}>Learn More <FiArrowRight style={{fontSize: '0.8rem'}} /></Link>
+                  }}>Learn More →</Link>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                    <span style={{ color: '#FFD700', fontSize: '0.8rem' }}><FiStar style={{fontSize: '0.8rem'}} /><FiStar style={{fontSize: '0.8rem'}} /><FiStar style={{fontSize: '0.8rem'}} /><FiStar style={{fontSize: '0.8rem'}} /><FiStar style={{fontSize: '0.8rem'}} /></span>
+                    <span style={{ color: '#FFD700', fontSize: '0.8rem' }}>★★★★★</span>
                     <span style={{ fontSize: '0.75rem', color: 'var(--gray-600)' }}>5.0/5</span>
                   </div>
                 </div>
               </div>
               
-              {/* Restaurant Service */}
-              <div style={{
+              {/* Service Areas */}
+              <div 
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-12px) scale(1.02)';
+                e.currentTarget.style.boxShadow = '0 30px 80px rgba(0, 0, 0, 0.15), 0 0 40px rgba(59, 130, 246, 0.2)';
+                e.currentTarget.style.border = '1px solid rgba(59, 130, 246, 0.3)';
+                const icon = e.currentTarget.querySelector('.service-icon');
+                if (icon) icon.style.transform = 'rotate(10deg) scale(1.1)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                e.currentTarget.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.08)';
+                e.currentTarget.style.border = '1px solid rgba(0, 0, 0, 0.05)';
+                const icon = e.currentTarget.querySelector('.service-icon');
+                if (icon) icon.style.transform = 'rotate(0deg) scale(1)';
+              }}
+              style={{
                 background: 'white',
                 borderRadius: '16px',
                 padding: '2rem',
                 boxShadow: '0 10px 40px rgba(0, 0, 0, 0.08)',
-                transition: 'all 0.3s ease',
+                transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                 border: '1px solid rgba(0, 0, 0, 0.05)',
                 position: 'relative',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                cursor: 'pointer'
               }}>
                 <div style={{
                   display: 'flex',
@@ -567,10 +690,10 @@ const Home: React.FC = () => {
                   gap: '1rem',
                   marginBottom: '1.5rem'
                 }}>
-                  <div style={{
+                  <div className="service-icon" style={{
                     width: '60px',
                     height: '60px',
-                    background: 'var(--accent)',
+                    background: 'linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)',
                     borderRadius: '12px',
                     display: 'flex',
                     alignItems: 'center',
@@ -578,20 +701,22 @@ const Home: React.FC = () => {
                     color: 'white',
                     fontSize: '1.5rem',
                     fontWeight: 'bold',
-                    minWidth: '60px'
-                  }}>F</div>
+                    minWidth: '60px',
+                    transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                    boxShadow: '0 8px 25px rgba(59, 130, 246, 0.3)'
+                  }}>📍</div>
                   <div>
                     <h3 style={{
                       color: 'var(--forest)',
                       marginBottom: '0.25rem',
                       fontSize: '1.25rem',
                       fontWeight: '700'
-                    }}>Restaurant & Food Safety</h3>
+                    }}>All London Boroughs</h3>
                     <div style={{
                       fontSize: '1rem',
                       fontWeight: '700',
                       color: 'var(--forest)'
-                    }}>From £199/mo</div>
+                    }}>33 Areas Covered</div>
                   </div>
                 </div>
                 <p style={{
@@ -599,15 +724,15 @@ const Home: React.FC = () => {
                   marginBottom: '1.5rem',
                   lineHeight: 1.6,
                   fontSize: '0.9rem'
-                }}>HACCP-compliant pest management specifically designed for food service establishments and hospitality venues.</p>
+                }}>Comprehensive pest control coverage across all London boroughs with local technicians for rapid response.</p>
                 <ul style={{ listStyle: 'none', marginBottom: '1.5rem', padding: 0 }}>
                   {[
-                    'HACCP & food safety certified approach',
-                    'Health inspection readiness guarantee',
-                    'Monitoring systems & alerts',
-                    'Digital reporting portal access',
-                    'Staff hygiene training included',
-                    'Emergency call-out within 2 hours'
+                    'Same-day service in your area',
+                    'Local technicians, local knowledge',
+                    'All 33 London boroughs covered',
+                    'Emergency response within 45 mins',
+                    'Borough-specific pest expertise',
+                    'Trusted by local councils'
                   ].map((item, index) => (
                     <li key={index} style={{
                       padding: '0.5rem 0',
@@ -630,21 +755,21 @@ const Home: React.FC = () => {
                         justifyContent: 'center',
                         fontSize: '0.7rem',
                         minWidth: '16px'
-                      }}><FiCheck style={{fontSize: '0.8rem'}} /></span>
+                      }}>✓</span>
                       {item}
                     </li>
                   ))}
                 </ul>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <Link to="/services/restaurants" style={{
+                  <Link to="/service-areas" style={{
                     color: 'var(--forest)',
                     fontWeight: '600',
                     textDecoration: 'none',
                     fontSize: '0.9rem'
-                  }}>Learn More <FiArrowRight style={{fontSize: '0.8rem'}} /></Link>
+                  }}>Find Your Borough →</Link>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                    <span style={{ color: '#FFD700', fontSize: '0.8rem' }}><FiStar style={{fontSize: '0.8rem'}} /><FiStar style={{fontSize: '0.8rem'}} /><FiStar style={{fontSize: '0.8rem'}} /><FiStar style={{fontSize: '0.8rem'}} /><FiStar style={{fontSize: '0.8rem'}} /></span>
-                    <span style={{ fontSize: '0.75rem', color: 'var(--gray-600)' }}>4.8/5</span>
+                    <span style={{ color: '#FFD700', fontSize: '0.8rem' }}>★★★★★</span>
+                    <span style={{ fontSize: '0.75rem', color: 'var(--gray-600)' }}>4.9/5</span>
                   </div>
                 </div>
               </div>
@@ -950,7 +1075,7 @@ const Home: React.FC = () => {
                         fontWeight: '600',
                         textDecoration: 'none',
                         fontSize: '0.8rem'
-                      }}>Learn More <FiArrowRight style={{fontSize: '0.8rem'}} /></Link>
+                      }}>Learn More →</Link>
                       <span style={{
                         background: `${pest.color}15`,
                         color: pest.color,
@@ -1060,7 +1185,7 @@ const Home: React.FC = () => {
                             alignItems: 'center',
                             justifyContent: 'center',
                             minWidth: '16px'
-                          }}><FiCheck style={{fontSize: '0.8rem'}} /></span>
+                          }}></span>
                           {area}
                         </div>
                       ))}
@@ -1088,7 +1213,7 @@ const Home: React.FC = () => {
                             alignItems: 'center',
                             justifyContent: 'center',
                             minWidth: '16px'
-                          }}><FiCheck style={{fontSize: '0.8rem'}} /></span>
+                          }}></span>
                           {area}
                         </div>
                       ))}
@@ -1236,7 +1361,7 @@ const Home: React.FC = () => {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text'
-              }}>0800-772-3999</div>
+              }}>077 2704 9304</div>
               
               <div style={{
                 display: 'grid',
@@ -1257,8 +1382,7 @@ const Home: React.FC = () => {
                   fontSize: '0.85rem',
                   fontWeight: '600'
                 }}>
-                  <FiZap style={{ fontSize: '1.1rem' }} />
-                  <span>Same-Day Service</span>
+                    <span>Same-Day Service</span>
                 </div>
                 <div style={{
                   display: 'flex',
@@ -1273,7 +1397,6 @@ const Home: React.FC = () => {
                   fontSize: '0.85rem',
                   fontWeight: '600'
                 }}>
-                  <FiPhone style={{ fontSize: '1.1rem' }} />
                   <span>Free Quotes & Inspections</span>
                 </div>
                 <div style={{
@@ -1289,8 +1412,7 @@ const Home: React.FC = () => {
                   fontSize: '0.85rem',
                   fontWeight: '600'
                 }}>
-                  <FiCheck style={{ fontSize: '1.1rem' }} />
-                  <span>Guaranteed Results</span>
+                    <span>✓ Guaranteed Results</span>
                 </div>
                 <div style={{
                   display: 'flex',
@@ -1305,7 +1427,6 @@ const Home: React.FC = () => {
                   fontSize: '0.85rem',
                   fontWeight: '600'
                 }}>
-                  <FiRecycle style={{ fontSize: '1.1rem' }} />
                   <span>Eco-Friendly Methods</span>
                 </div>
               </div>
@@ -1386,7 +1507,7 @@ const Home: React.FC = () => {
                   color: 'white',
                   fontWeight: '600',
                   fontSize: '0.85rem'
-                }}><FiCheck style={{fontSize: '0.8rem'}} /> {org}</div>
+                }}>{org}</div>
               ))}
             </div>
           </div>
