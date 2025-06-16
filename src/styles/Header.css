@@ -100,7 +100,6 @@
     color: var(--lime);
     background: rgba(143, 229, 72, 0.1);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(143, 229, 72, 0.3);
 }
 
 .nav-menu a:hover:before {
@@ -192,7 +191,6 @@
     background: linear-gradient(135deg, #F0FDF4 0%, #ECFDF5 100%);
     color: #0F766E;
     transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 8px 25px rgba(15, 118, 110, 0.15);
     border: 1px solid rgba(15, 118, 110, 0.2);
 }
 
@@ -365,7 +363,6 @@
 .phone-number:hover {
     background: rgba(143, 229, 72, 0.1);
     transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(143, 229, 72, 0.2);
 }
 
 .phone-number:hover:before {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { serviceAreas, londonRegions } from '../data/serviceAreas';
+import { boroughServiceAreas, londonRegions, getBoroughServiceAreasByRegion } from '../data/boroughServiceAreas';
 
 const ServiceAreas: React.FC = () => {
   return (
@@ -27,7 +27,7 @@ const ServiceAreas: React.FC = () => {
             maxWidth: '600px',
             margin: '0 auto'
           }}>
-            Professional pest control services across all 32 London boroughs with rapid response times and local expertise
+            Professional pest control services across all 33 London boroughs with rapid response times and local expertise
           </p>
         </div>
       </section>
@@ -53,8 +53,7 @@ const ServiceAreas: React.FC = () => {
                 maxWidth: '1400px',
                 margin: '0 auto'
               }}>
-                {serviceAreas
-                  .filter(area => area.region === region.id)
+                {getBoroughServiceAreasByRegion(region.id)
                   .map((area) => (
                     <Link 
                       key={area.id}
@@ -96,7 +95,7 @@ const ServiceAreas: React.FC = () => {
                           wordBreak: 'break-word',
                           maxWidth: '100%'
                         }}>
-                          {area.postcode}
+                          {area.postcodes.slice(0, 3).join(', ')}{area.postcodes.length > 3 ? '...' : ''}
                         </span>
                       </div>
                       
@@ -107,10 +106,7 @@ const ServiceAreas: React.FC = () => {
                         lineHeight: 1.5,
                         flex: 1
                       }}>
-                        {area.description.length > 100 
-                          ? `${area.description.substring(0, 100)}...` 
-                          : area.description
-                        }
+                        {`Expert pest control in ${area.name}. Serving ${area.neighborhoods.slice(0, 3).join(', ')} and surrounding areas. Response time: ${area.responseTime}.`}
                       </p>
                       
                       <div style={{
