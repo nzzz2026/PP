@@ -3,43 +3,48 @@ import { Link } from 'react-router-dom';
 import heroImage from '../hero_image.jpeg';
 
 const Home: React.FC = () => {
-  // Add keyframe animations
-  const keyframes = `
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0px);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-    }
-    
-    @keyframes shimmer {
-      0% {
-        background-position: -1000px 0;
-      }
-      100% {
-        background-position: 1000px 0;
-      }
-    }
-  `;
-
   React.useEffect(() => {
+    // Add keyframe animations
+    const keyframes = `
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      
+      @keyframes shimmer {
+        0% {
+          background-position: -1000px 0;
+        }
+        100% {
+          background-position: 1000px 0;
+        }
+      }
+    `;
+
     const style = document.createElement('style');
     style.textContent = keyframes;
     document.head.appendChild(style);
-    return () => document.head.removeChild(style);
+    
+    return () => {
+      if (document.head.contains(style)) {
+        document.head.removeChild(style);
+      }
+    };
   }, []);
 
   return (
@@ -148,8 +153,7 @@ const Home: React.FC = () => {
                 alignItems: 'center',
                 gap: '8px',
                 borderRadius: '12px',
-                border: '1px solid rgba(255, 255, 255, 0.2)',
-                transition: 'all 0.3s ease'
+                border: '1px solid rgba(255, 255, 255, 0.2)'
               }}>
                 <div style={{
                   width: '24px',
@@ -429,14 +433,14 @@ const Home: React.FC = () => {
                 e.currentTarget.style.transform = 'translateY(-12px) scale(1.02)';
                 e.currentTarget.style.boxShadow = '0 30px 80px rgba(0, 0, 0, 0.15), 0 0 40px rgba(15, 118, 110, 0.2)';
                 e.currentTarget.style.border = '1px solid rgba(15, 118, 110, 0.3)';
-                const icon = e.currentTarget.querySelector('.service-icon');
+                const icon = e.currentTarget.querySelector('.service-icon') as HTMLElement;
                 if (icon) icon.style.transform = 'rotate(10deg) scale(1.1)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0) scale(1)';
                 e.currentTarget.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.08)';
                 e.currentTarget.style.border = '1px solid rgba(0, 0, 0, 0.05)';
-                const icon = e.currentTarget.querySelector('.service-icon');
+                const icon = e.currentTarget.querySelector('.service-icon') as HTMLElement;
                 if (icon) icon.style.transform = 'rotate(0deg) scale(1)';
               }}
               style={{
@@ -546,14 +550,14 @@ const Home: React.FC = () => {
                 e.currentTarget.style.transform = 'translateY(-12px) scale(1.02)';
                 e.currentTarget.style.boxShadow = '0 30px 80px rgba(0, 0, 0, 0.15), 0 0 40px rgba(8, 145, 178, 0.2)';
                 e.currentTarget.style.border = '1px solid rgba(8, 145, 178, 0.3)';
-                const icon = e.currentTarget.querySelector('.service-icon');
+                const icon = e.currentTarget.querySelector('.service-icon') as HTMLElement;
                 if (icon) icon.style.transform = 'rotate(10deg) scale(1.1)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0) scale(1)';
                 e.currentTarget.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.08)';
                 e.currentTarget.style.border = '1px solid rgba(0, 0, 0, 0.05)';
-                const icon = e.currentTarget.querySelector('.service-icon');
+                const icon = e.currentTarget.querySelector('.service-icon') as HTMLElement;
                 if (icon) icon.style.transform = 'rotate(0deg) scale(1)';
               }}
               style={{
@@ -663,14 +667,14 @@ const Home: React.FC = () => {
                 e.currentTarget.style.transform = 'translateY(-12px) scale(1.02)';
                 e.currentTarget.style.boxShadow = '0 30px 80px rgba(0, 0, 0, 0.15), 0 0 40px rgba(59, 130, 246, 0.2)';
                 e.currentTarget.style.border = '1px solid rgba(59, 130, 246, 0.3)';
-                const icon = e.currentTarget.querySelector('.service-icon');
+                const icon = e.currentTarget.querySelector('.service-icon') as HTMLElement;
                 if (icon) icon.style.transform = 'rotate(10deg) scale(1.1)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0) scale(1)';
                 e.currentTarget.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.08)';
                 e.currentTarget.style.border = '1px solid rgba(0, 0, 0, 0.05)';
-                const icon = e.currentTarget.querySelector('.service-icon');
+                const icon = e.currentTarget.querySelector('.service-icon') as HTMLElement;
                 if (icon) icon.style.transform = 'rotate(0deg) scale(1)';
               }}
               style={{
