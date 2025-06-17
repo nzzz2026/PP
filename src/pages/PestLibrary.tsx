@@ -49,9 +49,9 @@ const PestLibrary: React.FC = () => {
           </div>
 
           <div className="alert-banner">
-            <span className="alert-icon">⚠️</span>
+            <span className="alert-icon">🌞</span>
             <div>
-              <strong>Seasonal Alert:</strong> Increased rat activity in London due to winter temperatures.
+              <strong>Summer Alert:</strong> Peak wasp and ant activity in London - nests reach maximum size and aggression levels.
               <Link to="/emergency" className="alert-link">Get Emergency Help →</Link>
             </div>
           </div>

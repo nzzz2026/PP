@@ -142,7 +142,7 @@
 }
 
 .view-all-pests {
-    color: #DC2626;
+    color: #DC2626 !important;
     font-weight: 600;
     font-size: 0.8rem;
     text-decoration: none;
@@ -155,7 +155,7 @@
 }
 
 .view-all-pests:hover {
-    color: #B91C1C;
+    color: #B91C1C !important;
 }
 
 .pest-dropdown-guarantee {
