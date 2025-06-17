@@ -255,7 +255,7 @@ const CamdenBoroughPage: React.FC = () => {
                     'Response within 24 hours guaranteed',
                     'BPCA certified technicians only',
                     'SafeContractor approved company',
-                    '30-day money back guarantee',
+                    '30-day guarantee after last sighting',
                     'Biodegradable pest control methods',
                     'Serving both domestic and commercial clients'
                   ].map((item, index) => (
@@ -474,7 +474,7 @@ const CamdenBoroughPage: React.FC = () => {
                 {
                   icon: '🛡️',
                   title: 'Guaranteed Results',
-                  description: 'We are committed to resolving your pest problems, offering guaranteed results and a 30-day money-back guarantee for your peace of mind.'
+                  description: 'We are committed to resolving your pest problems with trust, professionalism and fast response. 30-day guarantee after last sighting for your peace of mind.'
                 },
                 {
                   icon: '🎓',

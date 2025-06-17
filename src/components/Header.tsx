@@ -65,7 +65,7 @@ const Header: React.FC = () => {
                       <h4>Our Service Promise</h4>
                       <div className="guarantee-content">
                         <div className="guarantee-text">
-                          <strong>100% Satisfaction Guarantee</strong>
+                          <strong>30-Day Service Guarantee</strong>
                           <p>Expert local technicians with proven results across London</p>
                         </div>
                       </div>

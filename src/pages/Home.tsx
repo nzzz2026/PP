@@ -172,16 +172,28 @@ const Home: React.FC = () => {
                   <div style={{ fontSize: '0.65rem', color: 'rgba(255, 255, 255, 0.7)' }}>16+ Years Experience</div>
                 </div>
               </div>
-              <div style={{
+              <div 
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-4px) scale(1.05)';
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(143, 229, 72, 0.4)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+              style={{
                 background: 'rgba(255, 255, 255, 0.1)',
                 backdropFilter: 'blur(10px)',
+                transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                cursor: 'pointer',
                 padding: '12px 16px',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '8px',
                 borderRadius: '12px',
-                border: '1px solid rgba(255, 255, 255, 0.2)',
-                transition: 'all 0.3s ease'
+                border: '1px solid rgba(255, 255, 255, 0.2)'
               }}>
                 <div style={{
                   width: '24px',
@@ -194,22 +206,34 @@ const Home: React.FC = () => {
                   justifyContent: 'center',
                   fontSize: '0.8rem',
                   fontWeight: 'bold'
-                }}></div>
+                }}>✓</div>
                 <div>
                   <div style={{ fontWeight: '700', fontSize: '0.8rem', color: 'white' }}>BPCA Certified</div>
                   <div style={{ fontSize: '0.65rem', color: 'rgba(255, 255, 255, 0.7)' }}>Professional Standards</div>
                 </div>
               </div>
-              <div style={{
+              <div 
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-4px) scale(1.05)';
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(143, 229, 72, 0.4)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+              style={{
                 background: 'rgba(255, 255, 255, 0.1)',
                 backdropFilter: 'blur(10px)',
+                transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                cursor: 'pointer',
                 padding: '12px 16px',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '8px',
                 borderRadius: '12px',
-                border: '1px solid rgba(255, 255, 255, 0.2)',
-                transition: 'all 0.3s ease'
+                border: '1px solid rgba(255, 255, 255, 0.2)'
               }}>
                 <div style={{
                   width: '24px',
@@ -222,22 +246,34 @@ const Home: React.FC = () => {
                   justifyContent: 'center',
                   fontSize: '0.8rem',
                   fontWeight: 'bold'
-                }}></div>
+                }}>✓</div>
                 <div>
                   <div style={{ fontWeight: '700', fontSize: '0.8rem', color: 'white' }}>Fully Insured</div>
                   <div style={{ fontSize: '0.65rem', color: 'rgba(255, 255, 255, 0.7)' }}>£2M Public Liability</div>
                 </div>
               </div>
-              <div style={{
+              <div 
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-4px) scale(1.05)';
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(143, 229, 72, 0.4)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+              style={{
                 background: 'rgba(255, 255, 255, 0.1)',
                 backdropFilter: 'blur(10px)',
+                transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                cursor: 'pointer',
                 padding: '12px 16px',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '8px',
                 borderRadius: '12px',
-                border: '1px solid rgba(255, 255, 255, 0.2)',
-                transition: 'all 0.3s ease'
+                border: '1px solid rgba(255, 255, 255, 0.2)'
               }}>
                 <div style={{
                   width: '24px',
@@ -250,7 +286,7 @@ const Home: React.FC = () => {
                   justifyContent: 'center',
                   fontSize: '0.8rem',
                   fontWeight: 'bold'
-                }}></div>
+                }}>⭐</div>
                 <div>
                   <div style={{ fontWeight: '700', fontSize: '0.8rem', color: 'white' }}>4.9/5 Rating</div>
                   <div style={{ fontSize: '0.65rem', color: 'rgba(255, 255, 255, 0.7)' }}>487+ Reviews</div>
