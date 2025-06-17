@@ -53,10 +53,17 @@ const Contact: React.FC = () => {
     <div style={{ backgroundColor: '#FAFBFC', minHeight: '100vh', paddingTop: '80px' }}>
       {/* Hero Section */}
       <section style={{
-        background: 'linear-gradient(135deg, var(--charcoal) 0%, var(--gray-800) 100%)',
+        background: `
+          linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+          url('/hero-images/freepik__residential-pest-control-service-man-who-caught-a-__64231.jpeg')
+        `,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
         color: 'white',
         padding: '80px 0',
-        textAlign: 'center'
+        textAlign: 'center',
+        position: 'relative'
       }}>
         <div className="container">
           <h1 style={{

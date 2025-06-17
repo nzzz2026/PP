@@ -49,7 +49,18 @@ const ResidentialServices: React.FC = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">
+        <section 
+          className="text-white py-16 relative"
+          style={{
+            background: `
+              linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+              url('/hero-images/freepik__the-style-is-candid-image-photography-with-natural__64245.jpeg')
+            `,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
           <div className="max-w-6xl mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Residential Pest Control Services

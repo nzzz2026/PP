@@ -34,7 +34,18 @@ const PestLibrary: React.FC = () => {
 
   return (
     <div className="pest-library">
-      <section className="hero">
+      <section 
+        className="hero"
+        style={{
+          background: `
+            linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+            url('/hero-images/freepik__professional-pest-control-services__64243.jpeg')
+          `,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         <div className="container">
           <h1>London Pest Identification Guide</h1>
           <p>Identify common pests in London homes and businesses</p>

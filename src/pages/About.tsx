@@ -6,10 +6,17 @@ const About: React.FC = () => {
     <div style={{ backgroundColor: '#FAFBFC', minHeight: '100vh', paddingTop: '80px' }}>
       {/* Hero Section */}
       <section style={{
-        background: 'linear-gradient(135deg, var(--charcoal) 0%, var(--gray-800) 100%)',
+        background: `
+          linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+          url('/hero-images/freepik__the-style-is-candid-image-photography-with-natural__64244.jpeg')
+        `,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
         color: 'white',
         padding: '80px 0',
-        textAlign: 'center'
+        textAlign: 'center',
+        position: 'relative'
       }}>
         <div className="container">
           <h1 style={{
