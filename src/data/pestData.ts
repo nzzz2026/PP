@@ -1,3 +1,33 @@
+export interface PestServicePricing {
+  mainService: {
+    from: number;
+    unit: string;
+    description: string;
+  };
+  additionalServices?: {
+    name: string;
+    from: number;
+    description: string;
+  }[];
+}
+
+export interface PestGuarantee {
+  isOffered: boolean;
+  duration?: string;
+  conditions: string[];
+  exclusions: string[];
+}
+
+export interface PestTreatmentInfo {
+  preparation: string[];
+  methodology: string[];
+  aftercare: string[];
+  productsUsed: {
+    category: string;
+    purpose: string;
+  }[];
+}
+
 export interface PestData {
   id: string;
   name: string;
@@ -5,6 +35,9 @@ export interface PestData {
   category: 'rodents' | 'insects' | 'birds' | 'wildlife';
   commonNames: string[];
   description: string;
+  pricing?: PestServicePricing;
+  guarantee?: PestGuarantee;
+  treatmentInfo?: PestTreatmentInfo;
   identification: {
     size: string;
     color: string;
@@ -181,7 +214,110 @@ export const pests: PestData[] = [
       propertyTypes: ["Victorian terraces with connecting cellars and shared drainage systems providing neighbourhood-wide access routes", "Restaurant basements where grease traps and food storage create ideal breeding environments", "Council estates with refuse areas and multiple entry points through aging infrastructure", "Thames-side properties facing constant reinvasion from waterway populations and tourist-generated food waste", "Georgian conversions where partition walls create hidden highways between flats", "New-build developments where construction gaps and utility access points weren't properly sealed", "Commercial kitchens in high-density areas where grease and food debris accumulate in hard-to-clean areas", "Student accommodation where irregular cleaning and food storage practices create perfect conditions"]
     },
     urgencyLevel: "high",
-    relatedPests: ["mice", "squirrels"]
+    relatedPests: ["mice", "squirrels"],
+    pricing: {
+      mainService: {
+        from: 225,
+        unit: "for 3 visits",
+        description: "Comprehensive rat elimination program including survey, initial treatment, and two follow-up visits"
+      },
+      additionalServices: [
+        {
+          name: "Emergency same-day treatment",
+          from: 50,
+          description: "Priority response within 4 hours for urgent rat infestations"
+        },
+        {
+          name: "Drainage survey and proofing",
+          from: 150,
+          description: "CCTV drain inspection and professional sealing of sewer entry points"
+        },
+        {
+          name: "Commercial kitchen deep clean and treatment",
+          from: 300,
+          description: "Comprehensive sanitization and proofing for food service establishments"
+        },
+        {
+          name: "Loft insulation removal due to contamination",
+          from: 0,
+          description: "Complete removal and replacement of contaminated insulation - quote depends on area size"
+        }
+      ]
+    },
+    guarantee: {
+      isOffered: true,
+      duration: "6 months from final treatment",
+      conditions: [
+        "All identified entry points must be sealed within 14 days of recommendation",
+        "Property must remain accessible for all scheduled treatment visits",
+        "Environmental modifications (removing food/water sources) must be implemented",
+        "Drainage issues identified during survey must be addressed within 30 days",
+        "Client must follow all preparation and aftercare instructions"
+      ],
+      exclusions: [
+        "Does not cover infestations originating from neighboring properties or shared drainage systems",
+        "Void if new structural defects allow re-entry from external sources",
+        "Not applicable where ongoing construction or renovation creates new access points",
+        "Does not cover damage caused by rats before or during treatment",
+        "Guarantee void if recommended proofing works are not completed"
+      ]
+    },
+    treatmentInfo: {
+      preparation: [
+        "Do not disturb rat signs - leave droppings and damage for technician assessment",
+        "Map out all areas where rats have been seen or heard",
+        "Check with neighbors about rat activity in adjacent properties",
+        "Remove all accessible food sources including pet food and bird feed",
+        "Clear areas around potential entry points for technician access",
+        "Secure waste storage areas and repair damaged bins",
+        "Remove garden debris and overgrown vegetation near building",
+        "Ensure all family members and pets are away during treatment application"
+      ],
+      methodology: [
+        "Comprehensive external and internal property survey including drainage inspection",
+        "Identification of all entry points using specialized detection equipment",
+        "Strategic placement of professional-grade rodenticide baits in secure bait boxes",
+        "Treatment of sewer systems and drainage networks where rats originate",
+        "Installation of monitoring stations to track population reduction",
+        "Follow-up visits at 7-10 day intervals to assess effectiveness and replenish baits",
+        "Removal and disposal of deceased rats from accessible areas",
+        "Detailed proofing recommendations with prioritized action plan",
+        "Final inspection and removal of all baiting equipment"
+      ],
+      aftercare: [
+        "Do not move or tamper with bait stations during treatment period",
+        "Maintain strict food hygiene and storage protocols for minimum 60 days",
+        "Seal any new gaps or holes in building exterior immediately",
+        "Keep vegetation trimmed back from building perimeter",
+        "Install door sweeps and repair damaged door seals",
+        "Maintain secure waste storage with tight-fitting lids",
+        "Monitor drainage systems for signs of new rat activity",
+        "Report any new rat signs immediately during guarantee period",
+        "Implement all recommended proofing measures within specified timeframes"
+      ],
+      productsUsed: [
+        {
+          category: "Professional Anticoagulant Rodenticides",
+          purpose: "High-strength baits specifically formulated for rat elimination under CRRU regulations"
+        },
+        {
+          category: "Bromadiolone and Difenacoum formulations",
+          purpose: "Multi-dose anticoagulants effective against rats resistant to warfarin-based products"
+        },
+        {
+          category: "Heavy-duty tamper-resistant bait stations",
+          purpose: "Secure deployment systems designed for outdoor use and rat-strength security"
+        },
+        {
+          category: "Tracking powder for drainage systems",
+          purpose: "Specialized formulations for treating sewer networks and inaccessible void spaces"
+        },
+        {
+          category: "Electronic monitoring systems",
+          purpose: "Digital tracking of bait consumption and rat activity patterns for treatment optimization"
+        }
+      ]
+    }
   },
   {
     id: "mice",
@@ -302,7 +438,96 @@ export const pests: PestData[] = [
       propertyTypes: ["Victorian conversions where partition walls create extensive runway systems between units", "Restaurant kitchens with warm conditions, food debris, and multiple hiding spots behind equipment", "Student accommodation where irregular cleaning and food storage habits create perfect breeding conditions", "Older flats in mansion blocks with communal areas and shared utilities providing access routes", "Ground floor properties with direct garden access through gaps under doors and utility penetrations", "Period houses converted to multiple occupancy with shared kitchens and poor housekeeping standards", "Properties near construction sites where disturbance drives mice to seek alternative accommodation", "Homes with pets where food bowls and spillage provide consistent food sources"]
     },
     urgencyLevel: "medium",
-    relatedPests: ["rats"]
+    relatedPests: ["rats"],
+    pricing: {
+      mainService: {
+        from: 190,
+        unit: "for 2 visits",
+        description: "Complete mice elimination program including initial treatment and follow-up visit"
+      },
+      additionalServices: [
+        {
+          name: "Property proofing to prevent future access",
+          from: 90,
+          description: "Professional sealing of entry points using steel wool, mesh, and expanding foam"
+        },
+        {
+          name: "Biocidal spray treatment for contaminated areas", 
+          from: 110,
+          description: "Disinfection of areas contaminated by mouse droppings and urine"
+        },
+        {
+          name: "Loft insulation removal & replacement",
+          from: 0,
+          description: "Cost depends on loft size - call for quote. Includes safe removal, disinfection, and new insulation installation"
+        }
+      ]
+    },
+    guarantee: {
+      isOffered: true,
+      duration: "3 months from final treatment",
+      conditions: [
+        "Property preparation instructions must be followed completely before treatment",
+        "All recommended aftercare measures must be implemented",
+        "Access must be provided for all scheduled follow-up visits",
+        "Any recommended proofing work must be completed within 30 days"
+      ],
+      exclusions: [
+        "Does not cover future infestations from external sources",
+        "Not applicable in flats, terraced houses, or multi-occupancy buildings where mice may spread from adjoining premises",
+        "Void if new food sources are introduced or property conditions change",
+        "Does not cover structural damage or dead mice in inaccessible areas"
+      ]
+    },
+    treatmentInfo: {
+      preparation: [
+        "Leave any droppings or damage for technician inspection",
+        "Keep a record of where mice have been seen",
+        "Check if neighbours have reported mice problems",
+        "Remove all accessible food sources including pet food",
+        "Clean crumbs from under cooker and kitchen cabinets",
+        "Do not feed wild birds during treatment period",
+        "Do not put food scraps on compost heap",
+        "Clear access routes to affected areas"
+      ],
+      methodology: [
+        "Comprehensive property survey to identify entry points and activity areas",
+        "Strategic placement of CRRU-approved rodenticide baits in tamper-resistant bait stations",
+        "Treatment of wall cavities and void spaces where mice travel",
+        "Multiple bait formulations used to overcome bait shyness",
+        "Follow-up visit after 7-14 days to assess progress and replenish baits",
+        "Final visit to remove all baiting stations and dispose of any deceased mice",
+        "Post-treatment advice on prevention and proofing recommendations"
+      ],
+      aftercare: [
+        "Do not disturb bait stations between visits",
+        "Continue to restrict food sources for minimum 30 days",
+        "Maintain high standards of hygiene and food storage",
+        "Seal any new gaps or entry points immediately",
+        "Store dry goods in metal or thick plastic containers",
+        "Keep outdoor areas clear of food waste and fallen fruit",
+        "Monitor for signs of new activity and report immediately",
+        "Implement recommended proofing measures within 30 days"
+      ],
+      productsUsed: [
+        {
+          category: "Second Generation Anticoagulant Rodenticides (SGARs)",
+          purpose: "Primary elimination of mouse colonies - professionally applied indoors only under CRRU stewardship"
+        },
+        {
+          category: "Difenacoum-based rodenticide baits",
+          purpose: "Effective against mice colonies with lower secondary poisoning risk"
+        },
+        {
+          category: "Tamper-resistant bait stations",
+          purpose: "Safe deployment of rodenticides protecting children, pets, and non-target species"
+        },
+        {
+          category: "Tracking powder formulations",
+          purpose: "Treatment of wall voids and inaccessible areas where conventional baits cannot be placed"
+        }
+      ]
+    }
   },
   {
     id: "cockroaches",
@@ -493,7 +718,111 @@ export const pests: PestData[] = [
       ]
     },
     urgencyLevel: "emergency",
-    relatedPests: ["ants", "silverfish", "german-cockroach"]
+    relatedPests: ["ants", "silverfish", "german-cockroach"],
+    pricing: {
+      mainService: {
+        from: 185,
+        unit: "for 3 visits",
+        description: "Complete cockroach elimination program including survey, initial treatment, and follow-up visits"
+      },
+      additionalServices: [
+        {
+          name: "Emergency 4-hour response",
+          from: 75,
+          description: "Priority same-day treatment for urgent commercial or residential infestations"
+        },
+        {
+          name: "Commercial kitchen deep treatment",
+          from: 350,
+          description: "Comprehensive treatment for food service establishments including equipment dismantling"
+        },
+        {
+          name: "ULV fogging for severe infestations",
+          from: 150,
+          description: "Ultra-low volume fogging treatment for wide-area coverage in severe cases"
+        },
+        {
+          name: "Monthly monitoring and maintenance contract",
+          from: 95,
+          description: "Ongoing professional monitoring with bait station maintenance and reporting"
+        }
+      ]
+    },
+    guarantee: {
+      isOffered: true,
+      duration: "6 months from final treatment",
+      conditions: [
+        "All identified moisture sources must be eliminated within 7 days",
+        "Property must be kept clean with daily removal of food debris",
+        "All access points identified during survey must be sealed within 14 days", 
+        "Client must maintain proper sanitation standards throughout treatment period",
+        "Property must be accessible for all scheduled monitoring visits",
+        "Any new structural defects allowing entry must be reported immediately"
+      ],
+      exclusions: [
+        "Does not cover new infestations from neighboring properties in multi-unit buildings",
+        "Void if recommended sanitation standards are not maintained",
+        "Not applicable where ongoing moisture problems are not addressed",
+        "Does not cover infestations in properties with structural disrepair",
+        "Guarantee void if treatment areas are not kept accessible",
+        "Excludes reintroduction via infested items brought into treated property"
+      ]
+    },
+    treatmentInfo: {
+      preparation: [
+        "Complete deep cleaning of all food preparation and storage areas",
+        "Remove all clutter and stored items from affected areas",
+        "Empty all kitchen cabinets and bathroom storage for inspection access",
+        "Fix all water leaks and moisture sources immediately",
+        "Pull appliances away from walls to expose harboring areas",
+        "Bag and remove all contaminated food items",
+        "Document all sightings with time, date, and location photos",
+        "Ensure all pets and food are secured during treatment"
+      ],
+      methodology: [
+        "Comprehensive inspection using specialist detection equipment and monitoring",
+        "Identification of species and population assessment for targeted treatment approach",
+        "Strategic placement of professional gel baits in identified harboring areas",
+        "Application of residual insecticides to cracks, crevices, and runway areas",
+        "Dust treatments in wall voids and inaccessible spaces where liquids cannot reach",
+        "Installation of Insect Growth Regulators (IGRs) to disrupt breeding cycles",
+        "ULV fogging for severe infestations requiring immediate population reduction",
+        "Monitoring station placement for ongoing population assessment and early detection",
+        "Follow-up treatments at 14-21 day intervals targeting newly hatched populations"
+      ],
+      aftercare: [
+        "Maintain strict cleanliness with daily removal of food debris and moisture",
+        "Keep all bait stations undisturbed and report any tampering immediately",
+        "Continue regular deep cleaning behind appliances and in hidden areas",
+        "Monitor and report any new cockroach sightings during guarantee period",
+        "Maintain proper food storage in sealed containers",
+        "Ensure immediate repair of any new moisture sources or structural damage",
+        "Regular replacement of monitoring station adhesive pads as directed",
+        "Report any changes in property use or structural modifications"
+      ],
+      productsUsed: [
+        {
+          category: "Professional gel baits",
+          purpose: "Species-specific attraction and elimination targeting German, American, and Oriental cockroaches"
+        },
+        {
+          category: "Insect Growth Regulators (IGR)",
+          purpose: "Disrupts molting and reproduction preventing immature cockroaches from reaching breeding age"
+        },
+        {
+          category: "Residual pyrethroid insecticides",
+          purpose: "Long-lasting barrier treatments for cracks, crevices, and cockroach highways"
+        },
+        {
+          category: "Desiccant dust formulations",
+          purpose: "Wall void treatments and areas where moisture resistance is required"
+        },
+        {
+          category: "ULV fogging solutions",
+          purpose: "Wide-area knockdown treatment for severe infestations requiring immediate population reduction"
+        }
+      ]
+    }
   },
   {
     id: "bed-bugs",
@@ -687,7 +1016,113 @@ export const pests: PestData[] = [
       ]
     },
     urgencyLevel: "emergency",
-    relatedPests: ["fleas", "carpet-beetles", "booklice"]
+    relatedPests: ["fleas", "carpet-beetles", "booklice"],
+    pricing: {
+      mainService: {
+        from: 450,
+        unit: "for 2-3 treatments",
+        description: "Complete bed bug elimination program including initial assessment, treatment, and follow-up services"
+      },
+      additionalServices: [
+        {
+          name: "Heat treatment (chemical-free)",
+          from: 650,
+          description: "Whole-room heat treatment reaching 45-50°C - most effective single-day solution"
+        },
+        {
+          name: "Emergency same-day response",
+          from: 100,
+          description: "Priority assessment and initial treatment within 4 hours of contact"
+        },
+        {
+          name: "Mattress and furniture encasements",
+          from: 80,
+          description: "Professional-grade bed bug proof covers for mattresses, box springs, and furniture"
+        },
+        {
+          name: "Preparation service for elderly/disabled clients",
+          from: 150,
+          description: "Full preparation including washing, bagging, and furniture moving"
+        }
+      ]
+    },
+    guarantee: {
+      isOffered: true,
+      duration: "6 months from final treatment",
+      conditions: [
+        "All preparation instructions must be followed exactly prior to each treatment",
+        "Client must complete required washing and heat-drying of all clothing and bedding",
+        "All recommended mattress and furniture encasements must be installed",
+        "Property must remain accessible for all scheduled treatment visits",
+        "Client must not introduce new second-hand furniture during treatment period",
+        "Any travel during treatment must be reported and precautions followed"
+      ],
+      exclusions: [
+        "Does not cover new infestations introduced from external sources after treatment completion",
+        "Void if preparation instructions are not followed completely before any treatment visit",
+        "Not applicable if client introduces untreated second-hand furniture or clothing",
+        "Does not cover bed bugs introduced through travel during active treatment",
+        "Guarantee void if encasements are removed or damaged during treatment period",
+        "Excludes infestations spreading from neighboring units in multi-occupancy buildings"
+      ]
+    },
+    treatmentInfo: {
+      preparation: [
+        "Wash ALL clothing, bedding, and fabric items in 60°C water followed by 30+ minute high-heat drying",
+        "Bag all cleaned items in clear plastic bags and seal tightly",
+        "Remove all items from under beds, nightstands, and nearby furniture",
+        "Disassemble bed frames if requested by technician",
+        "Vacuum all mattress seams, bed frames, and surrounding areas thoroughly",
+        "Pull beds and furniture away from walls to allow treatment access",
+        "Remove all decorative items, clocks, and books from bedroom areas",
+        "Ensure pets and family members are out of treatment areas during service",
+        "Document infestation areas with photos for technician assessment"
+      ],
+      methodology: [
+        "Comprehensive inspection using specialized detection equipment and trained dogs if available",
+        "Targeted application of residual insecticides to all identified harboring areas",
+        "Steam treatment of mattress seams, bed frames, and upholstered furniture",
+        "Desiccant dust application in wall voids and inaccessible cracks",
+        "Installation of monitoring devices to track treatment effectiveness",
+        "Heat treatment option: raising room temperature to 45-50°C for 4+ hours",
+        "Application of insect growth regulators to disrupt breeding cycles",
+        "Follow-up treatments at 2-3 week intervals to target newly hatched nymphs",
+        "Final inspection and clearance confirmation 4-6 weeks after last treatment"
+      ],
+      aftercare: [
+        "Do not remove or wash mattress/furniture encasements for minimum 18 months",
+        "Continue weekly washing of bedding in hot water and high-heat drying",
+        "Maintain clutter-free environment around sleeping areas",
+        "Use bed bug interceptors under bed legs as ongoing monitoring",
+        "Inspect luggage and clothing after any travel",
+        "Report any suspicious bites or signs immediately during guarantee period",
+        "Avoid bringing second-hand furniture into home during guarantee period",
+        "Continue weekly vacuuming of mattress seams and bed frames",
+        "Replace interceptors every 3 months or when filled with debris"
+      ],
+      productsUsed: [
+        {
+          category: "Residual pyrethroid insecticides",
+          purpose: "Long-lasting kill and repellent effects in treated areas with 8-12 week residual activity"
+        },
+        {
+          category: "Diatomaceous earth and silica gel dusts",
+          purpose: "Desiccant dusts for wall voids and areas where liquid sprays cannot reach"
+        },
+        {
+          category: "Insect growth regulators (IGR)",
+          purpose: "Disrupts molting and reproduction cycles preventing nymph development to adults"
+        },
+        {
+          category: "Steam and heat treatment systems",
+          purpose: "Chemical-free killing method reaching temperatures lethal to all bed bug life stages"
+        },
+        {
+          category: "Monitoring and detection devices",
+          purpose: "Passive and active monitors to confirm elimination and detect any surviving populations"
+        }
+      ]
+    }
   },
   {
     id: "wasps",
@@ -878,7 +1313,104 @@ export const pests: PestData[] = [
       ]
     },
     urgencyLevel: "emergency",
-    relatedPests: ["hornets", "bees", "yellow-jacket-wasps"]
+    relatedPests: ["hornets", "bees", "yellow-jacket-wasps"],
+    pricing: {
+      mainService: {
+        from: 85,
+        unit: "per nest",
+        description: "Complete wasp nest elimination including treatment and follow-up safety check"
+      },
+      additionalServices: [
+        {
+          name: "Additional nests on same property",
+          from: 40,
+          description: "Each additional nest treated during same visit at reduced rate"
+        },
+        {
+          name: "Emergency same-day response",
+          from: 35,
+          description: "Priority treatment within 4 hours for dangerous or urgent situations"
+        },
+        {
+          name: "High-access specialist equipment",
+          from: 50,
+          description: "Cherry picker or specialist access equipment for difficult locations"
+        },
+        {
+          name: "Physical nest removal service",
+          from: 45,
+          description: "Complete nest removal 2-3 weeks after treatment when colony is dormant"
+        }
+      ]
+    },
+    guarantee: {
+      isOffered: true,
+      duration: "Remainder of current season (until October 31st)",
+      conditions: [
+        "Nest must be accessible for complete treatment application",
+        "Property access must be maintained for follow-up safety check",
+        "Client must follow safety instructions and keep area clear",
+        "Weather conditions must allow safe treatment application",
+        "Any structural changes affecting nest accessibility must be reported"
+      ],
+      exclusions: [
+        "Does not cover new nests established after treatment date",
+        "Not applicable for nests that cannot be fully accessed or treated",
+        "Void if weather conditions prevent complete treatment application",
+        "Does not guarantee against individual wasps from other distant nests",
+        "Excludes nests discovered after treatment that were not visible during initial visit"
+      ]
+    },
+    treatmentInfo: {
+      preparation: [
+        "Observe nest location from safe distance and note main entrance points",
+        "Clear safe access route for technician avoiding wasp flight paths",
+        "Close all windows and doors to prevent wasps entering house during treatment",
+        "Keep children and pets indoors with doors locked during treatment period",
+        "Remove outdoor furniture and covers from immediate nest area",
+        "Ensure clear parking access for emergency equipment if required",
+        "Have emergency contact details ready if anyone on property has severe allergies",
+        "Do not attempt to treat nest yourself or disturb area before technician arrival"
+      ],
+      methodology: [
+        "Professional assessment of nest location, size, and species identification",
+        "Selection of appropriate treatment method based on nest accessibility and environmental factors",
+        "Application of professional-grade insecticidal dust directly into nest entrance using specialist equipment",
+        "Treatment of all identified entry/exit points to ensure complete colony exposure",
+        "Residual spray application around nest area to eliminate returning forager wasps",
+        "Documentation of treatment with safety instructions for 48-hour period following treatment",
+        "Emergency contingency procedures in place for adverse reactions or weather changes",
+        "Follow-up safety inspection within 48 hours to confirm nest elimination"
+      ],
+      aftercare: [
+        "Avoid nest area completely for minimum 48 hours after treatment",
+        "Do not attempt to remove nest yourself - dead wasps may still sting",
+        "Keep windows and doors closed for 24 hours following treatment",
+        "Report any unusual wasp activity or suspected new nests immediately",
+        "Schedule nest removal appointment 2-3 weeks after treatment when safe",
+        "Implement prevention measures before next season (March-April)",
+        "Remove food sources and maintain clean outdoor areas through autumn",
+        "Seal potential nesting sites identified during treatment before next spring"
+      ],
+      productsUsed: [
+        {
+          category: "Professional insecticidal dusts",
+          purpose: "Rapid knockdown and residual killing effect for complete colony elimination"
+        },
+        {
+          category: "Foam-based nest treatments",
+          purpose: "Expansion treatment for aerial nests ensuring complete penetration of colony"
+        },
+        {
+          category: "Residual pyrethroid sprays",
+          purpose: "Perimeter treatment to eliminate returning forager wasps and prevent re-establishment"
+        },
+        {
+          category: "Specialist injection equipment",
+          purpose: "Safe, precise delivery of treatment directly into nest entrance from recommended distance"
+        }
+      ]
+    }
   },
   {
     id: "ants",
@@ -1067,7 +1599,111 @@ export const pests: PestData[] = [
       ]
     },
     urgencyLevel: "high",
-    relatedPests: ["cockroaches", "silverfish", "pharaoh-ants"]
+    relatedPests: ["cockroaches", "silverfish", "pharaoh-ants"],
+    pricing: {
+      mainService: {
+        from: 125,
+        unit: "for colony elimination",
+        description: "Complete ant colony elimination program including assessment, treatment, and follow-up monitoring"
+      },
+      additionalServices: [
+        {
+          name: "Pharaoh ant specialist treatment",
+          from: 195,
+          description: "Advanced 3-treatment program specifically for Pharaoh ant colonies in commercial settings"
+        },
+        {
+          name: "External perimeter treatment",
+          from: 85,
+          description: "Protective barrier treatment around building exterior to prevent future invasions"
+        },
+        {
+          name: "Flying ant emergency response",
+          from: 65,
+          description: "Rapid treatment during flying ant season for urgent situations"
+        },
+        {
+          name: "Annual monitoring and maintenance",
+          from: 150,
+          description: "4 quarterly visits with bait station maintenance and early detection monitoring"
+        }
+      ]
+    },
+    guarantee: {
+      isOffered: true,
+      duration: "6 months from final treatment for garden ants, 12 months for Pharaoh ants",
+      conditions: [
+        "All food sources must be eliminated and proper sanitation maintained",
+        "Identified entry points must be sealed within 14 days of treatment",
+        "Property must remain accessible for monitoring and bait station maintenance",
+        "Client must not disturb bait stations or treatment areas during active period",
+        "Any structural changes or new moisture sources must be reported",
+        "Different guarantee periods apply to different ant species"
+      ],
+      exclusions: [
+        "Does not cover new colonies establishing from external sources",
+        "Void if recommended sanitation standards are not maintained",
+        "Not applicable where ongoing moisture or structural issues remain unaddressed",
+        "Does not guarantee against individual foraging ants from distant colonies",
+        "Excludes garden ant activity that does not enter property interior",
+        "Flying ant swarms during natural seasonal events are not covered"
+      ]
+    },
+    treatmentInfo: {
+      preparation: [
+        "Deep clean all surfaces to remove existing pheromone trails and food residues",
+        "Remove all accessible food sources and store in sealed, ant-proof containers",
+        "Document all ant trails with photographs showing entry and exit points",
+        "Clear access to treatment areas including spaces behind appliances",
+        "Fix any water leaks or moisture sources that attract ants",
+        "Secure pets and children during treatment application",
+        "Empty bins and clean thoroughly to remove attractants",
+        "Provide access to external areas where outdoor colonies are suspected"
+      ],
+      methodology: [
+        "Comprehensive species identification to determine appropriate treatment approach",
+        "Location and mapping of colony sites using professional tracking techniques",
+        "Strategic placement of species-specific gel baits along identified ant trails",
+        "Application of granular baits for outdoor colony treatment and elimination",
+        "Residual spray treatments around building perimeter and entry points",
+        "Dust applications in wall cavities and inaccessible areas where appropriate",
+        "Installation of monitoring stations for ongoing population assessment",
+        "Different protocols for garden ants vs. Pharaoh ants requiring specialized approaches",
+        "Follow-up treatments at scheduled intervals based on species biology and colony response"
+      ],
+      aftercare: [
+        "Do not clean or disturb bait stations during active treatment period",
+        "Maintain strict food storage and cleanliness standards throughout guarantee period",
+        "Continue to seal any new cracks or entry points discovered",
+        "Monitor bait station activity and report changes to technician",
+        "Remove any dead ants with vacuum rather than cleaning sprays",
+        "Report any new ant activity immediately during guarantee period",
+        "Implement long-term prevention measures including moisture control",
+        "Schedule annual preventive treatments to maintain protection"
+      ],
+      productsUsed: [
+        {
+          category: "Species-specific gel baits",
+          purpose: "Targeted attraction and colony elimination for garden ants, Pharaoh ants, and other species"
+        },
+        {
+          category: "Granular bait formulations",
+          purpose: "Outdoor colony treatment and perimeter protection against reinvasion"
+        },
+        {
+          category: "Residual insecticide sprays",
+          purpose: "Barrier treatments around building perimeter and entry points"
+        },
+        {
+          category: "Desiccant dusts",
+          purpose: "Wall cavity treatments and areas where moisture resistance is required"
+        },
+        {
+          category: "Monitoring and detection systems",
+          purpose: "Ongoing population assessment and early detection of new activity"
+        }
+      ]
+    }
   },
   {
     id: "spiders",
