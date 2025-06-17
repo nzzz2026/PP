@@ -87,62 +87,28 @@ const Footer: React.FC = () => {
           {/* Contact Info */}
           <div className="footer-section">
             <h4 style={{color: 'white', marginBottom: '2rem', fontSize: '1.25rem'}}>Contact Information</h4>
-            <div className="contact-item" style={{display: 'flex', alignItems: 'flex-start', gap: '1rem', marginBottom: '2rem'}}>
-              <div className="contact-icon" style={{
-                width: '40px', 
-                height: '40px', 
-                background: 'rgba(143, 229, 72, 0.2)', 
-                borderRadius: '50%', 
-                display: 'flex', 
-                alignItems: 'center', 
-                justifyContent: 'center', 
-                color: 'var(--lime)', 
-                fontSize: '1.25rem', 
-                minWidth: '40px'
-              }}>📞</div>
+            <div className="contact-item" style={{marginBottom: '2rem'}}>
               <div className="contact-info">
-                <h5 style={{color: 'white', fontWeight: 700, marginBottom: '0.25rem'}}>24/7 Emergency Hotline</h5>
-                <p style={{color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.875rem'}}>077 2704 9304</p>
-                <p style={{fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.7)'}}>Always available for emergencies</p>
+                <h5 style={{color: 'white', fontWeight: 700, marginBottom: '0.5rem', fontSize: '1.1rem'}}>24/7 Emergency Hotline</h5>
+                <p style={{color: 'rgba(255, 255, 255, 0.9)', fontSize: '1rem', fontWeight: '600', marginBottom: '0.25rem'}}>077 2704 9304</p>
+                <p style={{fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)'}}>Always available for emergencies</p>
               </div>
             </div>
-            <div className="contact-item" style={{display: 'flex', alignItems: 'flex-start', gap: '1rem', marginBottom: '2rem'}}>
-              <div className="contact-icon" style={{
-                width: '40px', 
-                height: '40px', 
-                background: 'rgba(143, 229, 72, 0.2)', 
-                borderRadius: '50%', 
-                display: 'flex', 
-                alignItems: 'center', 
-                justifyContent: 'center', 
-                color: 'var(--lime)', 
-                fontSize: '1.25rem', 
-                minWidth: '40px'
-              }}>📧</div>
+            <div className="contact-item" style={{marginBottom: '2rem'}}>
               <div className="contact-info">
-                <h5 style={{color: 'white', fontWeight: 700, marginBottom: '0.25rem'}}>Email Support</h5>
-                <p style={{color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.875rem'}}>info@pestprolondon.co.uk</p>
-                <p style={{fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.7)'}}>Response within 2 hours</p>
+                <h5 style={{color: 'white', fontWeight: 700, marginBottom: '0.5rem', fontSize: '1.1rem'}}>Email Support</h5>
+                <p style={{color: 'rgba(255, 255, 255, 0.9)', fontSize: '1rem', fontWeight: '600', marginBottom: '0.25rem'}}>info@pestprolondon.co.uk</p>
+                <p style={{fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)'}}>Response within 2 hours</p>
               </div>
             </div>
-            <div className="contact-item" style={{display: 'flex', alignItems: 'flex-start', gap: '1rem', marginBottom: '2rem'}}>
-              <div className="contact-icon" style={{
-                width: '40px', 
-                height: '40px', 
-                background: 'rgba(143, 229, 72, 0.2)', 
-                borderRadius: '50%', 
-                display: 'flex', 
-                alignItems: 'center', 
-                justifyContent: 'center', 
-                color: 'var(--lime)', 
-                fontSize: '1.25rem', 
-                minWidth: '40px'
-              }}>📍</div>
+            <div className="contact-item" style={{marginBottom: '2rem'}}>
               <div className="contact-info">
-                <h5 style={{color: 'white', fontWeight: 700, marginBottom: '0.25rem'}}>Office Address</h5>
-                <p style={{color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.875rem'}}>Chapter South Bank Unit B1201</p>
-                <p style={{color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.875rem'}}>17 Great Suffolk Street</p>
-                <p style={{color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.875rem'}}>London SE1 0NS</p>
+                <h5 style={{color: 'white', fontWeight: 700, marginBottom: '0.5rem', fontSize: '1.1rem'}}>Office Address</h5>
+                <p style={{color: 'rgba(255, 255, 255, 0.9)', fontSize: '1rem', lineHeight: '1.5'}}>
+                  Chapter South Bank Unit B1201<br />
+                  17 Great Suffolk Street<br />
+                  London SE1 0NS
+                </p>
               </div>
             </div>
           </div>
