@@ -129,6 +129,7 @@ const Footer: React.FC = () => {
             © 2024 Pest Pro London. All rights reserved. | BPCA Member | Fully Insured | Environmental Agency Registered
           </p>
           <div className="footer-links" style={{display: 'flex', gap: '3rem', flexWrap: 'wrap'}}>
+            <a href="/sitemap.xml" style={{color: 'rgba(255, 255, 255, 0.6)', fontSize: '0.875rem', transition: 'color 0.3s ease'}}>Sitemap</a>
             <a href="#" style={{color: 'rgba(255, 255, 255, 0.6)', fontSize: '0.875rem', transition: 'color 0.3s ease'}}>Privacy Policy</a>
             <a href="#" style={{color: 'rgba(255, 255, 255, 0.6)', fontSize: '0.875rem', transition: 'color 0.3s ease'}}>Terms of Service</a>
             <a href="#" style={{color: 'rgba(255, 255, 255, 0.6)', fontSize: '0.875rem', transition: 'color 0.3s ease'}}>Cookie Policy</a>

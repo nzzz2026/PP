@@ -166,7 +166,7 @@ const About: React.FC = () => {
                 justifyContent: 'center',
                 margin: '0 auto 1.5rem',
                 fontSize: '2rem'
-              }}>🎯</div>
+              }}></div>
               <h3 style={{
                 fontSize: '1.3rem',
                 fontWeight: '700',
@@ -198,7 +198,7 @@ const About: React.FC = () => {
                 justifyContent: 'center',
                 margin: '0 auto 1.5rem',
                 fontSize: '2rem'
-              }}>🌱</div>
+              }}></div>
               <h3 style={{
                 fontSize: '1.3rem',
                 fontWeight: '700',
@@ -230,7 +230,7 @@ const About: React.FC = () => {
                 justifyContent: 'center',
                 margin: '0 auto 1.5rem',
                 fontSize: '2rem'
-              }}>🤝</div>
+              }}></div>
               <h3 style={{
                 fontSize: '1.3rem',
                 fontWeight: '700',
@@ -280,32 +280,22 @@ const About: React.FC = () => {
           }}>
             {[
               {
-                icon: '⚡',
                 title: 'Rapid Response',
-                description: 'Same-day service available across all 32 London boroughs. Average response time: 45 minutes for emergencies.'
+                description: 'Next-day service available across all 32 London boroughs. Average response time: 45 minutes for emergencies.'
               },
               {
-                icon: '🎓',
                 title: 'BPCA Certified',
                 description: 'All technicians are British Pest Control Association certified with ongoing training in the latest pest control methods.'
               },
               {
-                icon: '🛡️',
                 title: 'Fully Insured',
                 description: '£2M public liability insurance and comprehensive coverage for your complete peace of mind.'
               },
               {
-                icon: '🌍',
                 title: 'Local Expertise',
                 description: 'Deep knowledge of London-specific pest challenges, from Victorian drainage to urban wildlife management.'
               },
               {
-                icon: '🔬',
-                title: 'Advanced Methods',
-                description: 'Cutting-edge technology including thermal imaging, GPS tracking, and targeted biological controls.'
-              },
-              {
-                icon: '💯',
                 title: 'Satisfaction Guarantee',
                 description: '30-day guarantee after last sighting. If pests return, we return at no extra charge.'
               }
@@ -328,9 +318,12 @@ const About: React.FC = () => {
                 e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
               }}>
                 <div style={{
-                  fontSize: '3rem',
-                  marginBottom: '1rem'
-                }}>{feature.icon}</div>
+                  width: '60px',
+                  height: '60px',
+                  background: 'var(--lime)',
+                  borderRadius: '50%',
+                  margin: '0 auto 1rem'
+                }}></div>
                 <h3 style={{
                   fontSize: '1.2rem',
                   fontWeight: '700',
@@ -441,19 +434,22 @@ const About: React.FC = () => {
                   gap: '1.5rem'
                 }}>
                   {[
-                    { icon: '🏛️', title: 'BPCA Certified', desc: 'British Pest Control Association member' },
-                    { icon: '✅', title: 'SafeContractor', desc: 'Health & safety compliance approved' },
-                    { icon: '🎯', title: 'RSPH Qualified', desc: 'Royal Society for Public Health trained' },
-                    { icon: '🌿', title: 'IPM Certified', desc: 'Integrated Pest Management specialist' }
+                    { title: 'BPCA Certified', desc: 'British Pest Control Association member' },
+                    { title: 'SafeContractor', desc: 'Health & safety compliance approved' },
+                    { title: 'RSPH Qualified', desc: 'Royal Society for Public Health trained' },
+                    { title: 'IPM Certified', desc: 'Integrated Pest Management specialist' }
                   ].map((cert, index) => (
                     <div key={index} style={{
                       textAlign: 'center',
                       padding: '1rem'
                     }}>
                       <div style={{
-                        fontSize: '2.5rem',
-                        marginBottom: '0.5rem'
-                      }}>{cert.icon}</div>
+                        width: '40px',
+                        height: '40px',
+                        background: 'var(--lime)',
+                        borderRadius: '50%',
+                        margin: '0 auto 0.5rem'
+                      }}></div>
                       <h4 style={{
                         fontSize: '0.9rem',
                         fontWeight: '700',
@@ -517,7 +513,7 @@ const About: React.FC = () => {
               },
               {
                 question: 'How quickly can you respond to pest emergencies?',
-                answer: 'We offer same-day service across all London boroughs with an average response time of 45 minutes for emergency calls. For wasp nests, severe rodent infestations, or commercial emergencies, we prioritize immediate response. Standard appointments are usually available within 24-48 hours.'
+                answer: 'We offer next-day service across all London boroughs with an average response time of 45 minutes for emergency calls. For wasp nests, severe rodent infestations, or commercial emergencies, we prioritize immediate response. Standard appointments are usually available within 24-48 hours.'
               },
               {
                 question: 'What pest control methods do you use?',
