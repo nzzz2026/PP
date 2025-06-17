@@ -435,124 +435,194 @@ export const pests: PestData[] = [
     name: "Bed Bugs",
     scientificName: "Cimex lectularius",
     category: "insects",
-    commonNames: ["Common bed bug", "House bug"],
-    description: "Bed bugs are parasitic insects that feed on human blood. They've seen a resurgence in London due to increased travel and resistance to pesticides. They don't transmit diseases but cause significant distress.",
+    commonNames: ["Common bed bug", "House bug", "Wall louse", "Crimson rambler", "Heavy dragoon"],
+    description: "Discovering bed bugs in your home can be incredibly distressing, and we understand the anxiety this brings. At Pest Pro London, we've helped thousands of London residents reclaim their peace of mind with our expert bed bug identification, treatment, and prevention services. These resilient parasitic insects belong to the family Cimicidae and are masters of hiding, feeding exclusively on blood while remaining largely undetected. Despite their small size, bed bugs can cause significant emotional distress and sleepless nights. The good news? With proper professional treatment, bed bug infestations can be completely eliminated.",
     identification: {
-      size: "Adults: 4-5mm, Nymphs: 1-4mm",
-      color: "Reddish-brown when fed, lighter when unfed",
+      size: "Adults: 4-7mm (apple seed size), Nymphs: 1-4.5mm, Eggs: 1mm (grain of salt)",
+      color: "Unfed: light brown to mahogany, Fed: dark reddish-brown to deep brown, balloon-like when engorged",
       distinguishingFeatures: [
-        "Flat, oval body",
-        "Apple seed appearance",
-        "Six legs",
-        "Short antennae",
-        "No wings"
+        "Flat, broad oval body (like a shield) when unfed",
+        "Swollen, elongated body when recently fed",
+        "Six legs with no wings - they cannot fly or jump",
+        "Short, club-shaped antennae with four segments",
+        "Beak-like feeding tube (proboscis) tucked under head",
+        "Small compound eyes on sides of head",
+        "Fine golden hairs covering body (visible under magnification)",
+        "Distinctive sweet, musty almond-like odor when crushed"
       ],
-      soundsMade: ["Generally silent"],
-      droppings: "Dark spots on bedding, rusty stains",
-      tracks: "Blood spots, fecal stains, sweet musty odor"
+      soundsMade: ["Generally silent", "Rare clicking sounds when moving in large groups", "Slight rustling in severe infestations"],
+      droppings: "Dark brown to black spots (like ink stains), rusty or reddish stains on bedding, small blood smears",
+      tracks: "Dark fecal spots along mattress seams, sweet musty odor in heavily infested rooms, shed skins (exoskeletons) near hiding spots"
     },
     behavior: {
-      activityTime: "Most active 2-5 AM",
-      nestingHabits: "Hide in cracks near sleeping areas",
-      feedingHabits: "Feed every 5-10 days on blood",
-      lifespan: "6-12 months",
-      reproductionRate: "1-5 eggs per day, 200-500 in lifetime"
+      activityTime: "Primarily nocturnal, most active between 2-5 AM when CO2 levels peak, emerge 1-3 hours before dawn",
+      nestingHabits: "Aggregate in tight cracks and crevices within 8 feet of sleeping areas, prefer wood and fabric over metal and plastic",
+      feedingHabits: "Feed every 5-10 days for 3-12 minutes, can survive 12+ months without feeding, attracted to body heat and CO2",
+      lifespan: "6-12 months under favorable conditions, up to 18 months in cooler temperatures",
+      reproductionRate: "Females lay 1-7 eggs daily, 200-500 eggs in lifetime, eggs hatch in 6-10 days at room temperature"
     },
     habitat: {
-      preferredEnvironment: ["Bedrooms", "Hotels", "Hostels", "Public transport"],
+      preferredEnvironment: [
+        "Bedrooms and sleeping areas (primary)",
+        "Hotels, hostels, and temporary accommodation",
+        "Student accommodation and shared housing",
+        "Public transport (buses, trains, aircraft)",
+        "Cinemas, theatres, and waiting areas",
+        "Offices with sleeping areas or rest rooms",
+        "Any location where people remain stationary for extended periods"
+      ],
       commonHidingSpots: [
-        "Mattress seams",
-        "Bed frames",
-        "Headboards",
-        "Bedside furniture",
-        "Electrical outlets",
-        "Picture frames",
-        "Wallpaper edges"
+        "Mattress seams, tags, and button tufts",
+        "Box spring assemblies and bed frames",
+        "Headboards attached to walls",
+        "Bedside tables and furniture joints",
+        "Upholstered chairs and sofas in bedrooms",
+        "Drapery folds and curtain hems",
+        "Behind loose wallpaper and wall-mounted pictures",
+        "Electrical outlets and switch plates near beds",
+        "Carpet edges and under loose carpet",
+        "Books, clocks, and personal items near beds",
+        "Cracks in walls, particularly behind beds",
+        "Inside hollow bed posts and furniture legs"
       ],
       signsOfInfestation: [
-        "Bite marks in lines",
-        "Blood spots on sheets",
-        "Dark fecal spots",
-        "Sweet odor",
-        "Shed skins",
-        "Live bugs"
+        "Bite marks in lines or clusters (breakfast, lunch, dinner pattern)",
+        "Dark brown or red spots on sheets and pillowcases",
+        "Rusty bloodstains from crushed bugs on bedding",
+        "Dark fecal spots on mattress seams and nearby surfaces",
+        "Sweet, musty, coriander-like odor in heavily infested rooms",
+        "Shed skins (molted exoskeletons) near hiding areas",
+        "Live bugs visible during inspection",
+        "Small, dark spots on walls near the bed",
+        "Unexplained itchy welts, especially upon waking",
+        "Small blood spots on pillowcases from scratched bites"
       ]
     },
     risks: {
       healthRisks: [
-        "Allergic reactions",
-        "Secondary infections from scratching",
-        "Psychological distress",
-        "Sleep deprivation",
-        "Anxiety"
+        "Allergic reactions ranging from mild to severe",
+        "Secondary bacterial infections from excessive scratching",
+        "Psychological distress, anxiety, and paranoia",
+        "Sleep deprivation and insomnia",
+        "Social isolation and embarrassment",
+        "Potential anemia in severe infestations (rare)",
+        "Asthma exacerbation from allergens",
+        "Post-traumatic stress in sensitive individuals"
       ],
       propertyDamage: [
-        "Stained bedding",
-        "Damaged mattresses",
-        "Furniture disposal costs",
-        "Redecoration needs"
+        "Permanent staining of mattresses, bedding, and upholstery",
+        "Necessity to discard heavily infested furniture",
+        "Damage to personal belongings during treatment",
+        "Costs for specialized cleaning and laundering",
+        "Potential damage to electronics during heat treatment",
+        "Need for extensive redecoration in severe cases",
+        "Reduced property value if infestation becomes known"
       ],
       businessRisks: [
-        "Guest complaints",
-        "Negative reviews",
-        "Compensation claims",
-        "Room closure",
-        "Reputation damage"
+        "Immediate threat to guest safety and comfort",
+        "Devastating online reviews and reputation damage",
+        "Legal liability for guest compensation",
+        "Emergency room closures and lost revenue",
+        "Potential lawsuits from affected guests",
+        "Health department violations and fines",
+        "Staff morale and productivity issues",
+        "Increased insurance premiums",
+        "Long-term customer loss and reduced bookings"
       ]
     },
     prevention: {
       environmentalChanges: [
-        "Reduce clutter",
-        "Regular inspection",
-        "Protective covers",
-        "Careful with second-hand items"
+        "Install mattress and box spring encasements with certified bed bug-proof zippers",
+        "Reduce bedroom clutter to eliminate hiding spots",
+        "Use hard-sided luggage when traveling",
+        "Keep beds away from walls and ensure bedding doesn't touch the floor",
+        "Use light-colored sheets to spot bugs more easily",
+        "Install bed bug interceptors under bed legs",
+        "Seal cracks and crevices in walls, particularly around the bed area",
+        "Choose metal bed frames over wooden ones when possible"
       ],
       exclusionMethods: [
-        "Seal cracks in walls",
-        "Install door sweeps",
-        "Repair peeling wallpaper",
-        "Caulk baseboards"
+        "Seal cracks and crevices with appropriate caulk",
+        "Install door sweeps on bedroom doors",
+        "Repair holes in walls and loose wallpaper",
+        "Caulk gaps around baseboards and crown molding",
+        "Seal penetrations around pipes and electrical conduits",
+        "Use bed bug-proof mattress covers",
+        "Install weatherstripping around windows",
+        "Block gaps in flooring and wall junctions"
       ],
       cleaningTips: [
-        "Vacuum regularly",
-        "Wash bedding weekly at 60°C",
-        "Steam clean carpets",
-        "Declutter bedrooms"
+        "Vacuum mattress seams, bed frames, and surrounding areas weekly",
+        "Wash bedding in hot water (60°C minimum) weekly",
+        "Dry clothes and bedding on high heat for 30+ minutes",
+        "Steam clean carpets, curtains, and upholstery regularly",
+        "Declutter bedrooms to reduce hiding spots",
+        "Inspect and clean second-hand furniture before bringing inside",
+        "Use hard-surface flooring instead of carpets when possible",
+        "Wash and heat-dry clothes immediately after travel"
       ],
       landscapingTips: [
-        "Not applicable for bed bugs"
+        "Not applicable - bed bugs are strictly indoor pests that do not survive outdoors in the UK climate"
       ]
     },
     treatment: {
       professionalMethods: [
-        "Heat treatment",
-        "Residual insecticides",
-        "Steam treatment",
-        "Diatomaceous earth",
-        "Mattress encasements",
-        "Monitoring devices"
+        "Whole-room heat treatments (most effective - 45-50°C for 4+ hours)",
+        "Targeted steam treatments for immediate killing",
+        "Professional-grade residual insecticides (multiple applications)",
+        "Desiccant dusts (diatomaceous earth, silica gel) for long-term control",
+        "Cold treatments (cryonite) for sensitive areas",
+        "Mattress and furniture encasements as part of integrated approach",
+        "Monitoring devices and interceptor traps",
+        "Fumigation for severe infestations (rare)",
+        "Insect growth regulators to disrupt breeding cycles",
+        "Targeted crack and crevice treatments"
       ],
-      timeline: "2-4 treatments over 3-6 weeks",
+      timeline: "Initial assessment within 24 hours, first treatment within 48 hours, follow-up treatments at 2-3 week intervals, complete elimination typically achieved in 6-12 weeks",
       preparation: [
-        "Wash all bedding at 60°C",
-        "Bag and seal clothing",
-        "Clear floor areas",
-        "Remove bed from wall"
+        "Wash all clothing and bedding in hot water (60°C) and dry on high heat",
+        "Bag and seal cleaned items in bed bug-proof bags",
+        "Remove all items from under and around beds",
+        "Pull beds away from walls and remove bedding",
+        "Vacuum all cracks, crevices, and hiding spots thoroughly",
+        "Disassemble bed frames if requested by technician",
+        "Ensure access to all areas around sleeping spaces",
+        "Secure pets in untreated areas during service",
+        "Document infestation areas with photos for technician reference"
       ],
-      followUp: "Inspection after 2 weeks, monitoring for 2 months"
+      followUp: "Mandatory inspection 7-14 days after initial treatment, additional treatments as needed, final clearance inspection 4-6 weeks post-treatment, 6-month monitoring program available"
     },
     londonSpecific: {
-      commonBoroughs: ["Westminster", "Kensington & Chelsea", "Camden", "Tower Hamlets"],
+      commonBoroughs: [
+        "Westminster (high hotel density)",
+        "Kensington & Chelsea (short-term rentals)",
+        "Camden (student accommodation)",
+        "Tower Hamlets (high-density housing)",
+        "Islington (Victorian conversions)",
+        "Hackney (shared accommodation)",
+        "Southwark (tourist areas near attractions)",
+        "Lambeth (transport hubs)"
+      ],
       seasonalActivity: {
-        spring: "Increased travel brings infestations",
-        summer: "Peak activity with tourism",
-        autumn: "Student accommodation outbreaks",
-        winter: "Indoor heating increases activity"
+        spring: "Increased travel season brings new infestations from international visitors, peak university term brings student movement",
+        summer: "Highest activity due to tourism peak, warmer temperatures accelerate breeding cycles, summer holidays create apartment-to-apartment spread",
+        autumn: "University term restarts create major movement in student areas, return from summer holidays introduces new populations, pre-winter seeking of warm indoor environments",
+        winter: "Indoor heating systems maintain optimal breeding temperatures, holiday travel continues introductions, concentration indoors increases contact and spread rates"
       },
-      propertyTypes: ["Hotels", "Hostels", "Student halls", "HMOs", "Airbnb properties"]
+      propertyTypes: [
+        "Tourist hotels and boutique accommodations",
+        "Student halls and shared houses",
+        "Short-term rental properties (Airbnb)",
+        "Victorian terraced houses converted to flats",
+        "High-rise council and private housing estates",
+        "Homeless shelters and temporary housing",
+        "Backpacker hostels and budget accommodations",
+        "Nursing homes and care facilities",
+        "Transport accommodation (crew quarters)"
+      ]
     },
-    urgencyLevel: "high",
-    relatedPests: ["fleas"]
+    urgencyLevel: "emergency",
+    relatedPests: ["fleas", "carpet-beetles", "booklice"]
   },
   {
     id: "wasps",
