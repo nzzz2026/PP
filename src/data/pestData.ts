@@ -223,7 +223,7 @@ export const pests: PestData[] = [
       },
       additionalServices: [
         {
-          name: "Emergency same-day treatment",
+          name: "Emergency next-day treatment",
           from: 50,
           description: "Priority response within 4 hours for urgent rat infestations"
         },
@@ -729,7 +729,7 @@ export const pests: PestData[] = [
         {
           name: "Emergency 4-hour response",
           from: 75,
-          description: "Priority same-day treatment for urgent commercial or residential infestations"
+          description: "Priority next-day treatment for urgent commercial or residential infestations"
         },
         {
           name: "Commercial kitchen deep treatment",
@@ -1030,7 +1030,7 @@ export const pests: PestData[] = [
           description: "Whole-room heat treatment reaching 45-50°C - most effective single-day solution"
         },
         {
-          name: "Emergency same-day response",
+          name: "Emergency next-day response",
           from: 100,
           description: "Priority assessment and initial treatment within 4 hours of contact"
         },
@@ -1267,11 +1267,11 @@ export const pests: PestData[] = [
         "Complete nest removal once colony eliminated",
         "Residual spray treatments for repeat prevention",
         "Specialist access equipment for high or difficult locations",
-        "Emergency same-day treatment for dangerous locations",
+        "Emergency next-day treatment for dangerous locations",
         "Heat treatment for nests in sensitive areas",
         "Environmentally sensitive treatments near water features"
       ],
-      timeline: "Emergency same-day service available, nest elimination within 24-48 hours, complete removal after 2 weeks",
+      timeline: "Emergency next-day service available, nest elimination within 24-48 hours, complete removal after 2 weeks",
       preparation: [
         "Identify exact nest location and main entrance point",
         "Clear safe access route for technician",

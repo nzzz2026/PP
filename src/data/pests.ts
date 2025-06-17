@@ -136,7 +136,7 @@ export const pests: Pest[] = [
     description: 'German and Oriental cockroaches are increasing 23% annually in London, thriving in warm, humid environments.',
     riskLevel: 'high',
     urgency: 'high',
-    responseTime: 'Same day',
+    responseTime: 'Next day',
     successRate: '92%',
     healthRisks: [
       'Spread 33 different bacteria including E.coli',

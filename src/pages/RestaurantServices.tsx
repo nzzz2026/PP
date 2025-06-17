@@ -141,7 +141,7 @@ const RestaurantServices: React.FC = () => {
                   
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Emergency Service</h3>
-                <p className="text-gray-600">Same-day response for urgent pest situations.</p>
+                <p className="text-gray-600">Next-day response for urgent pest situations.</p>
               </div>
             </div>
           </div>

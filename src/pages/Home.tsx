@@ -119,7 +119,7 @@ const Home: React.FC = () => {
               textShadow: '1px 1px 10px rgba(0, 0, 0, 0.3)',
               animation: 'fadeInUp 1.4s ease-out 0.4s both'
             }}>
-              Professional pest control that actually works. Same-day service across London.
+              Professional pest control that actually works. Next-day service across London.
             </p>
             
             {/* Trust Badges */}

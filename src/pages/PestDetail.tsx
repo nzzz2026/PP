@@ -328,7 +328,7 @@ const PestDetail: React.FC = () => {
             <h2>Need {pest.name} Control?</h2>
             <p>Our BPCA-certified technicians are ready to help</p>
             <div className="features">
-              <div className="feature">✓ Same-day service available</div>
+              <div className="feature">✓ Next-day service available</div>
               <div className="feature">✓ 100% satisfaction guarantee</div>
               <div className="feature">✓ Safe for children and pets</div>
               <div className="feature">✓ Discrete service</div>

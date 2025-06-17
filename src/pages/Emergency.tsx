@@ -80,7 +80,7 @@ const Emergency: React.FC = () => {
             margin: '0 auto',
             textShadow: '1px 1px 5px rgba(0, 0, 0, 0.3)'
           }}>
-            Immediate response for urgent pest emergencies across London. Same-day service guaranteed.
+            Immediate response for urgent pest emergencies across London. Next-day service guaranteed.
           </p>
         </div>
       </section>
@@ -110,7 +110,7 @@ const Emergency: React.FC = () => {
                 lineHeight: 1.6,
                 marginBottom: '2rem'
               }}>
-                When pests pose an immediate threat to your health, safety, or property, our emergency response team is ready to act. We provide rapid deployment across all London boroughs with guaranteed same-day service.
+                When pests pose an immediate threat to your health, safety, or property, our emergency response team is ready to act. We provide rapid deployment across all London boroughs with guaranteed next-day service.
               </p>
 
               {/* Emergency Contact Methods */}
@@ -466,7 +466,7 @@ const Emergency: React.FC = () => {
                       <option value="">Any time (fastest response)</option>
                       <option value="immediately">Immediately (within 1 hour)</option>
                       <option value="2hours">Within 2 hours</option>
-                      <option value="today">Today (same day)</option>
+                      <option value="today">Today (next day)</option>
                       <option value="tomorrow">Tomorrow morning</option>
                     </select>
                   </div>

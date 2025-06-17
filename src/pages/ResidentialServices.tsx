@@ -31,7 +31,7 @@ const ResidentialServices: React.FC = () => {
     },
     {
       title: 'Wasp Nest Removal',
-      description: 'Safe removal of wasp and bee nests with emergency same-day service available.',
+      description: 'Safe removal of wasp and bee nests with emergency next-day service available.',
       features: ['Emergency response', 'Safe removal techniques', 'Protective equipment included', 'Nest prevention advice'],
       price: 'From £159'
     },
@@ -91,7 +91,7 @@ const ResidentialServices: React.FC = () => {
                   
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Rapid Response</h3>
-                <p className="text-gray-600">Same-day emergency service available with 2-4 hour response times for urgent pest situations.</p>
+                <p className="text-gray-600">Next-day emergency service available with 2-4 hour response times for urgent pest situations.</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">

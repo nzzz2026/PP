@@ -102,7 +102,7 @@ const generateServiceHighlights = (borough: BoroughData): string[] => {
   
   // Base highlights for all boroughs
   highlights.push('Fully licensed and insured');
-  highlights.push('Same-day appointments available');
+  highlights.push('Next-day appointments available');
   highlights.push('Local area expertise');
   
   // Special highlights based on borough characteristics
@@ -146,7 +146,7 @@ const generateSEOContent = (borough: BoroughData): {
 } => {
   const seoTitle = `Pest Control ${borough.name} | Professional Pest Removal Services`;
   
-  const seoDescription = `Professional pest control services in ${borough.name}. ${borough.responseTime} response time. Experts in ${borough.commonPests.slice(0, 3).join(', ')} removal. Call 077 2704 9304 for same-day service.`;
+  const seoDescription = `Professional pest control services in ${borough.name}. ${borough.responseTime} response time. Experts in ${borough.commonPests.slice(0, 3).join(', ')} removal. Call 077 2704 9304 for next-day service.`;
   
   const seoKeywords = [
     `pest control ${borough.name.toLowerCase()}`,

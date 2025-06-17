@@ -46,7 +46,7 @@ const CamdenBoroughPage: React.FC = () => {
       "@type": "LocalBusiness",
       "additionalType": "PestControlService",
       "name": "Pest Pro London - Camden",
-      "description": "Expert pest control services for homes and businesses in Camden. BPCA certified technicians for rats, mice, bed bugs, wasps and more. Same-day service available.",
+      "description": "Expert pest control services for homes and businesses in Camden. BPCA certified technicians for rats, mice, bed bugs, wasps and more. Next-day service available.",
       "telephone": "+447727049304",
       "email": "info@pestpro.london",
       "url": "https://www.pestpro.london/service-areas/camden",
@@ -366,7 +366,7 @@ const CamdenBoroughPage: React.FC = () => {
                     'Seasonal mosquito control for outdoor spaces',
                     'Comprehensive termite treatments with advanced baiting systems',
                     'Property protection services as part of home improvement offerings',
-                    'Emergency same-day service for urgent situations'
+                    'Emergency next-day service for urgent situations'
                   ].map((service, index) => (
                     <li key={index}>
                       <span className="check-icon">✓</span>

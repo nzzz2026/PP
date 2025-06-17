@@ -179,7 +179,7 @@ const Contact: React.FC = () => {
                   {[
                     'BPCA Certified professionals',
                     'Fully insured (£2M public liability)',
-                    'Same-day emergency service',
+                    'Next-day emergency service',
                     'Eco-friendly treatment options',
                     '6-month service guarantee',
                     'Free follow-up inspections'

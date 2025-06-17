@@ -39,7 +39,7 @@ const Services: React.FC = () => {
       primaryBenefit: 'Family-Safe Guaranteed',
       keyFeatures: [
         'Child & pet-safe treatments only',
-        'Same-day emergency response',
+        'Next-day emergency response',
         '12-month service guarantee',
         'Free follow-up inspections',
         'Preventative maintenance plans',
@@ -123,7 +123,7 @@ const Services: React.FC = () => {
         'Food-safe treatments exclusively',
         'Pre-opening service scheduling',
         'HACCP documentation support',
-        'Emergency same-day response',
+        'Emergency next-day response',
         'Kitchen-specific protocols',
         'Health inspection preparation'
       ],
@@ -350,7 +350,7 @@ const Services: React.FC = () => {
                   
                 </div>
                 <h3 className="stat-title">Emergency Response</h3>
-                <p className="stat-description">Same-day emergency service with 1-4 hour response times across London.</p>
+                <p className="stat-description">Next-day emergency service with 1-4 hour response times across London.</p>
               </div>
               
               <div className="stat-card">
