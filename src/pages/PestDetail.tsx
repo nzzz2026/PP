@@ -101,19 +101,10 @@ const PestDetail: React.FC = () => {
                       height: '200px',
                       objectFit: 'cover',
                       borderRadius: '12px',
-                      marginBottom: '1rem',
+                      marginBottom: '0',
                       boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'
                     }}
                   />
-                  <p style={{
-                    fontSize: '0.85rem',
-                    color: 'var(--gray-600)',
-                    textAlign: 'center',
-                    fontStyle: 'italic',
-                    margin: '0 0 1.5rem 0'
-                  }}>
-                    {pest.name} identification photo
-                  </p>
                 </div>
               )}
               
