@@ -136,16 +136,16 @@ const CamdenBoroughPage: React.FC = () => {
       <nav className="sticky-nav">
         <h3>Quick Navigation</h3>
         <ul className="nav-links">
-          <li><a href="#intro" onClick={(e) => { e.preventDefault(); scrollToSection('intro'); }}><span className="icon">📍</span>About Camden</a></li>
-          <li><a href="#pests" onClick={(e) => { e.preventDefault(); scrollToSection('pests'); }}><span className="icon">🐀</span>Common Pests</a></li>
-          <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}><span className="icon">🏠</span>Our Services</a></li>
-          <li><a href="#why-choose" onClick={(e) => { e.preventDefault(); scrollToSection('why-choose'); }}><span className="icon">⭐</span>Why Choose Us</a></li>
-          <li><a href="#testimonials" onClick={(e) => { e.preventDefault(); scrollToSection('testimonials'); }}><span className="icon">💬</span>Reviews</a></li>
-          <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}><span className="icon">📞</span>Contact</a></li>
+          <li><a href="#intro" onClick={(e) => { e.preventDefault(); scrollToSection('intro'); }}>About Camden</a></li>
+          <li><a href="#pests" onClick={(e) => { e.preventDefault(); scrollToSection('pests'); }}>Common Pests</a></li>
+          <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>Our Services</a></li>
+          <li><a href="#why-choose" onClick={(e) => { e.preventDefault(); scrollToSection('why-choose'); }}>Why Choose Us</a></li>
+          <li><a href="#testimonials" onClick={(e) => { e.preventDefault(); scrollToSection('testimonials'); }}>Reviews</a></li>
+          <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact</a></li>
         </ul>
         <div className="contact-card">
           <h4>Need Help Now?</h4>
-          <a href="tel:07727049304" className="phone-link">📞 077 2704 9304</a>
+          <a href="tel:07727049304" className="phone-link">077 2704 9304</a>
           <a href="/contact" className="quote-link">Get Free Quote</a>
         </div>
       </nav>
@@ -156,7 +156,7 @@ const CamdenBoroughPage: React.FC = () => {
         onClick={() => setMobileNavOpen(true)}
         aria-label="Open navigation menu"
       >
-        ☰
+        ⋯
       </button>
 
       {/* Mobile Navigation Overlay */}
@@ -177,16 +177,16 @@ const CamdenBoroughPage: React.FC = () => {
         <div className="nav-content">
           <h3>Quick Navigation</h3>
           <ul className="nav-links">
-            <li><a href="#intro" onClick={(e) => { e.preventDefault(); scrollToSection('intro'); }}><span className="icon">📍</span>About Camden</a></li>
-            <li><a href="#pests" onClick={(e) => { e.preventDefault(); scrollToSection('pests'); }}><span className="icon">🐀</span>Common Pests</a></li>
-            <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}><span className="icon">🏠</span>Our Services</a></li>
-            <li><a href="#why-choose" onClick={(e) => { e.preventDefault(); scrollToSection('why-choose'); }}><span className="icon">⭐</span>Why Choose Us</a></li>
-            <li><a href="#testimonials" onClick={(e) => { e.preventDefault(); scrollToSection('testimonials'); }}><span className="icon">💬</span>Reviews</a></li>
-            <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}><span className="icon">📞</span>Contact</a></li>
+            <li><a href="#intro" onClick={(e) => { e.preventDefault(); scrollToSection('intro'); }}>About Camden</a></li>
+            <li><a href="#pests" onClick={(e) => { e.preventDefault(); scrollToSection('pests'); }}>Common Pests</a></li>
+            <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>Our Services</a></li>
+            <li><a href="#why-choose" onClick={(e) => { e.preventDefault(); scrollToSection('why-choose'); }}>Why Choose Us</a></li>
+            <li><a href="#testimonials" onClick={(e) => { e.preventDefault(); scrollToSection('testimonials'); }}>Reviews</a></li>
+            <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact</a></li>
           </ul>
           <div className="contact-card">
             <h4>Need Help Now?</h4>
-            <a href="tel:07727049304" className="phone-link">📞 077 2704 9304</a>
+            <a href="tel:07727049304" className="phone-link">077 2704 9304</a>
             <a href="/contact" className="quote-link">Get Free Quote</a>
           </div>
         </div>
