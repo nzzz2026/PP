@@ -22,6 +22,7 @@ import RestaurantServices from './pages/RestaurantServices';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Emergency from './pages/Emergency';
+import CamdenBoroughPage from './pages/CamdenBoroughPage';
 
 function App() {
   return (
@@ -49,6 +50,9 @@ function App() {
             {/* Service Areas */}
             <Route path="/service-areas" element={<ServiceAreas />} />
             <Route path="/service-areas/:areaId" element={<ServiceAreaDetail />} />
+            
+            {/* Borough Pages */}
+            <Route path="/camden-pest-control" element={<CamdenBoroughPage />} />
             
             {/* Company */}
             <Route path="/about" element={<About />} />
