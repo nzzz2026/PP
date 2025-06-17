@@ -41,7 +41,7 @@ const CamdenBoroughPage: React.FC = () => {
       "description": "Expert pest control services for homes and businesses in Camden. BPCA certified technicians for rats, mice, bed bugs, wasps and more. Same-day service available.",
       "telephone": "+447727049304",
       "email": "info@pestpro.london",
-      "url": "https://www.pestpro.london/camden-pest-control",
+      "url": "https://www.pestpro.london/service-areas/camden",
       "areaServed": {
         "@type": "Place",
         "name": "Camden, London",
