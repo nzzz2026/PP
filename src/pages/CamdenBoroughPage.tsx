@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/CamdenBoroughPage.scss';
 
 const CamdenBoroughPage: React.FC = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [stickyNavPosition, setStickyNavPosition] = useState<'fixed' | 'absolute'>('fixed');
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -19,6 +20,39 @@ const CamdenBoroughPage: React.FC = () => {
       setMobileNavOpen(false);
     }
   };
+
+  // Handle sticky navigation positioning to stop at footer
+  useEffect(() => {
+    const handleScroll = () => {
+      const footer = document.querySelector('footer');
+      const stickyNav = document.querySelector('.sticky-nav');
+      
+      if (footer && stickyNav) {
+        const footerRect = footer.getBoundingClientRect();
+        const stickyNavRect = stickyNav.getBoundingClientRect();
+        const stickyNavHeight = stickyNavRect.height;
+        const buffer = 20; // Small buffer space above footer
+        
+        // Check if sticky nav would overlap with footer
+        if (footerRect.top <= window.innerHeight - stickyNavHeight - buffer) {
+          setStickyNavPosition('absolute');
+        } else {
+          setStickyNavPosition('fixed');
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+    
+    // Initial check
+    handleScroll();
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, []);
 
   // Update document title, meta description, and schema markup for SEO
   React.useEffect(() => {
@@ -141,7 +175,13 @@ const CamdenBoroughPage: React.FC = () => {
   return (
     <div className="camden-page">
       {/* Sticky Navigation */}
-      <nav className="sticky-nav">
+      <nav 
+        className="sticky-nav" 
+        style={{ 
+          position: stickyNavPosition,
+          bottom: stickyNavPosition === 'absolute' ? '20px' : 'auto'
+        }}
+      >
         <h3>Quick Navigation</h3>
         <ul className="nav-links">
           <li><a href="#intro" onClick={(e) => { e.preventDefault(); scrollToSection('intro'); }}>About Camden</a></li>
