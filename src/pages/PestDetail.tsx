@@ -27,6 +27,27 @@ const PestDetail: React.FC = () => {
     return pest.londonSpecific.seasonalActivity.winter;
   };
 
+  // Map pest IDs to photo filenames
+  const getPestPhoto = (pestId: string): string | null => {
+    const photoMap: { [key: string]: string } = {
+      'rats': 'freepik__rat__64233.jpeg',
+      'mice': 'freepik__mouse__64234.jpeg',
+      'cockroaches': 'freepik__cockroaches__64235.jpeg',
+      'bed-bugs': 'freepik__bed-bugs__64236.jpeg',
+      'wasps': 'freepik__wasp__64232.jpeg',
+      'ants': 'freepik__ants__64237.jpeg',
+      'spiders': 'freepik__spiders__64238.jpeg',
+      'fleas': 'freepik__fleas__64239.jpeg',
+      'foxes': 'freepik__fox__64240.jpeg',
+      'squirrels': 'freepik__squirrel__64241.jpeg',
+      'pigeons': 'freepik__pigeon__64242.jpeg'
+    };
+    
+    return photoMap[pestId] || null;
+  };
+
+  const pestPhoto = getPestPhoto(pest.id);
+
   return (
     <div className="pest-detail">
       <section className="breadcrumb-section">
@@ -69,27 +90,55 @@ const PestDetail: React.FC = () => {
               </div>
             </div>
             
-            <div className="quick-facts">
-              <h3>Quick Facts</h3>
-              <div className="fact">
-                <span className="fact-label">Size:</span>
-                <span className="fact-value">{pest.identification.size}</span>
-              </div>
-              <div className="fact">
-                <span className="fact-label">Color:</span>
-                <span className="fact-value">{pest.identification.color}</span>
-              </div>
-              <div className="fact">
-                <span className="fact-label">Activity:</span>
-                <span className="fact-value">{pest.behavior.activityTime}</span>
-              </div>
-              <div className="fact">
-                <span className="fact-label">Lifespan:</span>
-                <span className="fact-value">{pest.behavior.lifespan}</span>
-              </div>
-              <div className="fact">
-                <span className="fact-label">Breeding:</span>
-                <span className="fact-value">{pest.behavior.reproductionRate}</span>
+            <div className="sidebar-content">
+              {pestPhoto && (
+                <div className="pest-photo-box">
+                  <img 
+                    src={`/pest-photos/${pestPhoto}`} 
+                    alt={`${pest.name} for identification`}
+                    style={{
+                      width: '100%',
+                      height: '200px',
+                      objectFit: 'cover',
+                      borderRadius: '12px',
+                      marginBottom: '1rem',
+                      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'
+                    }}
+                  />
+                  <p style={{
+                    fontSize: '0.85rem',
+                    color: 'var(--gray-600)',
+                    textAlign: 'center',
+                    fontStyle: 'italic',
+                    margin: '0 0 1.5rem 0'
+                  }}>
+                    {pest.name} identification photo
+                  </p>
+                </div>
+              )}
+              
+              <div className="quick-facts">
+                <h3>Quick Facts</h3>
+                <div className="fact">
+                  <span className="fact-label">Size:</span>
+                  <span className="fact-value">{pest.identification.size}</span>
+                </div>
+                <div className="fact">
+                  <span className="fact-label">Color:</span>
+                  <span className="fact-value">{pest.identification.color}</span>
+                </div>
+                <div className="fact">
+                  <span className="fact-label">Activity:</span>
+                  <span className="fact-value">{pest.behavior.activityTime}</span>
+                </div>
+                <div className="fact">
+                  <span className="fact-label">Lifespan:</span>
+                  <span className="fact-value">{pest.behavior.lifespan}</span>
+                </div>
+                <div className="fact">
+                  <span className="fact-label">Breeding:</span>
+                  <span className="fact-value">{pest.behavior.reproductionRate}</span>
+                </div>
               </div>
             </div>
           </div>

@@ -142,6 +142,20 @@
   color: var(--gray-700);
 }
 
+.pest-detail .sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pest-detail .pest-photo-box {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--gray-200);
+}
+
 .pest-detail .quick-facts {
   background: white;
   border-radius: 16px;
@@ -564,5 +578,13 @@
   .pest-detail .features {
     flex-direction: column;
     gap: 1rem;
+  }
+  
+  .pest-detail .pest-photo-box {
+    padding: 1rem;
+  }
+  
+  .pest-detail .pest-photo-box img {
+    height: 150px !important;
   }
 }
