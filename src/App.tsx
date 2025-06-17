@@ -44,7 +44,7 @@ function App() {
             
             {/* Pest Library */}
             <Route path="/pest-library" element={<PestLibrary />} />
-            <Route path="/pest-library/:category" element={<PestCategory />} />
+            <Route path="/pest-library/:pestId" element={<PestDetail />} />
             <Route path="/pest-library/:category/:pestId" element={<PestDetail />} />
             
             {/* Service Areas */}

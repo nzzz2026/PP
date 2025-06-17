@@ -629,602 +629,938 @@ export const pests: PestData[] = [
     name: "Wasps",
     scientificName: "Vespula vulgaris & Vespula germanica",
     category: "insects",
-    commonNames: ["Common wasp", "German wasp", "Yellow jacket"],
-    description: "Wasps are social insects that become particularly troublesome in late summer. In London, they nest in gardens, lofts, and wall cavities, becoming aggressive when their nests are threatened.",
+    commonNames: ["Common wasp", "German wasp", "Yellow jacket", "European wasp", "Social wasp"],
+    description: "Wasp problems can quickly escalate from a minor annoyance to a serious safety threat, especially for families with children or anyone with allergies. We understand the fear and urgency that comes with discovering a wasp nest on your property. At Pest Pro London, our experienced technicians provide rapid, safe wasp nest removal services across London, ensuring your family's safety while maintaining the ecological balance of your garden. These highly social insects become increasingly aggressive from late summer onwards, making professional intervention not just advisable, but essential for your safety.",
     identification: {
-      size: "Workers: 12-17mm, Queens: 20mm",
-      color: "Bright yellow and black stripes",
+      size: "Workers: 12-17mm, Queens: 20-25mm, Drones: 13-15mm",
+      color: "Bright yellow and black bands with distinctive narrow 'wasp waist', glossy appearance",
       distinguishingFeatures: [
-        "Distinctive waist",
-        "Smooth body (not fuzzy)",
-        "Two pairs of wings",
-        "Yellow legs",
-        "Black antennae"
+        "Pronounced narrow waist (constriction between thorax and abdomen)",
+        "Smooth, hairless body with glossy finish",
+        "Bright yellow and black striped pattern",
+        "Two pairs of clear wings with visible veins",
+        "Yellow legs that dangle in flight",
+        "Black antennae with slight club shape",
+        "Triangular head with large compound eyes",
+        "Powerful mandibles for chewing wood pulp"
       ],
-      soundsMade: ["Buzzing", "Paper rustling from nest"],
-      droppings: "Not applicable",
-      tracks: "Paper-like nest material"
+      soundsMade: ["Distinctive angry buzzing when agitated", "Paper rustling sounds from nest construction", "High-pitched alarm pheromones when threatened"],
+      droppings: "Not applicable - wasps do not leave visible droppings",
+      tracks: "Grey papery nest material, wood shavings from fence posts and garden furniture, visible flight paths to and from nest"
     },
     behavior: {
-      activityTime: "Diurnal, most active in warm weather",
-      nestingHabits: "Build paper nests from chewed wood pulp",
-      feedingHabits: "Sweet foods, protein for larvae",
-      lifespan: "Workers: 12-22 days, Queens: 1 year",
-      reproductionRate: "One queen can produce 5,000-10,000 workers"
+      activityTime: "Diurnal (day-active), most active 10 AM to 4 PM in warm weather, reduced activity below 10°C",
+      nestingHabits: "Build aerial paper nests from chewed wood pulp mixed with saliva, colonies can reach 10,000+ individuals by autumn",
+      feedingHabits: "Adults feed on sugary substances (fruit, nectar), hunt insects to feed protein to larvae, increasingly attracted to sweet foods in late summer",
+      lifespan: "Workers: 12-22 days, Queens: 12 months (overwinter), Drones: 2-3 weeks",
+      reproductionRate: "Single queen can establish colony of 5,000-15,000 workers, peak numbers in August-September"
     },
     habitat: {
-      preferredEnvironment: ["Gardens", "Lofts", "Sheds", "Wall cavities", "Trees"],
+      preferredEnvironment: [
+        "Loft spaces and roof cavities (most common in London)",
+        "Garden sheds and outbuildings",
+        "Wall cavities and air bricks",
+        "Dense vegetation and hedgerows",
+        "Underground cavities (occasionally)",
+        "Garden decking and pergolas",
+        "Compost bins and garden storage"
+      ],
       commonHidingSpots: [
-        "Roof spaces",
-        "Under eaves",
-        "Garden sheds",
-        "Compost bins",
-        "Bird boxes",
-        "Underground burrows"
+        "Roof eaves and soffit boards",
+        "Behind fascia boards and guttering",
+        "Inside cavity walls through air bricks",
+        "Garden shed roofs and corners",
+        "Dense privet hedges and shrubs",
+        "Old bird boxes and garden furniture",
+        "Underground in abandoned rodent burrows",
+        "Behind external meter boxes",
+        "Gaps in garden fencing and trellis"
       ],
       signsOfInfestation: [
-        "High wasp activity",
-        "Visible nest",
-        "Flight paths to entry point",
-        "Chewed wood",
-        "Aggressive behavior"
+        "High levels of wasp activity around specific area",
+        "Visible grey papery nest (football to rugby ball sized)",
+        "Clear flight paths with wasps entering/exiting same point",
+        "Wood shavings around fence posts and garden furniture",
+        "Aggressive wasp behavior when approached",
+        "Multiple wasps in house (may indicate internal nest)",
+        "Paper-like debris falling from eaves or roof areas",
+        "Sweet smell from fermented fruit attracting large numbers"
       ]
     },
     risks: {
       healthRisks: [
-        "Painful stings",
-        "Allergic reactions",
-        "Anaphylaxis risk",
-        "Multiple stings",
-        "Secondary infections"
+        "Severe allergic reactions (anaphylaxis) requiring emergency medical attention",
+        "Multiple sting syndrome - dangerous when attacked by multiple wasps",
+        "Localised swelling, pain, and inflammation from single stings",
+        "Secondary bacterial infections at sting sites",
+        "Respiratory complications if stung in mouth or throat area",
+        "Cardiac stress in elderly or vulnerable individuals",
+        "Psychological trauma, especially in children",
+        "Risk of falls when fleeing from wasps"
       ],
       propertyDamage: [
-        "Wood damage for nesting",
-        "Staining from nests",
-        "Structural concerns with large nests"
+        "Structural damage to wood from nest construction",
+        "Staining of building surfaces from nest material",
+        "Damage to garden furniture from wood harvesting",
+        "Contamination of loft insulation with nest debris",
+        "Potential fire hazard if nests built near electrical equipment",
+        "Garden damage from defensive territorial behavior",
+        "Aesthetic damage to external building features"
       ],
       businessRisks: [
-        "Customer safety",
-        "Outdoor dining disruption",
-        "Event cancellations",
-        "Staff injuries",
-        "Liability issues"
+        "Immediate liability for customer and staff safety",
+        "Forced closure of outdoor dining areas",
+        "Event cancellations and lost revenue",
+        "Worker compensation claims from staff stings",
+        "Legal liability for not maintaining safe premises",
+        "Insurance claims from customer injuries",
+        "Reputation damage from wasp-related incidents",
+        "Health and safety enforcement action"
       ]
     },
     prevention: {
       environmentalChanges: [
-        "Remove food sources",
-        "Cover bins tightly",
-        "Clean up fallen fruit",
-        "Avoid bright colors"
+        "Remove all fallen fruit from gardens immediately",
+        "Secure all outdoor food sources and drinks",
+        "Use tight-fitting lids on all external bins",
+        "Install wasp-proof covers on outdoor eating areas",
+        "Remove water sources like leaking taps and standing water",
+        "Clear away pet food immediately after feeding",
+        "Avoid wearing bright colors and floral patterns outdoors",
+        "Inspect roof areas in early spring for early nest formation"
       ],
       exclusionMethods: [
-        "Seal entry points in spring",
-        "Install fly screens",
-        "Block old nest sites",
-        "Maintain building exterior"
+        "Seal potential nesting sites in March-April before nest establishment",
+        "Install fine mesh over air bricks and roof vents",
+        "Block old nest sites as wasps may reuse locations",
+        "Repair damaged roof tiles and fascia boards",
+        "Seal gaps in outdoor buildings and structures",
+        "Install wasp-proof screens on outdoor dining areas",
+        "Use smooth materials that wasps cannot grip for construction",
+        "Regular maintenance of building exteriors to eliminate entry points"
       ],
       cleaningTips: [
-        "Clean BBQ areas",
-        "Remove sugary spills",
-        "Empty bins regularly",
-        "Cover food outdoors"
+        "Clean barbecue areas immediately after use",
+        "Remove all food debris from outdoor dining areas",
+        "Empty outdoor bins daily during peak season",
+        "Clean up sugary spills immediately",
+        "Remove overripe fruit from trees and ground",
+        "Cover food and drinks when eating outdoors",
+        "Clean children's outdoor toys regularly",
+        "Maintain compost bins with tight-fitting lids"
       ],
       landscapingTips: [
-        "Remove rotting fruit",
-        "Maintain compost properly",
-        "Fill ground holes",
-        "Trim overhanging branches"
+        "Remove rotting windfall fruit weekly during fruiting season",
+        "Maintain compost bins properly to avoid sweet fermentation odors",
+        "Fill in ground holes that could provide nesting sites",
+        "Trim overhanging branches away from roof areas",
+        "Choose plants that don't attract wasps (avoid highly scented flowers)",
+        "Maintain short grass to eliminate ground-nesting opportunities",
+        "Remove ivy and dense vegetation from building walls",
+        "Install wasp-deterrent plants like mint and citronella"
       ]
     },
     treatment: {
       professionalMethods: [
-        "Insecticide dust",
-        "Foam treatments",
-        "Nest removal",
-        "Residual sprays",
-        "Trapping programs"
+        "Targeted insecticidal dust injection directly into nest entrance",
+        "Professional foam treatments for aerial nests",
+        "Complete nest removal once colony eliminated",
+        "Residual spray treatments for repeat prevention",
+        "Specialist access equipment for high or difficult locations",
+        "Emergency same-day treatment for dangerous locations",
+        "Heat treatment for nests in sensitive areas",
+        "Environmentally sensitive treatments near water features"
       ],
-      timeline: "Usually resolved in one visit",
+      timeline: "Emergency same-day service available, nest elimination within 24-48 hours, complete removal after 2 weeks",
       preparation: [
-        "Identify nest location",
-        "Clear access route",
-        "Close windows",
-        "Keep people away"
+        "Identify exact nest location and main entrance point",
+        "Clear safe access route for technician",
+        "Close all windows and doors to prevent indoor wasp entry",
+        "Keep children and pets indoors during treatment",
+        "Remove outdoor food sources and covering",
+        "Ensure parking access for emergency equipment",
+        "Have emergency contact details ready for severe allergy sufferers",
+        "Clear area of garden furniture if nest is outdoor"
       ],
-      followUp: "Check after 48 hours, remove nest after 2 weeks"
+      followUp: "Safety check after 48 hours, nest removal appointment after 2 weeks, preventive advice for following season"
     },
     londonSpecific: {
-      commonBoroughs: ["Richmond", "Bromley", "Barnet", "Harrow", "Sutton"],
+      commonBoroughs: [
+        "Richmond upon Thames (extensive green spaces)",
+        "Bromley (suburban gardens with fruit trees)",
+        "Barnet (mature gardens and parkland)",
+        "Harrow (residential areas with large gardens)",
+        "Sutton (suburban properties with outbuildings)",
+        "Wandsworth (gardens backing onto commons)",
+        "Kingston upon Thames (proximity to Richmond Park)",
+        "Croydon (mix of urban and suburban environments)"
+      ],
       seasonalActivity: {
-        spring: "Queens emerge, establish nests",
-        summer: "Colony growth, increasing activity",
-        autumn: "Peak aggression, seeking sweet foods",
-        winter: "All die except new queens"
+        spring: "Queens emerge from hibernation (March-April), establish small nests in protected locations, low aggression levels",
+        summer: "Rapid colony expansion (May-July), nest building peak, moderate wasp activity, focus on protein collection for larvae",
+        autumn: "Peak aggression period (August-October), maximum colony size, desperate foraging for sweet foods, highest sting risk",
+        winter: "Colony dies except new queens seeking hibernation sites, old nests remain visible but empty"
       },
-      propertyTypes: ["Suburban houses", "Garden sheds", "Schools", "Parks", "Beer gardens"]
+      propertyTypes: [
+        "Victorian and Edwardian houses with large roof spaces",
+        "Suburban properties with gardens and outbuildings",
+        "Schools with extensive grounds and outdoor dining",
+        "Parks, gardens, and recreational facilities",
+        "Pub gardens and outdoor dining establishments",
+        "Golf courses and sports facilities",
+        "Allotments and community gardens",
+        "Care homes with garden areas"
+      ]
     },
-    urgencyLevel: "high",
-    relatedPests: ["hornets", "bees"]
+    urgencyLevel: "emergency",
+    relatedPests: ["hornets", "bees", "yellow-jacket-wasps"]
   },
   {
     id: "ants",
     name: "Ants",
     scientificName: "Lasius niger & Monomorium pharaonis",
     category: "insects",
-    commonNames: ["Black garden ant", "Pharaoh ant", "Ghost ant"],
-    description: "Ants are social insects that can quickly become a nuisance when they invade properties searching for food. Pharaoh ants are particularly problematic in London's heated buildings.",
+    commonNames: ["Black garden ant", "Pharaoh ant", "Ghost ant", "Pavement ant", "Argentine ant"],
+    description: "An ant invasion can transform your peaceful home into a frustrating battleground, with endless trails of insects marching through your kitchen and contaminating your food. We understand how overwhelming it feels to discover ants have colonised your property - one day there are none, the next day there are thousands. At Pest Pro London, we specialise in permanent ant colony elimination, not just surface treatment. These highly organised social insects require professional intervention because their underground colonies can contain multiple queens and hundreds of thousands of workers, making complete eradication impossible without expert knowledge and targeted treatment methods.",
     identification: {
-      size: "Workers: 2-5mm, Queens: 9-15mm",
-      color: "Black, brown, or yellowish",
+      size: "Garden ant workers: 3-5mm, Pharaoh workers: 1.5-2mm, Queens: 9-15mm, Flying ants: 6-8mm",
+      color: "Black garden ants: dark brown to black, Pharaoh ants: light yellow to red, Ghost ants: pale yellow with dark head",
       distinguishingFeatures: [
-        "Three body segments",
-        "Elbowed antennae",
-        "Narrow waist",
-        "Six legs",
-        "Some species have wings"
+        "Three distinct body segments (head, thorax, abdomen)",
+        "Distinctive elbowed antennae with club-shaped ends",
+        "Pronounced narrow waist between thorax and abdomen",
+        "Six jointed legs with strong grip",
+        "Compound eyes and powerful mandibles",
+        "Reproductive ants have wings during swarming period",
+        "Visible metapleural glands (species-specific identification)",
+        "Segmented antennae with 11-12 segments"
       ],
-      soundsMade: ["None audible to humans"],
-      droppings: "Not visible",
-      tracks: "Visible trails, small dirt mounds"
+      soundsMade: ["Generally silent to human ears", "Possible faint rustling in large infestations", "Chemical communication through pheromone trails"],
+      droppings: "Microscopic and not visible to naked eye",
+      tracks: "Visible pheromone trails on surfaces, small excavated soil mounds at nest entrances, tiny debris piles near entry points"
     },
     behavior: {
-      activityTime: "Active during warm weather",
-      nestingHabits: "Underground colonies or in wall voids",
-      feedingHabits: "Sweet substances, proteins, grease",
-      lifespan: "Workers: 1-3 months, Queens: up to 15 years",
-      reproductionRate: "Thousands of eggs per queen annually"
+      activityTime: "Most active during daylight hours (diurnal), peak activity in warm weather above 15°C, reduced activity in cold conditions",
+      nestingHabits: "Complex underground colonies with multiple chambers, satellite nests in wall voids, prefer moisture-rich environments near food sources",
+      feedingHabits: "Omnivorous scavengers preferring sweet substances (honeydew, sugar), also collect proteins and fats, Pharaoh ants prefer meat and fats",
+      lifespan: "Workers: 1-3 months, Soldiers: 3-6 months, Queens: up to 15 years, Males: 1-2 weeks after mating",
+      reproductionRate: "Single queen produces 800-1,000 eggs per day, mature colonies contain 100,000-500,000 individuals, multiple nuptial flights per year"
     },
     habitat: {
-      preferredEnvironment: ["Kitchens", "Gardens", "Under paving", "Wall cavities"],
+      preferredEnvironment: [
+        "Kitchen areas and food preparation zones",
+        "Garden patios and paved areas",
+        "Wall cavities and structural voids",
+        "Heated buildings (Pharaoh ants)",
+        "Moist areas around plumbing",
+        "Window sills and door frames",
+        "Electrical conduits and meter boxes"
+      ],
       commonHidingSpots: [
-        "Under kitchen units",
-        "Behind skirting boards",
-        "In wall insulation",
-        "Under patios",
-        "Plant pots",
-        "Electrical boxes"
+        "Behind kitchen units and under appliances",
+        "Along skirting boards and architraves",
+        "Inside wall insulation and cavity walls",
+        "Under patio slabs and block paving",
+        "Plant pots and garden containers",
+        "Electrical junction boxes and switch plates",
+        "Behind bathroom tiles and around pipework",
+        "Window frames and door thresholds",
+        "Compost bins and garden storage areas"
       ],
       signsOfInfestation: [
-        "Ant trails",
-        "Small dirt mounds",
-        "Ants around food",
-        "Flying ants in summer",
-        "Nest entrances"
+        "Visible ant trails leading to food sources",
+        "Small conical soil mounds in gardens or near buildings",
+        "Live ants around sweet substances and food debris",
+        "Flying ants during warm weather (May-September)",
+        "Tiny holes in mortar joints and paving",
+        "Sweet/musty odour from large Pharaoh ant colonies",
+        "Damaged food packaging with tiny entry holes",
+        "Fine soil particles on windowsills or doorways"
       ]
     },
     risks: {
       healthRisks: [
-        "Food contamination",
-        "Pharaoh ants in hospitals",
-        "Allergic reactions (rare)",
-        "Disease transmission risk"
+        "Food contamination from foraging through unsanitary areas",
+        "Disease transmission risk in healthcare environments (Pharaoh ants)",
+        "Bacterial contamination of food preparation surfaces",
+        "Allergic reactions to ant bites (rare but possible)",
+        "Asthma triggers from ant debris and body parts",
+        "Cross-contamination between waste areas and kitchens",
+        "Potential for wound infections in hospital settings"
       ],
       propertyDamage: [
-        "Undermining paving",
-        "Electrical equipment damage",
-        "Food spoilage",
-        "Garden damage"
+        "Undermining of paved areas and pathways",
+        "Damage to electrical equipment through moisture attraction",
+        "Food spoilage and contamination costs",
+        "Garden plant damage through aphid farming",
+        "Structural issues from extensive excavation",
+        "Damage to lawn areas from nest construction",
+        "Contamination of stored goods and packaging"
       ],
       businessRisks: [
-        "Food safety violations",
-        "Customer complaints",
-        "Product contamination",
-        "Healthcare facility risks"
+        "Serious food safety violations and enforcement action",
+        "Customer complaints and reputation damage",
+        "Product recalls due to contamination",
+        "Particular risks in healthcare facilities from Pharaoh ants",
+        "Lost revenue from closed food preparation areas",
+        "Staff welfare issues in heavily infested workplaces",
+        "Insurance claims from contaminated stock"
       ]
     },
     prevention: {
       environmentalChanges: [
-        "Eliminate food sources",
-        "Fix water leaks",
-        "Seal food containers",
-        "Clean up spills"
+        "Eliminate all accessible food sources completely",
+        "Fix plumbing leaks and moisture problems immediately",
+        "Store all food in sealed, ant-proof containers",
+        "Clean up spills and crumbs immediately after eating",
+        "Remove pet food bowls after feeding times",
+        "Install dehumidifiers in damp areas",
+        "Trim vegetation away from building walls",
+        "Maintain dry perimeters around building foundations"
       ],
       exclusionMethods: [
-        "Seal cracks and gaps",
-        "Use ant barriers",
-        "Caulk entry points",
-        "Install door sweeps"
+        "Seal all cracks and gaps with appropriate sealant",
+        "Install door sweeps and weather stripping",
+        "Use ant-proof barriers around building perimeters",
+        "Caulk entry points around pipes and cables",
+        "Repair damaged mortar joints in brickwork",
+        "Install fine mesh over air vents and drains",
+        "Apply ant-deterrent substances to key entry areas",
+        "Regular maintenance of building exterior seals"
       ],
       cleaningTips: [
-        "Wipe surfaces daily",
-        "Clean pet bowls",
-        "Vacuum regularly",
-        "Empty bins daily"
+        "Wipe down all surfaces with ant-deterrent cleaners daily",
+        "Clean pet food bowls immediately after use",
+        "Vacuum floors daily, especially around food areas",
+        "Empty bins daily and clean containers weekly",
+        "Steam clean floors weekly to remove pheromone trails",
+        "Store food in elevated, sealed containers",
+        "Clean inside appliances regularly (toasters, microwaves)",
+        "Wash dishes immediately after use"
       ],
       landscapingTips: [
-        "Keep plants away from walls",
-        "Remove aphid-infested plants",
-        "Maintain dry perimeter",
-        "Use ant-resistant mulch"
+        "Keep plants at least 30cm away from building walls",
+        "Remove aphid-infested plants that attract ant farming",
+        "Maintain a dry gravel or concrete perimeter strip",
+        "Use ant-resistant mulch materials",
+        "Regularly inspect and treat soil around foundations",
+        "Remove fallen fruit and organic debris promptly",
+        "Install ant barriers around tree bases",
+        "Keep compost bins sealed and away from buildings"
       ]
     },
     treatment: {
       professionalMethods: [
-        "Gel baits",
-        "Granular baits",
-        "Residual sprays",
-        "Dust formulations",
-        "Colony elimination systems"
+        "Professional gel baits targeted to specific ant species",
+        "Granular baits for outdoor colony treatment",
+        "Residual spray treatments for perimeter protection",
+        "Dust formulations for wall cavity applications",
+        "Advanced colony elimination bait systems",
+        "Targeted injection treatments for nest sites",
+        "Integrated Pest Management (IPM) approaches",
+        "Specialist Pharaoh ant elimination protocols"
       ],
-      timeline: "2-4 weeks for colony elimination",
+      timeline: "Initial assessment within 24 hours, first treatment within 48 hours, colony elimination typically 2-6 weeks depending on species and colony size",
       preparation: [
-        "Clean all surfaces",
-        "Remove alternative food",
-        "Note trail locations",
-        "Clear treatment areas"
+        "Deep clean all surfaces to remove existing pheromone trails",
+        "Remove all alternative food sources during treatment period",
+        "Document and photograph all ant trail locations",
+        "Clear access to all treatment areas including behind appliances",
+        "Secure pets and children during professional application",
+        "Identify and mark all suspected entry points",
+        "Remove or cover food items in treatment areas",
+        "Provide access to cavity walls and roof spaces if required"
       ],
-      followUp: "Monitor for 2-4 weeks, retreat if necessary"
+      followUp: "Progress monitoring at 1-2 week intervals, bait station maintenance, final clearance inspection after 4-6 weeks, annual preventive service recommended"
     },
     londonSpecific: {
-      commonBoroughs: ["All London boroughs affected", "Pharaoh ants in Camden", "Tower Hamlets hospitals"],
+      commonBoroughs: [
+        "All London boroughs affected by garden ants",
+        "Camden (high density housing with Pharaoh ant issues)",
+        "Tower Hamlets (hospitals and healthcare facilities)",
+        "Westminster (commercial kitchens and restaurants)",
+        "Kensington & Chelsea (period properties with structural entry points)",
+        "Hackney (mixed residential and commercial areas)",
+        "Southwark (riverside properties with moisture issues)",
+        "Lambeth (social housing with heating systems favoring Pharaoh ants)"
+      ],
       seasonalActivity: {
-        spring: "Colony expansion begins",
-        summer: "Peak activity, flying ant day",
-        autumn: "Increased indoor invasions",
-        winter: "Pharaoh ants active indoors"
+        spring: "Colony expansion begins with increased foraging activity, first appearance of scouts in homes",
+        summer: "Peak activity period with flying ant days (typically July-August), maximum colony size and aggressive foraging",
+        autumn: "Increased indoor invasions as outdoor temperatures drop, preparation for overwintering",
+        winter: "Pharaoh ants remain active in heated buildings, garden ants largely dormant but may appear during warm spells"
       },
-      propertyTypes: ["All property types", "Hospitals for Pharaoh ants", "Ground floor flats", "Restaurants"]
+      propertyTypes: [
+        "All residential property types affected",
+        "Hospitals and healthcare facilities (particular Pharaoh ant risk)",
+        "Ground floor flats with garden access",
+        "Restaurant kitchens and food preparation areas",
+        "Care homes and sheltered accommodation",
+        "Schools with food service areas",
+        "Office buildings with kitchen facilities",
+        "Period properties with structural entry points"
+      ]
     },
-    urgencyLevel: "medium",
-    relatedPests: ["cockroaches", "silverfish"]
+    urgencyLevel: "high",
+    relatedPests: ["cockroaches", "silverfish", "pharaoh-ants"]
   },
   {
     id: "spiders",
     name: "Spiders",
     scientificName: "Various species",
     category: "insects",
-    commonNames: ["House spider", "False widow", "Cellar spider", "Garden spider"],
-    description: "While most UK spiders are harmless, some species like false widows can cause concern. Spiders are beneficial predators but become pests when they invade homes in large numbers.",
+    commonNames: ["House spider", "False widow", "Cellar spider", "Garden spider", "Wolf spider", "Orb weaver"],
+    description: "Spider phobia affects millions of people, and discovering webs throughout your home can trigger genuine fear and anxiety. While we understand that spiders are natural pest controllers, we also recognize when they become a problem that affects your comfort and peace of mind. At Pest Pro London, we provide sensitive, effective spider control that balances ecological responsibility with your family's wellbeing. Some London spiders, particularly the increasingly common false widow, can deliver medically significant bites, making professional identification and management essential for your safety.",
     identification: {
-      size: "Body: 3-15mm depending on species",
-      color: "Brown, black, grey, some with markings",
+      size: "House spiders: 6-20mm body, False widows: 7-14mm, Garden spiders: 10-18mm, Cellar spiders: 2-10mm",
+      color: "Typically brown, black, grey, or yellow-brown with various patterns and markings",
       distinguishingFeatures: [
-        "Eight legs",
-        "Two body segments",
-        "Multiple eyes (usually 8)",
-        "Spinnerets at rear",
-        "Some hairy, some smooth"
+        "Eight jointed legs attached to cephalothorax",
+        "Two distinct body segments (cephalothorax and abdomen)",
+        "Multiple eyes arranged in species-specific patterns (usually 8)",
+        "Silk-producing spinnerets at rear of abdomen",
+        "Pair of pedipalps near mouth (enlarged in males)",
+        "Chelicerae (fangs) for venom injection",
+        "Some species hairy (wolf spiders), others smooth (false widows)",
+        "Distinctive web patterns vary by species"
       ],
-      soundsMade: ["None"],
-      droppings: "Small dark spots below webs",
-      tracks: "Webs in corners and crevices"
+      soundsMade: ["Generally silent", "Possible slight rustling when moving through webs", "Courtship vibrations on webs (not audible to humans)"],
+      droppings: "Small dark spots below webs, white uric acid deposits mixed with prey remains",
+      tracks: "Distinctive web patterns, silk draglines, egg sacs, molted exoskeletons, captured prey remains"
     },
     behavior: {
-      activityTime: "Various, some nocturnal, some diurnal",
-      nestingHabits: "Solitary, create webs or hunt actively",
-      feedingHabits: "Carnivorous, eat insects",
-      lifespan: "1-2 years typically",
-      reproductionRate: "100-400 eggs per egg sac"
+      activityTime: "Varies by species - house spiders mostly nocturnal, garden spiders diurnal, false widows active day and night",
+      nestingHabits: "Solitary creatures, create species-specific webs or hunt actively without webs, retreat to crevices during day",
+      feedingHabits: "Strictly carnivorous, feeding on flying insects, crawling insects, and other spiders",
+      lifespan: "Most UK species: 1-2 years, some larger species up to 3 years, false widows up to 18 months",
+      reproductionRate: "100-400 eggs per egg sac, multiple sacs per year, peak reproduction in autumn"
     },
     habitat: {
-      preferredEnvironment: ["Dark corners", "Basements", "Attics", "Gardens", "Sheds"],
+      preferredEnvironment: [
+        "Dark, undisturbed corners and crevices",
+        "Basements and cellars with stable conditions",
+        "Loft spaces and storage areas",
+        "Garden sheds and outbuildings",
+        "Window frames and conservatories",
+        "Behind furniture and appliances",
+        "Garage spaces and storage areas"
+      ],
       commonHidingSpots: [
-        "Behind furniture",
-        "Window frames",
-        "Ceiling corners",
-        "Under eaves",
-        "Garages",
-        "Cupboards"
+        "Behind and under furniture, especially beds and wardrobes",
+        "Window and door frames, particularly corners",
+        "Ceiling corners and light fittings",
+        "Under stairwells and in cupboards",
+        "Behind radiators and heating pipes",
+        "In garage corners and garden storage",
+        "Between books and in storage boxes",
+        "External meter boxes and garden features",
+        "Brick crevices and cavity wall openings"
       ],
       signsOfInfestation: [
-        "Multiple webs",
-        "Live spiders",
-        "Egg sacs",
-        "Dead insects in webs",
-        "Spider droppings"
+        "Multiple webs in various locations",
+        "Live spiders spotted regularly",
+        "Egg sacs attached to webs or hidden surfaces",
+        "Dead insects caught in webs",
+        "Spider droppings and silk residue",
+        "Molted spider skins near hiding spots",
+        "Bite marks on residents (false widow identification)",
+        "Webs reformed quickly after removal"
       ]
     },
     risks: {
       healthRisks: [
-        "False widow bites",
-        "Allergic reactions",
-        "Secondary infections",
-        "Psychological distress"
+        "False widow spider bites causing pain, swelling, and potential infection",
+        "Allergic reactions to spider bites in sensitive individuals",
+        "Secondary bacterial infections at bite sites",
+        "Severe psychological distress and arachnophobia triggers",
+        "Sleep disruption from fear of spider encounters",
+        "Risk of falls when trying to escape from spiders",
+        "Respiratory issues in individuals allergic to spider debris"
       ],
       propertyDamage: [
-        "Unsightly webs",
-        "Staining from droppings"
+        "Extensive webbing creating unsightly appearance",
+        "Staining from spider droppings on walls and surfaces",
+        "Potential damage to stored items in infested areas",
+        "Contamination of food storage areas",
+        "Reduced property appeal for potential buyers/tenants"
       ],
       businessRisks: [
-        "Customer complaints",
-        "Staff concerns",
-        "Cleaning costs"
+        "Customer complaints and negative reviews",
+        "Staff welfare concerns affecting productivity",
+        "Cleaning costs for web removal and maintenance",
+        "Potential liability from customer spider bites",
+        "Hygiene perception issues in food-related businesses",
+        "Professional image concerns in office environments"
       ]
     },
     prevention: {
       environmentalChanges: [
-        "Reduce clutter",
-        "Control humidity",
-        "Limit outdoor lighting",
-        "Seal entry points"
+        "Reduce clutter in storage areas and basements",
+        "Control humidity levels below 50% where possible",
+        "Limit unnecessary outdoor lighting that attracts prey insects",
+        "Seal entry points around windows and doors",
+        "Remove spider food sources by controlling other insects",
+        "Use cedar products as natural deterrents",
+        "Install yellow or sodium lighting outdoors",
+        "Maintain clean, well-ventilated spaces"
       ],
       exclusionMethods: [
-        "Install door sweeps",
-        "Seal cracks",
-        "Use window screens",
-        "Weather stripping"
+        "Install brush seals under doors and around frames",
+        "Seal cracks and crevices with appropriate filler",
+        "Use fine mesh screens on windows and vents",
+        "Install weatherstripping around windows and doors",
+        "Block access points around pipes and cables",
+        "Repair damaged window screens immediately",
+        "Seal gaps in soffits and roof areas",
+        "Use door sweeps on external doors"
       ],
       cleaningTips: [
-        "Regular vacuuming",
-        "Remove webs promptly",
-        "Dust regularly",
-        "Declutter storage areas"
+        "Vacuum thoroughly including corners and crevices weekly",
+        "Remove webs promptly using long-handled tools",
+        "Dust regularly to remove spider eggs and debris",
+        "Declutter storage areas and rotate stored items",
+        "Steam clean carpets and upholstery periodically",
+        "Clean window frames and sills regularly",
+        "Vacuum under and behind furniture monthly",
+        "Maintain clean garage and storage areas"
       ],
       landscapingTips: [
-        "Trim vegetation from walls",
-        "Remove debris",
-        "Control outdoor lighting",
-        "Maintain tidy garden"
+        "Trim vegetation away from building walls (minimum 50cm)",
+        "Remove garden debris, woodpiles, and leaf litter",
+        "Control outdoor lighting to reduce insect attraction",
+        "Maintain tidy garden without excessive hiding spots",
+        "Remove or relocate firewood away from buildings",
+        "Clear ivy and dense vegetation from walls",
+        "Prune overhanging tree branches",
+        "Install gravel strips around building perimeters"
       ]
     },
     treatment: {
       professionalMethods: [
-        "Residual sprays",
-        "Web removal",
-        "Dust applications",
-        "Monitoring",
-        "Exclusion work"
+        "Targeted residual spray treatments for harboring areas",
+        "Professional web removal and cleanup",
+        "Dust applications in cavity walls and roof spaces",
+        "Monitoring and identification of problem species",
+        "Exclusion work to prevent re-entry",
+        "Integrated pest management focusing on prey reduction",
+        "Specialist false widow elimination protocols",
+        "Safe removal and relocation when appropriate"
       ],
-      timeline: "Usually 1-2 treatments",
+      timeline: "Initial assessment and first treatment within 48 hours, typically resolved with 1-2 treatments, ongoing monitoring for 6-8 weeks",
       preparation: [
-        "Clear treatment areas",
-        "Note problem areas",
-        "Remove clutter",
-        "Vacuum existing webs"
+        "Clear access to all treatment areas",
+        "Note and photograph problem areas and spider types",
+        "Remove clutter from affected areas",
+        "Vacuum existing webs before treatment",
+        "Secure pets during treatment application",
+        "Identify specific species if possible for targeted treatment",
+        "Clear storage areas for inspection",
+        "Document bite incidents if false widows suspected"
       ],
-      followUp: "Monitor and retreat if needed after 4 weeks"
+      followUp: "Progress monitoring after 2 weeks, retreat if necessary after 4-6 weeks, seasonal prevention advice, annual inspection recommended"
     },
     londonSpecific: {
-      commonBoroughs: ["All boroughs", "False widows increasing across London"],
+      commonBoroughs: [
+        "All London boroughs affected by common house spiders",
+        "Southern boroughs (Croydon, Bromley) with increasing false widow populations",
+        "Richmond and outer London with garden spider prevalence",
+        "Central London (Westminster, Camden) with cellar spider issues",
+        "Thames-side boroughs with moisture-related spider problems",
+        "Older housing stock areas (Islington, Hackney) with structural harboring",
+        "Suburban areas (Harrow, Barnet) with seasonal garden spider invasions"
+      ],
       seasonalActivity: {
-        spring: "Mating season begins",
-        summer: "Garden species active",
-        autumn: "Move indoors for warmth",
-        winter: "Reduced activity"
+        spring: "Mating season begins, increased spider movement and web-building activity",
+        summer: "Garden species peak activity, outdoor spiders most visible, breeding period for most species",
+        autumn: "Major indoor migration as spiders seek warmth, peak home invasion period, egg-laying season",
+        winter: "Reduced activity but spiders remain in heated homes, false widows stay active indoors"
       },
-      propertyTypes: ["Older properties", "Garden sheds", "Garages", "Basements"]
+      propertyTypes: [
+        "Older Victorian and Edwardian properties with more hiding spots",
+        "Garden sheds and outbuildings",
+        "Garages and basement areas",
+        "Properties with extensive storage areas",
+        "Homes backing onto parks or green spaces",
+        "Buildings with cavity walls and roof spaces",
+        "Commercial premises with warehousing",
+        "Schools and public buildings with storage areas"
+      ]
     },
-    urgencyLevel: "low",
-    relatedPests: ["silverfish", "moths"]
+    urgencyLevel: "medium",
+    relatedPests: ["silverfish", "moths", "false-widow-spiders"]
   },
   {
     id: "moths",
     name: "Moths",
     scientificName: "Tineola bisselliella & Plodia interpunctella",
     category: "insects",
-    commonNames: ["Clothes moth", "Carpet moth", "Pantry moth", "Indian meal moth"],
-    description: "Moths can cause significant damage to natural fibers and stored food products. London's older properties with wool carpets and vintage clothing are particularly susceptible.",
+    commonNames: ["Clothes moth", "Carpet moth", "Pantry moth", "Indian meal moth", "Common clothes moth", "Case-bearing clothes moth"],
+    description: "Discovering holes in your favorite clothes or finding larvae in your food storage can be heartbreaking and costly. We understand the frustration of opening your wardrobe to find irreplaceable garments damaged, or discovering contaminated food in your pantry. At Pest Pro London, we provide comprehensive moth control that protects both your treasured textiles and food stores. These persistent pests can cause thousands of pounds of damage to natural fiber clothing, carpets, and stored food products, requiring immediate professional intervention to prevent total infestation of your home.",
     identification: {
-      size: "Adults: 6-8mm (clothes), 8-10mm (pantry)",
-      color: "Buff/golden (clothes), grey-brown (pantry)",
+      size: "Clothes moths: 6-8mm wingspan, Pantry moths: 8-10mm wingspan, Larvae: 10-12mm when mature",
+      color: "Clothes moths: buff/golden brown, Pantry moths: grey-brown with distinctive patterns, Larvae: cream-white with brown heads",
       distinguishingFeatures: [
-        "Narrow wings when folded",
-        "Feathery antennae",
-        "Weak fliers",
-        "Attracted to light (pantry)",
-        "Avoid light (clothes)"
+        "Narrow, fringed wings held roof-like over body when at rest",
+        "Thread-like or feathery antennae (varies by species)",
+        "Weak, fluttering flight pattern",
+        "Pantry moths attracted to light sources",
+        "Clothes moths avoid light and prefer dark areas",
+        "Distinctive moth scales that rub off when handled",
+        "Larvae have well-developed heads with strong mandibles",
+        "Case-bearing moth larvae create portable silk cases"
       ],
-      soundsMade: ["None"],
-      droppings: "Not visible",
-      tracks: "Larvae cases, webbing, damaged materials"
+      soundsMade: ["Generally silent", "Possible faint rustling of larvae in fabrics", "Paper-like sound when disturbed from hiding spots"],
+      droppings: "Tiny dark specks (frass) near damaged materials, often mixed with silk webbing",
+      tracks: "Silk webbing trails, portable larval cases, irregular holes in fabrics, damaged food packaging with webbing"
     },
     behavior: {
-      activityTime: "Adults mainly nocturnal",
-      nestingHabits: "Lay eggs on food source",
-      feedingHabits: "Larvae eat natural fibers or stored food",
-      lifespan: "Adults: 2-4 weeks, Full cycle: 2-4 months",
-      reproductionRate: "40-50 eggs per female"
+      activityTime: "Adults primarily nocturnal and crepuscular, larvae active continuously in favorable conditions",
+      nestingHabits: "Females lay eggs directly on food source material, larvae pupate in crevices and corners",
+      feedingHabits: "Adults rarely feed, larvae consume natural fibers (wool, silk, cotton) or stored food products",
+      lifespan: "Adults: 2-4 weeks, Complete life cycle: 2-6 months depending on temperature and humidity",
+      reproductionRate: "Females lay 40-100 eggs over lifetime, multiple generations per year in heated homes"
     },
     habitat: {
-      preferredEnvironment: ["Wardrobes", "Carpeted areas", "Pantries", "Dark undisturbed areas"],
+      preferredEnvironment: [
+        "Wardrobes and clothing storage areas",
+        "Carpeted areas, especially under furniture",
+        "Pantries and food storage cupboards",
+        "Dark, undisturbed areas with natural materials",
+        "Museums, libraries, and archives",
+        "Basements and storage rooms",
+        "Attics with stored textiles"
+      ],
       commonHidingSpots: [
-        "Closets",
-        "Under furniture",
-        "Carpet edges",
-        "Storage boxes",
-        "Behind radiators",
-        "Food cupboards"
+        "Inside closets behind hanging clothes",
+        "Under furniture and carpet edges",
+        "Behind radiators and heating pipes",
+        "Storage boxes containing woollen items",
+        "Food cupboards and pantry areas",
+        "Picture frames and artwork storage",
+        "Upholstered furniture seams and crevices",
+        "Curtain folds and fabric blinds",
+        "Vintage clothing and textile collections"
       ],
       signsOfInfestation: [
-        "Damaged fabrics",
-        "Larvae cases",
-        "Adult moths",
-        "Webbing in food",
-        "Bare patches in carpet"
+        "Small irregular holes in wool, silk, or cotton fabrics",
+        "Silken cases or cocoons in corners and crevices",
+        "Adult moths flying in affected areas",
+        "Webbing in food packages or containers",
+        "Bare patches in natural fiber carpets and rugs",
+        "Larvae crawling on walls or ceilings",
+        "Fine dust or debris from damaged materials",
+        "Musty odor in heavily infested storage areas"
       ]
     },
     risks: {
       healthRisks: [
-        "Allergic reactions to larvae",
-        "Food contamination",
-        "Respiratory irritation"
+        "Allergic reactions to moth scales and larval hairs",
+        "Food contamination from pantry moth infestations",
+        "Respiratory irritation from airborne particles",
+        "Skin irritation from contact with infested materials",
+        "Asthma triggers from moth debris and allergens"
       ],
       propertyDamage: [
-        "Ruined clothing",
-        "Damaged carpets",
-        "Spoiled food",
-        "Furniture damage",
-        "Irreplaceable textiles"
+        "Irreparable damage to expensive clothing and textiles",
+        "Destruction of valuable carpets and rugs",
+        "Spoilage of stored food products",
+        "Damage to upholstered furniture",
+        "Loss of irreplaceable vintage or antique textiles",
+        "Contamination of entire wardrobes requiring professional cleaning",
+        "Damage to natural fiber insulation materials"
       ],
       businessRisks: [
-        "Stock damage",
-        "Museum/gallery losses",
-        "Hotel reputation",
-        "Retail losses"
+        "Significant stock losses in retail clothing businesses",
+        "Devastating losses in museums and galleries",
+        "Reputation damage for hotels and hospitality venues",
+        "Food safety violations in restaurants and catering",
+        "Insurance claims for damaged inventory",
+        "Customer compensation costs",
+        "Professional cleaning and replacement expenses"
       ]
     },
     prevention: {
       environmentalChanges: [
-        "Regular cleaning",
-        "Proper storage",
-        "Control humidity",
-        "Cedar products"
+        "Regular thorough cleaning and vacuuming of all areas",
+        "Proper storage of clothing in sealed containers",
+        "Maintain low humidity levels (below 50%)",
+        "Use natural deterrents like cedar blocks and lavender",
+        "Regular rotation and inspection of stored items",
+        "Professional cleaning before long-term storage",
+        "Install effective ventilation in storage areas",
+        "Temperature control to disrupt breeding cycles"
       ],
       exclusionMethods: [
-        "Sealed storage",
-        "Moth-proof bags",
-        "Screen windows",
-        "Door seals"
+        "Store susceptible items in sealed, airtight containers",
+        "Use moth-proof garment bags for valuable clothing",
+        "Install fine mesh screens on windows and vents",
+        "Seal gaps around doors and windows",
+        "Use pheromone traps for early detection",
+        "Professional-grade storage solutions for textiles",
+        "Cedar-lined wardrobes and storage areas",
+        "Regular inspection and monitoring protocols"
       ],
       cleaningTips: [
-        "Vacuum regularly",
-        "Clean before storage",
-        "Wash at high temps",
-        "Freeze susceptible items"
+        "Vacuum all carpets, rugs, and upholstery weekly",
+        "Clean clothing thoroughly before storage",
+        "Wash susceptible items at 60°C when possible",
+        "Freeze delicate items for 72 hours to kill eggs and larvae",
+        "Steam clean carpets and upholstery regularly",
+        "Clean and vacuum inside wardrobes monthly",
+        "Brush and air clothes regularly during storage",
+        "Professional dry cleaning for valuable or delicate items"
       ],
       landscapingTips: [
-        "Not applicable"
+        "Not applicable - moths are primarily indoor pests in London climate",
+        "Reduce outdoor lighting near windows to minimize attraction",
+        "Keep bird nests away from buildings as they can harbor moths"
       ]
     },
     treatment: {
       professionalMethods: [
-        "Pheromone traps",
-        "Residual sprays",
-        "Fumigation",
-        "Heat treatment",
-        "Freezing",
-        "IGR applications"
+        "Species-specific pheromone trapping systems",
+        "Targeted residual insecticide treatments",
+        "Professional fumigation for severe infestations",
+        "Heat treatment for textiles and storage areas",
+        "Controlled freezing treatment for delicate items",
+        "Insect Growth Regulator (IGR) applications",
+        "Steam treatment for carpets and upholstery",
+        "Comprehensive inspection and monitoring programs"
       ],
-      timeline: "2-3 treatments over 6-8 weeks",
+      timeline: "Initial assessment within 24 hours, first treatment within 48 hours, typically requires 2-3 treatments over 6-8 weeks, monitoring for 3-6 months",
       preparation: [
-        "Empty affected areas",
-        "Wash/dry clean items",
-        "Vacuum thoroughly",
-        "Bag infested items"
+        "Empty and clean all affected storage areas",
+        "Wash or dry clean all washable items",
+        "Vacuum all carpets, furniture, and crevices thoroughly",
+        "Bag and isolate heavily infested items",
+        "Provide access to all storage areas and wardrobes",
+        "Document all damaged items for insurance purposes",
+        "Remove or cover food items during treatment",
+        "Ensure adequate ventilation during treatment process"
       ],
-      followUp: "Monitor with traps for 3 months"
+      followUp: "Progress monitoring with pheromone traps for 3-6 months, follow-up inspections at regular intervals, prevention advice and seasonal monitoring"
     },
     londonSpecific: {
-      commonBoroughs: ["Kensington & Chelsea", "Westminster", "Camden", "Islington"],
+      commonBoroughs: [
+        "Kensington & Chelsea (high concentration of valuable textiles and period properties)",
+        "Westminster (museums, galleries, and commercial premises)",
+        "Camden (vintage shops and older residential properties)",
+        "Islington (Victorian properties with wool carpets)",
+        "Richmond (suburban homes with extensive storage)",
+        "Hampstead (older properties with natural fiber furnishings)",
+        "Greenwich (historic properties and maritime museums)",
+        "Southwark (period conversions with original features)"
+      ],
       seasonalActivity: {
-        spring: "Adults emerge and mate",
-        summer: "Peak breeding season",
-        autumn: "Larvae feeding heavily",
-        winter: "Heated homes allow activity"
+        spring: "Adults emerge from pupation and begin mating activities, increased moth sightings indoors",
+        summer: "Peak breeding season with optimal temperature and humidity conditions",
+        autumn: "Larvae feeding heavily in preparation for winter, maximum damage period",
+        winter: "Continuous activity in heated homes, slower development but ongoing damage"
       },
-      propertyTypes: ["Period properties", "Museums", "Vintage shops", "Hotels"]
+      propertyTypes: [
+        "Victorian and Edwardian period properties with wool carpets",
+        "Museums, galleries, and historic buildings",
+        "Vintage clothing shops and textile retailers",
+        "Hotels and hospitality venues with natural fiber furnishings",
+        "Private residences with extensive wardrobes",
+        "Antique shops and auction houses",
+        "Theaters and performance venues with costume collections",
+        "Libraries and archives with fabric-bound materials"
+      ]
     },
-    urgencyLevel: "medium",
-    relatedPests: ["carpet beetles", "silverfish"]
+    urgencyLevel: "high",
+    relatedPests: ["carpet-beetles", "silverfish", "booklice"]
   },
   {
     id: "fleas",
     name: "Fleas",
     scientificName: "Ctenocephalides felis & Ctenocephalides canis",
     category: "insects",
-    commonNames: ["Cat flea", "Dog flea", "Human flea"],
-    description: "Fleas are parasitic insects that feed on blood. In London, they're commonly brought in by pets or from previous tenants. They can survive without a host for months.",
+    commonNames: ["Cat flea", "Dog flea", "Human flea", "Oriental rat flea", "Sand flea"],
+    description: "Few things are more frustrating than the persistent biting and jumping of fleas throughout your home, especially when they continue to appear even after treating your pets. We understand the exhaustion that comes with fighting an invisible enemy that seems to multiply overnight. At Pest Pro London, we break the flea lifecycle completely, not just treating the adults you can see. These resilient parasites can survive for months without feeding and can explode into massive populations within days, making professional intervention essential to end the cycle of biting and breeding in your home.",
     identification: {
-      size: "Adults: 1-3mm",
-      color: "Dark brown to reddish-brown",
+      size: "Adults: 1.5-3.3mm, Cat fleas slightly larger than dog fleas, Larvae: 4-10mm when mature",
+      color: "Dark reddish-brown to mahogany when fed, lighter brown when unfed, larvae cream-white with brown heads",
       distinguishingFeatures: [
-        "Flattened body side to side",
-        "Large hind legs for jumping",
-        "No wings",
-        "Backward-pointing bristles"
+        "Heavily compressed body flattened side-to-side for movement through fur",
+        "Disproportionately large, powerful hind legs for jumping up to 150x body length",
+        "Completely wingless with smooth, streamlined profile",
+        "Backward-pointing bristles and spines for gripping host fur",
+        "Piercing-sucking mouthparts designed for blood feeding",
+        "Compound eyes and sensitive antennae for host detection",
+        "Hard, shiny exoskeleton resistant to crushing",
+        "Visible when jumping - distinctive arcing motion"
       ],
-      soundsMade: ["None"],
-      droppings: "Black specks that turn red when wet",
-      tracks: "Flea dirt in pet bedding"
+      soundsMade: ["Generally silent", "Possible faint clicking when jumping on hard surfaces", "Pets may scratch loudly due to flea irritation"],
+      droppings: "Distinctive 'flea dirt' - small black specks that turn reddish-brown when moistened (digested blood)",
+      tracks: "Flea dirt concentrated in pet sleeping areas, eggs appearing as tiny white specks in carpets, adult fleas visible jumping on socks and ankles"
     },
     behavior: {
-      activityTime: "Active when host present",
-      nestingHabits: "Eggs laid in host environment",
-      feedingHabits: "Blood meals every few days",
-      lifespan: "Adults: 2-3 months",
-      reproductionRate: "40-50 eggs per day"
+      activityTime: "Most active when hosts are present, peak activity during warm weather, dormant during winter but revive quickly with heating",
+      nestingHabits: "Adults live on hosts, females lay eggs in pet fur which fall into environment, larvae develop in carpets and soft furnishings",
+      feedingHabits: "Adults require blood meals for reproduction, can survive 100+ days without feeding, feed multiple times daily when on host",
+      lifespan: "Adults: 2-3 months on average, up to 12 months in favorable conditions, complete lifecycle: 14 days to 12 months depending on conditions",
+      reproductionRate: "Females lay 40-50 eggs daily, up to 2,000 eggs in lifetime, exponential population growth in optimal conditions"
     },
     habitat: {
-      preferredEnvironment: ["Pet bedding", "Carpets", "Upholstery", "Cracks in floors"],
+      preferredEnvironment: [
+        "Pet bedding and sleeping areas (primary breeding sites)",
+        "Carpeted areas throughout the home",
+        "Upholstered furniture and soft furnishings",
+        "Cracks between floorboards and under skirting",
+        "Warm, humid areas with organic debris",
+        "Vehicle interiors where pets travel",
+        "Garden areas where pets rest"
+      ],
       commonHidingSpots: [
-        "Pet sleeping areas",
-        "Under furniture",
-        "Carpet fibers",
-        "Between floorboards",
-        "Soft furnishings"
+        "Pet beds, blankets, and favorite resting spots",
+        "Deep within carpet pile and underlay",
+        "Gaps between floorboards and under furniture",
+        "Upholstered furniture seams and cushions",
+        "Curtains and fabric hangings at floor level",
+        "Children's soft toys and play areas",
+        "Vacuum cleaner bags and filters",
+        "Car upholstery and floor mats",
+        "Outdoor areas where pets spend time"
       ],
       signsOfInfestation: [
-        "Pets scratching",
-        "Bites on ankles",
-        "Jumping insects",
-        "Flea dirt",
-        "Red bite marks"
+        "Pets scratching, licking, and chewing excessively",
+        "Small red bites on human ankles and lower legs",
+        "Dark specks ('flea dirt') in pet fur and bedding",
+        "Tiny jumping insects visible on light-colored surfaces",
+        "White flea eggs appearing as 'salt' in carpets",
+        "Pets showing signs of anemia (pale gums) in severe cases",
+        "Red, irritated skin on pets and humans",
+        "Flea larvae visible as small worm-like creatures in carpets"
       ]
     },
     risks: {
       healthRisks: [
-        "Allergic reactions",
-        "Secondary infections",
-        "Disease transmission",
-        "Anemia in pets",
-        "Tapeworms"
+        "Severe allergic reactions and flea allergy dermatitis",
+        "Secondary bacterial infections from excessive scratching",
+        "Disease transmission including typhus and tapeworms",
+        "Anemia in pets and small children from blood loss",
+        "Psychological stress from persistent biting",
+        "Sleep disruption from nighttime flea activity",
+        "Skin irritation and scarring from repeated bites",
+        "Risk of plague transmission in extreme cases (rare in UK)"
       ],
       propertyDamage: [
-        "None direct",
-        "Treatment costs",
-        "Furniture disposal"
+        "Limited direct property damage",
+        "High costs for professional treatment and cleaning",
+        "Potential need to dispose of heavily infested furniture",
+        "Damage to carpets from excessive cleaning attempts",
+        "Reduced property value during active infestations",
+        "Staining from flea dirt on light-colored fabrics",
+        "Pet damage to furnishings from excessive scratching"
       ],
       businessRisks: [
-        "Guest complaints",
-        "Staff bites",
-        "Reputation damage",
-        "Compensation claims"
+        "Serious guest complaints and negative reviews",
+        "Staff welfare issues from persistent biting",
+        "Reputation damage for accommodation providers",
+        "Potential compensation claims from affected guests",
+        "Health and safety concerns for employees",
+        "Lost revenue from room closures during treatment",
+        "Insurance claims and increased premiums",
+        "Professional cleaning and replacement costs"
       ]
     },
     prevention: {
       environmentalChanges: [
-        "Regular pet treatment",
-        "Vacuum frequently",
-        "Wash pet bedding",
-        "Control humidity"
+        "Maintain regular veterinary flea prevention for all pets",
+        "Vacuum all carpeted areas daily during flea season",
+        "Wash all pet bedding weekly at 60°C minimum",
+        "Control indoor humidity levels below 50%",
+        "Groom pets regularly to detect early flea presence",
+        "Remove pet hair and organic debris promptly",
+        "Inspect and treat new pets before introduction",
+        "Maintain clean environment free from flea development sites"
       ],
       exclusionMethods: [
-        "Treat pets preventatively",
-        "Inspect second-hand furniture",
-        "Seal floor gaps"
+        "Treat all pets with veterinary-approved flea prevention",
+        "Thoroughly inspect second-hand furniture before bringing indoors",
+        "Seal gaps between floorboards where eggs can accumulate",
+        "Use hard flooring instead of carpets in pet areas where possible",
+        "Install dehumidifiers in areas prone to flea development",
+        "Regular inspection of pet sleeping and play areas",
+        "Quarantine new pets until flea-free status confirmed",
+        "Professional cleaning of vehicles used for pet transport"
       ],
       cleaningTips: [
-        "Vacuum daily during outbreak",
-        "Steam clean carpets",
-        "Wash bedding at 60°C",
-        "Dispose of vacuum bags"
+        "Vacuum daily during active infestations, focusing on pet areas",
+        "Steam clean all carpets and upholstery monthly",
+        "Wash all bedding, pet bedding, and soft furnishings at 60°C",
+        "Dispose of vacuum bags immediately or freeze contents",
+        "Clean pet grooming tools regularly and thoroughly",
+        "Mop hard floors with flea-specific cleaning products",
+        "Launder curtains and removable fabric items frequently",
+        "Professional deep cleaning of heavily infested areas"
       ],
       landscapingTips: [
-        "Keep grass short",
-        "Remove wildlife harbors",
-        "Control rodents"
+        "Keep grass areas short to reduce flea habitat",
+        "Remove organic debris and leaf litter where fleas develop",
+        "Control wildlife populations that may introduce fleas",
+        "Create dry, well-drained areas where pets spend time",
+        "Remove or control rodent populations",
+        "Use beneficial nematodes in garden areas as biological control",
+        "Install barriers to prevent wildlife access to pet areas",
+        "Regular garden maintenance to reduce flea-friendly environments"
       ]
     },
     treatment: {
       professionalMethods: [
-        "Residual insecticides",
-        "IGR applications",
-        "Fumigation",
-        "Heat treatment",
-        "Targeted sprays"
+        "Multi-stage residual insecticide treatment program",
+        "Insect Growth Regulator (IGR) applications to prevent development",
+        "Professional fumigation for severe whole-house infestations",
+        "Heat treatment for sensitive areas and valuable items",
+        "Targeted spray treatments for specific harboring areas",
+        "Integrated pest management combining multiple approaches",
+        "Coordination with veterinary treatment for all pets",
+        "Environmental management and habitat modification"
       ],
-      timeline: "2 treatments 2-3 weeks apart",
+      timeline: "Initial treatment within 24 hours of contact, second treatment 14-21 days later to target emerging adults, complete elimination typically achieved within 4-6 weeks",
       preparation: [
-        "Vacuum thoroughly",
-        "Wash all bedding",
-        "Treat pets",
-        "Clear floor areas"
+        "Vacuum all carpets, furniture, and pet areas thoroughly",
+        "Wash all bedding, clothing, and pet items at highest safe temperature",
+        "Treat all pets with veterinary flea treatment simultaneously",
+        "Clear floor areas of personal items and furniture where possible",
+        "Secure pets in treated areas according to technician instructions",
+        "Identify and document all areas where pets spend time",
+        "Prepare for temporary pet relocation if required",
+        "Remove or cover food items and pet food during treatment"
       ],
-      followUp: "Re-treat after 2-3 weeks to break cycle"
+      followUp: "Mandatory follow-up treatment after 2-3 weeks to break the lifecycle, progress monitoring for 6-8 weeks, ongoing pet treatment coordination with veterinarian"
     },
     londonSpecific: {
-      commonBoroughs: ["All boroughs with pet populations"],
+      commonBoroughs: [
+        "All London boroughs affected with pet ownership",
+        "Residential areas with high pet populations",
+        "Student accommodation areas allowing pets",
+        "Ground floor flats with garden access",
+        "Areas near parks where pets exercise",
+        "Suburban boroughs with larger pet populations",
+        "Social housing areas with pet-friendly policies",
+        "Tourist accommodation accepting pets"
+      ],
       seasonalActivity: {
-        spring: "Activity increases",
-        summer: "Peak season",
-        autumn: "Still active indoors",
-        winter: "Survive in heated homes"
+        spring: "Flea activity increases with warmer temperatures, pet outdoor activity brings new flea exposure",
+        summer: "Peak flea season with optimal breeding conditions, maximum outdoor flea populations",
+        autumn: "Continued indoor activity as outdoor temperatures drop, fleas seeking indoor harboring",
+        winter: "Survive and reproduce in heated homes, reduced outdoor activity but indoor infestations persist"
       },
-      propertyTypes: ["Pet-friendly rentals", "Properties with gardens", "Student accommodation"]
+      propertyTypes: [
+        "Pet-friendly rental properties and housing",
+        "Properties with gardens and outdoor pet access",
+        "Student accommodation allowing pets",
+        "Ground floor flats and houses with direct garden access",
+        "Veterinary clinics and pet-related businesses",
+        "Pet grooming and boarding facilities",
+        "Properties previously occupied by pet owners",
+        "Holiday rentals and accommodation accepting pets"
+      ]
     },
-    urgencyLevel: "high",
-    relatedPests: ["bed-bugs", "mites"]
+    urgencyLevel: "emergency",
+    relatedPests: ["bed-bugs", "mites", "ticks"]
   },
   {
     id: "foxes",
