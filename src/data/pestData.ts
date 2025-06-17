@@ -63,7 +63,7 @@ export const pests: PestData[] = [
     scientificName: "Rattus rattus & Rattus norvegicus",
     category: "rodents",
     commonNames: ["Brown rat", "Norway rat", "Sewer rat", "Black rat", "Roof rat"],
-    description: "Rats are one of the most common pest problems in London, thriving in both residential and commercial properties. They pose serious health risks and can cause significant property damage.",
+    description: "Discovering rats in your property can be one of the most distressing and urgent pest situations any London resident or business owner faces. The sight, sound, or smell of these persistent rodents triggers immediate anxiety about health risks, property damage, and the reputation of your home or business. At Pest Pro London, we understand that rats represent more than just a nuisance – they're a serious threat to your family's health, your property's integrity, and your peace of mind. Our BPCA-certified technicians have helped thousands of London residents and businesses eliminate rat infestations quickly and permanently, using advanced techniques specifically designed for London's unique urban environment where Victorian drainage systems, dense housing, and abundant food sources create ideal conditions for rat populations to thrive.",
     identification: {
       size: "Body: 20-25cm, Tail: 18-23cm",
       color: "Brown, grey, or black fur",
@@ -171,14 +171,14 @@ export const pests: PestData[] = [
       followUp: "Monthly monitoring for 3 months recommended"
     },
     londonSpecific: {
-      commonBoroughs: ["Westminster", "Camden", "Tower Hamlets", "Southwark", "Hackney"],
+      commonBoroughs: ["Westminster - particularly around restaurant districts where food waste attracts large populations", "Camden - Victorian terraces with connecting drainage systems create rat highways", "Tower Hamlets - historic warehouse conversions often have unsealed entry points", "Southwark - Thames-side properties face constant pressure from waterway populations", "Hackney - dense housing and garden-to-garden movement creates neighbourhood-wide issues", "Islington - converted period properties with shared walls and old drainage", "Lambeth - mix of residential and commercial creates year-round food sources", "Greenwich - riverside location combined with tourist food outlets increases activity"],
       seasonalActivity: {
-        spring: "Increased outdoor activity, seeking food for young",
-        summer: "Peak breeding season, garden invasions common",
-        autumn: "Moving indoors for warmth and shelter",
-        winter: "Highest home invasion rates, seeking warmth"
+        spring: "Peak breeding activity begins as temperatures warm. Pregnant females seek secure nesting sites in roof spaces and wall cavities. Outdoor populations expand rapidly, increasing pressure on neighbouring properties. Garden sheds and compost areas become primary targets.",
+        summer: "Maximum reproduction with up to 10 litters possible. Young rats explore beyond nest sites, often discovered in unexpected locations. Restaurant and takeaway areas experience highest activity due to increased outdoor dining and food waste.",
+        autumn: "Mass migration indoors as temperatures drop. Properties previously unaffected may suddenly experience infestations as outdoor food sources diminish. This is when most London residents first discover they have a rat problem.",
+        winter: "Peak season for domestic infestations. Rats concentrate in heated areas like boiler cupboards, kitchen voids, and loft spaces. Property damage peaks as they gnaw materials for nesting and struggle to maintain body temperature."
       },
-      propertyTypes: ["Victorian terraces", "Restaurant basements", "Council estates", "Thames-side properties"]
+      propertyTypes: ["Victorian terraces with connecting cellars and shared drainage systems providing neighbourhood-wide access routes", "Restaurant basements where grease traps and food storage create ideal breeding environments", "Council estates with refuse areas and multiple entry points through aging infrastructure", "Thames-side properties facing constant reinvasion from waterway populations and tourist-generated food waste", "Georgian conversions where partition walls create hidden highways between flats", "New-build developments where construction gaps and utility access points weren't properly sealed", "Commercial kitchens in high-density areas where grease and food debris accumulate in hard-to-clean areas", "Student accommodation where irregular cleaning and food storage practices create perfect conditions"]
     },
     urgencyLevel: "high",
     relatedPests: ["mice", "squirrels"]
@@ -189,7 +189,7 @@ export const pests: PestData[] = [
     scientificName: "Mus musculus",
     category: "rodents",
     commonNames: ["House mouse", "Field mouse", "Common mouse"],
-    description: "Mice are smaller than rats but equally problematic, capable of squeezing through tiny gaps and breeding rapidly indoors. They're particularly common in London homes during autumn and winter.",
+    description: "The discovery of mice in your home can be surprisingly distressing - these small, seemingly harmless creatures actually pose significant health risks and can cause substantial property damage while reproducing at an alarming rate. At Pest Pro London, we understand that mice problems often start with subtle signs that gradually escalate into a serious infestation, leaving homeowners feeling overwhelmed and unsure where to turn. Despite their diminutive size, mice can contaminate far more food than they consume, spread dangerous diseases through their droppings and urine, and cause thousands of pounds in damage by gnawing through electrical cables, insulation, and structural materials. Our experienced technicians have helped countless London families eliminate mouse infestations permanently, understanding that what appears to be a minor problem can quickly become a major crisis if not addressed with professional expertise and proven elimination strategies.",
     identification: {
       size: "Body: 6-9cm, Tail: 7-10cm",
       color: "Light brown to grey fur, lighter underside",
@@ -292,14 +292,14 @@ export const pests: PestData[] = [
       followUp: "Check and rebait after 1 week, monitor for 1 month"
     },
     londonSpecific: {
-      commonBoroughs: ["Kensington & Chelsea", "Westminster", "Camden", "Islington"],
+      commonBoroughs: ["Kensington & Chelsea - luxury apartments where central heating creates ideal year-round conditions", "Westminster - high-density housing with abundant restaurant food sources nearby", "Camden - Victorian conversions with multiple entry points and connecting wall cavities", "Islington - period properties converted to flats sharing drainage and utility systems", "Hackney - mixed residential/commercial areas providing constant food sources", "Greenwich - historic buildings with original construction gaps and aging seals", "Lambeth - ground floor flats in converted houses particularly vulnerable to garden invasions", "Wandsworth - family homes with children create perfect conditions through food spillage"],
       seasonalActivity: {
-        spring: "Outdoor breeding increases",
-        summer: "Garden and shed activity",
-        autumn: "Mass indoor migration",
-        winter: "Peak indoor infestations"
+        spring: "Breeding activity increases as temperatures warm and food becomes more abundant. Pregnant females seek warm, secure nesting sites in kitchen voids and airing cupboards. Garden population starts exploring into adjacent properties.",
+        summer: "Peak breeding period with new litters appearing every 3 weeks. Young mice begin dispersing to find new territories, often discovered in bedrooms and living areas. Outdoor populations expand, increasing pressure on surrounding homes.",
+        autumn: "Mass invasion season as outdoor temperatures drop and natural food sources diminish. Properties that never had mice suddenly experience infestations as populations seek warm indoor shelter for winter survival.",
+        winter: "Maximum domestic activity as mice concentrate in heated areas like boiler cupboards, kitchen appliances, and roof spaces. Nesting activity peaks with shredded materials found throughout the property."
       },
-      propertyTypes: ["Victorian conversions", "Restaurant kitchens", "Student accommodation", "Older flats"]
+      propertyTypes: ["Victorian conversions where partition walls create extensive runway systems between units", "Restaurant kitchens with warm conditions, food debris, and multiple hiding spots behind equipment", "Student accommodation where irregular cleaning and food storage habits create perfect breeding conditions", "Older flats in mansion blocks with communal areas and shared utilities providing access routes", "Ground floor properties with direct garden access through gaps under doors and utility penetrations", "Period houses converted to multiple occupancy with shared kitchens and poor housekeeping standards", "Properties near construction sites where disturbance drives mice to seek alternative accommodation", "Homes with pets where food bowls and spillage provide consistent food sources"]
     },
     urgencyLevel: "medium",
     relatedPests: ["rats"]
@@ -309,126 +309,191 @@ export const pests: PestData[] = [
     name: "Cockroaches",
     scientificName: "Blattella germanica & Periplaneta americana",
     category: "insects",
-    commonNames: ["German cockroach", "American cockroach", "Oriental cockroach"],
-    description: "Cockroaches are resilient insects that thrive in warm, humid environments. In London, they're commonly found in commercial kitchens, older apartment buildings, and properties with central heating.",
+    commonNames: ["German cockroach", "American cockroach", "Oriental cockroach", "Brown-banded cockroach", "Common cockroach"],
+    description: "Few pest sightings are as alarming as spotting a cockroach scurrying across your kitchen floor - it's a moment that makes your skin crawl and immediately raises concerns about hygiene and health. We completely understand the revulsion and panic that comes with discovering these resilient insects in your home or business. At Pest Pro London, we recognize that cockroaches represent one of the most serious pest threats, capable of contaminating food, spreading dangerous diseases, and multiplying rapidly in the warm, hidden spaces of London's buildings. These ancient survivors require immediate, professional intervention because home remedies simply cannot eliminate entire colonies hiding in wall voids and inaccessible areas.",
     identification: {
-      size: "German: 12-15mm, American: 35-40mm, Oriental: 20-25mm",
-      color: "Light brown to dark brown/black",
+      size: "German cockroach: 12-15mm, American cockroach: 35-50mm, Oriental cockroach: 20-30mm, Brown-banded: 10-14mm",
+      color: "German: light brown with dark stripes, American: reddish-brown, Oriental: dark brown to black, Brown-banded: brown with light bands",
       distinguishingFeatures: [
-        "Flattened oval body",
-        "Long antennae",
-        "Six legs with spines",
-        "Some species have wings"
+        "Distinctive flattened, oval body designed for hiding in cracks",
+        "Long, thread-like antennae longer than half their body length",
+        "Six spiny legs adapted for rapid movement on various surfaces",
+        "Leathery forewings (tegmina) that may or may not cover functional hind wings",
+        "Prominent compound eyes and chewing mouthparts",
+        "Cerci (tail-like appendages) at rear of abdomen",
+        "German cockroaches have two dark parallel stripes behind the head",
+        "American cockroaches are the largest and can actually fly short distances"
       ],
-      soundsMade: ["Clicking sounds", "Rustling when disturbed"],
-      droppings: "Small, dark, cylindrical or round pellets",
-      tracks: "Brown staining, egg cases (oothecae)"
+      soundsMade: ["Distinctive clicking or chirping sounds during mating", "Rustling noise when disturbed from hiding spots", "Scratching sounds in wall voids during heavy infestations"],
+      droppings: "Small, dark cylindrical pellets resembling ground coffee or black pepper, sticky brown smear marks on surfaces",
+      tracks: "Greasy brown smear marks along walls, egg cases (oothecae) resembling small brown purses, shed skins near harboring areas"
     },
     behavior: {
-      activityTime: "Nocturnal, hide during day",
-      nestingHabits: "Aggregate in warm, moist areas",
-      feedingHabits: "Omnivorous scavengers, eat anything organic",
-      lifespan: "German: 100-200 days, American: up to 2 years",
-      reproductionRate: "German: 4-8 oothecae, 30-40 eggs each"
+      activityTime: "Strictly nocturnal, most active 2-4 hours after lights out, scatter immediately when lights turned on",
+      nestingHabits: "Gregarious insects that aggregate in warm, moist, dark areas, prefer temperatures 25-30°C with high humidity",
+      feedingHabits: "Omnivorous scavengers eating virtually anything organic - food scraps, grease, soap, glue, paper, fabric, and even other cockroaches",
+      lifespan: "German: 100-200 days, American: 12-24 months, Oriental: 6-12 months",
+      reproductionRate: "German females produce 4-8 egg cases containing 30-40 eggs each, American females produce 10+ cases with 14-16 eggs, exponential population growth"
     },
     habitat: {
-      preferredEnvironment: ["Kitchens", "Bathrooms", "Basements", "Heating ducts", "Drains"],
+      preferredEnvironment: [
+        "Commercial kitchens and food preparation areas",
+        "Warm bathrooms with consistent moisture",
+        "Basements and cellars with heating systems",
+        "Heating ducts and boiler rooms",
+        "Drain systems and sewers",
+        "Electrical equipment that generates heat",
+        "Garbage storage and waste disposal areas"
+      ],
       commonHidingSpots: [
-        "Behind refrigerators",
-        "Under sinks",
-        "Inside appliances",
-        "Cracks in walls",
-        "Behind cookers",
-        "Electrical boxes"
+        "Behind and under refrigerators and other appliances",
+        "Inside electrical appliances (microwaves, toasters, coffee machines)",
+        "Under sinks and around plumbing penetrations",
+        "Inside cracks and crevices in walls, especially near heat sources",
+        "Behind cookers and ovens where grease accumulates",
+        "Electrical junction boxes and switch plates",
+        "Inside cardboard boxes and packaging materials",
+        "Void spaces behind tiles and under flooring",
+        "Inside furniture joints and upholstered seams"
       ],
       signsOfInfestation: [
-        "Live/dead insects",
-        "Egg cases",
-        "Fecal spots",
-        "Musty odor",
-        "Shed skins",
-        "Smear marks"
+        "Live cockroaches seen during daylight hours (indicates severe infestation)",
+        "Egg cases (oothecae) found in corners and crevices",
+        "Dark fecal spots and smear marks on walls and surfaces",
+        "Strong, distinctive musty or oily odor",
+        "Shed skins and body parts near hiding areas",
+        "Damage to food packaging and organic materials",
+        "Grease marks and sticky residue on walls",
+        "Dead cockroaches found in sticky traps or around treated areas"
       ]
     },
     risks: {
       healthRisks: [
-        "Salmonella",
-        "E. coli",
-        "Dysentery",
-        "Gastroenteritis",
-        "Allergies and asthma",
-        "Food poisoning"
+        "Salmonella poisoning from contaminated food preparation surfaces",
+        "E. coli infections leading to severe gastroenteritis",
+        "Dysentery and other intestinal diseases",
+        "Hepatitis A transmission through fecal contamination",
+        "Severe allergies and asthma exacerbation from shed skins and droppings",
+        "Food poisoning from bacterial contamination",
+        "Childhood asthma development linked to cockroach allergens",
+        "Respiratory complications in sensitive individuals"
       ],
       propertyDamage: [
-        "Food contamination",
-        "Damage to paper/fabric",
-        "Staining of surfaces",
-        "Unpleasant odors"
+        "Extensive food contamination requiring disposal",
+        "Damage to fabrics, paper, and leather materials",
+        "Permanent staining of surfaces from fecal matter",
+        "Unpleasant odors permeating affected areas",
+        "Damage to electrical equipment from nesting inside appliances",
+        "Contamination of stored goods and packaging",
+        "Reduced property value due to infestation history"
       ],
       businessRisks: [
-        "Health code violations",
-        "Immediate closure risk",
-        "Reputation damage",
-        "Loss of customers",
-        "Legal action"
+        "Immediate health code violations and closure orders",
+        "Catastrophic reputation damage and loss of customer trust",
+        "Legal liability and potential lawsuits from affected customers",
+        "Loss of food service licenses and permits",
+        "Insurance claims and increased premiums",
+        "Staff health issues and potential compensation claims",
+        "Product recalls and regulatory enforcement action",
+        "Complete business closure in severe cases"
       ]
     },
     prevention: {
       environmentalChanges: [
-        "Reduce moisture",
-        "Fix leaking pipes",
-        "Improve ventilation",
-        "Regular deep cleaning"
+        "Eliminate all moisture sources and fix leaking pipes immediately",
+        "Maintain optimal ventilation to reduce humidity below 60%",
+        "Remove all food debris and maintain pristine cleanliness",
+        "Store all food in sealed, cockroach-proof containers",
+        "Regular deep cleaning of all grease and organic residue",
+        "Install dehumidifiers in moisture-prone areas",
+        "Maintain optimal lighting to discourage settlement",
+        "Regular pest monitoring and early detection systems"
       ],
       exclusionMethods: [
-        "Seal cracks and crevices",
-        "Install door sweeps",
-        "Screen drains",
-        "Seal pipe penetrations"
+        "Seal all cracks and crevices with appropriate caulking materials",
+        "Install brush strips and door sweeps on all external doors",
+        "Screen all drains and install drain covers",
+        "Seal all pipe penetrations and utility entry points",
+        "Install fine mesh over air vents and ventilation openings",
+        "Repair damaged building fabric immediately",
+        "Use cockroach-proof materials in construction and renovation",
+        "Regular inspection and maintenance of building envelope"
       ],
       cleaningTips: [
-        "Clean daily",
-        "Remove grease buildup",
-        "Empty bins nightly",
-        "Clean appliance motors"
+        "Daily deep cleaning of all food preparation and storage areas",
+        "Remove all grease buildup from cooking surfaces and equipment",
+        "Empty and clean bins nightly, using tight-fitting lids",
+        "Clean behind and under all appliances weekly",
+        "Steam clean floors and surfaces to eliminate pheromone trails",
+        "Wash dishes immediately after use - never leave overnight",
+        "Clean appliance motors and electrical areas monthly",
+        "Vacuum all cracks and crevices where debris accumulates"
       ],
       landscapingTips: [
-        "Remove debris",
-        "Fix exterior cracks",
-        "Maintain drains",
-        "Control exterior lighting"
+        "Remove all organic debris and refuse from around buildings",
+        "Fix exterior drainage to prevent moisture accumulation",
+        "Maintain building exterior to eliminate entry points",
+        "Control exterior lighting to avoid attracting cockroaches",
+        "Keep vegetation trimmed away from building walls",
+        "Secure all outdoor waste storage areas",
+        "Regular maintenance of external drainage systems",
+        "Remove potential outdoor harboring sites"
       ]
     },
     treatment: {
       professionalMethods: [
-        "Gel baits",
-        "Insect growth regulators",
-        "Residual sprays",
-        "Dust formulations",
-        "Monitoring traps",
-        "ULV fogging"
+        "Professional gel baits targeted to specific cockroach species",
+        "Insect Growth Regulators (IGRs) to disrupt reproduction cycles",
+        "Residual spray treatments for long-term protection",
+        "Dust formulations for wall voids and inaccessible areas",
+        "Monitoring stations for ongoing population assessment",
+        "ULV fogging for severe infestations",
+        "Crack and crevice injection treatments",
+        "Integrated Pest Management (IPM) protocols"
       ],
-      timeline: "3-4 visits over 6-8 weeks for heavy infestations",
+      timeline: "Emergency response within 4 hours, initial treatment within 24 hours, typically requires 3-4 visits over 6-8 weeks for complete elimination",
       preparation: [
-        "Deep clean all areas",
-        "Remove clutter",
-        "Empty cabinets",
-        "Fix water leaks"
+        "Complete deep cleaning of all affected areas",
+        "Remove all clutter and unnecessary items",
+        "Empty all cabinets and storage areas for inspection",
+        "Fix all water leaks and moisture problems immediately",
+        "Provide comprehensive access to all potential harboring areas",
+        "Document all sighting locations with photographs",
+        "Secure all food items in sealed containers",
+        "Ensure adequate ventilation during treatment"
       ],
-      followUp: "Monthly monitoring for 3-6 months"
+      followUp: "Weekly monitoring for first month, monthly inspections for 3-6 months, quarterly preventive maintenance recommended"
     },
     londonSpecific: {
-      commonBoroughs: ["Tower Hamlets", "Newham", "Hackney", "Southwark", "Westminster"],
+      commonBoroughs: [
+        "Tower Hamlets (dense housing and commercial food establishments)",
+        "Newham (high-density residential areas and restaurants)",
+        "Hackney (mixed commercial and residential with older building stock)",
+        "Southwark (food markets and riverside properties)",
+        "Westminster (high concentration of restaurants and hotels)",
+        "Camden (student accommodation and food service areas)",
+        "Lambeth (social housing and commercial kitchens)",
+        "Brent (diverse food establishments and dense housing)"
+      ],
       seasonalActivity: {
-        spring: "Increased activity as temperatures rise",
-        summer: "Peak breeding and activity",
-        autumn: "Seeking warm indoor areas",
-        winter: "Concentrated in heated buildings"
+        spring: "Increased activity as temperatures rise and breeding accelerates",
+        summer: "Peak breeding season with optimal conditions for rapid population growth",
+        autumn: "Intensive indoor migration seeking warm environments for winter survival",
+        winter: "Concentrated populations in heated buildings with continuous breeding cycles"
       },
-      propertyTypes: ["Restaurant kitchens", "Tower blocks", "Food processing", "Older apartments"]
+      propertyTypes: [
+        "Restaurant kitchens and commercial food preparation facilities",
+        "High-rise tower blocks with central heating systems",
+        "Food processing and packaging facilities",
+        "Older apartment buildings with multiple utility penetrations",
+        "Hotels and hospitality venues with 24-hour food service",
+        "Student accommodation with shared kitchen facilities",
+        "Care homes and institutional catering facilities",
+        "Social housing with moisture and maintenance issues"
+      ]
     },
-    urgencyLevel: "high",
-    relatedPests: ["ants", "silverfish"]
+    urgencyLevel: "emergency",
+    relatedPests: ["ants", "silverfish", "german-cockroach"]
   },
   {
     id: "bed-bugs",
@@ -1568,7 +1633,7 @@ export const pests: PestData[] = [
     scientificName: "Vulpes vulpes",
     category: "wildlife",
     commonNames: ["Urban fox", "Red fox"],
-    description: "Urban foxes have adapted well to London life. While not pests in the traditional sense, they can cause problems with noise, mess, and property damage.",
+    description: "The haunting scream of urban foxes in the middle of the night can be deeply unsettling for London residents, and discovering evidence of fox activity in your garden - from scattered rubbish and strong musky odors to holes dug in prized lawns - can be frustrating and concerning, especially for families with small children or pets. At Pest Pro London, we understand the complex emotions that urban fox problems create - while these intelligent, adaptable animals are often admired for their resilience, they can cause significant stress when they establish territories in residential areas, creating noise disturbances, property damage, and potential safety concerns for beloved pets. Our wildlife management specialists recognize that foxes require a different approach than traditional pest control, balancing humane deterrence methods with effective long-term solutions that respect wildlife protection laws while addressing legitimate resident concerns. We've helped countless London families create fox-free environments that protect their gardens, pets, and peace of mind through professional habitat modification and proven deterrent systems.",
     identification: {
       size: "Body: 60-75cm, Tail: 40cm",
       color: "Reddish-brown fur, white chest, black legs",
@@ -1671,14 +1736,14 @@ export const pests: PestData[] = [
       followUp: "Monitor and maintain deterrents"
     },
     londonSpecific: {
-      commonBoroughs: ["Bromley", "Barnet", "Croydon", "Richmond", "Harrow"],
+      commonBoroughs: ["Bromley - extensive suburban areas with large gardens providing ideal territory and abundant food sources", "Barnet - mixture of parkland and residential areas creating perfect fox habitat corridors", "Croydon - suburban sprawl with railway embankments and green spaces supporting large fox populations", "Richmond - Richmond Park and surrounding areas provide natural habitat adjacent to residential properties", "Harrow - hilltop location with extensive green belt areas and mature suburban gardens", "Wandsworth - combination of common land and family homes with gardens providing food and shelter", "Greenwich - parkland areas adjacent to residential developments create population pressure on gardens", "Enfield - extensive green spaces and suburban gardens near countryside provide ideal conditions"],
       seasonalActivity: {
-        spring: "Cubs born, increased activity",
-        summer: "Family groups active",
-        autumn: "Young disperse",
-        winter: "Mating season (noisy)"
+        spring: "Cubs are born in underground dens, increasing territorial behavior and family group activity. Adult foxes become more aggressive in defending territory and may be more visible during daylight hours while hunting for their young.",
+        summer: "Family groups are most active with cubs learning to hunt and explore. This is when garden damage peaks as young foxes practice foraging skills. Noise complaints increase as cubs are vocal and playful.",
+        autumn: "Young foxes disperse to find new territories, often appearing in previously unaffected gardens. Competition for territory increases, leading to more aggressive behavior and increased scavenging in residential areas.",
+        winter: "Mating season brings the most vocal activity with haunting screams throughout the night. Established pairs may dig new dens under sheds or in gardens. Food scarcity drives foxes to raid bins and pet food more aggressively."
       },
-      propertyTypes: ["Suburban gardens", "Parks", "Golf courses", "Large gardens"]
+      propertyTypes: ["Suburban gardens with established shrubs and trees providing cover and potential den sites", "Properties adjacent to parks, commons, and green corridors that provide natural habitat access", "Large gardens with outbuildings like sheds, summerhouses, and decking that offer denning opportunities", "Golf courses and sports grounds providing open hunting areas adjacent to residential developments", "Railway embankments and transport corridors creating wildlife highways through urban areas", "Allotments and community gardens offering food sources and minimal human disturbance during night hours", "Cemetery grounds providing quiet, undisturbed areas with mature vegetation ideal for establishing territories", "Properties with chicken coops, rabbit hutches, or other small animals that attract fox attention as potential prey"]
     },
     urgencyLevel: "low",
     relatedPests: ["rats", "squirrels"]
@@ -1689,7 +1754,7 @@ export const pests: PestData[] = [
     scientificName: "Sciurus carolinensis",
     category: "wildlife",
     commonNames: ["Grey squirrel", "Tree rat"],
-    description: "Grey squirrels are invasive species in the UK that can cause significant damage when they enter roof spaces. They're protected from cruel treatment but can be controlled humanely.",
+    description: "The sudden sound of scampering, scratching, and chattering in your loft space can be deeply unsettling, particularly when you realize these noises are caused by grey squirrels that have invaded your home. At Pest Pro London, we understand the unique challenges that squirrel infestations present - these intelligent, agile creatures can cause thousands of pounds worth of damage by chewing through electrical cables, destroying insulation, and creating fire hazards, all while being legally protected from cruel treatment methods. Unlike rats or mice, squirrels are large, strong, and persistent, capable of enlarging small entry points and returning repeatedly even after removal. Our specialists have extensive experience with humane squirrel control across London, understanding that these invasive North American species pose serious risks to both property safety and our native red squirrel populations, requiring swift professional intervention that balances effective removal with legal compliance and animal welfare considerations.",
     identification: {
       size: "Body: 25-30cm, Tail: 20-25cm",
       color: "Grey fur with white underside",
@@ -1793,14 +1858,14 @@ export const pests: PestData[] = [
       followUp: "Check proofing after 1 month, maintain barriers"
     },
     londonSpecific: {
-      commonBoroughs: ["All boroughs with mature trees", "Richmond", "Hampstead", "Wimbledon"],
+      commonBoroughs: ["Richmond - extensive parks and mature tree coverage provide ideal habitat and access routes to properties", "Hampstead - wooded areas and large Victorian houses with accessible roof spaces", "Wimbledon - combination of Common land and residential properties with suitable nesting sites", "Greenwich - historic parkland adjacent to period properties creates perfect conditions", "Kensington & Chelsea - garden squares and mature plane trees provide highway networks to expensive properties", "Camden - Regent's Park and Primrose Hill create population centers that spread to surrounding terraces", "Islington - Highgate Woods and mature street trees provide access to converted period houses", "Wandsworth - Clapham and Tooting Commons adjacent to family homes with bird feeders and gardens"],
       seasonalActivity: {
-        spring: "First litter born",
-        summer: "Second litter, high activity",
-        autumn: "Food gathering, nest building",
-        winter: "Seek warm shelter in lofts"
+        spring: "First breeding season begins as temperatures warm and food becomes abundant. Pregnant females actively seek secure nesting sites in roof spaces, often causing initial property damage. Young squirrels become active and curious, exploring beyond nest sites.",
+        summer: "Peak activity with second litter season creating maximum population pressure. Adult and juvenile squirrels are most active, causing extensive garden damage and property intrusion. Bird feeding stations experience heaviest raiding activity.",
+        autumn: "Intensive food gathering and caching behavior as squirrels prepare for winter. This is prime invasion season as they seek dry, warm storage and nesting areas. Tree cutting and garden maintenance disturbs outdoor nests, driving them indoors.",
+        winter: "Maximum property invasion as squirrels seek heated shelter in loft spaces and wall cavities. Cold weather drives them to remain indoors longer, causing sustained damage to insulation and cables while building substantial nest structures."
       },
-      propertyTypes: ["Victorian houses", "Properties near parks", "Houses with mature gardens"]
+      propertyTypes: ["Victorian and Edwardian houses with accessible roof lines and mature garden settings", "Properties adjacent to parks, commons, and wooded areas providing natural habitat corridors", "Houses with mature gardens containing nut trees, bird feeders, and fruit trees that attract populations", "Period conversions with original roof access points and multiple entry opportunities from shared garden areas", "Detached and semi-detached homes in leafy suburbs where tree canopy provides aerial access routes", "Properties with solar panels creating warm microclimates and potential nesting areas underneath installations", "Heritage buildings in conservation areas where tree preservation orders prevent proper vegetation management", "Family homes with children's play equipment and pet food sources creating attractive foraging opportunities"]
     },
     urgencyLevel: "medium",
     relatedPests: ["rats", "mice"]
@@ -1811,7 +1876,7 @@ export const pests: PestData[] = [
     scientificName: "Columba livia",
     category: "birds",
     commonNames: ["Feral pigeon", "City pigeon", "Flying rats"],
-    description: "Feral pigeons are descendants of domestic pigeons and have adapted perfectly to urban life. They cause significant problems with fouling and can transmit diseases.",
+    description: "The sight of pigeons congregating on your building, leaving acidic droppings that stain and corrode surfaces, can be incredibly frustrating for any London property owner. At Pest Pro London, we understand the overwhelming nature of pigeon problems - these persistent birds multiply rapidly, create serious health hazards through their droppings, and can cause thousands of pounds in structural damage to buildings while being notoriously difficult to deter permanently. Often dismissed as just 'messy birds,' pigeons actually pose significant health risks through over 60 transmissible diseases, create slip hazards with their corrosive droppings, and cause substantial property damage to gutters, stonework, and roofing materials. Our experienced bird management specialists have helped countless London property owners - from residential buildings to commercial premises - implement effective, humane, and legal solutions that provide long-term relief from pigeon problems while protecting both property values and public health in compliance with wildlife protection legislation.",
     identification: {
       size: "32-37cm length, 64-72cm wingspan",
       color: "Grey with iridescent neck, varied patterns",
@@ -1919,14 +1984,14 @@ export const pests: PestData[] = [
       followUp: "Regular maintenance of systems"
     },
     londonSpecific: {
-      commonBoroughs: ["Westminster", "City of London", "Camden", "Southwark", "Tower Hamlets"],
+      commonBoroughs: ["Westminster - tourist areas and historic buildings provide abundant food sources and roosting sites", "City of London - office buildings and construction sites create perfect nesting opportunities with minimal disturbance", "Camden - mix of commercial and residential areas with market food waste and building ledges", "Southwark - Thames-side developments and high-rise buildings offer ideal roosting conditions", "Tower Hamlets - Canary Wharf buildings and construction activity provide nesting sites and food sources", "Kensington & Chelsea - mansion blocks and period buildings with ornate ledges perfect for nesting", "Lambeth - railway infrastructure and mixed-use developments create ideal pigeon habitat", "Greenwich - historic buildings and Thames-side location provide traditional roosting sites"],
       seasonalActivity: {
-        spring: "Increased breeding",
-        summer: "Peak populations",
-        autumn: "Young birds fledge",
-        winter: "Concentrated at food sources"
+        spring: "Primary breeding season begins with increased territorial behavior and nest building. Mated pairs become more aggressive in defending roosting sites. Property fouling intensifies as birds spend more time at nesting locations.",
+        summer: "Peak breeding activity with multiple broods possible. Young birds fledge and join flocks, dramatically increasing local population density. Maximum fouling and damage to building surfaces occurs during this period.",
+        autumn: "Newly independent young birds disperse to find territories, often discovering new building sites. Flocks consolidate around reliable food sources. Building damage assessment becomes apparent as summer growth impacts become visible.",
+        winter: "Populations concentrate around heated buildings and consistent food sources like shopping areas and transport hubs. Cold weather drives birds to seek shelter in building cavities and covered areas, increasing indoor nesting attempts."
       },
-      propertyTypes: ["Historic buildings", "Train stations", "Bridges", "Commercial buildings"]
+      propertyTypes: ["Historic buildings with ornate stonework providing multiple ledges and nesting crevices perfect for pigeon colonies", "Railway stations and transport hubs offering shelter, warmth, and abundant food sources from passenger activity", "Thames bridges and infrastructure providing high, undisturbed roosting sites with easy access to water sources", "Commercial buildings with flat roofs, air conditioning units, and signage creating ideal nesting platforms", "Office blocks with ledges, balconies, and architectural features that substitute for natural cliff faces", "Retail properties with awnings, canopies, and entrance areas that provide shelter and proximity to food sources", "Residential mansion blocks and conversions with multiple access points and less frequent disturbance", "Industrial buildings and warehouses offering large, unguarded roof spaces ideal for establishing significant colonies"]
     },
     urgencyLevel: "medium",
     relatedPests: ["seagulls", "starlings"]
@@ -1937,16 +2002,19 @@ export const pests: PestData[] = [
     scientificName: "Lepisma saccharina",
     category: "insects",
     commonNames: ["Fish moth", "Carpet shark"],
-    description: "Silverfish are primitive insects that thrive in damp conditions. They're common in London's older properties and can damage paper, textiles, and wallpaper.",
+    description: "Discovering silverfish in your home can be particularly unsettling - these alien-looking, fast-moving insects seem to appear from nowhere and disappear just as quickly, leaving you wondering where they're hiding and what damage they're causing to your precious belongings. At Pest Pro London, we understand the unique frustration that silverfish bring to homeowners who discover mysterious holes in clothing, damaged book pages, or strange yellow stains on wallpaper with no obvious explanation. These primitive insects are masters of concealment, thriving in the humid conditions common to London's older buildings, and they pose a serious threat to anything containing cellulose, starch, or protein - from your family photos and important documents to expensive clothing and treasured books. Our specialists have protected countless London homes from these destructive pests, understanding that while silverfish don't pose direct health risks, the sentimental and financial value of items they destroy can be irreplaceable, making professional elimination essential for preserving your property and peace of mind.",
     identification: {
       size: "12-19mm long",
       color: "Silver-grey, metallic appearance",
       distinguishingFeatures: [
-        "Teardrop shaped body",
-        "Three tail filaments",
-        "Long antennae",
-        "No wings",
-        "Fish-like movement"
+        "Distinctive teardrop or carrot-shaped body that tapers from head to tail",
+        "Three prominent tail filaments (cerci) extending from the rear abdomen",
+        "Two long, thread-like antennae that are often longer than the body",
+        "Completely wingless throughout their entire lifecycle",
+        "Characteristic fish-like wiggling movement when running at high speed",
+        "Flattened body perfectly adapted for hiding in thin cracks and crevices",
+        "Metallic silver scales covering the body that create a shimmering appearance",
+        "Small compound eyes positioned on the sides of the head"
       ],
       soundsMade: ["None"],
       droppings: "Small black pepper-like specs",
@@ -2040,14 +2108,14 @@ export const pests: PestData[] = [
       followUp: "Monitor with traps, maintain dry conditions"
     },
     londonSpecific: {
-      commonBoroughs: ["All boroughs with older properties"],
+      commonBoroughs: ["Kensington & Chelsea - period mansion blocks with poor ventilation and high humidity levels", "Camden - Victorian terraces with original lime mortar creating perfect moisture conditions", "Westminster - historic buildings with inadequate modern ventilation systems", "Greenwich - heritage properties with traditional construction methods that retain moisture", "Islington - converted period houses where modern bathrooms create humidity issues", "Hackney - older social housing with ventilation problems and moisture accumulation", "Lambeth - ground floor flats in converted Victorian houses prone to rising damp", "Tower Hamlets - historic warehouse conversions with poor humidity control"],
       seasonalActivity: {
-        spring: "Activity increases",
-        summer: "Thrive in humidity",
-        autumn: "Move deeper indoors",
-        winter: "Concentrate near heat/moisture"
+        spring: "Breeding activity increases as temperatures rise and humidity levels climb. Silverfish emerge from winter hiding spots to seek new food sources and mating opportunities. This is when property damage to stored items becomes most apparent.",
+        summer: "Peak activity period as London's humid summer conditions create ideal breeding environments. High humidity from summer storms and poor ventilation in older properties leads to rapid population growth and increased damage to paper goods and textiles.",
+        autumn: "Silverfish move deeper into heated areas of buildings as external temperatures drop. They concentrate around boiler rooms, airing cupboards, and heated bathrooms where winter humidity levels remain high due to poor ventilation.",
+        winter: "Activity focuses on heated, humid areas like bathrooms, kitchens, and utility rooms. Silverfish cluster near radiators, hot water pipes, and in poorly ventilated areas where condensation creates ideal microenvironments for survival."
       },
-      propertyTypes: ["Victorian properties", "Basement flats", "Libraries", "Museums"]
+      propertyTypes: ["Victorian properties with original lime mortar walls that naturally retain moisture and provide perfect hiding spots", "Basement flats with rising damp issues and poor natural ventilation creating year-round humidity problems", "Historic libraries and archives where temperature and humidity control is challenging in older buildings", "Art galleries and museums in heritage buildings struggling with conservation-grade environmental controls", "Period conversions where modern bathrooms have been added without adequate ventilation systems", "Ground floor flats in converted houses where natural moisture migration creates ongoing humidity issues", "Student accommodation in older buildings where poor maintenance and overcrowding exacerbate moisture problems", "Social housing in older tower blocks with concrete construction that promotes condensation issues"]
     },
     urgencyLevel: "low",
     relatedPests: ["booklice", "carpet beetles"]
