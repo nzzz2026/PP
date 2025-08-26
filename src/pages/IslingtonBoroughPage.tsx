@@ -3,7 +3,6 @@ import '../styles/IslingtonBoroughPage.scss';
 
 const IslingtonBoroughPage: React.FC = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
-  const [stickyNavPosition, setStickyNavPosition] = useState<'fixed' | 'absolute'>('fixed');
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -20,39 +19,6 @@ const IslingtonBoroughPage: React.FC = () => {
       setMobileNavOpen(false);
     }
   };
-
-  // Handle sticky navigation positioning to stop at footer
-  useEffect(() => {
-    const handleScroll = () => {
-      const footer = document.querySelector('footer');
-      const stickyNav = document.querySelector('.sticky-nav');
-      
-      if (footer && stickyNav) {
-        const footerRect = footer.getBoundingClientRect();
-        const stickyNavRect = stickyNav.getBoundingClientRect();
-        const stickyNavHeight = stickyNavRect.height;
-        const buffer = 20; // Small buffer space above footer
-        
-        // Check if sticky nav would overlap with footer
-        if (footerRect.top <= window.innerHeight - stickyNavHeight - buffer) {
-          setStickyNavPosition('absolute');
-        } else {
-          setStickyNavPosition('fixed');
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleScroll);
-    
-    // Initial check
-    handleScroll();
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleScroll);
-    };
-  }, []);
 
   // Update document title, meta description, and schema markup for SEO
   React.useEffect(() => {
@@ -174,30 +140,6 @@ const IslingtonBoroughPage: React.FC = () => {
 
   return (
     <div className="islington-page">
-      {/* Sticky Navigation */}
-      <nav 
-        className="sticky-nav" 
-        style={{ 
-          position: stickyNavPosition,
-          bottom: stickyNavPosition === 'absolute' ? '20px' : 'auto'
-        }}
-      >
-        <h3>Quick Navigation</h3>
-        <ul className="nav-links">
-          <li><a href="#intro" onClick={(e) => { e.preventDefault(); scrollToSection('intro'); }}>About Islington</a></li>
-          <li><a href="#pests" onClick={(e) => { e.preventDefault(); scrollToSection('pests'); }}>Common Pests</a></li>
-          <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>Our Services</a></li>
-          <li><a href="#why-choose" onClick={(e) => { e.preventDefault(); scrollToSection('why-choose'); }}>Why Choose Us</a></li>
-          <li><a href="#testimonials" onClick={(e) => { e.preventDefault(); scrollToSection('testimonials'); }}>Reviews</a></li>
-          <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact</a></li>
-        </ul>
-        <div className="contact-card">
-          <h4>Need Help Now?</h4>
-          <a href="tel:07727049304" className="phone-link">077 2704 9304</a>
-          <a href="/contact" className="quote-link">Get Free Quote</a>
-        </div>
-      </nav>
-
       {/* Mobile Navigation Toggle */}
       <button 
         className="mobile-nav-toggle"
@@ -269,6 +211,25 @@ const IslingtonBoroughPage: React.FC = () => {
           </div>
         </section>
 
+        <div className="content-wrapper">
+          <aside className="sidebar-nav">
+            <h3>Quick Navigation</h3>
+            <ul className="nav-links">
+              <li><a href="#intro" onClick={(e) => { e.preventDefault(); scrollToSection('intro'); }}>About Islington</a></li>
+              <li><a href="#pests" onClick={(e) => { e.preventDefault(); scrollToSection('pests'); }}>Common Pests</a></li>
+              <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>Our Services</a></li>
+              <li><a href="#why-choose" onClick={(e) => { e.preventDefault(); scrollToSection('why-choose'); }}>Why Choose Us</a></li>
+              <li><a href="#testimonials" onClick={(e) => { e.preventDefault(); scrollToSection('testimonials'); }}>Reviews</a></li>
+              <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact</a></li>
+            </ul>
+            <div className="contact-card">
+              <h4>Need Help Now?</h4>
+              <a href="tel:07727049304" className="phone-link">077 2704 9304</a>
+              <a href="/contact" className="quote-link">Get Free Quote</a>
+            </div>
+          </aside>
+
+          <div className="content-sections">
         {/* Introduction Section */}
         <section id="intro" className="section intro-section">
           <div className="container">
@@ -655,6 +616,8 @@ const IslingtonBoroughPage: React.FC = () => {
             </div>
           </div>
         </section>
+          </div>
+        </div>
       </main>
     </div>
   );

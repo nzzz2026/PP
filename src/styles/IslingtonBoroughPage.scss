@@ -31,22 +31,34 @@
     }
   }
 
-  // Sticky Navigation Menu
-  .sticky-nav {
-    position: fixed;
-    top: 80px;
-    left: 2rem;
-    width: 240px;
+  .content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      padding: 0 1rem;
+    }
+  }
+
+  .sidebar-nav {
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
+    width: 260px;
     background: white;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-lg);
     padding: 1.25rem;
-    z-index: 100;
     border: 1px solid var(--gray-200);
-    max-height: 80vh;
+    max-height: calc(100vh - 140px);
     overflow-y: auto;
 
-    @media (max-width: 1400px) {
+    @media (max-width: 1024px) {
       display: none;
     }
 
@@ -138,6 +150,10 @@
         }
       }
     }
+  }
+
+  .content-sections {
+    flex: 1;
   }
 
   // Mobile Navigation Toggle
