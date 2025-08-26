@@ -222,11 +222,9 @@
 
   // Main Content Area
   .main-content {
-    margin-left: 320px;
     padding-right: 2rem;
 
     @media (max-width: 1400px) {
-      margin-left: 0;
       padding-right: 0;
     }
   }
