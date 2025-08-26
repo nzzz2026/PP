@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/IslingtonBoroughPage.scss';
+import '../styles/ServiceAreaPage.scss';
+import ServiceAreaLinks from '../components/ServiceAreaLinks';
 
 const IslingtonBoroughPage: React.FC = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -139,7 +140,7 @@ const IslingtonBoroughPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="islington-page">
+    <div className="service-area-page">
       {/* Mobile Navigation Toggle */}
       <button 
         className="mobile-nav-toggle"
@@ -241,7 +242,7 @@ const IslingtonBoroughPage: React.FC = () => {
             <div className="intro-grid">
               <div className="intro-text">
                 <p>
-                  Dealing with pests in <a href="https://en.wikipedia.org/wiki/London_Borough_of_Islington" target="_blank" rel="noopener noreferrer" className="text-link">Islington</a> can be challenging, whether you're a homeowner near <a href="https://en.wikipedia.org/wiki/Angel_tube_station" target="_blank" rel="noopener noreferrer" className="text-link"><strong>Angel Station</strong></a> or managing a commercial property on <a href="https://en.wikipedia.org/wiki/Upper_Street" target="_blank" rel="noopener noreferrer" className="text-link"><strong>Upper Street</strong></a> in the bustling borough. At Pest Pro, we understand the unique pest challenges inherent to the vibrant and diverse Islington area and provide tailored, effective solutions to protect your property and peace of mind.
+                  Dealing with pests in <a href="https://en.wikipedia.org/wiki/London_Borough_of_Islington" target="_blank" rel="noopener noreferrer" className="text-link">Islington</a> can be challenging, whether you're a homeowner near <a href="https://en.wikipedia.org/wiki/Angel_tube_station" target="_blank" rel="noopener noreferrer" className="text-link"><strong>Angel Station</strong></a> or managing a commercial property on <a href="https://en.wikipedia.org/wiki/Upper_Street" target="_blank" rel="noopener noreferrer" className="text-link"><strong>Upper Street</strong></a> in the bustling borough. At Pest Pro, we understand the unique pest challenges inherent to the vibrant and diverse Islington area and provide tailored, effective solutions to protect your property and peace of mind. We also help neighbours in <a href="/service-areas/camden" className="text-link">Camden</a> and <a href="/service-areas/hackney" className="text-link">Hackney</a>.
                 </p>
 
                 <p>
@@ -624,6 +625,8 @@ const IslingtonBoroughPage: React.FC = () => {
             </div>
           </div>
         </section>
+
+        <ServiceAreaLinks />
           </div>
         </div>
       </main>
