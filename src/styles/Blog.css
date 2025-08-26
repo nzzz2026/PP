@@ -1,3 +1,22 @@
+.blog-hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.blog-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-hero p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #4B5563;
+}
+
 .blog-container {
   display: flex;
   gap: 2rem;
@@ -5,56 +24,149 @@
 }
 
 .blog-sidebar {
-  flex: 0 0 250px;
+  flex: 0 0 260px;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   backdrop-filter: blur(10px);
+  height: fit-content;
 }
 
-.blog-sidebar h3 {
+.sidebar-group h3 {
   margin-bottom: 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
 }
 
-.blog-sidebar select,
-.blog-sidebar button {
+.sidebar-group select,
+.sidebar-group button,
+.sidebar-group input {
+  width: 100%;
   padding: 0.5rem;
   border: 1px solid #ddd;
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.7);
   color: #1A242F;
+}
+
+.sort-btn {
+  cursor: pointer;
 }
 
 .blog-posts {
   flex: 1;
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem;
 }
 
 .blog-card {
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 12px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
   backdrop-filter: blur(10px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.blog-card h2 {
-  margin-bottom: 0.5rem;
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-.blog-card p {
-  margin-bottom: 1rem;
+.card-image {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
 }
 
-.blog-card a {
+.card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--forest);
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  margin-bottom: 0.75rem;
+  width: fit-content;
+}
+
+.meta {
+  font-size: 0.875rem;
+  color: #4B5563;
+  margin-bottom: 0.75rem;
+}
+
+.read-more {
   color: var(--forest);
   font-weight: 600;
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.post-hero {
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+.post-hero .overlay {
+  width: 100%;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  color: #fff;
+}
+
+.related-section {
+  margin-top: 3rem;
+}
+
+.related-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  margin-top: 1rem;
+}
+
+.related-card {
+  overflow: hidden;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+}
+
+.related-card .card-image {
+  height: 120px;
+}
+
+.related-card .card-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.related-card h4 {
+  margin-bottom: 0.5rem;
 }
 
 @media (max-width: 768px) {
