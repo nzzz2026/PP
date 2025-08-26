@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../styles/ServiceAreaPage.scss';
 import ServiceAreaLinks from '../components/ServiceAreaLinks';
 
-const CamdenBoroughPage: React.FC = () => {
+const HackneyBoroughPage: React.FC = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
@@ -23,16 +23,16 @@ const CamdenBoroughPage: React.FC = () => {
 
   // Update document title, meta description, and schema markup for SEO
   React.useEffect(() => {
-    document.title = 'Camden Pest Control Services | Trusted Exterminators in Camden, London';
+    document.title = 'Hackney Pest Control Services | Trusted Exterminators in Hackney, London';
     
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Expert pest control in Camden for homes & businesses. Fast, effective solutions for mice, rats, bed bugs, wasps & more. Certified technicians. Call for a free quote!');
+      metaDescription.setAttribute('content', 'Humane pest control in Hackney for flats and shops. Friendly technicians use safe traps, targeted gels and proofing to tackle mice, rats and insects. Call for a local quote!');
     } else {
       const meta = document.createElement('meta');
       meta.name = 'description';
-      meta.content = 'Expert pest control in Camden for homes & businesses. Fast, effective solutions for mice, rats, bed bugs, wasps & more. Certified technicians. Call for a free quote!';
+      meta.content = 'Humane pest control in Hackney for flats and shops. Friendly technicians use safe traps, targeted gels and proofing to tackle mice, rats and insects. Call for a local quote!';
       document.head.appendChild(meta);
     }
 
@@ -46,19 +46,19 @@ const CamdenBoroughPage: React.FC = () => {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "additionalType": "PestControlService",
-      "name": "Pest Pro London - Camden",
-      "description": "Expert pest control services for homes and businesses in Camden. BPCA certified technicians for rats, mice, bed bugs, wasps and more. Next-day service available.",
+      "name": "Pest Pro London - Hackney",
+      "description": "Humane pest control for Hackney homes and indie businesses. Local team uses traps, safe baits and proofing to deter rats, mice and insects. Next-day help available.",
       "telephone": "+447727049304",
       "email": "info@pestpro.london",
-      "url": "https://www.pestpro.london/service-areas/camden",
+      "url": "https://www.pestpro.london/service-areas/hackney",
       "areaServed": {
         "@type": "Place",
-        "name": "Camden, London",
+        "name": "Hackney, London",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Camden",
+          "addressLocality": "Hackney",
           "addressRegion": "London",
-          "postalCode": "NW1",
+          "postalCode": "N1",
           "addressCountry": "GB"
         }
       },
@@ -66,8 +66,8 @@ const CamdenBoroughPage: React.FC = () => {
         "@type": "GeoCircle",
         "geoMidpoint": {
           "@type": "GeoCoordinates",
-          "latitude": 51.5414,
-          "longitude": -0.1419
+          "latitude": 51.5380,
+          "longitude": -0.0990
         },
         "geoRadius": "5000"
       },
@@ -107,7 +107,7 @@ const CamdenBoroughPage: React.FC = () => {
             "@type": "Person",
             "name": "S. Thompson"
           },
-          "reviewBody": "Excellent service from start to finish. They came out within 2 hours of my call and completely sorted our rat problem near Camden Market.",
+          "reviewBody": "Excellent service from start to finish. They came out within 2 hours of my call and completely sorted our rat problem near Mare Street in Hackney Central.",
           "datePublished": "2024-07-15"
         },
         {
@@ -121,7 +121,7 @@ const CamdenBoroughPage: React.FC = () => {
             "@type": "Person",
             "name": "M. Patel"
           },
-          "reviewBody": "We've been using Pest Pro for our restaurant in Camden for over a year now. Their preventative service keeps us compliant and pest-free.",
+          "reviewBody": "Our restaurant on Kingsland Road has been pest-free since partnering with Pest Pro. Their preventative service keeps us compliant and pest-free.",
           "datePublished": "2024-06-20"
         }
       ],
@@ -168,7 +168,7 @@ const CamdenBoroughPage: React.FC = () => {
         <div className="nav-content">
           <h3>Quick Navigation</h3>
           <ul className="nav-links">
-            <li><a href="#intro" onClick={(e) => { e.preventDefault(); scrollToSection('intro'); }}>About Camden</a></li>
+            <li><a href="#intro" onClick={(e) => { e.preventDefault(); scrollToSection('intro'); }}>About Hackney</a></li>
             <li><a href="#pests" onClick={(e) => { e.preventDefault(); scrollToSection('pests'); }}>Common Pests</a></li>
             <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>Our Services</a></li>
             <li><a href="#why-choose" onClick={(e) => { e.preventDefault(); scrollToSection('why-choose'); }}>Why Choose Us</a></li>
@@ -189,9 +189,9 @@ const CamdenBoroughPage: React.FC = () => {
         <section className="hero">
           <div className="container">
             <div className="hero-content">
-              <h1>Your Local Pest Control Experts in Camden, London</h1>
+              <h1>Your Local Pest Control Experts in Hackney, London</h1>
               <p className="subtitle">
-                Rapid, effective, and guaranteed pest solutions for homes and businesses across Camden and surrounding areas.
+                Rapid, effective, and guaranteed pest solutions for homes and businesses across Hackney and surrounding areas.
               </p>
               
               <div className="cta-buttons">
@@ -199,7 +199,7 @@ const CamdenBoroughPage: React.FC = () => {
                   Call Us Now: 077 2704 9304
                 </a>
                 <a href="/contact" className="secondary-cta">
-                  Get a Free Quote for Camden
+                  Get a Free Quote for Hackney
                 </a>
               </div>
 
@@ -216,7 +216,7 @@ const CamdenBoroughPage: React.FC = () => {
           <aside className="sidebar-nav">
             <h3>Quick Navigation</h3>
             <ul className="nav-links">
-              <li><a href="#intro" onClick={(e) => { e.preventDefault(); scrollToSection('intro'); }}>About Camden</a></li>
+              <li><a href="#intro" onClick={(e) => { e.preventDefault(); scrollToSection('intro'); }}>About Hackney</a></li>
               <li><a href="#pests" onClick={(e) => { e.preventDefault(); scrollToSection('pests'); }}>Common Pests</a></li>
               <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>Our Services</a></li>
               <li><a href="#why-choose" onClick={(e) => { e.preventDefault(); scrollToSection('why-choose'); }}>Why Choose Us</a></li>
@@ -235,28 +235,28 @@ const CamdenBoroughPage: React.FC = () => {
         <section id="intro" className="section intro-section">
           <div className="container">
             <div className="section-header">
-              <h2>Professional Pest Control Services in Camden</h2>
-              <p className="subtitle">Local expertise for Camden's unique pest challenges with guaranteed results</p>
+              <h2>Professional Pest Control Services in Hackney</h2>
+              <p className="subtitle">Local expertise for Hackney's unique pest challenges with guaranteed results</p>
             </div>
             
             <div className="intro-grid">
               <div className="intro-text">
                 <p>
-                  Dealing with pests in Camden can be challenging, whether you're a homeowner near <strong>Camden Market</strong> or managing a commercial property in the bustling area. At Pest Pro, we understand the unique pest challenges inherent to the vibrant and diverse Camden area and provide tailored, effective solutions to protect your property and peace of mind. We also assist neighbouring boroughs like <a href="/service-areas/islington" className="text-link">Islington</a> and <a href="/service-areas/hackney" className="text-link">Hackney</a>.
+                  Dealing with pests in <a href="https://en.wikipedia.org/wiki/London_Borough_of_Hackney" target="_blank" rel="noopener noreferrer" className="text-link">Hackney</a> can be challenging, whether you're a flat owner by <a href="https://en.wikipedia.org/wiki/Broadway_Market" target="_blank" rel="noopener noreferrer" className="text-link"><strong>Broadway Market</strong></a> or running a studio in <a href="https://en.wikipedia.org/wiki/Dalston" target="_blank" rel="noopener noreferrer" className="text-link"><strong>Dalston</strong></a>. At Pest Pro, we understand the borough's mix of historic terraces and new developments and provide tailored, effective solutions to protect your property and peace of mind. We also support neighbouring areas such as <a href="/service-areas/camden" className="text-link">Camden</a> and <a href="/service-areas/islington" className="text-link">Islington</a>.
                 </p>
-                
+
                 <p>
-                  Our fully qualified, <strong>BPCA certified technicians</strong> are local experts who live and work in London, ensuring a prompt, reliable, and trustworthy local service specifically designed for Camden residents and businesses. We pride ourselves on quick response times, often attending within 2 hours for urgent issues, and always within 24 hours – if not, we offer a 10% discount!
+                  Our fully qualified, <a href="https://bpca.org.uk/" target="_blank" rel="noopener noreferrer" className="text-link"><strong>BPCA certified technicians</strong></a> are local experts who live and work in London, ensuring a prompt, reliable, and trustworthy local service specifically designed for Hackney residents and businesses. We pride ourselves on quick response times, often attending within 2 hours for urgent issues, and always within 24 hours – if not, we offer a 10% discount! We favour humane, preventative treatments first—like sealing entry points, setting live-capture traps and using gel baits sparingly—so small properties stay safe and compliant.
                 </p>
               </div>
-              
+
               <div className="guarantee-card">
-                <h3>Camden Service Guarantee</h3>
+                <h3>Hackney Service Guarantee</h3>
                 <ul className="guarantee-list">
                   {[
                     'Response within 24 hours guaranteed',
-                    'BPCA certified technicians only',
-                    'SafeContractor approved company',
+                    <><a href="https://bpca.org.uk/" target="_blank" rel="noopener noreferrer" className="text-link">BPCA</a> certified technicians only</>,
+                    <><a href="https://www.safecontractor.com/" target="_blank" rel="noopener noreferrer" className="text-link">SafeContractor</a> approved company</>,
                     '30-day guarantee after last sighting',
                     'Biodegradable pest control methods',
                     'Serving both domestic and commercial clients'
@@ -276,8 +276,8 @@ const CamdenBoroughPage: React.FC = () => {
         <section id="pests" className="section alt-bg">
           <div className="container">
             <div className="section-header">
-              <h2>Common Pest Problems in Camden & How We Solve Them</h2>
-              <p className="subtitle">Camden's unique environment presents specific pest challenges. Our local expertise ensures targeted, effective solutions for every situation.</p>
+              <h2>Common Pest Problems in Hackney & How We Solve Them</h2>
+              <p className="subtitle">Hackney's unique environment presents specific pest challenges. Our local expertise ensures targeted, effective solutions for every situation.</p>
             </div>
 
             <div className="pest-grid">
@@ -285,7 +285,7 @@ const CamdenBoroughPage: React.FC = () => {
                 {
                   name: 'Mice & Rats',
                   icon: '🐀',
-                  description: 'Effective rodent control in Camden, including comprehensive solutions for rat problems originating from sewers, and drain camera surveys to identify and seal entry points.',
+                  description: 'Effective rodent control in Hackney, including comprehensive solutions for rat problems originating from sewers, and drain camera surveys to identify and seal entry points.',
                   solution: 'Advanced baiting systems, entry point sealing, and ongoing monitoring'
                 },
                 {
@@ -297,7 +297,7 @@ const CamdenBoroughPage: React.FC = () => {
                 {
                   name: 'Cockroaches',
                   icon: '🪳',
-                  description: 'Targeted cockroach extermination for rapid results in residential and commercial settings across Camden.',
+                  description: 'Targeted cockroach extermination for rapid results in residential and commercial settings across Hackney.',
                   solution: 'Gel baiting, spray treatments, and source elimination strategies'
                 },
                 {
@@ -309,7 +309,7 @@ const CamdenBoroughPage: React.FC = () => {
                 {
                   name: 'Pigeons & Birds',
                   icon: '🐦',
-                  description: 'Humane bird proofing solutions, including solar panel bird proofing, to protect properties in Camden.',
+                  description: 'Humane bird proofing solutions, including solar panel bird proofing, to protect properties in Hackney.',
                   solution: 'Netting, spikes, deterrent systems, and solar panel protection'
                 },
                 {
@@ -352,8 +352,8 @@ const CamdenBoroughPage: React.FC = () => {
         <section id="services" className="section gradient-bg">
           <div className="container">
             <div className="section-header">
-              <h2>Tailored Pest Control for Camden Homes & Businesses</h2>
-              <p className="subtitle">Whether you're protecting your family home or ensuring your business stays pest-free, we provide comprehensive solutions tailored to Camden's unique needs.</p>
+              <h2>Tailored Pest Control for Hackney Homes & Businesses</h2>
+              <p className="subtitle">Whether you're protecting your family home or ensuring your business stays pest-free, we provide comprehensive solutions tailored to Hackney's unique needs.</p>
             </div>
 
             <div className="services-grid">
@@ -363,12 +363,11 @@ const CamdenBoroughPage: React.FC = () => {
                 <h3>Residential Services</h3>
                 <ul className="service-list">
                   {[
-                    'Targeted pest control using industry-leading technology',
-                    'Preventative pest control for year-round protection',
-                    'Seasonal mosquito control for outdoor spaces',
-                    'Comprehensive termite treatments with advanced baiting systems',
-                    'Property protection services as part of home improvement offerings',
-                    'Emergency next-day service for urgent situations'
+                    'Humane rodent removal using snap and live traps',
+                    'Insect treatments with targeted gels and dusts',
+                    'Proofing and sealing of entry points',
+                    'Advice on sanitation and long-term prevention',
+                    'Emergency call-outs for urgent infestations'
                   ].map((service, index) => (
                     <li key={index}>
                       <span className="check-icon">✓</span>
@@ -384,12 +383,11 @@ const CamdenBoroughPage: React.FC = () => {
                 <h3>Commercial Services</h3>
                 <ul className="service-list">
                   {[
-                    'Trusted commercial pest control contracts for Camden businesses',
-                    'Services for schools, food premises, and research centres',
-                    'Housing associations and property management company solutions',
-                    'Compliance-focused treatments for regulated industries',
-                    'Scheduled maintenance programs for ongoing protection',
-                    'Emergency response for business-critical situations'
+                    'Routine inspections and monitoring stations',
+                    'Discreet treatments outside trading hours',
+                    'Safe use of gels, powders and low-toxicity baits',
+                    'Proofing to keep pests out of stock rooms and kitchens',
+                    'Documentation to satisfy council and audit requirements'
                   ].map((service, index) => (
                     <li key={index}>
                       <span className="check-icon">✓</span>
@@ -415,7 +413,7 @@ const CamdenBoroughPage: React.FC = () => {
                 marginBottom: '1.5rem',
                 textAlign: 'center'
               }}>
-                Specialized Treatments for Camden Clients
+                Specialized Treatments for Hackney Clients
               </h3>
               
               <div style={{
@@ -424,12 +422,11 @@ const CamdenBoroughPage: React.FC = () => {
                 gap: '1.5rem'
               }}>
                 {[
-                  'Disinfectant/biocide treatment for post-infestation cleanup',
+                  'Disinfectant treatments after infestations',
                   'Drain camera surveys to identify hidden entry points',
-                  'Loft insulation removal & installation for contaminated areas',
-                  'Fumigation services for severe infestations',
-                  'Integrated Pest Management (IPM) strategies',
-                  'Solar panel bird proofing and maintenance'
+                  'Loft insulation removal & replacement after rodent damage',
+                  'Integrated pest management (IPM) strategies',
+                  'Solar panel and roof space bird proofing'
                 ].map((treatment, index) => (
                   <div key={index} style={{
                     background: 'white',
@@ -457,15 +454,15 @@ const CamdenBoroughPage: React.FC = () => {
         <section id="why-choose" className="section alt-bg">
           <div className="container">
             <div className="section-header">
-              <h2>Why Camden Chooses Pest Pro for Pest Control</h2>
-              <p className="subtitle">We're more than just exterminators – we're your local pest control partners, committed to protecting Camden homes and businesses with unmatched expertise and service.</p>
+              <h2>Why Hackney Chooses Pest Pro for Pest Control</h2>
+              <p className="subtitle">We're more than just exterminators – we're your local pest control partners, committed to protecting Hackney homes and businesses with unmatched expertise and service.</p>
             </div>
 
             <div className="benefits-grid">
               {[
                 {
                   icon: '🎯',
-                  title: 'Local Experts for Camden',
+                  title: 'Local Experts for Hackney',
                   description: 'Our technicians are experts in London pests, living and working in the areas we serve, ensuring a deep understanding of local pest behaviours and effective solutions.'
                 },
                 {
@@ -486,7 +483,7 @@ const CamdenBoroughPage: React.FC = () => {
                 {
                   icon: '🌱',
                   title: 'Safe & Environmentally Conscious',
-                  description: 'We utilize safe, legal, and effective pest control methods, including biodegradable insecticides and poisons where appropriate.'
+                  description: 'We prioritise humane techniques, using live traps, targeted gels and entry-point proofing before considering low-toxicity baits.'
                 },
                 {
                   icon: '📅',
@@ -501,7 +498,7 @@ const CamdenBoroughPage: React.FC = () => {
                 {
                   icon: '🏆',
                   title: 'Proven Track Record',
-                  description: 'With hundreds of successful treatments in Camden and across London, our reputation speaks for itself through satisfied customers.'
+                  description: 'With hundreds of successful treatments in Hackney and across London, our reputation speaks for itself through satisfied customers.'
                 }
               ].map((benefit, index) => (
                 <div key={index} className="benefit-card">
@@ -518,22 +515,30 @@ const CamdenBoroughPage: React.FC = () => {
         <section id="testimonials" className="section gradient-bg">
           <div className="container">
             <div className="section-header">
-              <h2>What Our Camden Customers Say</h2>
+              <h2>What Our Hackney Customers Say</h2>
             </div>
 
             <div className="testimonials-grid">
               {[
                 {
-                  quote: "Excellent service from start to finish. They came out within 2 hours of my call and completely sorted our rat problem near Camden Market. The technician was professional, knowledgeable about local pest issues, and the follow-up service was outstanding.",
-                  author: "S. Thompson",
-                  location: "Camden Town",
-                  date: "July 2024"
+                  quote: (
+                    <>
+                      Excellent service from start to finish. They came out within 2 hours of my call and completely sorted our rat problem near <a href="https://en.wikipedia.org/wiki/Mare_Street" target="_blank" rel="noopener noreferrer" className="text-link">Mare Street</a> in <a href="https://en.wikipedia.org/wiki/Hackney_Central" target="_blank" rel="noopener noreferrer" className="text-link">Hackney Central</a>. The technician was professional, knowledgeable about local pest issues, and the follow-up service was outstanding.
+                    </>
+                  ),
+                  author: 'S. Thompson',
+                  location: <a href="https://en.wikipedia.org/wiki/Hackney_Central" target="_blank" rel="noopener noreferrer" className="text-link">Hackney Central</a>,
+                  date: 'July 2024'
                 },
                 {
-                  quote: "We've been using Pest Pro for our restaurant in Camden for over a year now. Their preventative service keeps us compliant and pest-free, which is crucial in our business. Highly recommend their commercial services.",
-                  author: "M. Patel",
-                  location: "Camden Market Area",
-                  date: "June 2024"
+                  quote: (
+                    <>
+                      Our deli by <a href="https://en.wikipedia.org/wiki/Kingsland_Road" target="_blank" rel="noopener noreferrer" className="text-link">Kingsland Road</a> has been pest-free since we started using Pest Pro. Their preventative service keeps us compliant and pest-free, which is crucial for our business. Highly recommend their commercial services.
+                    </>
+                  ),
+                  author: 'M. Patel',
+                  location: <a href="https://en.wikipedia.org/wiki/Kingsland_Road" target="_blank" rel="noopener noreferrer" className="text-link">Kingsland Road</a>,
+                  date: 'June 2024'
                 }
               ].map((testimonial, index) => (
                 <div key={index} className="testimonial-card">
@@ -568,15 +573,15 @@ const CamdenBoroughPage: React.FC = () => {
         <section id="contact" className="final-cta">
           <div className="container">
             <div className="cta-content">
-              <h2>Ready to Get Rid of Pests in Camden?</h2>
+              <h2>Ready to Get Rid of Pests in Hackney?</h2>
               
               <p className="cta-subtitle">
-                Don't let pests disrupt your home or business in Camden. Contact our friendly, knowledgeable team today for a free, personalized quote. We're here to provide the effective, safe, and reliable pest control solutions you need.
+                Don't let pests disrupt your home or business in Hackney. Contact our friendly, knowledgeable team today for a free, personalized quote. We're here to provide the effective, safe, and reliable pest control solutions you need.
               </p>
 
               <div className="cta-buttons">
                 <a href="tel:07727049304" className="primary-cta">
-                  📞 077 2704 9304
+                  077 2704 9304
                 </a>
                 <a href="/contact" className="secondary-cta">
                   Request a Call Back within 1 Hour!
@@ -602,13 +607,13 @@ const CamdenBoroughPage: React.FC = () => {
         <section className="service-area">
           <div className="container">
             <div className="area-content">
-              <h3>Comprehensive Camden Coverage</h3>
+              <h3>Comprehensive Hackney Coverage</h3>
               <p>
-                We proudly serve all London Boroughs, including Camden, ensuring local expertise and rapid response wherever you are in the city. Our Camden service covers all areas including Camden Town, Hampstead, Kentish Town, Kings Cross, Bloomsbury, and Holborn.
+                We proudly serve all <a href="/service-areas" className="text-link">London boroughs</a>, including <a href="https://en.wikipedia.org/wiki/London_Borough_of_Hackney" target="_blank" rel="noopener noreferrer" className="text-link">Hackney</a>, ensuring local expertise and rapid response wherever you are in the city. Our Hackney service covers all areas including <a href="https://en.wikipedia.org/wiki/Shoreditch" target="_blank" rel="noopener noreferrer" className="text-link">Shoreditch</a>, <a href="https://en.wikipedia.org/wiki/Dalston" target="_blank" rel="noopener noreferrer" className="text-link">Dalston</a>, <a href="https://en.wikipedia.org/wiki/Stoke_Newington" target="_blank" rel="noopener noreferrer" className="text-link">Stoke Newington</a>, <a href="https://en.wikipedia.org/wiki/Homerton" target="_blank" rel="noopener noreferrer" className="text-link">Homerton</a>, <a href="https://en.wikipedia.org/wiki/Clapton,_London" target="_blank" rel="noopener noreferrer" className="text-link">Clapton</a> and <a href="https://en.wikipedia.org/wiki/Hackney_Central" target="_blank" rel="noopener noreferrer" className="text-link">Hackney Central</a>.
               </p>
               
               <div className="postcodes">
-                {['NW1', 'NW3', 'NW5', 'NW6', 'NW8', 'WC1', 'WC2', 'EC1'].map(postcode => (
+                {['E2', 'E5', 'E8', 'E9', 'N1', 'N16'].map(postcode => (
                   <span key={postcode} className="postcode">
                     {postcode}
                   </span>
@@ -626,4 +631,4 @@ const CamdenBoroughPage: React.FC = () => {
   );
 };
 
-export default CamdenBoroughPage;
+export default HackneyBoroughPage;

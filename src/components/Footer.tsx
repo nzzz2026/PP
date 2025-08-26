@@ -64,11 +64,11 @@ const Footer: React.FC = () => {
           <div className="footer-section">
             <h4 style={{color: 'white', marginBottom: '2rem', fontSize: '1.25rem'}}>Quick Links</h4>
             <ul style={{listStyle: 'none'}}>
-              <li style={{padding: '0.75rem 0'}}><Link to="/about" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>→ About Us</Link></li>
-              <li style={{padding: '0.75rem 0'}}><Link to="/services" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>→ Our Services</Link></li>
-              <li style={{padding: '0.75rem 0'}}><Link to="/pest-library" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>→ Pest Library</Link></li>
-              <li style={{padding: '0.75rem 0'}}><Link to="/service-areas" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>→ Service Areas</Link></li>
-              <li style={{padding: '0.75rem 0'}}><Link to="/emergency" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>→ Emergency Service</Link></li>
+              <li style={{padding: '0.75rem 0'}}><Link to="/about" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>About Us</Link></li>
+              <li style={{padding: '0.75rem 0'}}><Link to="/services" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>Our Services</Link></li>
+              <li style={{padding: '0.75rem 0'}}><Link to="/pest-library" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>Pest Library</Link></li>
+              <li style={{padding: '0.75rem 0'}}><Link to="/service-areas" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>Service Areas</Link></li>
+              <li style={{padding: '0.75rem 0'}}><Link to="/emergency" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>Emergency Service</Link></li>
             </ul>
           </div>
           
@@ -76,11 +76,11 @@ const Footer: React.FC = () => {
           <div className="footer-section">
             <h4 style={{color: 'white', marginBottom: '2rem', fontSize: '1.25rem'}}>Our Services</h4>
             <ul style={{listStyle: 'none'}}>
-              <li style={{padding: '0.75rem 0'}}><Link to="/services" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>→ Residential Pest Control</Link></li>
-              <li style={{padding: '0.75rem 0'}}><Link to="/services" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>→ Commercial Solutions</Link></li>
-              <li style={{padding: '0.75rem 0'}}><Link to="/services" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>→ Restaurant & Food Safety</Link></li>
-              <li style={{padding: '0.75rem 0'}}><Link to="/emergency" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>→ Emergency Services</Link></li>
-              <li style={{padding: '0.75rem 0'}}><Link to="/services" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>→ Prevention Programs</Link></li>
+              <li style={{padding: '0.75rem 0'}}><Link to="/services" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>Residential Pest Control</Link></li>
+              <li style={{padding: '0.75rem 0'}}><Link to="/services" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>Commercial Solutions</Link></li>
+              <li style={{padding: '0.75rem 0'}}><Link to="/services" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>Restaurant & Food Safety</Link></li>
+              <li style={{padding: '0.75rem 0'}}><Link to="/emergency" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>Emergency Services</Link></li>
+              <li style={{padding: '0.75rem 0'}}><Link to="/services" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>Prevention Programs</Link></li>
             </ul>
           </div>
           
