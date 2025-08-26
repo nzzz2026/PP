@@ -49,15 +49,14 @@ const Blog: React.FC = () => {
           <p>News, tips and best practices for keeping London properties pest free.</p>
         </div>
       </header>
-      <section className="intro">
+      <section className="intro container">
         <p>
-          Welcome to our resource hub. Browse the latest articles or filter by topic using the controls on the
-          left.
+          Welcome to our resource hub. Use the filters to navigate our latest posts.
         </p>
       </section>
-      <section className="container blog-container">
-        <aside className="blog-sidebar">
-          <div className="sidebar-group">
+      <section className="blog-layout container">
+        <aside className="filters">
+          <div className="filter-group">
             <h3>Search</h3>
             <input
               type="text"
@@ -66,7 +65,7 @@ const Blog: React.FC = () => {
               placeholder="Search articles..."
             />
           </div>
-          <div className="sidebar-group">
+          <div className="filter-group">
             <h3>Category</h3>
             <select value={selectedCategory} onChange={e => setSelectedCategory(e.target.value)}>
               {categories.map(cat => (
@@ -74,51 +73,57 @@ const Blog: React.FC = () => {
               ))}
             </select>
           </div>
-          <div className="sidebar-group">
+          <div className="filter-group">
             <h3>Sort</h3>
-            <button onClick={() => setSortNewest(!sortNewest)} className="sort-btn">
+            <button onClick={() => setSortNewest(!sortNewest)}>
               {sortNewest ? 'Newest First' : 'Oldest First'}
             </button>
           </div>
         </aside>
-        <div className="blog-posts">
-          {paginated.map(post => (
-            <article key={post.id} className="blog-card">
-              <div className="card-image" style={{ backgroundImage: `url(${post.image})` }} />
-              <div className="card-content">
-                <span className="badge">{post.category}</span>
-                <h2>{post.title}</h2>
-                <p className="meta">{new Date(post.date).toLocaleDateString()}</p>
-                <p>{post.excerpt}</p>
-                <Link className="read-more" to={`/blog/${post.id}`}>
-                  Read More
-                </Link>
-              </div>
-            </article>
-          ))}
-        </div>
-        {totalPages > 1 && (
-          <div className="pagination">
-            <button onClick={() => setCurrentPage(p => Math.max(1, p - 1))} disabled={currentPage === 1}>
-              Prev
-            </button>
-            {Array.from({ length: totalPages }, (_, i) => (
-              <button
-                key={i + 1}
-                onClick={() => setCurrentPage(i + 1)}
-                className={currentPage === i + 1 ? 'active' : ''}
-              >
-                {i + 1}
-              </button>
+        <div className="content-area">
+          <div className="posts-grid">
+            {paginated.map(post => (
+              <article key={post.id} className="post-card">
+                <Link
+                  to={`/blog/${post.id}`}
+                  className="image"
+                  style={{ backgroundImage: `url(${post.image})` }}
+                />
+                <div className="content">
+                  <span className="category">{post.category}</span>
+                  <h2>{post.title}</h2>
+                  <p className="meta">{new Date(post.date).toLocaleDateString()}</p>
+                  <p>{post.excerpt}</p>
+                  <Link className="read-more" to={`/blog/${post.id}`}>
+                    Read More
+                  </Link>
+                </div>
+              </article>
             ))}
-            <button
-              onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
-              disabled={currentPage === totalPages}
-            >
-              Next
-            </button>
           </div>
-        )}
+          {totalPages > 1 && (
+            <div className="pagination">
+              <button onClick={() => setCurrentPage(p => Math.max(1, p - 1))} disabled={currentPage === 1}>
+                Prev
+              </button>
+              {Array.from({ length: totalPages }, (_, i) => (
+                <button
+                  key={i + 1}
+                  onClick={() => setCurrentPage(i + 1)}
+                  className={currentPage === i + 1 ? 'active' : ''}
+                >
+                  {i + 1}
+                </button>
+              ))}
+              <button
+                onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                disabled={currentPage === totalPages}
+              >
+                Next
+              </button>
+            </div>
+          )}
+        </div>
       </section>
     </>
   );
