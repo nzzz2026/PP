@@ -23,6 +23,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Emergency from './pages/Emergency';
 import CamdenBoroughPage from './pages/CamdenBoroughPage';
+import IslingtonBoroughPage from './pages/IslingtonBoroughPage';
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
             {/* Service Areas */}
             <Route path="/service-areas" element={<ServiceAreas />} />
             <Route path="/service-areas/camden" element={<CamdenBoroughPage />} />
+            <Route path="/service-areas/islington" element={<IslingtonBoroughPage />} />
             <Route path="/service-areas/:areaId" element={<ServiceAreaDetail />} />
             
             {/* Company */}
