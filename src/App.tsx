@@ -24,6 +24,8 @@ import Contact from './pages/Contact';
 import Emergency from './pages/Emergency';
 import CamdenBoroughPage from './pages/CamdenBoroughPage';
 import IslingtonBoroughPage from './pages/IslingtonBoroughPage';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 
 function App() {
   return (
@@ -53,10 +55,12 @@ function App() {
             <Route path="/service-areas/camden" element={<CamdenBoroughPage />} />
             <Route path="/service-areas/islington" element={<IslingtonBoroughPage />} />
             <Route path="/service-areas/:areaId" element={<ServiceAreaDetail />} />
-            
+
             {/* Company */}
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:postId" element={<BlogPost />} />
           </Routes>
         </main>
         <Footer />

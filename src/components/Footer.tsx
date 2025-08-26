@@ -69,6 +69,7 @@ const Footer: React.FC = () => {
               <li style={{padding: '0.75rem 0'}}><Link to="/pest-library" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>→ Pest Library</Link></li>
               <li style={{padding: '0.75rem 0'}}><Link to="/service-areas" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>→ Service Areas</Link></li>
               <li style={{padding: '0.75rem 0'}}><Link to="/emergency" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>→ Emergency Service</Link></li>
+              <li style={{padding: '0.75rem 0'}}><Link to="/blog" style={{color: 'rgba(255, 255, 255, 0.7)', transition: 'all 0.3s ease'}}>→ Blog</Link></li>
             </ul>
           </div>
           
