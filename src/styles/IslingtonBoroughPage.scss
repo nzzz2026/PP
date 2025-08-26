@@ -2,7 +2,7 @@
 .islington-page {
   background-color: #FAFBFC;
   min-height: 100vh;
-  padding-top: 100px;
+  padding-top: 80px;
   padding-bottom: 4rem;
   
   // CSS Variables for consistency
@@ -228,11 +228,7 @@
 
   // Main Content Area
   .main-content {
-    padding-right: 2rem;
-
-    @media (max-width: 1400px) {
-      padding-right: 0;
-    }
+    padding-right: 0;
   }
 
   // Hero Section
