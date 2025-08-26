@@ -2,7 +2,8 @@
 .camden-page {
   background-color: #FAFBFC;
   min-height: 100vh;
-  padding-top: 80px;
+  padding-top: 100px;
+  padding-bottom: 4rem;
   
   // CSS Variables for consistency
   --primary-color: #059669;
@@ -20,6 +21,11 @@
   --border-radius: 16px;
   --border-radius-lg: 20px;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  .text-link {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
 
   .container {
     max-width: 1600px;
@@ -159,7 +165,7 @@
   // Mobile Navigation Toggle
   .mobile-nav-toggle {
     position: fixed;
-    top: 90px;
+    top: 110px;
     right: 1rem;
     background: var(--primary-color);
     color: white;

@@ -241,21 +241,21 @@ const IslingtonBoroughPage: React.FC = () => {
             <div className="intro-grid">
               <div className="intro-text">
                 <p>
-                  Dealing with pests in Islington can be challenging, whether you're a homeowner near <strong>Angel Station</strong> or managing a commercial property on <strong>Upper Street</strong> in the bustling borough. At Pest Pro, we understand the unique pest challenges inherent to the vibrant and diverse Islington area and provide tailored, effective solutions to protect your property and peace of mind.
+                  Dealing with pests in <a href="https://en.wikipedia.org/wiki/London_Borough_of_Islington" target="_blank" rel="noopener noreferrer" className="text-link">Islington</a> can be challenging, whether you're a homeowner near <a href="https://en.wikipedia.org/wiki/Angel_tube_station" target="_blank" rel="noopener noreferrer" className="text-link"><strong>Angel Station</strong></a> or managing a commercial property on <a href="https://en.wikipedia.org/wiki/Upper_Street" target="_blank" rel="noopener noreferrer" className="text-link"><strong>Upper Street</strong></a> in the bustling borough. At Pest Pro, we understand the unique pest challenges inherent to the vibrant and diverse Islington area and provide tailored, effective solutions to protect your property and peace of mind.
                 </p>
-                
+
                 <p>
-                  Our fully qualified, <strong>BPCA certified technicians</strong> are local experts who live and work in London, ensuring a prompt, reliable, and trustworthy local service specifically designed for Islington residents and businesses. We pride ourselves on quick response times, often attending within 2 hours for urgent issues, and always within 24 hours – if not, we offer a 10% discount!
+                  Our fully qualified, <a href="https://bpca.org.uk/" target="_blank" rel="noopener noreferrer" className="text-link"><strong>BPCA certified technicians</strong></a> are local experts who live and work in London, ensuring a prompt, reliable, and trustworthy local service specifically designed for Islington residents and businesses. We pride ourselves on quick response times, often attending within 2 hours for urgent issues, and always within 24 hours – if not, we offer a 10% discount!
                 </p>
               </div>
-              
+
               <div className="guarantee-card">
                 <h3>Islington Service Guarantee</h3>
                 <ul className="guarantee-list">
                   {[
                     'Response within 24 hours guaranteed',
-                    'BPCA certified technicians only',
-                    'SafeContractor approved company',
+                    <><a href="https://bpca.org.uk/" target="_blank" rel="noopener noreferrer" className="text-link">BPCA</a> certified technicians only</>,
+                    <><a href="https://www.safecontractor.com/" target="_blank" rel="noopener noreferrer" className="text-link">SafeContractor</a> approved company</>,
                     '30-day guarantee after last sighting',
                     'Biodegradable pest control methods',
                     'Serving both domestic and commercial clients'
@@ -523,16 +523,24 @@ const IslingtonBoroughPage: React.FC = () => {
             <div className="testimonials-grid">
               {[
                 {
-                  quote: "Excellent service from start to finish. They came out within 2 hours of my call and completely sorted our rat problem near Upper Street in Angel. The technician was professional, knowledgeable about local pest issues, and the follow-up service was outstanding.",
-                  author: "S. Thompson",
-                  location: "Angel",
-                  date: "July 2024"
+                  quote: (
+                    <>
+                      Excellent service from start to finish. They came out within 2 hours of my call and completely sorted our rat problem near <a href="https://en.wikipedia.org/wiki/Upper_Street" target="_blank" rel="noopener noreferrer" className="text-link">Upper Street</a> in <a href="https://en.wikipedia.org/wiki/Angel,_London" target="_blank" rel="noopener noreferrer" className="text-link">Angel</a>. The technician was professional, knowledgeable about local pest issues, and the follow-up service was outstanding.
+                    </>
+                  ),
+                  author: 'S. Thompson',
+                  location: <a href="https://en.wikipedia.org/wiki/Angel,_London" target="_blank" rel="noopener noreferrer" className="text-link">Angel</a>,
+                  date: 'July 2024'
                 },
                 {
-                  quote: "Our café on Holloway Road has been pest-free since we started using Pest Pro. Their preventative service keeps us compliant and pest-free, which is crucial for our business. Highly recommend their commercial services.",
-                  author: "M. Patel",
-                  location: "Holloway Road",
-                  date: "June 2024"
+                  quote: (
+                    <>
+                      Our café on <a href="https://en.wikipedia.org/wiki/Holloway_Road" target="_blank" rel="noopener noreferrer" className="text-link">Holloway Road</a> has been pest-free since we started using Pest Pro. Their preventative service keeps us compliant and pest-free, which is crucial for our business. Highly recommend their commercial services.
+                    </>
+                  ),
+                  author: 'M. Patel',
+                  location: <a href="https://en.wikipedia.org/wiki/Holloway_Road" target="_blank" rel="noopener noreferrer" className="text-link">Holloway Road</a>,
+                  date: 'June 2024'
                 }
               ].map((testimonial, index) => (
                 <div key={index} className="testimonial-card">
@@ -575,7 +583,7 @@ const IslingtonBoroughPage: React.FC = () => {
 
               <div className="cta-buttons">
                 <a href="tel:07727049304" className="primary-cta">
-                  📞 077 2704 9304
+                  077 2704 9304
                 </a>
                 <a href="/contact" className="secondary-cta">
                   Request a Call Back within 1 Hour!
@@ -603,7 +611,7 @@ const IslingtonBoroughPage: React.FC = () => {
             <div className="area-content">
               <h3>Comprehensive Islington Coverage</h3>
               <p>
-                We proudly serve all London Boroughs, including Islington, ensuring local expertise and rapid response wherever you are in the city. Our Islington service covers all areas including Angel, Highbury, Holloway, Finsbury Park, Clerkenwell, and Barnsbury.
+                We proudly serve all <a href="/service-areas" className="text-link">London boroughs</a>, including <a href="https://en.wikipedia.org/wiki/London_Borough_of_Islington" target="_blank" rel="noopener noreferrer" className="text-link">Islington</a>, ensuring local expertise and rapid response wherever you are in the city. Our Islington service covers all areas including <a href="https://en.wikipedia.org/wiki/Angel,_London" target="_blank" rel="noopener noreferrer" className="text-link">Angel</a>, <a href="https://en.wikipedia.org/wiki/Highbury" target="_blank" rel="noopener noreferrer" className="text-link">Highbury</a>, <a href="https://en.wikipedia.org/wiki/Holloway,_London" target="_blank" rel="noopener noreferrer" className="text-link">Holloway</a>, <a href="https://en.wikipedia.org/wiki/Finsbury_Park,_London" target="_blank" rel="noopener noreferrer" className="text-link">Finsbury Park</a>, <a href="https://en.wikipedia.org/wiki/Clerkenwell" target="_blank" rel="noopener noreferrer" className="text-link">Clerkenwell</a>, and <a href="https://en.wikipedia.org/wiki/Barnsbury" target="_blank" rel="noopener noreferrer" className="text-link">Barnsbury</a>.
               </p>
               
               <div className="postcodes">
