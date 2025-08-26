@@ -79,6 +79,7 @@ const Header: React.FC = () => {
               </li>
               <li><Link to="/service-areas">Service Areas</Link></li>
               <li><Link to="/about">About</Link></li>
+              <li><Link to="/blog">Blog</Link></li>
               <li><Link to="/contact">Contact</Link></li>
             </ul>
           </nav>
@@ -114,6 +115,7 @@ const Header: React.FC = () => {
               <li><Link to="/pest-library" onClick={() => setIsMobileMenuOpen(false)}>Pest Library</Link></li>
               <li><Link to="/service-areas" onClick={() => setIsMobileMenuOpen(false)}>Service Areas</Link></li>
               <li><Link to="/about" onClick={() => setIsMobileMenuOpen(false)}>About</Link></li>
+              <li><Link to="/blog" onClick={() => setIsMobileMenuOpen(false)}>Blog</Link></li>
               <li><Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link></li>
             </ul>
             <div className="mobile-cta">
