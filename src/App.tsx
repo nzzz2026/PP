@@ -24,8 +24,9 @@ import Contact from './pages/Contact';
 import Emergency from './pages/Emergency';
 import CamdenBoroughPage from './pages/CamdenBoroughPage';
 import IslingtonBoroughPage from './pages/IslingtonBoroughPage';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
+import BlogNew from './pages/BlogNew';
+import BlogPostNew from './pages/BlogPostNew';
+import BlogAdminProtected from './pages/BlogAdminProtected';
 
 function App() {
   return (
@@ -59,8 +60,9 @@ function App() {
             {/* Company */}
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:postId" element={<BlogPost />} />
+            <Route path="/blog" element={<BlogNew />} />
+            <Route path="/blog/admin" element={<BlogAdminProtected />} />
+            <Route path="/blog/:slug" element={<BlogPostNew />} />
           </Routes>
         </main>
         <Footer />

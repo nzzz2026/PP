@@ -86,10 +86,9 @@ const Home: React.FC = () => {
               fontWeight: '600',
               marginBottom: '1.5rem',
               color: 'white',
-              backdropFilter: 'blur(10px)',
-              animation: 'fadeInUp 1s ease-out, float 3s ease-in-out infinite'
+              backdropFilter: 'blur(10px)'
             }}>
-              <span>✓ London's #1 Rated Pest Control</span>
+              <span>London's #1 Rated Pest Control</span>
             </div>
             
             <h1 style={{
@@ -155,18 +154,10 @@ const Home: React.FC = () => {
                 borderRadius: '12px',
                 border: '1px solid rgba(255, 255, 255, 0.2)'
               }}>
-                <div style={{
-                  width: '24px',
-                  height: '24px',
-                  background: 'var(--lime)',
-                  color: 'white',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '0.8rem',
-                  fontWeight: 'bold'
-}}>✓</div>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--lime)', minWidth: '20px' }}>
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
                 <div>
                   <div style={{ fontWeight: '700', fontSize: '0.8rem', color: 'white' }}>Since 2008</div>
                   <div style={{ fontSize: '0.65rem', color: 'rgba(255, 255, 255, 0.7)' }}>16+ Years Experience</div>
@@ -195,18 +186,10 @@ const Home: React.FC = () => {
                 borderRadius: '12px',
                 border: '1px solid rgba(255, 255, 255, 0.2)'
               }}>
-                <div style={{
-                  width: '24px',
-                  height: '24px',
-                  background: 'var(--lime)',
-                  color: 'white',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '0.8rem',
-                  fontWeight: 'bold'
-                }}>✓</div>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--lime)', minWidth: '20px' }}>
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
                 <div>
                   <div style={{ fontWeight: '700', fontSize: '0.8rem', color: 'white' }}>BPCA Certified</div>
                   <div style={{ fontSize: '0.65rem', color: 'rgba(255, 255, 255, 0.7)' }}>Professional Standards</div>
@@ -235,18 +218,9 @@ const Home: React.FC = () => {
                 borderRadius: '12px',
                 border: '1px solid rgba(255, 255, 255, 0.2)'
               }}>
-                <div style={{
-                  width: '24px',
-                  height: '24px',
-                  background: 'var(--lime)',
-                  color: 'white',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '0.8rem',
-                  fontWeight: 'bold'
-                }}>✓</div>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--lime)', minWidth: '20px' }}>
+                  <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                </svg>
                 <div>
                   <div style={{ fontWeight: '700', fontSize: '0.8rem', color: 'white' }}>Fully Insured</div>
                   <div style={{ fontSize: '0.65rem', color: 'rgba(255, 255, 255, 0.7)' }}>£2M Public Liability</div>
@@ -275,18 +249,9 @@ const Home: React.FC = () => {
                 borderRadius: '12px',
                 border: '1px solid rgba(255, 255, 255, 0.2)'
               }}>
-                <div style={{
-                  width: '24px',
-                  height: '24px',
-                  background: 'var(--lime)',
-                  color: 'white',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '0.8rem',
-                  fontWeight: 'bold'
-                }}>⭐</div>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--lime)', minWidth: '20px' }}>
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
                 <div>
                   <div style={{ fontWeight: '700', fontSize: '0.8rem', color: 'white' }}>4.9/5 Rating</div>
                   <div style={{ fontSize: '0.65rem', color: 'rgba(255, 255, 255, 0.7)' }}>487+ Reviews</div>
@@ -300,33 +265,29 @@ const Home: React.FC = () => {
               justifyContent: 'center',
               animation: 'fadeInUp 1.8s ease-out 0.8s both'
             }}>
-              <a href="tel:08007723999" 
+              <a href="tel:07727049304" 
               onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-5px) scale(1.05)';
-                e.currentTarget.style.background = 'linear-gradient(135deg, var(--lime-light) 0%, var(--lime) 100%)';
-                e.currentTarget.style.boxShadow = '0 25px 60px rgba(16, 185, 129, 0.6), 0 0 30px rgba(16, 185, 129, 0.8)';
+                e.currentTarget.style.background = '#0ea569';
+                e.currentTarget.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                e.currentTarget.style.background = 'var(--lime)';
-                e.currentTarget.style.boxShadow = '0 8px 30px rgba(16, 185, 129, 0.4)';
+                e.currentTarget.style.background = '#10b981';
+                e.currentTarget.style.transform = 'translateY(0)';
               }}
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '0.5rem',
-                padding: '18px 40px',
-                fontSize: '1.2rem',
-                fontWeight: '700',
-                borderRadius: '12px',
-                background: 'var(--lime)',
+                padding: '16px 32px',
+                fontSize: '1.1rem',
+                fontWeight: '600',
+                borderRadius: '8px',
+                background: '#10b981',
                 color: 'white',
                 textDecoration: 'none',
-                transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                boxShadow: '0 8px 30px rgba(16, 185, 129, 0.4)',
-                textShadow: 'none',
-                position: 'relative',
-                overflow: 'hidden'
+                transition: 'all 0.2s ease',
+                boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+                border: 'none'
               }}>
                 <span>Call Now: 077 2704 9304</span>
               </a>
@@ -469,15 +430,11 @@ const Home: React.FC = () => {
                 e.currentTarget.style.transform = 'translateY(-12px) scale(1.02)';
                 e.currentTarget.style.boxShadow = '0 30px 80px rgba(0, 0, 0, 0.15), 0 0 40px rgba(15, 118, 110, 0.2)';
                 e.currentTarget.style.border = '1px solid rgba(15, 118, 110, 0.3)';
-                const icon = e.currentTarget.querySelector('.service-icon') as HTMLElement;
-                if (icon) icon.style.transform = 'rotate(10deg) scale(1.1)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0) scale(1)';
                 e.currentTarget.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.08)';
                 e.currentTarget.style.border = '1px solid rgba(0, 0, 0, 0.05)';
-                const icon = e.currentTarget.querySelector('.service-icon') as HTMLElement;
-                if (icon) icon.style.transform = 'rotate(0deg) scale(1)';
               }}
               style={{
                 background: 'white',
@@ -499,18 +456,20 @@ const Home: React.FC = () => {
                   <div className="service-icon" style={{
                     width: '60px',
                     height: '60px',
-                    background: 'linear-gradient(135deg, var(--forest) 0%, var(--forest-light) 100%)',
                     borderRadius: '12px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: 'white',
-                    fontSize: '1.5rem',
-                    fontWeight: 'bold',
                     minWidth: '60px',
-                    transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                    boxShadow: '0 8px 25px rgba(15, 118, 110, 0.3)'
-                  }}>R</div>
+                    boxShadow: '0 8px 25px rgba(15, 118, 110, 0.3)',
+                    overflow: 'hidden',
+                    position: 'relative'
+                  }}>
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=120&h=120&q=80" 
+                         alt="Residential Home" 
+                         style={{
+                           width: '100%',
+                           height: '100%',
+                           objectFit: 'cover'
+                         }} />
+                  </div>
                   <div>
                     <h3 style={{
                       color: 'var(--forest)',
@@ -586,15 +545,11 @@ const Home: React.FC = () => {
                 e.currentTarget.style.transform = 'translateY(-12px) scale(1.02)';
                 e.currentTarget.style.boxShadow = '0 30px 80px rgba(0, 0, 0, 0.15), 0 0 40px rgba(8, 145, 178, 0.2)';
                 e.currentTarget.style.border = '1px solid rgba(8, 145, 178, 0.3)';
-                const icon = e.currentTarget.querySelector('.service-icon') as HTMLElement;
-                if (icon) icon.style.transform = 'rotate(10deg) scale(1.1)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0) scale(1)';
                 e.currentTarget.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.08)';
                 e.currentTarget.style.border = '1px solid rgba(0, 0, 0, 0.05)';
-                const icon = e.currentTarget.querySelector('.service-icon') as HTMLElement;
-                if (icon) icon.style.transform = 'rotate(0deg) scale(1)';
               }}
               style={{
                 background: 'white',
@@ -616,18 +571,20 @@ const Home: React.FC = () => {
                   <div className="service-icon" style={{
                     width: '60px',
                     height: '60px',
-                    background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%)',
                     borderRadius: '12px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: 'white',
-                    fontSize: '1.5rem',
-                    fontWeight: 'bold',
                     minWidth: '60px',
-                    transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                    boxShadow: '0 8px 25px rgba(8, 145, 178, 0.3)'
-                  }}>C</div>
+                    boxShadow: '0 8px 25px rgba(8, 145, 178, 0.3)',
+                    overflow: 'hidden',
+                    position: 'relative'
+                  }}>
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=120&h=120&q=80" 
+                         alt="Commercial Building" 
+                         style={{
+                           width: '100%',
+                           height: '100%',
+                           objectFit: 'cover'
+                         }} />
+                  </div>
                   <div>
                     <h3 style={{
                       color: 'var(--forest)',
@@ -703,15 +660,11 @@ const Home: React.FC = () => {
                 e.currentTarget.style.transform = 'translateY(-12px) scale(1.02)';
                 e.currentTarget.style.boxShadow = '0 30px 80px rgba(0, 0, 0, 0.15), 0 0 40px rgba(59, 130, 246, 0.2)';
                 e.currentTarget.style.border = '1px solid rgba(59, 130, 246, 0.3)';
-                const icon = e.currentTarget.querySelector('.service-icon') as HTMLElement;
-                if (icon) icon.style.transform = 'rotate(10deg) scale(1.1)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0) scale(1)';
                 e.currentTarget.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.08)';
                 e.currentTarget.style.border = '1px solid rgba(0, 0, 0, 0.05)';
-                const icon = e.currentTarget.querySelector('.service-icon') as HTMLElement;
-                if (icon) icon.style.transform = 'rotate(0deg) scale(1)';
               }}
               style={{
                 background: 'white',
@@ -733,18 +686,20 @@ const Home: React.FC = () => {
                   <div className="service-icon" style={{
                     width: '60px',
                     height: '60px',
-                    background: 'linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)',
                     borderRadius: '12px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: 'white',
-                    fontSize: '1.5rem',
-                    fontWeight: 'bold',
                     minWidth: '60px',
-                    transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                    boxShadow: '0 8px 25px rgba(59, 130, 246, 0.3)'
-                  }}>📍</div>
+                    boxShadow: '0 8px 25px rgba(59, 130, 246, 0.3)',
+                    overflow: 'hidden',
+                    position: 'relative'
+                  }}>
+                    <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=120&h=120&q=80" 
+                         alt="London Skyline" 
+                         style={{
+                           width: '100%',
+                           height: '100%',
+                           objectFit: 'cover'
+                         }} />
+                  </div>
                   <div>
                     <h3 style={{
                       color: 'var(--forest)',
@@ -869,10 +824,48 @@ const Home: React.FC = () => {
               gap: '2rem'
             }}>
               {[
-                { icon: 'E', title: 'Certified Experts', desc: 'BPCA trained and certified professionals with continuous education and 16+ years of London experience.' },
-                { icon: 'E', title: 'Eco-Friendly Methods', desc: 'Environmentally responsible treatments that are safe for your family, pets, and the London ecosystem.' },
-                { icon: 'G', title: 'Guaranteed Results', desc: '100% satisfaction guarantee with free re-treatments and comprehensive 6-month warranties.' },
-                { icon: 'R', title: 'Rapid Response', desc: 'Emergency service with same-day response across all London boroughs within 2 hours.' }
+                { 
+                  icon: (
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                      <path d="M2 17l10 5 10-5"/>
+                      <path d="M2 12l10 5 10-5"/>
+                    </svg>
+                  ), 
+                  title: 'Certified Experts', 
+                  desc: 'BPCA trained and certified professionals with continuous education and 16+ years of London experience.' 
+                },
+                { 
+                  icon: (
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 2a10 10 0 1 0 10 10h-10V2z"/>
+                      <path d="M12 2a10 10 0 0 1 10 10"/>
+                      <path d="M12 12l3.5 3.5"/>
+                    </svg>
+                  ), 
+                  title: 'Eco-Friendly Methods', 
+                  desc: 'Environmentally responsible treatments that are safe for your family, pets, and the London ecosystem.' 
+                },
+                { 
+                  icon: (
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                      <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                  ), 
+                  title: 'Guaranteed Results', 
+                  desc: '100% satisfaction guarantee with free re-treatments and comprehensive 6-month warranties.' 
+                },
+                { 
+                  icon: (
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                  ), 
+                  title: 'Rapid Response', 
+                  desc: 'Emergency service with same-day response across all London boroughs within 2 hours.' 
+                }
               ].map((item, index) => (
                 <div key={index} style={{
                   textAlign: 'center',
@@ -901,17 +894,17 @@ const Home: React.FC = () => {
                   <div style={{
                     width: '50px',
                     height: '50px',
-                    background: 'linear-gradient(135deg, rgba(15, 118, 110, 0.2) 0%, rgba(8, 145, 178, 0.2) 100%)',
                     borderRadius: '12px',
+                    margin: '0 auto 1rem',
+                    border: '1px solid rgba(15, 118, 110, 0.3)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    margin: '0 auto 1rem',
-                    border: '1px solid rgba(15, 118, 110, 0.3)',
-                    color: 'var(--forest)',
-                    fontWeight: '700',
-                    fontSize: '1.2rem'
-                  }}>{item.icon}</div>
+                    background: 'linear-gradient(135deg, rgba(15, 118, 110, 0.1) 0%, rgba(8, 145, 178, 0.1) 100%)',
+                    color: 'var(--lime)'
+                  }}>
+                    {item.icon}
+                  </div>
                   <h3 style={{
                     color: 'white',
                     marginBottom: '0.75rem',

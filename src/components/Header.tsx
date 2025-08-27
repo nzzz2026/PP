@@ -89,7 +89,6 @@ const Header: React.FC = () => {
             <a href="tel:07727049304" className="phone-number">
               <span className="phone-text">077 2704 9304</span>
             </a>
-            <Link to="/emergency" className="emergency-btn">Emergency</Link>
           </div>
           
           {/* Mobile Menu Button */}
@@ -122,9 +121,6 @@ const Header: React.FC = () => {
               <a href="tel:07727049304" className="mobile-phone">
                 <span>077 2704 9304</span>
               </a>
-              <Link to="/emergency" className="mobile-emergency" onClick={() => setIsMobileMenuOpen(false)}>
-                Emergency Call
-              </Link>
             </div>
           </nav>
         </div>

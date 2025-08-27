@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import '../styles/ResidentialServices.css';
 
 const ResidentialServices: React.FC = () => {
   const services = [
@@ -43,104 +42,103 @@ const ResidentialServices: React.FC = () => {
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-gray-50">
-      
-      
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section 
-          className="text-white py-16 relative"
-          style={{
-            background: `
-              linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-              url('/hero-images/freepik__the-style-is-candid-image-photography-with-natural__64245.jpeg')
-            `,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
-        >
-          <div className="max-w-6xl mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Residential Pest Control Services
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Protecting London homes from pests with safe, effective, and guaranteed solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Get Free Quote
-              </Link>
-              <a 
-                href="tel:02071234567" 
-                className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
-              >
-                Emergency: 020 7123 4567
-              </a>
-            </div>
-          </div>
-        </section>
+  const benefits = [
+    {
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+        </svg>
+      ),
+      title: 'Family Safe',
+      description: 'Child and pet-safe treatments exclusively'
+    },
+    {
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+      ),
+      title: 'Fast Response',
+      description: 'Same-day emergency service available'
+    },
+    {
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+          <polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+      ),
+      title: 'Guaranteed Results',
+      description: '100% satisfaction with free re-treatment'
+    },
+    {
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+          <path d="M2 17l10 5 10-5"/>
+        </svg>
+      ),
+      title: 'Certified Experts',
+      description: 'BPCA trained professionals'
+    }
+  ];
 
-        {/* Why Choose Us */}
-        <section className="py-16">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Why Choose PestPro for Your Home?</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Family Safe Methods</h3>
-                <p className="text-gray-600">Child and pet-friendly treatments that keep your family safe while eliminating pests effectively.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Rapid Response</h3>
-                <p className="text-gray-600">Next-day emergency service available with 2-4 hour response times for urgent pest situations.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Guaranteed Results</h3>
-                <p className="text-gray-600">All residential treatments come with our satisfaction guarantee and follow-up support.</p>
-              </div>
+  return (
+    <div style={{ minHeight: '100vh', background: 'white' }}>
+      
+      <main style={{ paddingTop: '80px' }}>
+        {/* Hero Section */}
+        <section className="residential-hero">
+          <div className="container">
+            <h1>Residential Pest Control Services</h1>
+            <p>Protecting London homes with safe, effective pest solutions since 2008</p>
+            <div className="hero-cta">
+              <Link to="/contact" className="btn-hero-primary">Get Free Quote</Link>
+              <a href="tel:07727049304" className="btn-hero-secondary">Call Now: 077 2704 9304</a>
             </div>
           </div>
         </section>
 
         {/* Services Grid */}
-        <section className="py-16 bg-white">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Our Residential Services</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section className="services-container">
+          <div className="container">
+            <div className="services-header">
+              <h2>Our Residential Services</h2>
+              <div className="section-divider"></div>
+              <p>Comprehensive pest solutions tailored for London homes and families</p>
+            </div>
+            
+            <div className="services-grid">
               {services.map((service, index) => (
-                <div key={index} className="border rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <ul className="space-y-2 mb-4">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm">
-                        
-                        {feature}
-                      </li>
+                <div key={index} className="service-card">
+                  <h3 className="service-title">{service.title}</h3>
+                  <p className="service-description">{service.description}</p>
+                  <ul className="service-features">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx}>{feature}</li>
                     ))}
                   </ul>
-                  <div className="flex justify-between items-center">
-                    <span className="text-lg font-semibold text-green-600">{service.price}</span>
-                    <Link 
-                      to="/contact" 
-                      className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors text-sm"
-                    >
-                      Get Quote
-                    </Link>
+                  <div className="service-price">{service.price}</div>
+                  <Link to="/contact" className="btn-book">Book Service</Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us */}
+        <section className="why-choose">
+          <div className="container">
+            <h2>Why Choose Pest Pro London?</h2>
+            <div className="benefits-grid">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="benefit-card">
+                  <div className="benefit-icon">
+                    {benefit.icon}
                   </div>
+                  <h3>{benefit.title}</h3>
+                  <p>{benefit.description}</p>
                 </div>
               ))}
             </div>
@@ -148,52 +146,47 @@ const ResidentialServices: React.FC = () => {
         </section>
 
         {/* Process Section */}
-        <section className="py-16">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Our 4-Step Process</h2>
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">1</div>
-                <h3 className="font-semibold mb-2">Inspection</h3>
-                <p className="text-gray-600 text-sm">Thorough assessment of your property and pest situation</p>
+        <section className="process-section">
+          <div className="container">
+            <h2>Our Simple Process</h2>
+            <div className="process-steps">
+              <div className="process-step">
+                <div className="step-number">1</div>
+                <h3>Contact</h3>
+                <p>Call or book online for a free assessment</p>
               </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">2</div>
-                <h3 className="font-semibold mb-2">Treatment Plan</h3>
-                <p className="text-gray-600 text-sm">Customized treatment strategy for your specific needs</p>
+              <div className="process-step">
+                <div className="step-number">2</div>
+                <h3>Inspect</h3>
+                <p>Professional inspection to identify pest issues</p>
               </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">3</div>
-                <h3 className="font-semibold mb-2">Treatment</h3>
-                <p className="text-gray-600 text-sm">Professional application of safe, effective treatments</p>
+              <div className="process-step">
+                <div className="step-number">3</div>
+                <h3>Treat</h3>
+                <p>Safe, effective treatment tailored to your needs</p>
               </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">4</div>
-                <h3 className="font-semibold mb-2">Follow-up</h3>
-                <p className="text-gray-600 text-sm">Monitoring and prevention to ensure long-term results</p>
+              <div className="process-step">
+                <div className="step-number">4</div>
+                <h3>Prevent</h3>
+                <p>Proofing and prevention to stop future infestations</p>
+              </div>
+              <div className="process-step">
+                <div className="step-number">5</div>
+                <h3>Guarantee</h3>
+                <p>Follow-up service with our satisfaction guarantee</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-green-600 text-white">
-          <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to Protect Your Home?</h2>
-            <p className="text-xl mb-8">Get a free, no-obligation quote for residential pest control services</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Request Free Quote
-              </Link>
-              <Link 
-                to="/pest-library" 
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
-              >
-                Browse Pest Library
-              </Link>
+        <section className="cta-section">
+          <div className="container">
+            <h2>Ready to Protect Your Home?</h2>
+            <p>Get a free quote and same-day service for urgent pest problems</p>
+            <div className="cta-buttons">
+              <Link to="/contact" className="btn-cta-primary">Get Free Quote</Link>
+              <a href="tel:07727049304" className="btn-cta-secondary">Emergency Call</a>
             </div>
           </div>
         </section>

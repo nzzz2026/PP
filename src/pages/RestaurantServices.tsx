@@ -1,177 +1,320 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import '../styles/RestaurantServices.css';
 
 const RestaurantServices: React.FC = () => {
   const services = [
     {
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/>
+          <path d="M7 2v20"/>
+          <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/>
+        </svg>
+      ),
       title: 'Kitchen Deep Cleaning & Treatment',
       description: 'Comprehensive kitchen pest control focusing on food preparation areas and storage zones.',
-      features: ['Food-safe treatments', 'Equipment protection', 'Grease trap maintenance', 'Deep cleaning protocols'],
-      price: 'From £249'
+      features: ['Food-safe treatments', 'Equipment protection', 'Grease trap maintenance', 'Deep cleaning protocols']
     },
     {
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+          <path d="M9 12l2 2 4-4"/>
+        </svg>
+      ),
       title: 'Rodent Control Systems',
       description: 'Advanced monitoring and baiting systems designed specifically for restaurant environments.',
-      features: ['Tamper-resistant stations', 'Digital monitoring', '24/7 tracking', 'Immediate alerts'],
-      price: 'From £199'
+      features: ['Tamper-resistant stations', 'Digital monitoring', '24/7 tracking', 'Immediate alerts']
     },
     {
-      title: 'Flying Insect Management',
-      description: 'Specialized control of flies, gnats, and other flying pests that threaten food safety.',
-      features: ['UV light traps', 'Breeding site elimination', 'Entry point sealing', 'Drain treatments'],
-      price: 'From £179'
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+        </svg>
+      ),
+      title: 'HACCP Compliance Management',
+      description: 'Complete documentation and compliance support for health inspections and audits.',
+      features: ['Digital reporting', 'Audit preparation', 'Staff training docs', 'Compliance certificates']
     },
     {
-      title: 'Cockroach Elimination',
-      description: 'Intensive cockroach control programs using gel baits and targeted treatments.',
-      features: ['Food-grade treatments', 'Crack & crevice application', 'Monitor & maintain', 'Emergency response'],
-      price: 'From £229'
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 1v6"/>
+          <path d="M12 17v6"/>
+          <path d="M4.22 4.22l4.24 4.24"/>
+          <path d="M15.54 15.54l4.24 4.24"/>
+          <path d="M1 12h6"/>
+          <path d="M17 12h6"/>
+        </svg>
+      ),
+      title: 'Flying Insect Control',
+      description: 'Professional fly and moth elimination with UV traps and targeted treatments.',
+      features: ['UV light traps', 'Drain treatments', 'Window screens', 'Monthly monitoring']
     },
     {
-      title: 'Ant Colony Control',
-      description: 'Complete ant colony elimination with focus on kitchen and food storage areas.',
-      features: ['Colony targeting', 'Safe bait systems', 'Prevention barriers', 'Long-term monitoring'],
-      price: 'From £169'
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+        </svg>
+      ),
+      title: 'Emergency Response Service',
+      description: '24/7 emergency pest control to protect your reputation during critical situations.',
+      features: ['1-hour response', 'Weekend service', 'Discrete arrival', 'Immediate treatment']
     },
     {
-      title: 'Comprehensive IPM Program',
-      description: 'Full integrated pest management program designed for restaurants and food service.',
-      features: ['Monthly inspections', 'Staff training', 'HACCP compliance', 'Audit preparation'],
-      price: 'From £399/month'
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+      ),
+      title: 'Staff Training Programs',
+      description: 'Educate your team on pest prevention and early detection protocols.',
+      features: ['On-site training', 'Certification programs', 'Best practices guide', 'Regular updates']
     }
   ];
 
-  const complianceFeatures = [
-    'Food Standards Agency (FSA) compliance',
-    'Environmental Health Officer (EHO) approval',
-    'HACCP integration support',
-    'Allergen management protocols',
-    'Detailed treatment records',
-    'Emergency response protocols'
+  const haccpSteps = [
+    {
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="m21 21-4.35-4.35"/>
+        </svg>
+      ),
+      title: 'Hazard Analysis',
+      description: 'Identify potential pest hazards in your establishment'
+    },
+    {
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M9 11H3"/>
+          <path d="M21 11h-6"/>
+          <circle cx="12" cy="11" r="3"/>
+        </svg>
+      ),
+      title: 'Control Points',
+      description: 'Establish critical control points for pest management'
+    },
+    {
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+          <polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+      ),
+      title: 'Monitoring',
+      description: 'Regular inspections and monitoring procedures'
+    },
+    {
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+        </svg>
+      ),
+      title: 'Documentation',
+      description: 'Complete records for health inspections'
+    }
+  ];
+
+  const industries = [
+    { 
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/>
+          <path d="M7 2v20"/>
+        </svg>
+      ),
+      title: 'Fine Dining',
+      description: 'Discrete premium service'
+    },
+    { 
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+          <path d="M6 8H5a4 4 0 0 0 0 8h1"/>
+          <path d="M8 8v8"/>
+          <path d="M12 8v8"/>
+          <path d="M16 8v8"/>
+        </svg>
+      ),
+      title: 'Fast Food',
+      description: 'Quick response protocols'
+    },
+    { 
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+          <line x1="9" y1="9" x2="9.01" y2="9"/>
+          <line x1="15" y1="9" x2="15.01" y2="9"/>
+        </svg>
+      ),
+      title: 'Cafes & Bakeries',
+      description: 'Specialized treatments'
+    },
+    { 
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+          <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+          <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+        </svg>
+      ),
+      title: 'Pubs & Bars',
+      description: 'Cellar & bar protection'
+    },
+    { 
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+        </svg>
+      ),
+      title: 'Hotels',
+      description: 'Kitchen & dining areas'
+    },
+    { 
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+          <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+        </svg>
+      ),
+      title: 'Catering',
+      description: 'Mobile unit protection'
+    }
+  ];
+
+  const testimonials = [
+    {
+      text: "Pest Pro saved our restaurant during a critical inspection. Their HACCP documentation and swift response were exceptional.",
+      author: "Marco Bellini",
+      role: "Owner, Bellini's Italian",
+      rating: 5
+    },
+    {
+      text: "We've been pest-free for 2 years thanks to their preventive program. The monthly reports give us complete peace of mind.",
+      author: "Sarah Williams",
+      role: "Manager, The Garden Café",
+      rating: 5
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div style={{ minHeight: '100vh', background: 'white' }}>
       
-      
-      <main className="pt-20">
+      <main style={{ paddingTop: '80px' }}>
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-red-600 to-orange-600 text-white py-16">
-          <div className="max-w-6xl mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Restaurant Pest Control Services
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Specialized pest management for London restaurants, cafes, and food service businesses
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Get Restaurant Quote
-              </Link>
-              <a 
-                href="tel:02071234567" 
-                className="bg-yellow-500 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-colors"
-              >
-                Emergency: 020 7123 4567
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Food Safety Promise */}
-        <section className="py-16">
-          <div className="max-w-6xl mx-auto px-4">
-            <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <h2 className="text-3xl font-bold mb-6 text-red-600">Food Safety First Promise</h2>
-              <p className="text-lg text-gray-700 mb-6">
-                We understand that your restaurant's reputation depends on food safety. Our treatments are specifically designed 
-                to eliminate pests while maintaining the highest food safety standards.
-              </p>
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="flex items-center justify-center">
-                  
-                  <span className="font-semibold">Food-Safe Only</span>
-                </div>
-                <div className="flex items-center justify-center">
-                  
-                  <span className="font-semibold">Emergency Response</span>
-                </div>
-                <div className="flex items-center justify-center">
-                  
-                  <span className="font-semibold">Compliance Guaranteed</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Why Restaurants Choose Us */}
-        <section className="py-16 bg-white">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Why London Restaurants Trust PestPro</h2>
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Food Service Experts</h3>
-                <p className="text-gray-600">Specialized knowledge of restaurant pest challenges and solutions.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Flexible Hours</h3>
-                <p className="text-gray-600">Pre-opening and post-closing treatments to avoid disruption.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Inspection Ready</h3>
-                <p className="text-gray-600">Full documentation and compliance for health inspections.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Emergency Service</h3>
-                <p className="text-gray-600">Next-day response for urgent pest situations.</p>
-              </div>
+        <section className="restaurant-hero">
+          <div className="container">
+            <h1>Restaurant Pest Control Services</h1>
+            <p>HACCP-compliant pest management for London's food service industry</p>
+            <div className="hero-cta">
+              <Link to="/contact" className="btn-hero-primary">Get HACCP Quote</Link>
+              <a href="tel:07727049304" className="btn-hero-secondary">Emergency: 077 2704 9304</a>
             </div>
           </div>
         </section>
 
         {/* Services Grid */}
-        <section className="py-16">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Our Restaurant Services</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section className="restaurant-services">
+          <div className="container">
+            <div className="services-header">
+              <h2>Specialized Restaurant Services</h2>
+              <div className="section-divider"></div>
+              <p>Complete pest management solutions designed for food service establishments</p>
+            </div>
+            
+            <div className="restaurant-services-grid">
               {services.map((service, index) => (
-                <div key={index} className="bg-white border rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <ul className="space-y-2 mb-4">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm">
-                        
-                        {feature}
-                      </li>
+                <div key={index} className="restaurant-service-card">
+                  <div className="service-icon-wrap">
+                    {service.icon}
+                  </div>
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                  <ul className="service-features">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx}>{feature}</li>
                     ))}
                   </ul>
-                  <div className="flex justify-between items-center">
-                    <span className="text-lg font-semibold text-red-600">{service.price}</span>
-                    <Link 
-                      to="/contact" 
-                      className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors text-sm"
-                    >
-                      Get Quote
-                    </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* HACCP Section */}
+        <section className="haccp-section">
+          <div className="container">
+            <div className="haccp-header">
+              <h2>HACCP Compliance Support</h2>
+              <p>We help you maintain the highest food safety standards</p>
+            </div>
+            
+            <div className="haccp-grid">
+              {haccpSteps.map((step, index) => (
+                <div key={index} className="haccp-card">
+                  <div className="haccp-icon">
+                    {step.icon}
+                  </div>
+                  <h3>{step.title}</h3>
+                  <p>{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Industries Section */}
+        <section className="industries-section">
+          <div className="container">
+            <div className="industries-header">
+              <h2>Food Service Sectors We Protect</h2>
+              <div className="section-divider"></div>
+            </div>
+            
+            <div className="industries-grid">
+              {industries.map((industry, index) => (
+                <div key={index} className="industry-item">
+                  <div className="industry-icon-wrapper">
+                    {industry.icon}
+                  </div>
+                  <h3>{industry.title}</h3>
+                  <p>{industry.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials */}
+        <section className="testimonial-section">
+          <div className="container">
+            <div className="testimonial-header">
+              <h2>Trusted by London's Best Restaurants</h2>
+            </div>
+            
+            <div className="testimonials-grid">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="testimonial-card">
+                  <div className="rating">
+                    {'★'.repeat(testimonial.rating)}
+                  </div>
+                  <p className="testimonial-text">"{testimonial.text}"</p>
+                  <div className="testimonial-author">
+                    <div className="author-avatar"></div>
+                    <div className="author-info">
+                      <h4>{testimonial.author}</h4>
+                      <p>{testimonial.role}</p>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -179,111 +322,14 @@ const RestaurantServices: React.FC = () => {
           </div>
         </section>
 
-        {/* Compliance Section */}
-        <section className="py-16 bg-gray-100">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Food Safety Compliance</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-lg">
-                <h3 className="text-2xl font-semibold mb-6">Compliance Features</h3>
-                <ul className="space-y-3">
-                  {complianceFeatures.map((feature, index) => (
-                    <li key={index} className="flex items-center">
-                      
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="bg-white p-8 rounded-lg">
-                <h3 className="text-2xl font-semibold mb-6">Common Restaurant Pests</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    
-                    <div>
-                      <h4 className="font-semibold">Cockroaches</h4>
-                      <p className="text-sm text-gray-600">Kitchen and food prep areas</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center">
-                    
-                    <div>
-                      <h4 className="font-semibold">Rodents</h4>
-                      <p className="text-sm text-gray-600">Storage and dining areas</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center">
-                    
-                    <div>
-                      <h4 className="font-semibold">Flies</h4>
-                      <p className="text-sm text-gray-600">Kitchen and waste areas</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center">
-                    
-                    <div>
-                      <h4 className="font-semibold">Ants</h4>
-                      <p className="text-sm text-gray-600">Food storage and prep areas</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Process Section */}
-        <section className="py-16 bg-white">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Our Restaurant Process</h2>
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">1</div>
-                <h3 className="font-semibold mb-2">Initial Audit</h3>
-                <p className="text-gray-600 text-sm">Comprehensive food safety and pest assessment</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">2</div>
-                <h3 className="font-semibold mb-2">Custom Plan</h3>
-                <p className="text-gray-600 text-sm">Tailored IPM program for your restaurant</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">3</div>
-                <h3 className="font-semibold mb-2">Safe Treatment</h3>
-                <p className="text-gray-600 text-sm">Food-safe pest control implementation</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">4</div>
-                <h3 className="font-semibold mb-2">Monitor</h3>
-                <p className="text-gray-600 text-sm">Ongoing monitoring and maintenance</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">5</div>
-                <h3 className="font-semibold mb-2">Document</h3>
-                <p className="text-gray-600 text-sm">Complete records for inspections</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
-        <section className="py-16 bg-red-600 text-white">
-          <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6">Keep Your Restaurant Pest-Free</h2>
-            <p className="text-xl mb-8">Protect your reputation with professional restaurant pest control services</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Get Restaurant Quote
-              </Link>
-              <Link 
-                to="/pest-library" 
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
-              >
-                View Pest Threats
-              </Link>
+        <section className="cta-section">
+          <div className="container">
+            <h2>Protect Your Restaurant's Reputation</h2>
+            <p>Get a free HACCP-compliant pest assessment today</p>
+            <div className="cta-buttons">
+              <Link to="/contact" className="btn-cta-primary">Schedule Assessment</Link>
+              <a href="tel:07727049304" className="btn-cta-secondary">Call Expert Now</a>
             </div>
           </div>
         </section>

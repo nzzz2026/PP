@@ -36,6 +36,7 @@ const Services: React.FC = () => {
       description: 'Comprehensive pest elimination for London homes using family-safe methods that protect what matters most.',
       detailedDescription: 'Our residential pest control services are specifically designed for London homes, ensuring your family\'s safety while effectively eliminating unwanted pests. We understand that your home is your sanctuary.',
       icon: null,
+      image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80',
       primaryBenefit: 'Family-Safe Guaranteed',
       keyFeatures: [
         'Child & pet-safe treatments only',
@@ -77,6 +78,7 @@ const Services: React.FC = () => {
       description: 'Professional pest management that protects your business reputation with minimal disruption and full compliance documentation.',
       detailedDescription: 'Protecting London businesses from pest-related disruptions since 2010. Our commercial services ensure your operations continue smoothly while maintaining the highest standards of pest control.',
       icon: null,
+      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
       primaryBenefit: 'Zero Business Disruption',
       keyFeatures: [
         'Discrete, unmarked service vehicles',
@@ -118,6 +120,7 @@ const Services: React.FC = () => {
       description: 'Specialized food service pest control ensuring HACCP compliance and maintaining your establishment\'s reputation for cleanliness.',
       detailedDescription: 'London\'s restaurant industry trusts us to maintain the highest food safety standards. Our specialized treatments protect your reputation, ensure compliance, and keep your kitchen pest-free.',
       icon: null,
+      image: 'https://images.unsplash.com/photo-1555992457-b8fefdd09069?auto=format&fit=crop&w=800&q=80',
       primaryBenefit: 'HACCP Compliance Guaranteed',
       keyFeatures: [
         'Food-safe treatments exclusively',
@@ -213,8 +216,27 @@ const Services: React.FC = () => {
                   <div className="service-grid">
                     {/* Content Side */}
                     <div className="service-content">
+                      {category.image && (
+                        <div style={{
+                          width: '100%',
+                          height: '200px',
+                          marginBottom: '1.5rem',
+                          borderRadius: '12px',
+                          overflow: 'hidden',
+                          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'
+                        }}>
+                          <img 
+                            src={category.image} 
+                            alt={category.title}
+                            style={{
+                              width: '100%',
+                              height: '100%',
+                              objectFit: 'cover'
+                            }}
+                          />
+                        </div>
+                      )}
                       <div className={`service-badge ${category.color}`}>
-                        <span className="service-badge-icon" style={{display: 'flex', alignItems: 'center'}}>{category.icon}</span>
                         <span>{category.primaryBenefit}</span>
                       </div>
                       
@@ -247,7 +269,7 @@ const Services: React.FC = () => {
                           <ul className="feature-list">
                             {category.keyFeatures.map((feature, featureIndex) => (
                               <li key={featureIndex} className="feature-item">
-                                <span className={`feature-icon ${category.color}`} style={{display: 'flex'}}></span>
+                                <span style={{color: 'var(--lime)', marginRight: '8px', fontWeight: 'bold'}}>✓</span>
                                 <span>{feature}</span>
                               </li>
                             ))}
@@ -260,7 +282,7 @@ const Services: React.FC = () => {
                           <ul className="feature-list">
                             {category.commonIssues.map((issue, issueIndex) => (
                               <li key={issueIndex} className="feature-item">
-                                <span className="issue-icon" style={{display: 'flex'}}></span>
+                                <span style={{color: '#DC2626', marginRight: '8px', fontWeight: 'bold'}}>•</span>
                                 <span>{issue}</span>
                               </li>
                             ))}
@@ -346,7 +368,10 @@ const Services: React.FC = () => {
             <div className="stats-grid">
               <div className="stat-card">
                 <div className="stat-icon-wrapper green">
-                  
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                  </svg>
                 </div>
                 <h3 className="stat-title">98% Success Rate</h3>
                 <p className="stat-description">Industry-leading elimination success rate with guaranteed follow-up service.</p>
@@ -354,7 +379,9 @@ const Services: React.FC = () => {
               
               <div className="stat-card">
                 <div className="stat-icon-wrapper blue">
-                  
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                  </svg>
                 </div>
                 <h3 className="stat-title">Emergency Response</h3>
                 <p className="stat-description">Next-day emergency service with 1-4 hour response times across London.</p>
@@ -362,7 +389,10 @@ const Services: React.FC = () => {
               
               <div className="stat-card">
                 <div className="stat-icon-wrapper red">
-                  
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                    <path d="M9 12l2 2 4-4"/>
+                  </svg>
                 </div>
                 <h3 className="stat-title">Safety Certified</h3>
                 <p className="stat-description">Only FSA-approved, family-safe treatments with full insurance coverage.</p>
@@ -370,6 +400,13 @@ const Services: React.FC = () => {
               
               <div className="stat-card">
                 <div className="stat-icon-wrapper purple">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                    <polyline points="10 9 9 9 8 9"/>
+                  </svg>
                 </div>
                 <h3 className="stat-title">Full Compliance</h3>
                 <p className="stat-description">Complete documentation for health inspections and regulatory compliance.</p>
