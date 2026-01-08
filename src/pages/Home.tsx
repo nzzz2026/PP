@@ -78,7 +78,7 @@ const Home: React.FC = () => {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '0.5rem',
-              background: 'rgba(16, 185, 129, 0.2)',
+              background: 'rgba(59, 130, 246, 0.2)',
               border: '1px solid rgba(16, 185, 129, 0.4)',
               padding: '8px 20px',
               borderRadius: '25px',
