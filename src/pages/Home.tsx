@@ -78,15 +78,16 @@ const Home: React.FC = () => {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '0.5rem',
-              background: 'rgba(59, 130, 246, 0.2)',
-              border: '1px solid rgba(59, 130, 246, 0.4)',
+              background: 'rgba(59, 130, 246, 0.12)',
+              border: '1px solid rgba(37, 99, 235, 0.6)',
               padding: '8px 20px',
               borderRadius: '25px',
               fontSize: '0.9rem',
               fontWeight: '600',
               marginBottom: '1.5rem',
-              color: 'white',
-              backdropFilter: 'blur(10px)'
+              color: '#2563eb',
+              backdropFilter: 'blur(10px)',
+              cursor: 'default'
             }}>
               <span>London's #1 Rated Pest Control</span>
             </div>
@@ -1445,7 +1446,7 @@ const Home: React.FC = () => {
                   fontSize: '0.85rem',
                   fontWeight: '600'
                 }}>
-                    <span>✓ Guaranteed Results</span>
+                    <span>Guaranteed Results</span>
                 </div>
                 <div style={{
                   display: 'flex',
