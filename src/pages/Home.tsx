@@ -79,7 +79,7 @@ const Home: React.FC = () => {
               alignItems: 'center',
               gap: '0.5rem',
               background: 'rgba(59, 130, 246, 0.2)',
-              border: '1px solid rgba(16, 185, 129, 0.4)',
+              border: '1px solid rgba(59, 130, 246, 0.4)',
               padding: '8px 20px',
               borderRadius: '25px',
               fontSize: '0.9rem',
