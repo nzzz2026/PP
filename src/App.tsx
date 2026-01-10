@@ -25,6 +25,7 @@ import Emergency from './pages/Emergency';
 import CamdenBoroughPage from './pages/CamdenBoroughPage';
 import IslingtonBoroughPage from './pages/IslingtonBoroughPage';
 import HackneyBoroughPage from './pages/HackneyBoroughPage';
+import KensingtonChelseaBoroughPage from './pages/KensingtonChelseaBoroughPage';
 import BlogNew from './pages/BlogNew';
 import BlogPostNew from './pages/BlogPostNew';
 import BlogAdminProtected from './pages/BlogAdminProtected';
@@ -57,6 +58,7 @@ function App() {
             <Route path="/service-areas/camden" element={<CamdenBoroughPage />} />
             <Route path="/service-areas/islington" element={<IslingtonBoroughPage />} />
             <Route path="/service-areas/hackney" element={<HackneyBoroughPage />} />
+            <Route path="/service-areas/kensington-chelsea" element={<KensingtonChelseaBoroughPage />} />
             <Route path="/service-areas/:areaId" element={<ServiceAreaDetail />} />
 
             {/* Company */}

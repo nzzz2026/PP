@@ -85,7 +85,7 @@ const Home: React.FC = () => {
               fontSize: '0.9rem',
               fontWeight: '600',
               marginBottom: '1.5rem',
-              color: '#2563eb',
+              color: '#ffffff',
               backdropFilter: 'blur(10px)',
               cursor: 'default'
             }}>
