@@ -51,7 +51,7 @@ const KensingtonChelseaBoroughPage: React.FC = () => {
       "description": "Premium pest control services for homes, apartments, hotels, and restaurants in Kensington & Chelsea. BPCA certified technicians for rats, mice, moths, bed bugs, cockroaches, and pigeons.",
       "telephone": "+447727049304",
       "email": "info@pestpro.london",
-      "url": "https://www.pestpro.london/service-areas/kensington-chelsea",
+      "url": "https://www.pestpro.london/service-areas/kensington-and-chelsea",
       "areaServed": {
         "@type": "Place",
         "name": "Kensington & Chelsea, London",
@@ -243,11 +243,11 @@ const KensingtonChelseaBoroughPage: React.FC = () => {
             <div className="intro-grid">
               <div className="intro-text">
                 <p>
-                  The <a href="https://en.wikipedia.org/wiki/Royal_Borough_of_Kensington_and_Chelsea" target="_blank" rel="noopener noreferrer" className="text-link"><strong>Royal Borough of Kensington and Chelsea</strong></a> blends world-famous attractions with beautiful residential streets. From <strong>Knightsbridge</strong> and <strong>South Kensington</strong> to <strong>Notting Hill</strong> and <strong>Chelsea</strong>, properties range from mansion blocks and stucco terraces to mews houses and basement apartments. That variety creates distinct pest challenges that demand careful, tailored solutions.
+                  The <a href="https://en.wikipedia.org/wiki/Royal_Borough_of_Kensington_and_Chelsea" target="_blank" rel="noopener noreferrer" className="text-link"><strong>Royal Borough of Kensington and Chelsea</strong></a> blends world-famous attractions with beautiful residential streets. From <strong>Knightsbridge</strong> and <strong>South Kensington</strong> to <strong>Notting Hill</strong> and <strong>Chelsea</strong>, properties range from mansion blocks and stucco terraces to mews houses and basement apartments. This mix of heritage architecture, concierge-managed blocks, and high-value interiors creates distinct pest challenges that demand careful, tailored solutions.
                 </p>
 
                 <p>
-                  High footfall around <strong>Harrods</strong>, the <strong>V&amp;A</strong>, the <strong>Natural History Museum</strong>, and <strong>Portobello Road Market</strong> increases opportunities for rodents, cockroaches, and fly activity, while warm, centrally heated properties can encourage year-round issues such as textile moths and bed bugs. Our local technicians deliver discreet treatments, rapid response, and long-term prevention across the borough. We also support nearby areas like <a href="/service-areas/hammersmith-fulham" className="text-link">Hammersmith &amp; Fulham</a> and <a href="/service-areas/westminster" className="text-link">Westminster</a>.
+                  High footfall around <strong>Harrods</strong>, the <strong>V&amp;A</strong>, the <strong>Natural History Museum</strong>, and <strong>Exhibition Road</strong> increases opportunities for rodents, cockroaches, and fly activity. Seasonal spikes around <strong>Notting Hill Carnival</strong> and busy hospitality corridors such as <strong>King's Road</strong> and <strong>Sloane Square</strong> can also elevate pest pressure. Meanwhile, warm, centrally heated properties near <strong>Kensington Palace</strong> and <strong>Kensington Gardens</strong> can encourage year-round issues such as textile moths and bed bugs. Our local technicians deliver discreet treatments, rapid response, and long-term prevention across the borough. We also support nearby areas like <a href="/service-areas/hammersmith-fulham" className="text-link">Hammersmith &amp; Fulham</a> and <a href="/service-areas/westminster" className="text-link">Westminster</a>.
                 </p>
               </div>
 
@@ -329,7 +329,7 @@ const KensingtonChelseaBoroughPage: React.FC = () => {
           <div className="container">
             <div className="section-header">
               <h2>Common Pest Problems in Kensington &amp; Chelsea &amp; How We Solve Them</h2>
-              <p className="subtitle">Premium properties and busy retail corridors demand targeted, discreet pest control.</p>
+              <p className="subtitle">Premium properties, heritage buildings, and high-traffic retail corridors demand targeted, discreet pest control.</p>
             </div>
 
             <div className="pest-grid">
@@ -365,10 +365,10 @@ const KensingtonChelseaBoroughPage: React.FC = () => {
                   solution: 'Humane netting, spikes, and balcony-proofing systems'
                 },
                 {
-                  name: 'Wasps & Seasonal Pests',
-                  icon: '🐝',
-                  description: 'Rooflines, lofts, and garden squares can host wasp nests and flying insect activity.',
-                  solution: 'Safe nest removal, residual protection, and prevention advice'
+                  name: 'Silverfish & Moisture Pests',
+                  icon: '💧',
+                  description: 'Basement flats and older plumbing can create damp conditions that attract silverfish and other moisture-loving pests.',
+                  solution: 'Targeted treatments, moisture source identification, and sealing advice'
                 }
               ].map((pest, index) => (
                 <div key={index} className="pest-card">

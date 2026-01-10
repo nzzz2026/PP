@@ -4,7 +4,7 @@ const serviceAreas = [
   { slug: 'camden', name: 'Camden' },
   { slug: 'islington', name: 'Islington' },
   { slug: 'hackney', name: 'Hackney' },
-  { slug: 'kensington-chelsea', name: 'Kensington & Chelsea' },
+  { slug: 'kensington-and-chelsea', name: 'Kensington & Chelsea' },
 ];
 
 const ServiceAreaLinks: React.FC = () => (
